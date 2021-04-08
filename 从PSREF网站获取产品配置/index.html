@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content=#58b77a>
+  <title>从PSREF网站获取产品配置 | Small fish, big ocean</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Houyufeng 侯宇峰">
+  <meta name="keywords" content="">
+  <meta name="description" content="My blog">
+  <script id="hexo-configurations">
+  var CONFIG = {
+    root: '/',
+    theme: 'hexo-theme-lx-master',
+    version: '0.3.9',
+    localsearch:{
+      "enable": false,
+      "trigger": "auto",
+      "top_n_per_article": 1,
+      "unescape": false,
+      "preload": false
+      },
+    path: 'null'
+  };
+</script>
+
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/css/main.min.css">
+  <style type="text/css">
+    pre,
+    code {
+      font-family: 'Fira Code', monospace;
+    }
+    html {
+      font-family: sans-serif;
+    }
+    body {
+      font-family: sans-serif;
+    }
+    h1, h2, h3, h4, h5, figure {
+      font-family: sans-serif;
+    }
+    .menu-container{
+      font-family: sans-serif;
+    }
+  </style>
+
+  <script src="//cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/js/jquery.jside.menu.js"></script>
+	<script>
+	$(document).ready(function(){
+	$(".menu-container").jSideMenu({
+	    jSidePosition: "position-right",
+	    jSideSticky: true,
+	    jSideSkin: "greenish",
+	     });
+	}); 
+	</script>
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Fira Code:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css">
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body>
+<div class="single">
+
+<div id="page">
+<div id="lx-aside" style="background-image: url(//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/images/post_cover.jpeg)" data-stellar-background-ratio="0.5">
+  <div class="overlay">
+  <div class="page-title">
+    <div class="avatar"><a href="/"><img src="/images/avatar.jpeg"></a></div>
+    <span>2021-04-02</span>
+    <h2>从PSREF网站获取产品配置</h2>
+    
+    </div>
+</div>
+</div>
+
+<div id="lx-main-content">
+  <div class="lx-post">
+    <div class="lx-entry padding">
+      <div>
+        <h1 id="小鱼游大海的第一个公开项目上线，快速获取Lenovo-产品配置"><a href="#小鱼游大海的第一个公开项目上线，快速获取Lenovo-产品配置" class="headerlink" title="小鱼游大海的第一个公开项目上线，快速获取Lenovo 产品配置"></a>小鱼游大海的第一个公开项目上线，快速获取Lenovo 产品配置</h1><blockquote>
+<p>依托伟大的PSREF数据支持，直接获取Lenovo 产品配置并保存为本地的Excel文件</p>
+</blockquote>
+<p>首先我得先声明，Small Fish Big Ocean是我的GitHub公开仓库的名字，非常欢迎您来玩儿的同时，我也得说，这个名字非常正义，完全没有歧义，请不要脑补开车车。有没有被我的正义形象感动？</p>
+<p>代码我就不贴了，请您从这里获取源代码: <a target="_blank" rel="noopener" href="https://github.com/smallfish-bigocean/smallcodes/raw/main/get_single_PN_configuration_from_PSREF/get_single_PN_configuration_from_PSREF.py">获取Lenovo产品配置</a> . 再次声明，我的所有代码都使用MIT协议，完全开源，欢迎借鉴，更欢迎指教。我写这篇文章其实是为了分享我的思路，也特别希望获得您的鼓励和指教，非要发红包？ 请看我正义的眼神</p>
+<p> <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20180216%2F85268af206f143dc8e665e685c34bd9d.jpeg&refer=http%3A%2F%2F5b0988e595225.cdn.sohucs.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1619684332&t=5877ffa0df3e5c9375b96955eeb4b5a8" alt="不要红包"></p>
+<p>我写这个程式的初衷是:</p>
+<ul>
+<li>不必使用浏览器直接获取Lenovo产品的配置，并且以Excel保存，利于分享</li>
+<li>利用用户本地计算机资源生成Excel格式的产品配置表，不占用PSREF服务器资源。 完了，我是不是应该坦诚其实我是联想PSREF团队员工。。。 作为俩米的亲生父亲兼爸爸兼职业打工人，给自己部门省点资源，有错吗？</li>
+</ul>
+<p>整个程式没什么太复杂的思路，大体的工作流是:</p>
+<ol>
+<li>获取用户的桌面路径，用于保存最终的Excel表格。把文件放桌面上，一向是我的挚爱。推己及人，用户也会喜欢哒， 尤其公司电脑，乱乱的桌面是您职业的象征</li>
+<li>请用户输入想查询的十位产品Model PN号，确认这个号码是否存在</li>
+<li>如果用户输入的PN真实存在，输出配置为Excel并保存，工作流结束</li>
+<li>如果用户输入的PN没查到，和用户说再见，工作流结束</li>
+</ol>
+<p>用图说话，就是:</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/psrefconfig/workflow.png" alt="workflow"></p>
+<p>所以这个程式主要的几个模块就是:</p>
+<ul>
+<li>判断用户桌面路径。 万一有的大哥把桌面改在D盘E盘X盘呢，譬如我</li>
+<li>判断用户输入PN是否存在。不得不说，这个微不足道的部分反而是这个程式里我最满意的。</li>
+</ul>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/psrefconfig/findpn.png" alt="判断"></p>
+<p>请注意，对于存在的PN号，页面会给出 “[X] filtered products by searching [PN]”，对应的HTML标签是’p’,class_=’filtered_title’， 所以，只要根据是否存在这个标签，就能判断出PN能否被查到。</p>
+<ul>
+<li>拼接PN对应的网址。因为这里页面并没有完整PN链接，需要根据页面HTML里的modeldetaillinkpart进行拼接</li>
+<li>访问PN网址，抓取表格，写入Excel。 这部分是程式的主体。 Python抓数据真的太合适了。</li>
+</ul>
+<p>代码本身基本就是这样。我暂时不想更新新的功能，虽然目前看加入批量获取多个PN的配置是最应该加入的。但因为加批量其实并不复杂，应该就是多了读取PN列表，然后把单一PN的代码做成循环就可以，所以就先不折腾了。 有兴趣的朋友可以自己尝试。</p>
+<p>Small fish, big ocean. 这个世界如此精彩而丰富，只要我们稍有探索之心，生活随处都能找到快乐呀。</p>
+<p>嗯对了，本文的markdown代码也放在了本小鱼的github上，欢迎访问<a target="_blank" rel="noopener" href="https://github.com/smallfish-bigocean/smallcodes">Small fish, big ocean</a> ，嘻嘻</p>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="lx-navigation">
+	<div class="lx-cover prev lx-cover-sm" style="background-image: url(//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/images/footer-l.jpeg)">
+		<div class="overlay"></div>
+		<a class="copy" href="/%E8%AF%B7%E6%82%A8%E7%9B%98%E6%88%91/">
+			<div class="display-t">
+				<div class="display-tc">
+					<div>
+						<span>Next</span>
+						<h3>请您盘我</h3>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+        <div class="lx-cover next lx-cover-sm" style="background-image: url(//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/images/footer-r.jpeg)">
+		<div class="overlay"></div>
+		<a class="copy" href="/%E4%BD%A0%E5%B9%B2%E6%B4%BB%EF%BC%8C%E6%88%91%E5%96%9D%E8%8C%B6%E4%B9%8B%E4%BB%8ELenovo-Solution-Centre%E6%8A%93%E5%8F%96MTM%E6%95%B0%E6%8D%AE/">
+			<div class="display-t">
+				<div class="display-tc">
+					<div>
+						<span>Prev</span>
+						<h3>你干活，我喝茶...</h3>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+</div>
+
+</div>
+
+<footer>
+  <div>
+  Copyright &copy; 2021.<a href="/">Small fish, big ocean</a><br>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme <a href="https://lx.js.org" target="_blank">Lx</a><br>
+  </div>
+</footer>
+
+</div>
+
+<button class="hamburger hamburger--arrow-r" type="button">
+    <div class="hamburger-box">
+      <div class="hamburger-inner"></div>
+    </div>
+</button> 
+<div class="menu visibility">
+  <div class="menu-head">
+    <span class="layer">
+      <div class="col">
+        <div class="row for-pic">
+          <div class="profile-pic">
+            <a href="/"><img src="/images/avatar.jpeg" alt="Houyufeng 侯宇峰"/></a>
+          </div>
+        </div>
+        <div class="row for-name">
+          <p>Houyufeng 侯宇峰</p>
+          <span class="tagline">Hello, World!</span>
+        </div>
+      </div>
+    </span>
+  </div>
+  <nav class="menu-container">
+  <ul class="menu-items">
+    <li><a href="/"><i class="fa fa-home fa-fw"></i>Home</a></li>
+    <li><a href="/archives/"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+    
+    <li class="has-sub"><span class="dropdown-heading">
+      <i class="fa fa-bookmark fa-fw"></i>Pages</span>
+        <ul>
+          <li><a href="/guestbook/">Guestbook</a></li>
+        <li><a href="/about/">About</a></li>
+        </ul>
+    </li>
+    <li class="has-sub"><span class="dropdown-heading">
+      <i class="fa fa-link fa-fw"></i>Friends</span>
+        <ul>
+          <li> <a href="https://lx.js.org" target="_blank">Theme-Lx</a></li>
+        </ul>
+    </li>
+  </ul>
+  </nav>
+</div>
+
+<div class="gototop js-top">
+  <a href="#" class="js-gotop"><i class="fa fa-arrow-up"></i></a>
+</div>
+<script src="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/js/jquery.easing.min.js"></script>
+<script>
+(function () {
+	"use strict";
+	var goToTop = function() {
+		$(".js-gotop").on("click", function(event){
+			event.preventDefault();
+			$("html, body").animate({
+				scrollTop: $("html").offset().top
+			}, 500, "easeInOutExpo");
+			return false;
+		});
+		$(window).scroll(function(){
+			var $win = $(window);
+			if ($win.scrollTop() > 200) {
+				$(".js-top").addClass("active");
+			} else {
+				$(".js-top").removeClass("active");
+			}
+		});
+	};
+	$(function(){
+		goToTop();
+	});
+}());
+</script>
+
+
+</body>
+</html>
