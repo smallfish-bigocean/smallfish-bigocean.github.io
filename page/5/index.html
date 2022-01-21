@@ -60,7 +60,7 @@
   
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Fira Code:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css">
-<meta name="generator" content="Hexo 6.0.0"></head>
+<meta name="generator" content="Hexo 5.4.0"></head>
 <body>
 <div id="page">
 
@@ -79,6 +79,48 @@
 <div id="lx-main-content">
   <div class="lx-post">
 
+  <div class="lx-entry padding">
+    <div>
+      <h2 class="title"><a href="/%E4%BB%8EPSREF%E7%BD%91%E7%AB%99%E8%8E%B7%E5%8F%96%E4%BA%A7%E5%93%81%E9%85%8D%E7%BD%AE/">从PSREF网站获取产品配置</a></h2>
+      <span class="lx-post-detail"><i class="fa fa-calendar-o"></i> 2021-04-02</span>
+      <p><h1 id="小鱼游大海的第一个公开项目上线，快速获取Lenovo-产品配置"><a href="#小鱼游大海的第一个公开项目上线，快速获取Lenovo-产品配置" class="headerlink" title="小鱼游大海的第一个公开项目上线，快速获取Lenovo 产品配置"></a>小鱼游大海的第一个公开项目上线，快速获取Lenovo 产品配置</h1><blockquote>
+<p>依托伟大的PSREF数据支持，直接获取Lenovo 产品配置并保存为本地的Excel文件</p>
+</blockquote>
+<p>首先我得先声明，Small Fish Big Ocean是我的GitHub公开仓库的名字，非常欢迎您来玩儿的同时，我也得说，这个名字非常正义，完全没有歧义，请不要脑补开车车。有没有被我的正义形象感动？</p>
+<p>代码我就不贴了，请您从这里获取源代码: <a target="_blank" rel="noopener" href="https://github.com/smallfish-bigocean/smallcodes/raw/main/get_single_PN_configuration_from_PSREF/get_single_PN_configuration_from_PSREF.py">获取Lenovo产品配置</a> . 再次声明，我的所有代码都使用MIT协议，完全开源，欢迎借鉴，更欢迎指教。我写这篇文章其实是为了分享我的思路，也特别希望获得您的鼓励和指教，非要发红包？ 请看我正义的眼神</p>
+<p> <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20180216%2F85268af206f143dc8e665e685c34bd9d.jpeg&refer=http%3A%2F%2F5b0988e595225.cdn.sohucs.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1619684332&t=5877ffa0df3e5c9375b96955eeb4b5a8" alt="不要红包"></p>
+<p>我写这个程式的初衷是:</p>
+<ul>
+<li>不必使用浏览器直接获取Lenovo产品的配置，并且以Excel保存，利于分享</li>
+<li>利用用户本地计算机资源生成Excel格式的产品配置表，不占用PSREF服务器资源。 完了，我是不是应该坦诚其实我是联想PSREF团队员工。。。 作为俩米的亲生父亲兼爸爸兼职业打工人，给自己部门省点资源，有错吗？</li>
+</ul>
+<p>整个程式没什么太复杂的思路，大体的工作流是:</p>
+<ol>
+<li>获取用户的桌面路径，用于保存最终的Excel表格。把文件放桌面上，一向是我的挚爱。推己及人，用户也会喜欢哒， 尤其公司电脑，乱乱的桌面是您职业的象征</li>
+<li>请用户输入想查询的十位产品Model PN号，确认这个号码是否存在</li>
+<li>如果用户输入的PN真实存在，输出配置为Excel并保存，工作流结束</li>
+<li>如果用户输入的PN没查到，和用户说再见，工作流结束</li>
+</ol>
+<p>用图说话，就是:</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/psrefconfig/workflow.png" alt="workflow"></p>
+<p>所以这个程式主要的几个模块就是:</p>
+<ul>
+<li>判断用户桌面路径。 万一有的大哥把桌面改在D盘E盘X盘呢，譬如我</li>
+<li>判断用户输入PN是否存在。不得不说，这个微不足道的部分反而是这个程式里我最满意的。</li>
+</ul>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/psrefconfig/findpn.png" alt="判断"></p>
+<p>请注意，对于存在的PN号，页面会给出 “[X] filtered products by searching [PN]”，对应的HTML标签是’p’,class_=’filtered_title’， 所以，只要根据是否存在这个标签，就能判断出PN能否被查到。</p>
+<ul>
+<li>拼接PN对应的网址。因为这里页面并没有完整PN链接，需要根据页面HTML里的modeldetaillinkpart进行拼接</li>
+<li>访问PN网址，抓取表格，写入Excel。 这部分是程式的主体。 Python抓数据真的太合适了。</li>
+</ul>
+<p>代码本身基本就是这样。我暂时不想更新新的功能，虽然目前看加入批量获取多个PN的配置是最应该加入的。但因为加批量其实并不复杂，应该就是多了读取PN列表，然后把单一PN的代码做成循环就可以，所以就先不折腾了。 有兴趣的朋友可以自己尝试。</p>
+<p>Small fish, big ocean. 这个世界如此精彩而丰富，只要我们稍有探索之心，生活随处都能找到快乐呀。</p>
+<p>嗯对了，本文的markdown代码也放在了本小鱼的github上，欢迎访问<a target="_blank" rel="noopener" href="https://github.com/smallfish-bigocean/smallcodes">Small fish, big ocean</a> ，嘻嘻</p>
+</p>
+      <div class="post-button"><a class="btn" href="/%E4%BB%8EPSREF%E7%BD%91%E7%AB%99%E8%8E%B7%E5%8F%96%E4%BA%A7%E5%93%81%E9%85%8D%E7%BD%AE/" rel="noopener"><i class="fa fa-angle-double-right fa-fw"></i>Read More</a></div>
+    </div>
+  </div>
   <div class="lx-entry padding">
     <div>
       <h2 class="title"><a href="/%E4%BD%A0%E5%B9%B2%E6%B4%BB%EF%BC%8C%E6%88%91%E5%96%9D%E8%8C%B6%E4%B9%8B%E4%BB%8ELenovo-Solution-Centre%E6%8A%93%E5%8F%96MTM%E6%95%B0%E6%8D%AE/">你干活，我喝茶之从Lenovo Solution Centre抓取MTM数据</a></h2>
