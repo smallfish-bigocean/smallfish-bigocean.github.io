@@ -81,6 +81,67 @@
 
   <div class="lx-entry padding">
     <div>
+      <h2 class="title"><a href="/%E5%AE%9D%E8%B4%9D%E5%84%BF%EF%BC%8C%E4%B8%80%E8%B5%B7%E5%AD%A6Python%E5%91%80-6-md/">宝贝儿，一起学Python呀-6.md</a></h2>
+      <span class="lx-post-detail"><i class="fa fa-calendar-o"></i> 2021-07-10</span>
+      <p><h1 id="宝贝儿，一起学Python呀-VI-什么结衣雅美，我全都要！"><a href="#宝贝儿，一起学Python呀-VI-什么结衣雅美，我全都要！" class="headerlink" title="宝贝儿，一起学Python呀 - VI - 什么结衣雅美，我全都要！"></a>宝贝儿，一起学Python呀 - VI - 什么结衣雅美，我全都要！</h1><h3 id="Python中的列表和循环"><a href="#Python中的列表和循环" class="headerlink" title="Python中的列表和循环"></a>Python中的列表和循环</h3><p>还记得上篇结尾，我留的小作业吗?</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">name=<span class="string">&#x27;长泽雅美&#x27;</span></span><br><span class="line">name=<span class="string">&#x27;石原里美&#x27;</span></span><br><span class="line">name=<span class="string">&#x27;新垣结衣&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(name)</span><br></pre></td></tr></table></figure>
+
+<p>是的，打印name, 结果是’新垣结衣’。相信随着新垣结衣和星野源宣布合体，无数中国宅男纷纷表示无比的悲痛，更有甚者开始分析中国老爷们儿完爆日本男人的99999条理由，反正不知道星野源这家伙到底用了什么手段迷惑了我们新垣结衣。</p>
+<p>想必您也看出来了，别人着急我不急，急坏身体无人替。为什么我能如此镇定？因为我是长泽雅美的粉儿。。。</p>
+<p>常规性跑题。话说 name = ‘长泽雅美’ 您都知道，这是一个赋值语句，作用是把一个值赋值给变量name. 这里咱们也别费劲讲什么变量啦，内存啦，指针啦什么的。我不会肯定是一个原因，另外就是咱们拿Python干活儿，一时半会儿用不上这个。等真能用上，估计您也得转行程序员了。</p>
+<p>上篇也说了，Python对待变量的态度很随便。不用声明变量支持的数据类型，您灌什么值变量就是什么类型。但是这里有个问题，就是取变量存的值时，Python只会取最近一次存入的，就如同上面例子中，输出name的结果是新垣结衣。</p>
+<p>有身体好的大哥说了，选什么选，老子全都要！什么雅美里美结衣悠亚阿香的，都给我整来！那普通的数据类型是满足不了您了，这时，我们就得请列表出山喽!</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">name = [<span class="string">&#x27;石原里美&#x27;</span>,<span class="string">&#x27;新垣结衣&#x27;</span>,<span class="string">&#x27;长泽雅美&#x27;</span>] <span class="comment"># []表示这是列表类型，列表里的元素用,隔开</span></span><br></pre></td></tr></table></figure>
+
+<p>怎么样，像不像您买了栋大别墅，然后把小姐姐们都请进来入住？在Python中，表示列表的标记就是[]，列表里每一项用，隔开。列表里的每一项都可以是任意的数据类型，而且无需一样，比如:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">list1 = [<span class="string">&#x27;联想&#x27;</span>,<span class="number">1984</span>]</span><br></pre></td></tr></table></figure>
+
+<p>这里的列表list1有两项，字符串’联想’和数字1984。</p>
+<p>现在小姐姐都在您的大房子里了，怎么把怹们挨个请出来呢？聪明的您一定想到了，print()呗。好吧，我们print(name)试试，结果是:</p>
+<blockquote>
+<p>[‘石原里美’, ‘新垣结衣’, ‘长泽雅美’]</p>
+</blockquote>
+<p>嗯？ Python很不讲究，直接把列表给打出来了，这相当于小姐姐们扛着别墅就过来了，不行，我想要，不是，这位身体好大哥想要的应该是其中某一位小姐姐，对吧？把这句话翻译成专业点的术语，就是我们要访问列表中的项。</p>
+<p>可以。</p>
+<p>列表通过索引定位列表中的每一项，相当于给每位小姐姐都编了号。当然，按照搞计算机大哥们的习惯，编号从0开始。不知道为什么大哥们这么喜欢0。。。所以，我们可以这么访问小姐姐们:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">name = [<span class="string">&#x27;石原里美&#x27;</span>,<span class="string">&#x27;新垣结衣&#x27;</span>,<span class="string">&#x27;长泽雅美&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(name[<span class="number">0</span>]) <span class="comment">#name[0]表示列表name中的第一项，就是石原里美啦</span></span><br><span class="line"><span class="built_in">print</span>(name[<span class="number">1</span>]) <span class="comment">#name[0]表示列表name中的第二项，就是新垣结衣啦</span></span><br><span class="line"><span class="built_in">print</span>(name[<span class="number">2</span>]) <span class="comment">#name[0]表示列表name中的第三项，就是长泽雅美啦</span></span><br></pre></td></tr></table></figure>
+
+<p>用索引除了访问列表中的项，也可以更新列表中的项，比如:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">name[<span class="number">2</span>] = <span class="string">&#x27;三上悠亚&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>那就是把原来的长泽雅美换成了三上悠亚。</p>
+<p>或者，身体好的大哥说，4位小姐姐老子也能对付，不用替换，直接把三上加进来！</p>
+<p>那就得用到列表自带的append方法了。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">name.append(<span class="string">&#x27;三上悠亚&#x27;</span>) <span class="comment">#列表变量.append(想添加到列表的值)</span></span><br></pre></td></tr></table></figure>
+
+<p>这时，name就变成了</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">name = [<span class="string">&#x27;石原里美&#x27;</span>,<span class="string">&#x27;新垣结衣&#x27;</span>,<span class="string">&#x27;长泽雅美&#x27;</span>,<span class="string">&#x27;三上悠亚&#x27;</span>]</span><br></pre></td></tr></table></figure>
+
+<p>append 方法会直接把项目添加到列表结尾。</p>
+<p>或者这位小哥哥又说了，三上悠亚在我心中地位第一，干什么给她放最后？给我放最前面！</p>
+<p>得嘞这位爷，咱也别费劲了，我告诉您一个办法，您爱放哪儿放哪儿行不？</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">name.insert(<span class="number">0</span>,<span class="string">&#x27;三上悠亚&#x27;</span>) <span class="comment">#insert方法用于把项目插入到列表中，格式就是 列表变量.insert(想插入的索引,想插入的项目)</span></span><br></pre></td></tr></table></figure>
+
+<p>用insert方法，您爱放哪都行，行了吧？</p>
+<p>以上咱们聊的是用索引访问列表中的项。身强力壮小哥哥又说了，用索引一个一个的来不痛快，而且小姐姐太多也记不住索引，能不能一口气把小姐姐全请出来？</p>
+<p>说来简单，直接用循环就行了。话说一般计算机语言中，循环和条件判断都是非常重要和核心的。Python的循环主要是for循环和while循环,其中for循环提供了很好的访问列表的方法，简单粗暴，来咱们走一个:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">girls = [<span class="string">&#x27;石原里美&#x27;</span>,<span class="string">&#x27;新垣结衣&#x27;</span>,<span class="string">&#x27;长泽雅美&#x27;</span>]  <span class="comment"># 定义一个列表存放数据</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> girls: <span class="comment"># 利用循环输出数组中的每一个元素</span></span><br><span class="line">    <span class="built_in">print</span>(i) <span class="comment">#必须必须注意，这行开始有一个tab</span></span><br></pre></td></tr></table></figure>
+
+<p>看见了吧，就是这么简单。这里需要注意的是，i 本身也是一个变量，这个循环里，先定义一个i用于存放列表中元素，然后按照索引顺序遍历列表中的每一项，然后把此项数值赋给i,然后print()把i的内容输出，然后循环访问列表中的下一项，直到遍历完毕。</p>
+<p>另外我们也引出了Python中写代码一个很重要的内容，缩进。和其它语言不同，Python不用{}标识代码块，编写Python代码时，主要的区分代码块的标记就是tab。这里的tab也可以用4个空格代替，但是要一致，不能一会儿tab一会儿四个空格。这个缩进不能省略，上面的例子中如果没有缩进，会直接报错。</p>
+<p>还有一个重要的概念，就是字符串也可以看做列表，具有列表的特点，比如通过索引访问字符串中的元素，这个就请您自己试试。</p>
+<p>好了，到了留作业的时候，请问，以下的代码输出结果是什么？</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">slogan = <span class="string">&#x27;让世界充满爱&#x27;</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> slogan:</span><br><span class="line">    <span class="built_in">print</span>(i)</span><br></pre></td></tr></table></figure>
+
+
+
+<p>今天就到这里，祝您愉快，咱们下篇再见。至于下篇咱们聊什么？让我想想吧，我现在满脑子都是长泽雅美。。。</p>
+</p>
+      <div class="post-button"><a class="btn" href="/%E5%AE%9D%E8%B4%9D%E5%84%BF%EF%BC%8C%E4%B8%80%E8%B5%B7%E5%AD%A6Python%E5%91%80-6-md/" rel="noopener"><i class="fa fa-angle-double-right fa-fw"></i>Read More</a></div>
+    </div>
+  </div>
+  <div class="lx-entry padding">
+    <div>
       <h2 class="title"><a href="/%E5%AE%9D%E8%B4%9D%E5%84%BF%EF%BC%8C%E4%B8%80%E8%B5%B7%E5%AD%A6Python%E5%91%80-%E7%95%AA%E5%A4%96%E7%AF%87/">宝贝儿，一起学Python呀 - 番外篇</a></h2>
       <span class="lx-post-detail"><i class="fa fa-calendar-o"></i> 2021-07-02</span>
       <p><h1 id="宝贝儿，一起学Python呀-番外篇"><a href="#宝贝儿，一起学Python呀-番外篇" class="headerlink" title="宝贝儿，一起学Python呀 - 番外篇"></a>宝贝儿，一起学Python呀 - 番外篇</h1><center>一</center>
@@ -769,90 +830,6 @@
 <p>第一篇就写到这儿，下周见。</p>
 </p>
       <div class="post-button"><a class="btn" href="/%E5%AE%9D%E8%B4%9D%E5%84%BF%EF%BC%8C%E4%B8%80%E8%B5%B7%E5%AD%A6Python%E5%91%80-I/" rel="noopener"><i class="fa fa-angle-double-right fa-fw"></i>Read More</a></div>
-    </div>
-  </div>
-  <div class="lx-entry padding">
-    <div>
-      <h2 class="title"><a href="/%E8%8A%B1%E4%B8%AD%E9%86%89%E5%8D%A7%E7%9C%9F%E5%A5%BD%E6%B1%89%EF%BC%8C%E7%95%99%E5%BE%97%E8%8A%B3%E9%A6%99%E6%BB%A1%E4%BA%BA%E9%97%B4/">花中醉卧真好汉，留得芳香满人间</a></h2>
-      <span class="lx-post-detail"><i class="fa fa-calendar-o"></i> 2021-06-07</span>
-      <p><h1 id="花中醉卧真好汉，留得芳香满人间"><a href="#花中醉卧真好汉，留得芳香满人间" class="headerlink" title="花中醉卧真好汉，留得芳香满人间"></a>花中醉卧真好汉，留得芳香满人间</h1><h4 id="写在古龙诞辰83周年"><a href="#写在古龙诞辰83周年" class="headerlink" title="写在古龙诞辰83周年"></a>写在古龙诞辰83周年</h4><center>一</center>
-
-<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/gulong/gl.jpg" alt="古龙"></p>
-<p>“身高一米五，头大如麦斗。好色如虎狼，一日不无酒”。</p>
-<p>其貌不扬，好色，酒鬼，这可能是个废柴渣男。</p>
-<p>他，也可能是古龙。</p>
-<p>我最喜欢的武侠小说家，没有之一。</p>
-<p>这个范围，包括金庸先生。</p>
-<center>二</center>
-
-<p>金庸先生写过很多江湖，写过江湖里有令狐冲这样的浪子。</p>
-<p>古龙自己就在江湖，古龙自己就是浪子。</p>
-<p>古龙的故事里，写的都是他自己的样子。</p>
-<center>三</center>
-
-<p>古龙什么功夫也不会，估计打架未必是我的对手。</p>
-<p>但古龙真的打过架，</p>
-<p>为了保护心爱的女人。</p>
-<p>其实不能算打架，因为古龙傻乎乎地用手去接人家的刀。</p>
-<p>可悲的是，刀在，</p>
-<p>可喜的是，手也在。</p>
-<p>所以古龙还能写书。</p>
-<center>四</center>
-
-<p>古龙的小说，</p>
-<p>经典不少，</p>
-<p>垃圾也不少。</p>
-<p>公开找人代笔更不少。</p>
-<p>“为了等钱吃饭而写稿，虽然不是作家共同的悲哀，却是我的悲哀，我也相信有这种悲哀的人大概不止我一个”</p>
-<p>因为他的这句话，我认为，只要一个人还能真诚地面对自己，那他就算不是大家或圣人，至少还可以做好汉。</p>
-<center>五</center>
-
-<p>古龙说自己写书，分为几个阶段。</p>
-<p>我看古龙的书，也经历过几个阶段。</p>
-<p>早期，年轻，热血，</p>
-<p>执迷于情节，胜负。</p>
-<p>李寻欢到底能不能战胜上官金虹？</p>
-<p>飞剑客和荆无命谁才是真的快剑？</p>
-<p>傅红雪的刀能否砍断路小佳的剑？</p>
-<p>楚留香和陆小凤谁的轻功更高？</p>
-<p>剑神西门吹雪是否真的天下无敌？</p>
-<p>。。。</p>
-<p>当然，还有女人。</p>
-<p>古龙还没到“此处需要删除XX字”的程度。</p>
-<p>但已经足以让年少轻狂的我，</p>
-<p>看的瞠目结舌，遐想连篇。</p>
-<p>后来，后来，在后来。</p>
-<p>再看古龙的书，</p>
-<p>我只觉得悲伤。</p>
-<p>蝴蝶一样美丽的生命。</p>
-<p>快意恩仇的剑，</p>
-<p>却都只如流星一般。</p>
-<p>但哪怕只有一瞬，</p>
-<p>却此生无悔。</p>
-<p>这是古龙笔下的人。</p>
-<p>这是古龙。</p>
-<center>六</center>
-
-<p>古龙死于酒。</p>
-<p>年48.</p>
-<p>埋葬48年生命的，</p>
-<p>是挚友买下的48瓶美酒。</p>
-<p>书好，</p>
-<p>比书好的，</p>
-<p>是人。</p>
-<p>比人好的，</p>
-<p>是酒。</p>
-<center>七</center>
-
-<p>“儿须成名，酒须醉。酒后倾诉，是心言”</p>
-<p>不知道啤酒您喝不喝。</p>
-<p>但请满饮此杯。</p>
-<p align="right">又是六月七日</p>
-<p align="right">于北京</p>
-<p align="right">我也有酒</p>
-
-</p>
-      <div class="post-button"><a class="btn" href="/%E8%8A%B1%E4%B8%AD%E9%86%89%E5%8D%A7%E7%9C%9F%E5%A5%BD%E6%B1%89%EF%BC%8C%E7%95%99%E5%BE%97%E8%8A%B3%E9%A6%99%E6%BB%A1%E4%BA%BA%E9%97%B4/" rel="noopener"><i class="fa fa-angle-double-right fa-fw"></i>Read More</a></div>
     </div>
   </div>
 
