@@ -81,6 +81,105 @@
 
   <div class="lx-entry padding">
     <div>
+      <h2 class="title"><a href="/%E5%AE%9D%E8%B4%9D%E5%84%BF%EF%BC%8C%E4%B8%80%E8%B5%B7%E5%AD%A6Python%E5%91%80-5/">宝贝儿，一起学Python呀 - V</a></h2>
+      <span class="lx-post-detail"><i class="fa fa-calendar-o"></i> 2021-07-01</span>
+      <p><h1 id="宝贝儿，一起学Python呀-V"><a href="#宝贝儿，一起学Python呀-V" class="headerlink" title="宝贝儿，一起学Python呀 - V"></a>宝贝儿，一起学Python呀 - V</h1><h2 id="一切从print-说起"><a href="#一切从print-说起" class="headerlink" title="一切从print()说起"></a>一切从print()说起</h2><p>今天是&lt;&lt;宝贝儿，一起学Python呀&gt;&gt;的第五篇，这一篇里，咱们一起聊聊Python的print()函数，然后初步认识一下整型和字符串这两种数据类型。</p>
+<p>对了，今天开始会有课后作业。我很希望您能在VS Code里实际写一写作业里的神秘小代码，感受一下Python带给您的乐趣。如果您确实体会到了乐趣，记得找我一起去安定医院挂号。。。</p>
+<center>一</center>
+
+<p>前文书曾经说过，一般入门编程教程的第一个实例程序都是让屏幕输出”Hello World”。据说这是一种能带来好运的习惯。那咱看看能不能好运喽:)</p>
+<p>前排提示：还记得怎么用VS Code写Python程序么？下图有没有让您回忆起什么?</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/python/helloworld.png" alt="hello world1"></p>
+<p>对了，要点是在您集中存放Python程序的文件夹，使用右键菜单选择“使用Code打开”，然后新建一个.py文件,然后输入如下的语句:</p>
+<blockquote>
+<p>print(Hello World)</p>
+</blockquote>
+<p>然后在文件上右键单击，选择”在终端中运行Python文件”</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/python/helloworld2.png" alt="helloworld2"></p>
+<p>怎么样？是不是报错了？您应该收到了这样的错误信息:</p>
+<blockquote>
+<p>SyntaxError: invalid syntax</p>
+</blockquote>
+<p>这个报错表示代码有语法错误，而且Python解释器会很贴心告诉您错误在哪。</p>
+<p>那错误在哪呢？下面请清空所有代码，咱们重新输入如下代码，然后分析分析：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;Hello World&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello World&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;It&#x27; s a good day&quot;</span>) <span class="comment">#双引号</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;&#x27;&#x27;Hello </span></span><br><span class="line"><span class="string">World&#x27;&#x27;&#x27;</span>) <span class="comment">#三个单引号</span></span><br><span class="line"><span class="built_in">print</span>(<span class="number">1</span>+<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+<p>请注意， # 后面的文字是我写给您的注释，并不是代码的一部分。我也很推荐您在写代码时，把自己的一些想法注释在这里。当然了，我有时也会在自己千辛万苦之后终于跑通的代码后面会以注释的形式赋诗一首。。。这个也无所谓了，自己玩儿，开心和乐趣很重要哒。</p>
+<p>另外需要注意的是，# 是单行注释，不能换行，换行就变成代码了。</p>
+<p>下面我们再执行一下，这次没有报错了，反馈结果是: ( 为了方便观察，我把代码以注释形式放在后面)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 所有符号均是英文模式下的符号</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;Hello World&#x27;</span>) <span class="comment"># 输出Hello World</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello World&quot;</span>) <span class="comment"># 输出Hello World</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;It&#x27; s a good day&quot;</span>) <span class="comment"># 输出It&#x27; s a good day</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;&#x27;&#x27;Hello</span></span><br><span class="line"><span class="string">World&#x27;&#x27;&#x27;</span>) <span class="comment"># 输出Hello World, Hello后面换行 </span></span><br><span class="line"><span class="built_in">print</span>(<span class="number">1</span>+<span class="number">3</span>) <span class="comment"># 输出4</span></span><br></pre></td></tr></table></figure>
+
+<p>看见了吧，下面咱们逐个分析分析。</p>
+<p>print(‘Hello World’)和print(“Hello World”)都能输出Hello World，所以一般情况下，把字符串用单引号双引号括起来都行。二者的区别在print(“It’ s a good day”)这里体现。使用双引号括起的字符串，字符串里的单引号会以字符的形式正常输出，而这时如果是单引号括起来，那就会报错了。至于三个引号，那就是完全找原样输出。三个引号内字符串有换行，print()输出一样会换行。</p>
+<p>至于print(1+3)，Python会进行计算，然后把结果转换为字符串输出。</p>
+<p>所以我们可以大致得出关于Python的print()的结论:</p>
+<blockquote>
+<p>对于print(‘’)，直接输出字符串，但字符串不能含有’</p>
+<p>对于print(“”), 直接输出字符串，且字符串可以包含’</p>
+<p>对于print(‘’’’’’), 直接输出字符串，且可以换行</p>
+<p>对于print(表达式), 计算表达式的结果，然后转换为字符串输出</p>
+</blockquote>
+<p>所以这也就能理解，我们第一次的代码print(Hello World)为什么Python会报错，因为既没有’’说明这是字符串，也不是一个能被Python理解的表达式。</p>
+<p>我们写代码时最常用的print()，基本上了解这些就可以了。值得注意的是，虽然print()里面可以是表达式，甚至是数字，比如print(1234567), Python都可以很好的识别，但这里其实有个小隐藏步骤，就是print()其实还是把要输出的内容转化为了字符串。</p>
+<p>对了，还得补充一句，这里的print()叫做函数，()里的内容就是这个函数的参数。有的函数不需要参数。比如：</p>
+<blockquote>
+<p>帮我买东西(要买的东西)</p>
+</blockquote>
+<p>这个函数就是带参数的，每次调用这个函数，您需要把要买的东西作为参数写在函数后面的括号里。如果没写，就会报错“出错，您没有说明您让我帮忙买的东西”。</p>
+<p>再比如:</p>
+<blockquote>
+<p>帮我洗袜子()</p>
+</blockquote>
+<p>这个函数没有参数，但括号不能省略，每次使用这个函数，需要写成 帮我洗袜子()就行了。</p>
+<p>至于print()，理论上是需要带参数的，参数就是您想输出的内容。但实际上，在代码里写成print()，括号里什么都没有，程序也不会报错，只是什么也不干罢了。至于为什么Python的设计者要这么做，而不是抛出一个错误，那我就不知道了。好在谁也不会真的写个print()占字数，没听哪位程序员说工资是按照程序行数结算的。</p>
+<blockquote>
+<p>另外相信您也看见了，Python的程序是每句话一行，结尾不用任何符号表示结束。看起来很简单是吧？ 等以后加上缩进表示逻辑层级时，相信您会感受到被对齐Tab支配的恐惧:)</p>
+</blockquote>
+<center>二</center>
+
+<p>上面提到了数据类型，比如，1，2，3，4，这个都是整数，Python里都叫整型。 </p>
+<p>1.3， 2.4，这些都是小数，Python里叫浮点。</p>
+<p>至于字符串，自然就是字符组成的串了，怎么样，解释非常科学吧。</p>
+<p>Python下定义数据类型非常简单，比如</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="number">1</span> <span class="comment"># 定义一个整型变量</span></span><br><span class="line">y = <span class="number">2.4</span> <span class="comment"># 定义一个浮点型变量</span></span><br><span class="line">z = <span class="string">&#x27;伦家是个字符串&#x27;</span> <span class="comment"># 定义一个字符串。Python中用&#x27;&#x27;或&quot;&quot;括起来的就是字符串</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>看出来了吧，Python 无需想其它语言那样需要事先约定数据类型。如C++就这么定义:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> x = <span class="number">1</span>; <span class="comment">//定义一个整型变量</span></span><br></pre></td></tr></table></figure>
+
+<p>Python定义变量非常简单，也比较随意，对于使用者非常友好，但是这也要求我们在编程时需要脑子很清楚，不然很容易出错。举个例子，我设计这么一个密码锁小程序:</p>
+<blockquote>
+<p>我事先给门锁预定一个密码，666666吧，反正我也想不出来什么复杂密码。然后我请您输入密码，如果一致，把门打开，如果不一致，继续请您输入。</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">password = <span class="string">&#x27;&#x27;</span> <span class="comment"># 定义password变量，类型是字符串，但我没有预设任何内容，目的仅仅是接收您输入的密码字符串</span></span><br><span class="line"><span class="keyword">while</span> password !=<span class="string">&#x27;666666&#x27;</span>: <span class="comment"># 条件判断，!=的意思是不等于。这行密码的意义是，判断密码是否是我预设的666666</span></span><br><span class="line">	password = <span class="built_in">input</span>(<span class="string">&#x27;请尝试输入密码： &#x27;</span>) <span class="comment"># input()函数的作用是捕捉键盘的输入。&#x27;请尝试输入密码： &#x27;是终端提示，没有提示，您面对着黑黑的终端估计也不知道要干嘛不是:) 注意这一行前面是空了一个制表符的。 这就是缩进。Python的缩进是我学习使用Python中遇到的第一个障碍，没事，有我在，我会让您和我感同身受哒</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;欢迎回家&#x27;</span>) <span class="comment"># 您的密码输对了，那就跳出循环，显示欢迎回家。不然就得一直让您输密码，直到输对了算。。。</span></span><br></pre></td></tr></table></figure>
+
+<p>这段代码的关键就是这个条件判断</p>
+<blockquote>
+<p>while password !=’666666’:</p>
+</blockquote>
+<p>注意到了么，这里的666666是加了’’的，考考您，这是什么数据类型？对了，不是整型数字，是字符串。password是input()函数捕捉到的键盘输入，类型是字符串，都是字符串才有比较的意义。如果666666没加’’，变成了</p>
+<blockquote>
+<p>while password !=666666:</p>
+</blockquote>
+<p>那只能说，您今天怕是不能回家了。就算您把键盘按烂了，无论如何您按出来的这个字符串也是不可能等于一个数字666666的。就像小哥哥再温柔体贴善良正直，长得不行还没钱，只有一辆马自达，那无论小哥哥说什么甜言蜜语，有些只喜欢在宝马车上哭的小姐姐也只当是放P。社会如此，我们无法改变。现在买不起宝马，将来也总买得起，相信我，到那时，你会发现当初当舔狗的自己有多SB，你也会知道哪个只认识宝马标，却不知道宝马X1还不如马自达CX-5贵的小姐姐和当初当舔狗的自己其实智力也没差多少，你一定会释然，并且微笑。</p>
+<p>我去，跑题了跑题了。总之，咱们今天讲了print()的使用，认识了整型，浮点型两种数字类型，初识了字符串类型。那亲爱的朋友，咱们做几道题复习复习如何？请解答以下题目，然后自己在VS Code里实际写出来，运行一下看看您的解答是不是对的。</p>
+<p>第一题：程序输入结果是什么？</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="number">123</span>+<span class="string">&#x27;456&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>第二题: 程序最后打出了谁的名字？</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">name=<span class="string">&#x27;长泽雅美&#x27;</span></span><br><span class="line">name=<span class="string">&#x27;石原里美&#x27;</span></span><br><span class="line">name=<span class="string">&#x27;新垣结衣&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(name)</span><br></pre></td></tr></table></figure>
+
+
+
+<p>今天就到这里啦，再见。下一篇，我尝试着写一下最简单的循环基础，以及另一个超级无敌常用的数据类型：列表。</p>
+<p>再见，爱你，么么哒。</p>
+</p>
+      <div class="post-button"><a class="btn" href="/%E5%AE%9D%E8%B4%9D%E5%84%BF%EF%BC%8C%E4%B8%80%E8%B5%B7%E5%AD%A6Python%E5%91%80-5/" rel="noopener"><i class="fa fa-angle-double-right fa-fw"></i>Read More</a></div>
+    </div>
+  </div>
+  <div class="lx-entry padding">
+    <div>
       <h2 class="title"><a href="/%E7%B3%9F%E4%BA%86%EF%BC%8C%E6%98%AF%E5%BF%83%E5%8A%A8%E7%9A%84%E6%84%9F%E8%A7%89%E3%80%82%E5%86%99%E5%9C%A8Windows-11%E5%8F%91%E5%B8%83%E4%B9%8B%E5%88%9D/">哥们儿，先别急着心动 - 写在Windows 11发布之初</a></h2>
       <span class="lx-post-detail"><i class="fa fa-calendar-o"></i> 2021-06-26</span>
       <p><h1 id="哥们儿，先别急着心动-写在Windows-11发布之初"><a href="#哥们儿，先别急着心动-写在Windows-11发布之初" class="headerlink" title="哥们儿，先别急着心动 - 写在Windows 11发布之初"></a>哥们儿，先别急着心动 - 写在Windows 11发布之初</h1><center>一</center>
@@ -634,33 +733,6 @@
 <p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/2/123.jpg" alt="哈弗H3"></p>
 </p>
       <div class="post-button"><a class="btn" href="/%E5%B0%8F%E9%BD%90%E8%A6%81%E6%B1%82%E6%88%91%E5%86%8D%E5%86%99%E4%B8%80%E7%AF%87%E5%8C%85%E5%90%AB%E5%B0%8F%E7%B1%B3%E7%9A%84%E4%BD%9C%E6%96%87%EF%BC%8C%E4%B8%8D%E5%B0%91%E4%BA%8E800%E5%AD%97%EF%BC%8C%E8%A6%81%E6%B1%82%E7%9C%9F%E6%83%85%E5%AE%9E%E6%84%9F/" rel="noopener"><i class="fa fa-angle-double-right fa-fw"></i>Read More</a></div>
-    </div>
-  </div>
-  <div class="lx-entry padding">
-    <div>
-      <h2 class="title"><a href="/%E6%84%9F%E5%8F%97%E5%95%A4%E9%85%92%E7%9A%84%E5%BF%AB%E4%B9%90%EF%BC%8C%E8%BF%9C%E7%A6%BB%E5%A4%A7%E7%B1%B3/">感受啤酒的快乐，远离大米</a></h2>
-      <span class="lx-post-detail"><i class="fa fa-calendar-o"></i> 2021-05-17</span>
-      <p><h1 id="感受啤酒的快乐，远离大米"><a href="#感受啤酒的快乐，远离大米" class="headerlink" title="感受啤酒的快乐，远离大米"></a>感受啤酒的快乐，远离大米</h1><blockquote>
-<p>特别想和关心爱护我的人说一声感激，同时也想请您放心，我不会臣服于酒精的麻醉，我只是喜欢那份纯粹</p>
-</blockquote>
-<p>本文也发表于鄙人的Blog <a href="https://smallfish-bigocean.github.io/">小鱼游大海</a></p>
-<p>不知不觉，距离上次写作已经快半个月了，为了不让拖延症的阴影再次笼罩我的大地，这次我准备搬出自己最爱的主题之一：啤酒。</p>
-<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/beer/975bd234ly4gmrm41qwbvg20dw07uq8v.gif" alt="啤酒"></p>
-<p>要说啤酒，也算历史悠久的低酒精饮料，据说全球消耗量仅次于水和茶。啤酒的种类很多，而我最喜欢的，莫过于德国啤酒啦。那醇厚的粮食带来的醇厚滋味，啤酒花特有的香气，爽滑的口感，丰富的泡沫，加上不同原料下带来的独有的口味，一杯冰凉的啤酒，仿佛灵魂都能得到升华，无论什么忧伤都能得到治愈。</p>
-<p>德国啤酒的出名，应该主要是因为巴伐利亚大公威廉四世颁布于1516年的那部《纯正啤酒法》，其中规定，当时巴伐利亚的啤酒，只能采</p>
-<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/beer/Reinheitsgebot1.jpg" alt="纯正法"></p>
-<p>啤酒花，大麦，和水。后来随着酵母的出现，慢慢酵母也被加入到允许的成分当中。所以纯粹的巴伐利亚啤酒，应该只含有啤酒花，大麦，水，和酵母四种原料，正如好的中国白酒必须是纯粮食发酵，这是底线，不可逾越。</p>
-<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/beer/bier_grundzutaten.jpg" alt="啤酒原料"></p>
-<p>当然了，随着德国领土的变迁，巴伐利亚的《纯正啤酒法》逐渐扩展到全德国，而允许的原料也慢慢加入了小麦，于是，就有了现在享誉全球的德国啤酒。</p>
-<p>在中国，聪明的中国人用各种完美的食材，搭配德国啤酒，形成至纯至真的灵魂组合，令人直接跳过996007，直接步人生巅峰。比如，凉粉，凉皮，炸灌肠，酱牛肉，猪头肉，羊头肉，酱肘子，花生米，毛豆，花生米+毛豆，哈尔滨红肠，蒜肠，泥肠，溜肥肠，炸素丸子。。。 不能再写了，再写口水就滴到键盘上了。。。</p>
-<p>当然，并非只有德国啤酒才能带给您春天般的惬意，夏日的火热，秋天的满足感，冬日的爽快感。作为啤酒生产大国，中国本土也有不少啤酒品牌。作为理工科钢铁直男，我也得在此提醒，选择啤酒时，一定要注意看成分。别被啤酒的文案和包装蒙蔽双眼，那是CBD的才干的事儿 (开玩笑的大哥，您把刀放下)…</p>
-<p>有些啤酒为了降低成本，对，就是降低成本，没有其它理由，一些啤酒里会放入大米，玉米淀粉等原料，它们会在确保啤酒粮食口感的同时，大大降低成本，毕竟麦子多贵呀，是吧。但是，这些成分产生的杂醇会使我们喝完啤酒以后特别难受，完全没有那种走向人生巅峰的愉快，而且大米带来的味道，远不能同大麦相提并论。所以，我的建议是，想感受啤酒的快乐，就要远离大米！</p>
-<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/beer/dami.jpg" alt="大米"></p>
-<p>嗯嗯，请大米小朋友不要摆出一副惊讶的表情，我说的不是你。</p>
-<p>亲爱的朋友，相信咱们最近事儿都挺多的，但有机会，还是希望能和您坐下来一起喝一杯纯粹的啤酒，不是为了追求酒精的刺激和麻醉，仅仅是为了一份简单的快乐。</p>
-<p>干杯~~~</p>
-</p>
-      <div class="post-button"><a class="btn" href="/%E6%84%9F%E5%8F%97%E5%95%A4%E9%85%92%E7%9A%84%E5%BF%AB%E4%B9%90%EF%BC%8C%E8%BF%9C%E7%A6%BB%E5%A4%A7%E7%B1%B3/" rel="noopener"><i class="fa fa-angle-double-right fa-fw"></i>Read More</a></div>
     </div>
   </div>
 

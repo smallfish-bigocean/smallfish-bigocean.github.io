@@ -81,6 +81,61 @@
 
   <div class="lx-entry padding">
     <div>
+      <h2 class="title"><a href="/%E6%B1%82%E7%B4%A2%E9%9B%86-%E7%AC%AC%E4%B8%89-%E5%93%AA%E9%87%8C%E6%9D%A5%E7%9A%84e/"></a></h2>
+      <span class="lx-post-detail"><i class="fa fa-calendar-o"></i> 2022-04-20</span>
+      <p><center>一</center>
+
+<p>我发现每次git强制合并都会出问题, 这次是一个新朋友.</p>
+<p>话说以前每次电脑打开python数据分析学习笔记我都是先git pull把之前存在github上的最新笔记down下来然后再开始学习, 结果这次我糊涂了,直接就在本地笔记上开始了学习, 结果就出现了问题,</p>
+<p>远程的版本是2.0, 然后我本地的版本是之前1.0基础上更新的1.1, 所以当前情况就是, github库里有的本地没有, 本地有的github没有, 而不是简单的1.0 - 1.1 - 1.2的关系.</p>
+<p>于是我还是简单粗暴直接进行了强制合并.</p>
+<p>于是再次打开强制合并后的笔记, 完蛋了, 报错…</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/20220411/1.png" alt="打开笔记报错"></p>
+<p>这可是有好几百行的, 从新年到现在的学习笔记, 有我的笔记, 我的代码, 我的心得…</p>
+<p>于是我幻想着跳过jupyter notebook服务, 直接用文本编辑器打开笔记本, 好歹把东西拷贝出来吧, 哦耶, 还是报错…</p>
+<p>此时我不得不把头仰起45度, 这样大鼻涕泡才会准确流到嘴里, 让我了解人生的滋味…</p>
+<p>我不得不打开浏览器进入搜索引擎, 只是此时已经没有了以往的期盼和憧憬, 因为我甚至懒得用隐私浏览模式. 一番搜索, 总算看到一个和我一样倒霉的大哥的经历, 他说保不齐是强制合并的时候Git系统干了什么不为人知的事情.</p>
+<p>我去, 原来如此! 于是把笔记单独存了一份, 强制把文件后缀改成txt, 然后文本编辑器打开, 果然呀果然:</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/20220411/3.png" alt="笔记变成了这样"></p>
+<p>Git自作主张修改了我的笔记, 把改动信息也给插进来了, 还好新问我是接受当前修改还是接受两边的修改,问题是我腰不改后缀的话我连笔记文件都打不开了大哥!!!</p>
+<p>别废话了, 一顿accept, 然后我的笔记又回来了, 好感动~~~</p>
+<img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/20220411/4.png" alt="笔记回来喽" style="zoom:50%;" />
+
+<p>于是我第N次 (N&gt;=xxx)告诉自己, 别偷懒强制合并了, 你把握不住的大哥…</p>
+<center>二</center>
+
+<p>python数据分析学到了多维数组的通用函数, 结果以前中学学过的对数又出来了, 还有那个如梦魇般在当初我的脑袋里和武侠小说, 四大天王周华健, 还有圣斗士阿拉蕾挤占空间的自然常数e…</p>
+<p>说到常数我就必须要吐槽, 为什么你们这些常数就没有一个正常点的?</p>
+<p>圆周率Π. 是你让我第一次认识什么叫无限不循环小数. 你一个小数有零有整的我就忍了,然后你除不干净我也认了, 然后你还不循环? 你好意思不循环? 世界上怎么会有这么奇怪的东西?  而且老师还让背? 还比谁背的位数多???</p>
+<p>虚数单位i, 你竟然是-1的开方??? 当初老师让我们记那些正数的开方我就已经很爆炸了好吗? 2的平方根是1.414, 3的平方根是1.73, 5的平方根是2.236… 然后现在你一个-1也敢开方? 我先开了你信吗?</p>
+<p>直到e的出现, 我彻底老实了. 如果说i好歹还有个定义, Π至少还能和圆圈挂钩, 那你这个e是什么玩意? 一样的无限不循环, 但是你是算什么用的? 谁等于你乘以另一个家伙的平方? 谁又等于你乘以第三个奇怪家伙?</p>
+<p>我现在虽然没有年轻时的暴烈和桀骜不驯, 但那份对于”最起码我得知道你是干嘛用的吧”的执着依然旺盛, 好吧, 让我看看你这个e是怎么来的吧!</p>
+<p>网上能找到的最好懂的一个教程是用银行利息距离的, 好比说, 这家银行的存款年利息是100% (我靠, 这不是银行,这是慈善机构), 那么到了年底, 我的存款实际就成了:</p>
+<p>(1+ 100%)<sup>1</sup> = 2</p>
+<p>情况复杂了, 银行表示咱们现在是半年算一次利息, 但利率也下降到50%, 那么到一年结束, 实际存款就是</p>
+<p>(1+ 1/2)<sup>2</sup> =  2.25</p>
+<p>现在情况又复杂了, 银行说咱们按月计算利息, 利率是年利率的12分之一:</p>
+<p>(1+1/12)<sup>12</sup>= 2.61</p>
+<p>好的, 现在继续变化, 按天记利息, 每天利息是年利的365分之一:</p>
+<p>(1+1/365)<sup>365</sup> ≈ 2.715… 注意从这里开始, 就是约等于了.</p>
+<p>似乎发现问题了, 义务教育的好处体现了, 我们敏锐的发现, 似乎利息分的越细, 这个实际存款就越接近2.几或3之间的某个数. 咱们算算:</p>
+<p>(1+1/99999)<sup>99999</sup> ≈  2.7183</p>
+<p>果然, 这个数似乎是有极限的, 这个极限看起来像是2.72 左右.</p>
+<p>于是用极限来表示,就是:</p>
+<img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/20220411/e.jpg" alt="e到底是什么" style="zoom:50%;" />
+
+<p>而这个极限, 就是e, 也就是自然常数, 约等于2.718281828459045, 和我们的猜测差不多.</p>
+<p>和用割圆法求圆周率差不多, n取的越大, (1+1/n)<sup>n</sup>就越接近e.</p>
+<p>到这里, 我们就弄明白e是怎么来的了. 至于这个e能干什么, 那可就玄乎了, 感觉这个e简直无所不能, 玫瑰开花, 母猪配种, 阴阳和谐, 民主富强, 似乎都离不开这个e. 得嘞, 今天关于e的研究就到此为止, 下次接着聊.</p>
+<blockquote>
+<p>如果能学进去, 其实学习还是挺好玩儿的:)</p>
+</blockquote>
+</p>
+      <div class="post-button"><a class="btn" href="/%E6%B1%82%E7%B4%A2%E9%9B%86-%E7%AC%AC%E4%B8%89-%E5%93%AA%E9%87%8C%E6%9D%A5%E7%9A%84e/" rel="noopener"><i class="fa fa-angle-double-right fa-fw"></i>Read More</a></div>
+    </div>
+  </div>
+  <div class="lx-entry padding">
+    <div>
       <h2 class="title"><a href="/%E6%B1%82%E7%B4%A2%E9%9B%86-%E7%AC%AC%E4%BA%8C-%E4%BD%A0%E4%BB%AC%E8%BF%98%E6%98%AF%E5%AF%B9%E6%88%91%E8%BF%99%E4%B8%AA%E5%AE%9D%E5%AE%9D%E5%8A%A8%E6%89%8B%E4%BA%86/">求索集 第二 - 你们还是对我这个宝宝动手了</a></h2>
       <span class="lx-post-detail"><i class="fa fa-calendar-o"></i> 2022-04-06</span>
       <p><h1 id="求索集-第二-你们还是对我这个宝宝动手了"><a href="#求索集-第二-你们还是对我这个宝宝动手了" class="headerlink" title="求索集 第二 - 你们还是对我这个宝宝动手了"></a>求索集 第二 - 你们还是对我这个宝宝动手了</h1><center>一</center>
@@ -586,57 +641,6 @@
 <p>看看, 哲人就是哲人, 要不人家女朋友多呢. 得了, 今天想说的也说差不多了, 闲聊几句, 没什么干货. 下次聊什么我还没想好, 想好了就跟您聊, 88.</p>
 </p>
       <div class="post-button"><a class="btn" href="/%E5%9B%9B%E5%8D%81-%E4%B8%BA%E4%BB%80%E4%B9%88%E5%B0%B1%E8%83%BD%E4%B8%8D%E6%83%91/" rel="noopener"><i class="fa fa-angle-double-right fa-fw"></i>Read More</a></div>
-    </div>
-  </div>
-  <div class="lx-entry padding">
-    <div>
-      <h2 class="title"><a href="/%E5%BC%80%E6%BA%90%E8%80%85%E7%9A%84%E6%83%85%E6%80%80/">开源者的情怀</a></h2>
-      <span class="lx-post-detail"><i class="fa fa-calendar-o"></i> 2022-01-21</span>
-      <p><h1 id="情怀"><a href="#情怀" class="headerlink" title="情怀"></a>情怀</h1><p>情怀, 我的理解是感情的容器, 是一个人在特定时间对特定事物的感情集合, 因此, 情怀是很复杂的, 并不都是美好, 也不都是丑恶. 情怀无所谓好, 无所谓坏, 它是人生的一个片段, 时过境迁, 便无法改变, 只会藏在你的心里.</p>
-<p>之所以让我想到情怀这个词, 大抵是因为这样一则新闻:</p>
-<blockquote>
-<p>12年历史的 PDF 补丁丁, 今天开放源代码了</p>
-</blockquote>
-<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/%E6%83%85%E6%80%80/pdf%E8%A1%A5%E4%B8%81%E4%B8%81.png" alt="补丁丁"></p>
-<p>PDF补丁丁可能听过的人不多, 但之前需要频繁处理PDF时, 这个小软件却在很多方面对我提供了很大的帮助. 相对PDF处理的巨无霸Adobe Acrobat Pro而言, 小巧的补丁丁把常用的PDF操作, 比如提取页面, 自动生成书签, 批量修改文件等整合在一个小界面里, 就像瑞士军刀, 小而强悍, 绝对是日常使用的利器.</p>
-<p>就这样一个小工具, 作者坚持维护了12年, 而且就在刚刚, 作者还把这个软件开源了. 而真正震撼我的, 是作者这个自己编的开源版权协议:</p>
-<blockquote>
-<p>《PDF 补丁丁》软件（以下简称本软件）受著作权法及国际条约条款和其它知识产权法及条约的保护。<br>本软件对于最终用户免费。由于本软件使用了带有 AGPL 条款的第三方开源组件，因此，本软件及其源代码的使用协议也基于 AGPL。另外还带有如下附加条件。在遵守本软件的前提条件下，你可以在遵循本协议的基础上自由的使用和传播它，你一旦安装、复制或使用本软件，则表示您已经同意本协议条款。如果你不同意本协议，请不要安装使用本软件，也不应利用其源代码。</p>
-<p>附加条件：<br>每一个使用本软件的用户，如果本软件帮助了您，每使用本软件后，您应当做 1 件善事。善事无分大小，有心则行。例如：</p>
-<ol>
-<li>如果您的父母在身边，你可以为您的父母做一顿美味的饭菜，或者为他们按摩、洗脚；如果他们身处远方，你可以向他们发起通话，问候他们的健康和生活。</li>
-<li>在大雨滂沱的时候，如果您有雨伞，可与同路的人共享；在烈日当空的时节，如果您看到环卫工人太阳下工作，您可以为他们买一瓶水送给他们；在拥挤的公共交通工具上，或在公共场合排队等候之际，如果您有座位，可以让给老人、孕妇或提着重物的人就坐。</li>
-<li>您可以用您擅长的技能，为身边的人排难解困；您可以将您的知识，分享给其他人，让他们有所获益；您可以向比您困难的人捐资赠物。</li>
-<li>如果您觉得这个软件真的好用，请将它的使用方法介绍给别人，让别人也通过使用本软件而得到好处；或者将其它您觉得好用的软件介绍给别人。</li>
-</ol>
-<p>如果您无法做到使用本软件后做 1 件善事，请记在心中。在有机会的时候，多行善积德。本用户协议之遵循与否，全在于您的良心。是为“<strong>良心授权</strong>”。</p>
-</blockquote>
-<p>我想, 这应该是我见过最让人温暖的协议. 尤其是读了作者的Blog, 得知他是在家人去世后的沉痛之余, 做出了这样的选择. 作者的劳动成果给我的工作提供了很多帮助, 我想, 我也应该做点什么, 那么, 我就把这个出色的PDF处理工具集介绍给大家吧, PDF处理虽然属于比较小众的行业软件, 但只要您涉及于此, 这个小工具必会带给您帮助, 只要您用过庞大的Acrobat, 您就会知道这个小工具有多方便.</p>
-<p>二</p>
-<p>怀着感恩的心情到作者的Git仓库看了一下, 我就懵逼了… 我以为会有现成的Release, 我只要分享一下就好, 结果发现木有, 那就得下载源代码然后自己编译了, 这事儿我没干过, 咱们一步一步来.</p>
-<p>先把整个项目git pull下来, 然后看了一下, 很好, 源代码有sln文件, 这是Visual Studio 的项目文件呀</p>
-<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/%E6%83%85%E6%80%80/sln.png" alt="sln文件"></p>
-<p>直接用Visual Studio打开sln文件, 然后生成解决方案, 完美! 然后就报错了…</p>
-<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/%E6%83%85%E6%80%80/vs%20error.png" alt="报错"></p>
-<p>报错不怕, 有错误信息就行. 直接百度一下, 原来是这些文件需要解锁, 于是挨个解锁, 这次完美编译, 搞定!</p>
-<p>我把程序放在了gitee上, 请您随意使用, 再次感谢作者带给我们的温暖.</p>
-<p><a target="_blank" rel="noopener" href="https://gitee.com/houyufengatgitee/sharingforpublic/blob/master/PDFPatcher.zip">PDF补丁丁</a></p>
-<p>三</p>
-<p>从某种意义上, 我认为 开源和情怀是近义词. 要知道, 大量的开发者仅仅从兴趣出发, 把自己的成果无偿分享给大家, 然后就构成了一个美好的世界. 我现在还存着当年Linux之父Linus Benedict Torvalds开发完第一版Linux内核后的那封邮件 (里面的中文是我加的注释, 英语四级将及格, 理解一下…):</p>
-<blockquote>
-<p>I’m doing a (free) operating system (just a hobby 业余爱好, won’t be big and professional like gnu) for386(486) AT clones. This has been brewing 发酵 since april, and is starting to get ready. I’d like any feedback on things people like/dislike in minix, as my OS resembles 类似 it somewhat 稍微, 有点 (same physical layout of the file-system (due to practical 真实的, 切实有效的, 务实的 reasons) among other things). I’ve currently ported bash(1.08) and gcc(1.40),and things seem to work. This implies 意味着, 蕴含 that I’ll get something practical within a few months, and I’d like to know what features most people would want. Any suggestions are welcome, but I won’t promise I’ll implement them :-) Linus(<a href="mailto:torv...@kruuna.helsinki.fi">torv...@kruuna.helsinki.fi</a>) PS.Yes- it’s free of any minix code, and it has a multi-threaded fs. It is NOT protable (uses 386 task switching etc), and it probably never will support anything other than AT-harddisks, as that’s all I have :-(.</p>
-</blockquote>
-<p>我想, 他当时一定没想到, 自己出于兴趣创造的东西, 现在已经影响了全世界. 如果说Linux因为其专业性和使用门槛造成还无法像Windows那样在桌面领域普及, 那基于Linux构建的安卓系统早已称霸全球. (按设备数量算, 安卓的市场占有率在移动领域是80% - 90%, 即使算上PC和其它需要操作系统的设备, 安卓的市占率也达到了39%, 而Windows是34%), 而这一切, 从这个层面上说, 开源, 是推动互联网乃至人类进步的巨大动力.</p>
-<p>四</p>
-<p>开源其实是很宽泛的, 并不仅仅是公开自己的程序源代码, 分享思想, 理念, 方法, 我觉得都是开源. 这也是我有时候厚着脸皮觉得自己其实也是开源一份子的原因,哈哈. 但是, 在赞美开源的同时, 我也想说, 开源社区是需要善待的. 而在这个问题上, 我们国内的企业做的并不好, 甚至有些方面, 是无耻.</p>
-<p>我之前写过一篇文章 &lt;&lt;国产自主真正发展的前提-是不要侮辱国人的期待&gt;&gt;, 谈到了某个以爱国为营销卖点的著名国内企业, 赤裸裸地套用麻省理工给孩子们出的开源编程软件Scratch, 换了个配色就好成国产编程软件妄图进入国内教育界, 而且使用中赤裸裸地利用摄像头收集用户隐私, 而从未提及完全基于Scratch开源代码, 不要脸的程度令人发指. 而且, 这家企业对开源社区的利用不仅于此. 在企业操作系统市场, 这家企业直接拿来Red Hat 公司开发的Red Hat Enterprise Linux, 稍作修改便以”国产自研”为噱头大加宣传, 从头到尾别说Red Hat, 就连 Linux也不提一句. 这还不算, 这家公司的另外一个支柱型产品, 某面向手机的操作系统, 则开创了全新的抄作业模式, 就是”兼容”. 是的, 他们开发的所谓自研手机操作系统, 使用了安卓的开源代码, 而美其名曰”我们兼容安卓”, 如此手段, 只能说令人叹服. 难怪大家现在都在调侃:</p>
-<blockquote>
-<p>国外一开源, 我们就自主</p>
-</blockquote>
-<p>五</p>
-<p>人性本复杂, 开源社区也并不都是天使, 人么, 追求利益不丢人. 我本人很反对成天站在高高的讲台上扯着嗓门讲奉献, 心里却想着今晚找哪个情妇陪的行为. 但是, 我觉得大到企业, 小到个人, 还是要讲良心的. 当我们因为别人的劳动而受益时, 至少应该在心里说一声”谢谢”, 然后把这份感动转换为内心的善意, 把这份善意传递给周围的人.这无关乎法律, 也不是什么道德规范, 也不涉及素质, 这仅仅是人性中光明一面的副产品.</p>
-</p>
-      <div class="post-button"><a class="btn" href="/%E5%BC%80%E6%BA%90%E8%80%85%E7%9A%84%E6%83%85%E6%80%80/" rel="noopener"><i class="fa fa-angle-double-right fa-fw"></i>Read More</a></div>
     </div>
   </div>
 

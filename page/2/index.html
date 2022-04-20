@@ -81,6 +81,57 @@
 
   <div class="lx-entry padding">
     <div>
+      <h2 class="title"><a href="/%E5%BC%80%E6%BA%90%E8%80%85%E7%9A%84%E6%83%85%E6%80%80/">开源者的情怀</a></h2>
+      <span class="lx-post-detail"><i class="fa fa-calendar-o"></i> 2022-01-21</span>
+      <p><h1 id="情怀"><a href="#情怀" class="headerlink" title="情怀"></a>情怀</h1><p>情怀, 我的理解是感情的容器, 是一个人在特定时间对特定事物的感情集合, 因此, 情怀是很复杂的, 并不都是美好, 也不都是丑恶. 情怀无所谓好, 无所谓坏, 它是人生的一个片段, 时过境迁, 便无法改变, 只会藏在你的心里.</p>
+<p>之所以让我想到情怀这个词, 大抵是因为这样一则新闻:</p>
+<blockquote>
+<p>12年历史的 PDF 补丁丁, 今天开放源代码了</p>
+</blockquote>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/%E6%83%85%E6%80%80/pdf%E8%A1%A5%E4%B8%81%E4%B8%81.png" alt="补丁丁"></p>
+<p>PDF补丁丁可能听过的人不多, 但之前需要频繁处理PDF时, 这个小软件却在很多方面对我提供了很大的帮助. 相对PDF处理的巨无霸Adobe Acrobat Pro而言, 小巧的补丁丁把常用的PDF操作, 比如提取页面, 自动生成书签, 批量修改文件等整合在一个小界面里, 就像瑞士军刀, 小而强悍, 绝对是日常使用的利器.</p>
+<p>就这样一个小工具, 作者坚持维护了12年, 而且就在刚刚, 作者还把这个软件开源了. 而真正震撼我的, 是作者这个自己编的开源版权协议:</p>
+<blockquote>
+<p>《PDF 补丁丁》软件（以下简称本软件）受著作权法及国际条约条款和其它知识产权法及条约的保护。<br>本软件对于最终用户免费。由于本软件使用了带有 AGPL 条款的第三方开源组件，因此，本软件及其源代码的使用协议也基于 AGPL。另外还带有如下附加条件。在遵守本软件的前提条件下，你可以在遵循本协议的基础上自由的使用和传播它，你一旦安装、复制或使用本软件，则表示您已经同意本协议条款。如果你不同意本协议，请不要安装使用本软件，也不应利用其源代码。</p>
+<p>附加条件：<br>每一个使用本软件的用户，如果本软件帮助了您，每使用本软件后，您应当做 1 件善事。善事无分大小，有心则行。例如：</p>
+<ol>
+<li>如果您的父母在身边，你可以为您的父母做一顿美味的饭菜，或者为他们按摩、洗脚；如果他们身处远方，你可以向他们发起通话，问候他们的健康和生活。</li>
+<li>在大雨滂沱的时候，如果您有雨伞，可与同路的人共享；在烈日当空的时节，如果您看到环卫工人太阳下工作，您可以为他们买一瓶水送给他们；在拥挤的公共交通工具上，或在公共场合排队等候之际，如果您有座位，可以让给老人、孕妇或提着重物的人就坐。</li>
+<li>您可以用您擅长的技能，为身边的人排难解困；您可以将您的知识，分享给其他人，让他们有所获益；您可以向比您困难的人捐资赠物。</li>
+<li>如果您觉得这个软件真的好用，请将它的使用方法介绍给别人，让别人也通过使用本软件而得到好处；或者将其它您觉得好用的软件介绍给别人。</li>
+</ol>
+<p>如果您无法做到使用本软件后做 1 件善事，请记在心中。在有机会的时候，多行善积德。本用户协议之遵循与否，全在于您的良心。是为“<strong>良心授权</strong>”。</p>
+</blockquote>
+<p>我想, 这应该是我见过最让人温暖的协议. 尤其是读了作者的Blog, 得知他是在家人去世后的沉痛之余, 做出了这样的选择. 作者的劳动成果给我的工作提供了很多帮助, 我想, 我也应该做点什么, 那么, 我就把这个出色的PDF处理工具集介绍给大家吧, PDF处理虽然属于比较小众的行业软件, 但只要您涉及于此, 这个小工具必会带给您帮助, 只要您用过庞大的Acrobat, 您就会知道这个小工具有多方便.</p>
+<p>二</p>
+<p>怀着感恩的心情到作者的Git仓库看了一下, 我就懵逼了… 我以为会有现成的Release, 我只要分享一下就好, 结果发现木有, 那就得下载源代码然后自己编译了, 这事儿我没干过, 咱们一步一步来.</p>
+<p>先把整个项目git pull下来, 然后看了一下, 很好, 源代码有sln文件, 这是Visual Studio 的项目文件呀</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/%E6%83%85%E6%80%80/sln.png" alt="sln文件"></p>
+<p>直接用Visual Studio打开sln文件, 然后生成解决方案, 完美! 然后就报错了…</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/%E6%83%85%E6%80%80/vs%20error.png" alt="报错"></p>
+<p>报错不怕, 有错误信息就行. 直接百度一下, 原来是这些文件需要解锁, 于是挨个解锁, 这次完美编译, 搞定!</p>
+<p>我把程序放在了gitee上, 请您随意使用, 再次感谢作者带给我们的温暖.</p>
+<p><a target="_blank" rel="noopener" href="https://gitee.com/houyufengatgitee/sharingforpublic/blob/master/PDFPatcher.zip">PDF补丁丁</a></p>
+<p>三</p>
+<p>从某种意义上, 我认为 开源和情怀是近义词. 要知道, 大量的开发者仅仅从兴趣出发, 把自己的成果无偿分享给大家, 然后就构成了一个美好的世界. 我现在还存着当年Linux之父Linus Benedict Torvalds开发完第一版Linux内核后的那封邮件 (里面的中文是我加的注释, 英语四级将及格, 理解一下…):</p>
+<blockquote>
+<p>I’m doing a (free) operating system (just a hobby 业余爱好, won’t be big and professional like gnu) for386(486) AT clones. This has been brewing 发酵 since april, and is starting to get ready. I’d like any feedback on things people like/dislike in minix, as my OS resembles 类似 it somewhat 稍微, 有点 (same physical layout of the file-system (due to practical 真实的, 切实有效的, 务实的 reasons) among other things). I’ve currently ported bash(1.08) and gcc(1.40),and things seem to work. This implies 意味着, 蕴含 that I’ll get something practical within a few months, and I’d like to know what features most people would want. Any suggestions are welcome, but I won’t promise I’ll implement them :-) Linus(<a href="mailto:torv...@kruuna.helsinki.fi">torv...@kruuna.helsinki.fi</a>) PS.Yes- it’s free of any minix code, and it has a multi-threaded fs. It is NOT protable (uses 386 task switching etc), and it probably never will support anything other than AT-harddisks, as that’s all I have :-(.</p>
+</blockquote>
+<p>我想, 他当时一定没想到, 自己出于兴趣创造的东西, 现在已经影响了全世界. 如果说Linux因为其专业性和使用门槛造成还无法像Windows那样在桌面领域普及, 那基于Linux构建的安卓系统早已称霸全球. (按设备数量算, 安卓的市场占有率在移动领域是80% - 90%, 即使算上PC和其它需要操作系统的设备, 安卓的市占率也达到了39%, 而Windows是34%), 而这一切, 从这个层面上说, 开源, 是推动互联网乃至人类进步的巨大动力.</p>
+<p>四</p>
+<p>开源其实是很宽泛的, 并不仅仅是公开自己的程序源代码, 分享思想, 理念, 方法, 我觉得都是开源. 这也是我有时候厚着脸皮觉得自己其实也是开源一份子的原因,哈哈. 但是, 在赞美开源的同时, 我也想说, 开源社区是需要善待的. 而在这个问题上, 我们国内的企业做的并不好, 甚至有些方面, 是无耻.</p>
+<p>我之前写过一篇文章 &lt;&lt;国产自主真正发展的前提-是不要侮辱国人的期待&gt;&gt;, 谈到了某个以爱国为营销卖点的著名国内企业, 赤裸裸地套用麻省理工给孩子们出的开源编程软件Scratch, 换了个配色就好成国产编程软件妄图进入国内教育界, 而且使用中赤裸裸地利用摄像头收集用户隐私, 而从未提及完全基于Scratch开源代码, 不要脸的程度令人发指. 而且, 这家企业对开源社区的利用不仅于此. 在企业操作系统市场, 这家企业直接拿来Red Hat 公司开发的Red Hat Enterprise Linux, 稍作修改便以”国产自研”为噱头大加宣传, 从头到尾别说Red Hat, 就连 Linux也不提一句. 这还不算, 这家公司的另外一个支柱型产品, 某面向手机的操作系统, 则开创了全新的抄作业模式, 就是”兼容”. 是的, 他们开发的所谓自研手机操作系统, 使用了安卓的开源代码, 而美其名曰”我们兼容安卓”, 如此手段, 只能说令人叹服. 难怪大家现在都在调侃:</p>
+<blockquote>
+<p>国外一开源, 我们就自主</p>
+</blockquote>
+<p>五</p>
+<p>人性本复杂, 开源社区也并不都是天使, 人么, 追求利益不丢人. 我本人很反对成天站在高高的讲台上扯着嗓门讲奉献, 心里却想着今晚找哪个情妇陪的行为. 但是, 我觉得大到企业, 小到个人, 还是要讲良心的. 当我们因为别人的劳动而受益时, 至少应该在心里说一声”谢谢”, 然后把这份感动转换为内心的善意, 把这份善意传递给周围的人.这无关乎法律, 也不是什么道德规范, 也不涉及素质, 这仅仅是人性中光明一面的副产品.</p>
+</p>
+      <div class="post-button"><a class="btn" href="/%E5%BC%80%E6%BA%90%E8%80%85%E7%9A%84%E6%83%85%E6%80%80/" rel="noopener"><i class="fa fa-angle-double-right fa-fw"></i>Read More</a></div>
+    </div>
+  </div>
+  <div class="lx-entry padding">
+    <div>
       <h2 class="title"><a href="/%E9%A5%AE%E6%B0%B4%E5%BD%93%E6%80%9D%E6%BA%90-%E5%AD%A6%E4%B9%A0%E8%B4%B5%E5%9D%9A%E6%8C%81/">饮水当思源, 学习贵坚持</a></h2>
       <span class="lx-post-detail"><i class="fa fa-calendar-o"></i> 2022-01-06</span>
       <p><h1 id="饮水当思源-学习贵坚持"><a href="#饮水当思源-学习贵坚持" class="headerlink" title="饮水当思源, 学习贵坚持"></a>饮水当思源, 学习贵坚持</h1><h3 id="推荐一款最近发现的宝藏级笔记软件"><a href="#推荐一款最近发现的宝藏级笔记软件" class="headerlink" title="推荐一款最近发现的宝藏级笔记软件"></a>推荐一款最近发现的宝藏级笔记软件</h3><p>“活到老, 学到老”.  这段时间接触到一个概念, “终身学习”, 大概意思就是人要把自己当成一部电脑, 不断升级操作系统的同时, 还要确保不断更新数据, 确保这台电脑始终能跟随时代的脚步. 终身学习者并不局限于学科和专业的限制, 而是在合理的时间内, 持续接触和了解新的知识, 并且努力把知识转化为实际中的应用, 在应用中拓展相关的知识,  以此循环, 建立一个属于自己的庞大知识体系, 如此反复, 就是终身学习.</p>
@@ -572,62 +623,6 @@
 <p>看起来部署一个基于浏览器的Scratch并不难, 像网易也是这么做的, 网易的创意编程社区 <a target="_blank" rel="noopener" href="https://kada.163.com/">有道卡搭</a> 就采用了基于浏览器的Scratch, 而且人家是大大方方说了自己用的是Scratch, 虽然不怎么自主吧, 但不用你摄像头麦克风, 也不收集你隐私, 让中国孩子踏踏实实学编程, 是不是也算为国出力了?</p>
 </p>
       <div class="post-button"><a class="btn" href="/%E5%9B%BD%E4%BA%A7%E8%87%AA%E4%B8%BB%E7%9C%9F%E6%AD%A3%E5%8F%91%E5%B1%95%E7%9A%84%E5%89%8D%E6%8F%90-%E6%98%AF%E4%B8%8D%E8%A6%81%E4%BE%AE%E8%BE%B1%E5%9B%BD%E4%BA%BA%E7%9A%84%E6%9C%9F%E5%BE%85/" rel="noopener"><i class="fa fa-angle-double-right fa-fw"></i>Read More</a></div>
-    </div>
-  </div>
-  <div class="lx-entry padding">
-    <div>
-      <h2 class="title"><a href="/%E9%82%A3%E4%B8%80%E5%A4%9C-%E6%88%91%E7%AB%9F%E7%84%B6%E5%81%9A%E4%BA%86%E8%BF%99%E6%A0%B7%E7%9A%84%E4%BA%8B%E5%84%BF/">那一夜, 我竟然做了这样的事儿...</a></h2>
-      <span class="lx-post-detail"><i class="fa fa-calendar-o"></i> 2021-10-28</span>
-      <p><h1 id="那一夜-我竟然做了这样的事儿…"><a href="#那一夜-我竟然做了这样的事儿…" class="headerlink" title="那一夜, 我竟然做了这样的事儿…"></a>那一夜, 我竟然做了这样的事儿…</h1><center>一</center>
-
-<p>问题: 用Python做数据分析时, 安装相关的包会报错</p>
-<p>解决方案: 请使用我做的一键安装Python数据科学包小工具:)</p>
-<center>二</center>
-
-<p>最近喜欢上了这种写问题解决类文章的结构,就是先说问题和解决方案,而把详细思路放在后面.因为据我观察,大家更喜欢知道如何解决,而不是分析和解决思路.</p>
-<p>话说Python学都学了, 门也入了,不搞搞数据分析实在说不过去. 于是老老实实找来&lt;&lt;Python for Data Analysis, 2nd Edition&gt;&gt;, 翻开第一页, “欲练神功, 挥刀…”, 抱歉串台了, 是”欲练神功, 先装包包”. 包嘛, Python最NB的两大法宝之一.Python之所以NB,就是因为它就像万能的百宝箱, 能满足您的一切需求 (当然了,生理需求还得靠吃喝拉撒睡以及花钱解决,但最近朝阳群众发挥出色,学钢琴有危险…), 而包,就是百宝箱里的宝贝啦.</p>
-<p>按照书的要求, 拿Python搞数据大体需要以下包:</p>
-<blockquote>
-<p>numpy<br>pandas<br>matplotlib<br>lxml<br>seaborn<br>statsmodels<br>scipy<br>patsy<br>scikit-learn<br>beautifulsoup4</p>
-</blockquote>
-<p>我一看, 嘿, 您别说, 除了不认识的, 就是认识的. numpy, Python搞数学的利器, 最近帮我做线性代数作业好用的一批, 那矩阵运算功能, 嗷嗷好用, 比我算的快多了而且没错过, 反正错了我也发现不了. pandas, 之前数据分析入门时用过, 而且还能处理Excel, 好东西. beautifulsoup4, 非常哇塞, Python看家功能 - 爬虫的基础包, 分析HTML, 找个神秘代码什么的, 嗷嗷好用. 剩下的,就是它认识我, 我不认识它了. 不认识没事儿, 装包咱会呀, 给Python装包可比装B简单多了. 走你! 直接打开Windows Terminal, 执行:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install &lt;包名&gt;</span><br></pre></td></tr></table></figure>
-
-<p>然后,我就收到了这样温馨的提示:</p>
-<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/datapackage/error.png" alt="error info"></p>
-<p>我去, 不是说好要做彼此的天使么, 为何如此为难一个单纯善良的少男? 这满屏的红色都是什么玩意? 没关系, 书中自有颜如玉, 打开 &lt;&lt;Python for Data Analysis, 2nd Edition&gt;&gt;, NB, 不愧是一部超级好的Python数据分析教材, 装包装出错一点没讲, 如此不多赚稿费的行为, 请允许我为您点赞.</p>
-<p>这下就有点尴尬了. 话说我只是个使用者, 说好听点, 数据科学领域的学习者, 难道还没在知识的海洋里徜徉, 我刚到沙滩就被晒太阳的比基尼小姐姐绊倒了? 当然我其实不介意, 只是总觉得中华民族伟大复兴事业刚刚如火如荼开展, 我怎么能就这么四仰八叉躺在知识海洋的沙滩上胡吃闷睡呢? 绝不允许呀! 于是, 我决定动用我不怎么丰富的知识找找思路.</p>
-<p>网络问题? 确实Python的包都是从互联网的库里下的, 但是我已经把库改成了清华大学开源网站, 不会经过太平洋海底的光缆, 无非就是从海淀跑到西城, 这网络还不是咔咔的? </p>
-<p>好吧, 为了确保不是晚高峰堵车导致数据包全卡在了三环路上, 我从网上把需要的包手动一个一个地下载到本地, 我本地离线安装, 这下没问题了吧?</p>
-<p>结果, 奇迹没有出现, Windows Terminal 还是仿佛满山杜鹃花, 红成了一片. 我就奇怪了, 为什么我最爱的 00992号港股就没这么红呢? 8块出头的股价什么时候才能涨到80? 为什么人生不如意, 十有八九? 难道阿拉伯著名哲学家说的都是对的?</p>
-<p>难道是Windows 11的问题? 自从把系统升级到了Win 11, 我已经被漂亮的输入法工具栏迷上了, 甚至为了随时见到它的身影, 我把积攒多年词库的QQ输入法都抛弃了, 你们知道里面有多少优雅的陪伴我成长的词汇? 不可能, 不可能是Windows 11的问题. 我的理性思维告诉我, Windows 11这么漂亮, 不可能会有错! 而且作为 “中国反舔狗协会北京市西城区西长安街街道分会副会长” 同时兼任”中国反颜值即正义协会海淀区马连洼街道软件园分会男秘书”的我, 从不相信长得好看就不会错, 所以肯定不是漂亮的Windows 11的错, 就这么愉快而理智地决定了!</p>
-<p>难道是我包下错了? 不可能, 我的Python是最新的3.10版本, 而我下的每一个包都写明了是 for 3.10, 作为61分高分通过大学四级英语考试的我而言, for 3.10 里的那个for简直就是明白无误地告诉我这是给3.10版Python用的, 怎么可能我下错包? 那种下了一个晚上&lt;&lt;七个男子闯入年轻夫妻家然后发生不可描述事件.mp4&gt;&gt; 最后一看是TM葫芦娃的2B行为, 肯定不是我干的, 我怎么可能下错包? 我怎么可能用512K的ADSL拨号上网下了一宿然后下个葫芦娃…</p>
-<p>包没错, Win 11没错, 我也没错, 大家都没错, 那错的是什么? 难道其实Windows Terminal 里面红色的Error其实是安装完毕的意思? 难道这是美帝的最新阴谋, 目的就是让我这样为中华崛起而奋斗的年轻才俊知难而退? 嗯, 很可能是这样. 我已经决定close掉这个问题, 安然入睡. 但是, 我胸前隐藏的红领巾告诉我, 勇敢的狮子座黄金圣斗士, 要勇敢面对, 不要就这样睡去啊! 而且您睡前不想去个洗手间么?</p>
-<p>唉?! 想去洗手间的念头出现在脑海里, 迅速激活了我大脑丘脑前核群以及穹窿峡的反馈, 难道是这样? 赶紧起床打开笔记本电脑, 对, 是那台ThinkPad W系列移动工作站, 是的, 联想的移动工作站非常好用我的朋友, 赶紧在我的每一行安装代码后面加上了那串神秘的字符:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">TOKYO HOT Original Movie Collection</span><br></pre></td></tr></table></figure>
-
-<p>抱歉抱歉我脑袋调错信息了,是</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install &lt;包名&gt; --user</span><br></pre></td></tr></table></figure>
-
-<p>哈哈哈, 见证奇迹的时刻, 所有包安装完毕! 没有报错! 没有问题! 没有红色! </p>
-<center>三</center>
-
-<p>搞定了包, 我突然想到, 遇到这样问题的肯定不止我一个, 大家都是Python的使用者而非程序员或专家, 遇到问题难道就如此知男而退? 这难道不会让人男上加男或者左右为男? 我觉得, 作为一个受党教育多年的超龄少先队员, 我有必要把安装所有Python数据分析需要的包做成一个简单的能一键成功的工具包, 而且本着开源的精神, 我应该把包以及代码都放到Github上. 于是, 就有了我维护的这个仓库:</p>
-<p><a target="_blank" rel="noopener" href="https://github.com/hou-yufeng/python_packages">Data Science Packages for Python (Github)</a><br><a target="_blank" rel="noopener" href="https://gitee.com/houyufengatgitee/python_packages">Data Science Packages for Python (Gitee)</a></p>
-<p>使用方法很简单, 我也在仓库首页写了readme, 简单到家啦</p>
-<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/datapackage/123.png" alt="Install instruction"></p>
-<center>四</center>
-
-<p>没想到整个过程最麻烦的不是写bat程序, 也不是下载包, 而是把包放到哪里供大家使用. 放到网盘然后分享? 请允许我对国内的网盘环境表示遗憾. 免费的不好用, 好用的不免费也不敢用就是目前国内网盘市场的现状.</p>
-<p>那就只能Github了. 国内访问Github真是太TM一言难尽了. 整个git push过程令人抓狂, 每次报错的信息都不一样, 要么是”人家去洗澡了”, 要么是”人家要睡觉了”, 要么是”人家要边洗澡边睡觉了”, 要么就是连理由都懒得找了直接就卡那里一动不动. 每次看着Git Bash报错都唤起了我对美国联邦政府的愤恨, 要不是你们瞎闹腾, 我至于还得弄个Gitee仓库玩儿双飞, 不是, 双修吗? 每次挂两个仓库push两次, 你知道我多累吗? 一个已婚带娃男人的肉体, 禁得起这么折腾吗? 不过这次折腾也不是没有收获, 我又知道一件事:</p>
-<blockquote>
-<p>Git上传大文件, 需要安装并启用Git-LFS组件</p>
-</blockquote>
-<p>NB, 从下载到安装全搞定, 问题真的可以Close喽, 睡觉去喽.</p>
-<p>当然了说这些不是让您感谢我, 更不是希望您们为了鼓励我给我发红包转账, 虽然我的支付宝微信随便你们往里转账,但你们都了解我, 我是见钱眼开的人吗? </p>
-<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/datapackage/123.jpg" alt="不接受红包"></p>
-</p>
-      <div class="post-button"><a class="btn" href="/%E9%82%A3%E4%B8%80%E5%A4%9C-%E6%88%91%E7%AB%9F%E7%84%B6%E5%81%9A%E4%BA%86%E8%BF%99%E6%A0%B7%E7%9A%84%E4%BA%8B%E5%84%BF/" rel="noopener"><i class="fa fa-angle-double-right fa-fw"></i>Read More</a></div>
     </div>
   </div>
 
