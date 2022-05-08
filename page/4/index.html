@@ -81,6 +81,67 @@
 
   <div class="lx-entry padding">
     <div>
+      <h2 class="title"><a href="/%E5%AE%9D%E8%B4%9D%E5%84%BF%EF%BC%8C%E4%B8%80%E8%B5%B7%E5%AD%A6Python%E5%91%80-6-md/">宝贝儿，一起学Python呀-6.md</a></h2>
+      <span class="lx-post-detail"><i class="fa fa-calendar-o"></i> 2021-07-10</span>
+      <p><h1 id="宝贝儿，一起学Python呀-VI-什么结衣雅美，我全都要！"><a href="#宝贝儿，一起学Python呀-VI-什么结衣雅美，我全都要！" class="headerlink" title="宝贝儿，一起学Python呀 - VI - 什么结衣雅美，我全都要！"></a>宝贝儿，一起学Python呀 - VI - 什么结衣雅美，我全都要！</h1><h3 id="Python中的列表和循环"><a href="#Python中的列表和循环" class="headerlink" title="Python中的列表和循环"></a>Python中的列表和循环</h3><p>还记得上篇结尾，我留的小作业吗?</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">name=<span class="string">&#x27;长泽雅美&#x27;</span></span><br><span class="line">name=<span class="string">&#x27;石原里美&#x27;</span></span><br><span class="line">name=<span class="string">&#x27;新垣结衣&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(name)</span><br></pre></td></tr></table></figure>
+
+<p>是的，打印name, 结果是’新垣结衣’。相信随着新垣结衣和星野源宣布合体，无数中国宅男纷纷表示无比的悲痛，更有甚者开始分析中国老爷们儿完爆日本男人的99999条理由，反正不知道星野源这家伙到底用了什么手段迷惑了我们新垣结衣。</p>
+<p>想必您也看出来了，别人着急我不急，急坏身体无人替。为什么我能如此镇定？因为我是长泽雅美的粉儿。。。</p>
+<p>常规性跑题。话说 name = ‘长泽雅美’ 您都知道，这是一个赋值语句，作用是把一个值赋值给变量name. 这里咱们也别费劲讲什么变量啦，内存啦，指针啦什么的。我不会肯定是一个原因，另外就是咱们拿Python干活儿，一时半会儿用不上这个。等真能用上，估计您也得转行程序员了。</p>
+<p>上篇也说了，Python对待变量的态度很随便。不用声明变量支持的数据类型，您灌什么值变量就是什么类型。但是这里有个问题，就是取变量存的值时，Python只会取最近一次存入的，就如同上面例子中，输出name的结果是新垣结衣。</p>
+<p>有身体好的大哥说了，选什么选，老子全都要！什么雅美里美结衣悠亚阿香的，都给我整来！那普通的数据类型是满足不了您了，这时，我们就得请列表出山喽!</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">name = [<span class="string">&#x27;石原里美&#x27;</span>,<span class="string">&#x27;新垣结衣&#x27;</span>,<span class="string">&#x27;长泽雅美&#x27;</span>] <span class="comment"># []表示这是列表类型，列表里的元素用,隔开</span></span><br></pre></td></tr></table></figure>
+
+<p>怎么样，像不像您买了栋大别墅，然后把小姐姐们都请进来入住？在Python中，表示列表的标记就是[]，列表里每一项用，隔开。列表里的每一项都可以是任意的数据类型，而且无需一样，比如:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">list1 = [<span class="string">&#x27;联想&#x27;</span>,<span class="number">1984</span>]</span><br></pre></td></tr></table></figure>
+
+<p>这里的列表list1有两项，字符串’联想’和数字1984。</p>
+<p>现在小姐姐都在您的大房子里了，怎么把怹们挨个请出来呢？聪明的您一定想到了，print()呗。好吧，我们print(name)试试，结果是:</p>
+<blockquote>
+<p>[‘石原里美’, ‘新垣结衣’, ‘长泽雅美’]</p>
+</blockquote>
+<p>嗯？ Python很不讲究，直接把列表给打出来了，这相当于小姐姐们扛着别墅就过来了，不行，我想要，不是，这位身体好大哥想要的应该是其中某一位小姐姐，对吧？把这句话翻译成专业点的术语，就是我们要访问列表中的项。</p>
+<p>可以。</p>
+<p>列表通过索引定位列表中的每一项，相当于给每位小姐姐都编了号。当然，按照搞计算机大哥们的习惯，编号从0开始。不知道为什么大哥们这么喜欢0。。。所以，我们可以这么访问小姐姐们:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">name = [<span class="string">&#x27;石原里美&#x27;</span>,<span class="string">&#x27;新垣结衣&#x27;</span>,<span class="string">&#x27;长泽雅美&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(name[<span class="number">0</span>]) <span class="comment">#name[0]表示列表name中的第一项，就是石原里美啦</span></span><br><span class="line"><span class="built_in">print</span>(name[<span class="number">1</span>]) <span class="comment">#name[0]表示列表name中的第二项，就是新垣结衣啦</span></span><br><span class="line"><span class="built_in">print</span>(name[<span class="number">2</span>]) <span class="comment">#name[0]表示列表name中的第三项，就是长泽雅美啦</span></span><br></pre></td></tr></table></figure>
+
+<p>用索引除了访问列表中的项，也可以更新列表中的项，比如:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">name[<span class="number">2</span>] = <span class="string">&#x27;三上悠亚&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>那就是把原来的长泽雅美换成了三上悠亚。</p>
+<p>或者，身体好的大哥说，4位小姐姐老子也能对付，不用替换，直接把三上加进来！</p>
+<p>那就得用到列表自带的append方法了。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">name.append(<span class="string">&#x27;三上悠亚&#x27;</span>) <span class="comment">#列表变量.append(想添加到列表的值)</span></span><br></pre></td></tr></table></figure>
+
+<p>这时，name就变成了</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">name = [<span class="string">&#x27;石原里美&#x27;</span>,<span class="string">&#x27;新垣结衣&#x27;</span>,<span class="string">&#x27;长泽雅美&#x27;</span>,<span class="string">&#x27;三上悠亚&#x27;</span>]</span><br></pre></td></tr></table></figure>
+
+<p>append 方法会直接把项目添加到列表结尾。</p>
+<p>或者这位小哥哥又说了，三上悠亚在我心中地位第一，干什么给她放最后？给我放最前面！</p>
+<p>得嘞这位爷，咱也别费劲了，我告诉您一个办法，您爱放哪儿放哪儿行不？</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">name.insert(<span class="number">0</span>,<span class="string">&#x27;三上悠亚&#x27;</span>) <span class="comment">#insert方法用于把项目插入到列表中，格式就是 列表变量.insert(想插入的索引,想插入的项目)</span></span><br></pre></td></tr></table></figure>
+
+<p>用insert方法，您爱放哪都行，行了吧？</p>
+<p>以上咱们聊的是用索引访问列表中的项。身强力壮小哥哥又说了，用索引一个一个的来不痛快，而且小姐姐太多也记不住索引，能不能一口气把小姐姐全请出来？</p>
+<p>说来简单，直接用循环就行了。话说一般计算机语言中，循环和条件判断都是非常重要和核心的。Python的循环主要是for循环和while循环,其中for循环提供了很好的访问列表的方法，简单粗暴，来咱们走一个:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">girls = [<span class="string">&#x27;石原里美&#x27;</span>,<span class="string">&#x27;新垣结衣&#x27;</span>,<span class="string">&#x27;长泽雅美&#x27;</span>]  <span class="comment"># 定义一个列表存放数据</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> girls: <span class="comment"># 利用循环输出数组中的每一个元素</span></span><br><span class="line">    <span class="built_in">print</span>(i) <span class="comment">#必须必须注意，这行开始有一个tab</span></span><br></pre></td></tr></table></figure>
+
+<p>看见了吧，就是这么简单。这里需要注意的是，i 本身也是一个变量，这个循环里，先定义一个i用于存放列表中元素，然后按照索引顺序遍历列表中的每一项，然后把此项数值赋给i,然后print()把i的内容输出，然后循环访问列表中的下一项，直到遍历完毕。</p>
+<p>另外我们也引出了Python中写代码一个很重要的内容，缩进。和其它语言不同，Python不用{}标识代码块，编写Python代码时，主要的区分代码块的标记就是tab。这里的tab也可以用4个空格代替，但是要一致，不能一会儿tab一会儿四个空格。这个缩进不能省略，上面的例子中如果没有缩进，会直接报错。</p>
+<p>还有一个重要的概念，就是字符串也可以看做列表，具有列表的特点，比如通过索引访问字符串中的元素，这个就请您自己试试。</p>
+<p>好了，到了留作业的时候，请问，以下的代码输出结果是什么？</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">slogan = <span class="string">&#x27;让世界充满爱&#x27;</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> slogan:</span><br><span class="line">    <span class="built_in">print</span>(i)</span><br></pre></td></tr></table></figure>
+
+
+
+<p>今天就到这里，祝您愉快，咱们下篇再见。至于下篇咱们聊什么？让我想想吧，我现在满脑子都是长泽雅美。。。</p>
+</p>
+      <div class="post-button"><a class="btn" href="/%E5%AE%9D%E8%B4%9D%E5%84%BF%EF%BC%8C%E4%B8%80%E8%B5%B7%E5%AD%A6Python%E5%91%80-6-md/" rel="noopener"><i class="fa fa-angle-double-right fa-fw"></i>Read More</a></div>
+    </div>
+  </div>
+  <div class="lx-entry padding">
+    <div>
       <h2 class="title"><a href="/%E5%AE%9D%E8%B4%9D%E5%84%BF%EF%BC%8C%E4%B8%80%E8%B5%B7%E5%AD%A6Python%E5%91%80-%E7%95%AA%E5%A4%96%E7%AF%87/">宝贝儿，一起学Python呀 - 番外篇</a></h2>
       <span class="lx-post-detail"><i class="fa fa-calendar-o"></i> 2021-07-02</span>
       <p><h1 id="宝贝儿，一起学Python呀-番外篇"><a href="#宝贝儿，一起学Python呀-番外篇" class="headerlink" title="宝贝儿，一起学Python呀 - 番外篇"></a>宝贝儿，一起学Python呀 - 番外篇</h1><center>一</center>
@@ -702,32 +763,6 @@
 
 </p>
       <div class="post-button"><a class="btn" href="/%E8%8A%B1%E4%B8%AD%E9%86%89%E5%8D%A7%E7%9C%9F%E5%A5%BD%E6%B1%89%EF%BC%8C%E7%95%99%E5%BE%97%E8%8A%B3%E9%A6%99%E6%BB%A1%E4%BA%BA%E9%97%B4/" rel="noopener"><i class="fa fa-angle-double-right fa-fw"></i>Read More</a></div>
-    </div>
-  </div>
-  <div class="lx-entry padding">
-    <div>
-      <h2 class="title"><a href="/%E6%88%91%E5%8F%AF%E8%83%BD%E5%BE%97%E4%BA%B2%E4%BA%B2%E4%BD%A0/">我可能得亲亲你</a></h2>
-      <span class="lx-post-detail"><i class="fa fa-calendar-o"></i> 2021-06-03</span>
-      <p><h2 id="我可能得亲亲你"><a href="#我可能得亲亲你" class="headerlink" title="我可能得亲亲你"></a>我可能得亲亲你</h2><p>本文也发表于鄙人的Blog <a href="https://smallfish-bigocean.github.io/">小鱼游大海</a></p>
-<center>一</center>
-
-<p>大象进入昆明边界了。</p>
-<p>庄稼地里吃过粮，高速上边压马路。革命小酒天天有，谁管家乡在何处。</p>
-<p>十五头亚洲象，就这么从西双版纳州一路北上，逛吃逛吃，所到之处可谓人仰马翻，但人家体型巨大，脑袋灵活，保护动物会武术，天下流氓挡不住。一头小象干掉200斤酒糟直接醉倒，脱离象群。不要以为这会影响象群旅游的决心，人家带头母象居然找到了这位纪律堪忧的小家伙，继续逛吃，于是经过400公里徒步，这群吃货即将进入昆明市界，如果林业部门再不采取措施，估计昆明就得改成保护区了。。。</p>
-<p>说到大象，其实大象和北京也颇有渊源，比如象来街。</p>
-<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/14ce36d3d539b6003af37b45e81c222ac65c113819a7.png" alt="14ce36d3d539b6003af37b45e81c222ac65c113819a7"></p>
-<p>话说明朝开始，东南亚各国开始来北京朝贡，而要说最有分量的贡品，显然就是当地特产，大象。于是就在宣武门内西侧靠着城墙设置了象房来饲养这些贡品。每到大象洗澡的日子，一群大象在饲养员的引导下溜达到宣武门外的护城河沐浴一番，能想象当年绝对是北京一景。</p>
-<p>希望这些准备在昆明潇洒一番的大象朋友遵守交规，不要随地乱坐，不然一屁股把人家豪车坐瘪就不好了，怕是保险也不好理赔这种情况。。。</p>
-<center>二</center>
-
-<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20210602162535.jpg" alt="微信图片_20210602162535"></p>
-<p>带孩子出门的时候，我很喜欢观察别的孩子的举动，并猜测这个家庭的状况，比如谁会照顾孩子多一些(A)？ 孩子发展情况如何(B)？夫妻关系如何(C)？ 家庭成员之间的关系又是怎样(D)？</p>
-<p>比如，有的家庭明显妈妈照顾孩子多一些，孩子明显对妈妈又更多依赖，而爸爸会更倾向于玩儿手机，跟妈妈和孩子几乎没什么交流。这样的家庭特点一般是孩子不能离开妈妈，一旦妈妈去洗手间或干点别的，孩子会立刻陷入到无助和缺乏安全感。这种情况下的家庭，孩子一般没有同年龄段应该具有的独立游戏，吃饭的能力，更多需要妈妈的陪伴。这种情况的家庭，一般ABCD四维都有很大潜力空间，只要找对方法，短期就能有很大改善。</p>
-<p>而另外有的家庭，则是老人照顾孩子。比如吃饭时，老人会帮孩子喂饭，爸爸妈妈则交流很多。这种环境下，ABCD四维中一般ACD都有不错的发展，B的潜力也会很高。</p>
-<p>每个家庭都有各自的情况，也都有各自要面对的问题。但是站在爸爸的角度，我想，努力平衡好工作，家庭和个人爱好的关系，提升自身的能力，修养，勤练内功，应该是每个爸爸的重要工作。</p>
-<p>哦对了，还有，时不时的对家人腻乎腻乎，其实也挺好玩儿的。</p>
-</p>
-      <div class="post-button"><a class="btn" href="/%E6%88%91%E5%8F%AF%E8%83%BD%E5%BE%97%E4%BA%B2%E4%BA%B2%E4%BD%A0/" rel="noopener"><i class="fa fa-angle-double-right fa-fw"></i>Read More</a></div>
     </div>
   </div>
 
