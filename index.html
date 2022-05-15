@@ -81,6 +81,51 @@
 
   <div class="lx-entry padding">
     <div>
+      <h2 class="title"><a href="/%E6%B1%82%E7%B4%A2%E9%9B%86-%E7%AC%AC%E4%BA%94-%E5%88%B0%E5%BA%95%E6%9C%89%E5%A4%9A%E5%B7%AE-%E6%A0%87%E5%87%86%E5%B7%AE-%E6%96%B9%E5%B7%AE-%E5%8D%8F%E6%96%B9%E5%B7%AE/">求索集-第五-到底有多差? 标准差, 方差, 协方差学习笔记一</a></h2>
+      <span class="lx-post-detail"><i class="fa fa-calendar-o"></i> 2022-05-15</span>
+      <p><h1 id="求索集-第五-到底有多差-标准差-方差-协方差-协方差矩阵学习笔记一"><a href="#求索集-第五-到底有多差-标准差-方差-协方差-协方差矩阵学习笔记一" class="headerlink" title="求索集-第五-到底有多差? 标准差, 方差, 协方差, 协方差矩阵学习笔记一"></a>求索集-第五-到底有多差? 标准差, 方差, 协方差, 协方差矩阵学习笔记一</h1><center>一</center>
+
+<p>从页数看, Python数据分析已经学习到1/4, 进度却越来越慢, 原因很简单, 这本书主要面向已经有统计学或数据分析基础, 希望利用Python进行计算机高性能数据分析的用户, 而我基本就是个小白, 大学时学过的统计学, 线性代数, 数据分析也就还记得个转置和正态分布 (为什么没有萝莉分布???), 因此在学习时我必须话额外时间去了解这些基础概念. 但无可否认, 我已经深深喜欢上了这本教材, 比起之前接触过的&lt;&lt;XXX从入门到入土&gt;&gt;, 已经通俗易懂很多, 而且逻辑上也非常合理.</p>
+<p><img src="https://wfqqreader-1252317822.image.myqcloud.com/cover/904/22739904/t6_22739904.jpg" alt="Python数据分析"></p>
+<center>二</center>
+
+<p>这段时间接触到了统计方面的几个基本概念, 标准差, 方差, 协方差. 坦白讲看见”差”我就虎躯一震, 尘封的那些不愉快的记忆, 不负责任的判断, 刻板的印象似乎慢慢浮现, 好在我本身脸皮够厚, 面对负面的情绪, 心境也慢慢从”你丫再说一遍试试”, “去你大爷的, 滚蛋”, 到”你随便吧”, 再到如今已经能去珍惜自己喜欢的声音, 不喜欢的则能产生漠视的本能, 无论如何, 还是坦然了许多.</p>
+<p>跑题了.</p>
+<p>不得不说, Python, 或者说基于Python的NumPy 数学库, 真的是太牛了, 很多复杂的计算仅仅用一条语句就能解决. 因此, 如果能以常用的NumPy函数为线索, 把涉及的统计概念能稍微深入了解一些, 同时对于简单的数据, 能进行纸笔计算, 那么这样学起来会更扎实和通透. 毕竟我现在不是为了升学或考证书而学习.</p>
+<p>先说我对方差的理解. 对于一个问题, 我们在解决时会得到一系列观测值, 转换成数据就是一个一维数组, 那么方差就是这个数组中每个元素相对于均值的偏差程度的量化. 计算方法是:</p>
+<p><img src="https://bkimg.cdn.bcebos.com/formula/4cbaee3df1b5e54daa15c0f9d4ab474b.svg" alt="方差公式"></p>
+<p>μ是数组元素平均值, N是数组样本数 (也就是数组长度)</p>
+<p>而标准差, 则是方差的平方根, 注意标准差分为标准差和样本标准差, 区别就是计算时前者的分母是N, 后者是N-1, 前者用于对全部样本进行计算, 而后者则是对巨量样本中选择的部分样本做计算.</p>
+<p>方差是针对一组样本进行偏移分析, 而协方差则体现两组以上数据样本之间的一致性, 如, “男人财富的数量”和”其配偶的胸围”这两组变量是否存在相关性; 如果相关, 是正相关 (钱多胸大) 还是负相关 (只能说有钱男人品味真奇怪), 这个就要请出协方差来解决, 计算方法是:</p>
+<p>cov (x, y) = E(x - Ex)(y-Ey)</p>
+<p>而对于多组变量, 为了表示任意两组变量的协方差, 则需要协方差矩阵, 这也是最让我头大的地方. 这里必须仔细说说.</p>
+<p>对于多组变量, 比如3组吧, 就像这样:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">X:1 3 7 8 11</span><br><span class="line">Y:2 2 4 1 16</span><br><span class="line">Z:3 2 24 26 31</span><br></pre></td></tr></table></figure>
+
+<p>那么很显然, 组合组之间存在3的平方, 共9种关系: XX, XY, XZ, YX, YY, YZ, ZX, ZY, ZZ.</p>
+<p>那么, 把每种关系的协方差都求出来, 就知道了这9种关系的全部相关性, 如果把这9种相关性数值写成矩阵, 那么就是这样:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Cxx Cxy Cxz</span><br><span class="line">Cyx Cyy Cyz</span><br><span class="line">Czx Czy Czz</span><br><span class="line">C表示协方差Covariance</span><br></pre></td></tr></table></figure>
+
+<p>这就相当于一个协方差元素表, 只要看每个值就能知道对应的两组变量之间的关系了. 而且我们还会有以下发现:</p>
+<ul>
+<li>协方差矩阵从左上到右下的对角线就是每个变量的方差. 但注意这里的方差是样本方差, 分母是N-1, 因为NumPy计算协方差时分母就是N-1</li>
+<li>由于cov(x, y) = cov (y, x), 所以这个表以从左上到右下的对角线为对称轴, 对角线两边的值是对称的</li>
+<li>N组数据的协方差矩阵是NxN, 所以一维或二维数组的协方差公式是”正方形”的二维数组</li>
+</ul>
+<center>三</center>
+
+<p>NumPy求解这些差本身的函数非常简单,</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">arr4 = np.array([-<span class="number">1</span>, <span class="number">2</span>, <span class="number">5</span>]) <span class="comment">#定义一维数组</span></span><br><span class="line">arr4.var() <span class="comment">#求方差</span></span><br><span class="line">arr4.var(ddof = <span class="number">1</span>) <span class="comment">#求样本方差</span></span><br><span class="line">np.cov(arr4) <span class="comment">#求协方差公式注意这里不是arr4.cov(),而且由于arr4是一维数组, 所以协方差矩阵是只有1个元素的二维矩阵(1x1)</span></span><br></pre></td></tr></table></figure>
+
+<center>四</center>
+
+<p>这部分内容肯定是层层深入的, 现在的初级理解肯定会迭代和更新. 今天最大的收获大概是, 这是我近年来为数不多能在周日花大段时间学习了. 看书, 查资料, 纸笔计算, 青春的感觉, 回来了呢~~~</p>
+</p>
+      <div class="post-button"><a class="btn" href="/%E6%B1%82%E7%B4%A2%E9%9B%86-%E7%AC%AC%E4%BA%94-%E5%88%B0%E5%BA%95%E6%9C%89%E5%A4%9A%E5%B7%AE-%E6%A0%87%E5%87%86%E5%B7%AE-%E6%96%B9%E5%B7%AE-%E5%8D%8F%E6%96%B9%E5%B7%AE/" rel="noopener"><i class="fa fa-angle-double-right fa-fw"></i>Read More</a></div>
+    </div>
+  </div>
+  <div class="lx-entry padding">
+    <div>
       <h2 class="title"><a href="/%E5%AF%84%E8%8A%B1%E9%9B%86-%E7%AC%AC%E4%BA%94-%E6%88%91%E7%9A%84%E5%A6%88%E5%91%80/">寄花集-第五 我的妈呀</a></h2>
       <span class="lx-post-detail"><i class="fa fa-calendar-o"></i> 2022-05-08</span>
       <p><h1 id="寄花集-第五-我的妈呀"><a href="#寄花集-第五-我的妈呀" class="headerlink" title="寄花集-第五 我的妈呀"></a>寄花集-第五 我的妈呀</h1><p>今天是母亲节, 因此写下这篇关于母亲的文章</p>
@@ -621,66 +666,6 @@
 <p>哦对了, 上面冬奥会的图片全部来自新华社, 感谢!</p>
 </p>
       <div class="post-button"><a class="btn" href="/%E5%AF%84%E8%8A%B1%E9%9B%86-1/" rel="noopener"><i class="fa fa-angle-double-right fa-fw"></i>Read More</a></div>
-    </div>
-  </div>
-  <div class="lx-entry padding">
-    <div>
-      <h2 class="title"><a href="/%E4%BA%8C%E4%BD%8D%E7%B1%B3%E7%88%B7%E7%9A%84%E5%81%87%E6%9C%9F-%E5%89%8D%E7%AF%87/">二位米爷的假期<前篇></a></h2>
-      <span class="lx-post-detail"><i class="fa fa-calendar-o"></i> 2022-02-06</span>
-      <p><h1 id="二位米爷的假期-lt-前篇-gt"><a href="#二位米爷的假期-lt-前篇-gt" class="headerlink" title="二位米爷的假期&lt;前篇&gt;"></a>二位米爷的假期&lt;前篇&gt;</h1><center>大米每天都在头大的问题是...</center>
-
-<p>不可否认, 大米跟我的关系有点纠结. 好的时候就像亲哥们儿怎么都行, 不好的时候看见对方都头疼. 毫无疑问, 大米绝对是让我头大的第一名.不过谢天谢地, 这家伙也有头大的时候.</p>
-<p>话说假期伊始, 棒球队开始为期一周的全天集训. 我和小齐一拍即合, 决定让俩米自己体验一下我们当年的寒暑假, 两个小家伙自己带着家钥匙, 从早上起床, 出门买早点到自己找地方吃完饭回家洗漱,一条龙全部自己完成. 抛开俩米的独立能力不谈, 这俩家伙一听没人管了, 一致大声叫好, 尤其大米, 估计是想到再也没人催自己写作业了, 简直就跟到了49年似的. 看着大米得意的笑, 我心想, 走着瞧, 有你高兴的.</p>
-<img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/miholiday1/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20220206202344.jpg" alt="小米训练" style="zoom:50%;" />
-
-<p>话说俩米分工明确, 小米拿家钥匙和我的小号手机, 大米负责结账扫码. 一开始俩米都挺满意. 小米兜里揣着钥匙和手机, 觉得自己像个大管家, 大米负责结账, 自然是风光无限, 结果就这么过了几天, 俩米晚上开始有课 (双减背景下, 低调, 低调), 大米晚上突然找我, 跟我商量能不能早上带着平板走, 我说你带不带是你的自由这我不管, 只是你们晚上7点上课, 4点棒球集训就结束了, 你有必要背着大平板出门? 晚上回家上课岂不美哉? 谁知大米顿时脸就黑了, 跟我说, 你是不知道每天我跟小米为了去哪里吃晚饭得打多长时间…</p>
-<img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/miholiday1/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20220206202429.jpg" alt="大米训练" style="zoom:50%;" />
-
-<p>哈哈, 大米也有头大的时候, 开心~~~</p>
-<center>诚实的俩米</center>
-
-<p>话说俩米棒球集训期间, 故事不少, 争斗不断, 相爱相杀被俩米演绎得淋漓尽致. 但是有一件事, 绝对让我觉得这就是老子养的孩子, NB.</p>
-<p>事情是这样的. 俩米每天晚上集训完的流程一般是: 收拾装备 - 商量去哪吃晚饭 - 打架 - 继续打架 - 打累了 - 某人先妥协 (话说这个妥协的十有八九是大米, 我猜的) - 吃晚饭 - 去711买第二天的早点 - 回家写作业 (一般不写) - 洗漱 - 睡觉. 这次的故事就发生在711. 话说自从俩米获得了自己去超市的机会, 那家伙, 俩米知道我不让她们买巧克力制品做早点, 好哒, 人家没买, 然后找个理由说教练夸自己练的努力, 然后得给自己来点额外的奖励, 你们当家长的不能拦着吧? 于是, 买巧克力就名正言顺了.</p>
-<img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/miholiday1/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20220206202422.jpg" alt="大米训练" style="zoom:50%;" />
-
-<p>某日, 小米拿了几个711卖的那种特别小的巧克力, 顺手就放大衣兜里了, 结果结账时小米就给忘了个一干二净, 大米也不知道, 店员也不知道… 就这样, 小米回家从兜里拿出几个巧克力, 大米当时就惊了, 一问果然没结账, 于是俩米决定不告诉我和小齐, 而是开始了自行解决…</p>
-<img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/miholiday1/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20220206202426.jpg" alt="大米训练" style="zoom:50%;" />
-
-<p>具体过程我们当时并不知情, 而是事后听说, 俩米的解决方案是, 去711买了同样的巧克力, 结账, 然后把买到的巧克力放回货架. 当我知道整件事的第一反应, NB, 真NB, 做人不泯灭良心, 我最看重的事情, 俩米做到了, 欧耶. 不过事后我也和小齐进行了反思, 为什么这么好的事情俩米选择不告诉我们? 难道我就这么可拍, 这么不值得信任? 个中缘由, 值得深思呀…</p>
-<center>俩米是怎么让我答应买18个冰淇淋的</center>
-
-<p>话说大过节的, 整天吃饱了长肉也不合适, 于是决定出门骑车, 路线就是起点在奥森的42公里绿色骑行道. 话说这个骑行道从奥森到十三陵水库, 沿线穿过几个城市森林公园, 按说景色是完全OK的. 结果故事就发生在骑行路上的某个城市森林公园, 不是我卖关子, 是我满脑子都是18个冰淇淋, 气得我完全忘了公园叫什么了.</p>
-<p>这个公园有几个设施, 应该就是让像大小米这样精力旺盛又不怎么好静的家伙折腾用的. 其中有个设施, 就长下面这个样子,</p>
-<img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/miholiday1/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20220206202625.jpg" alt="小米游戏" style="zoom:50%;" />
-
-<p>得有小一个成人的高度, 滑不出溜, 只能靠拽着绳子上去. 俩米一见大喜过望, 拽着绳子就是一顿操作猛如虎, 然后纷纷兵败而归. 我寻思着这孩子还是得鼓励为主是吧, 我就想, 得嘞, 你们爬上去我就奖励你们一个冰淇淋. 结果我这脑袋就抽了, 嘴也瓢了, 不知怎么就说成了”你们爬上去一次我就奖励一个冰淇淋”, 俩米也不含糊, 直接理解为”我们爬上去一次你就奖励我们每人一根冰淇淋, 且上不封顶”…</p>
-<img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/miholiday1/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20220206202405.jpg" alt="大米游戏" style="zoom:50%;" />
-
-<p>就这样, 俩米不是在玩儿了, 完全是在虐待这个设施. 后来俩米玩的连绳子都不需要了, 直接一个箭步腾空, 抓着栏杆就上去了… 就这样, 大米一共搞了9个冰淇淋, 小米也搞了7个. 有人说了, 那为什么一共18个? 唉, 还不是我看小米玩儿到第7次没体力了, 我怕小米不高兴比大米少俩, 所以我上去帮小米完成俩么…</p>
-<center>说好的找东西, 怎么变成玩儿冰车了</center>
-
-<p>话说大米这家伙在丢三落四的方面天赋绝对源自我这里. 东西放哪儿一会儿就能忘, 然后我们俩大眼瞪小眼, 一对儿大笨蛋. 这次就是. 大米从团结湖到北五环我父母家过春节, 第二天上课发现教具落团结湖了. 嘿, 我这脾气能忍? 想想又得大晚上的开车从北五环跑到东三环这来回折腾, 加上马自达8实在不是个省油的家伙, 我这一脑门子官司. 结果我还没发飙, 大米过来跟我商量, 让我陪她骑车回团结湖, 一起锻炼锻炼, 顺便把教具拿回来. 嘿, 大米不愧是我肚子里的大肠杆菌, 太了解我了. 只要是陪她骑车, 我连个屁都不带放的. 那就走着呗. </p>
-<img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/miholiday1/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20220206202410.jpg" alt="大米骑车" style="zoom:50%;" />
-
-<p>从北五环出发, 顺着滨河路 - 奥森北园北门 -奥森北园东门 -安立路 - 北四环 -东四环 -朝阳公园, 一路到达团结湖, 拿东西, 然后从团结湖顺着东直门外大街 - 东二环 - 北二环 - 北二环 - 还是北二环… 是的, 我们卡在北二环了. 话说我就路边去个洗手间, 回来就看大米有点走不动了. 稍加研究, 发现原来路下边就是北护城河, 好巧不巧, 一帮人在河上滑冰. 我跟大米对看三秒钟, 我什么都没说直接掏手机请示领导, 小齐也痛快, 直接恩准, 得嘞, 那就别废话了, 玩儿呗.</p>
-<img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/miholiday1/微信图片_20220206202605.jpg" alt="大米滑冰" style="zoom:50%;" />
-
-<p>话说这冰车是实在不便宜, 50块钱. 好在不像各大景区公园, 上个冰都得排队, 那就招呼呗. 冰面上很快回荡起大米豪爽的声音, 欢乐的笑声和夕阳的余晖一起洒在冰面上, 我不由得感叹, 这玩儿就是比写作业有意思. </p>
-<img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/miholiday1/微信图片_20220206202609.jpg" alt="大米滑冰" style="zoom:50%;" />
-
-<p>若干时间后, 冻得哆哆嗦嗦且俩胳膊划冰车划得酸痛的我终于等来了大米说可以回家的旨意. 我如释重负赶紧还冰车走人, 这回家还得骑好远呢, 于是, 从北二环重整旗鼓重新出发, 继续沿着安定门 - 安贞桥 - 北四环 - 鸟巢 - 北辰西路- </p>
-<img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/miholiday1/微信图片_20220206202613.jpg" alt="大米骑车" style="zoom:50%;" />
-
-<p>科荟路 - 林萃路, 就这么一直骑回了北五环, 顺便还看了看中国刚刚夺冠的场地 - 速滑馆.</p>
-<img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/miholiday1/微信图片_20220206202621.jpg" alt="大米骑车" style="zoom:50%;" />
-
-<p>一下午从北五环 - 团结湖一个来回 42公里, 我对今年即将开始的全新爷儿俩骑行季有点小期待了, 哈哈.</p>
-<center>前篇结束</center>
-
-<p>叨叨叨不知不觉说了小2500字, 这作文我也写的差不多了. 有时候我也想, 这要是没孩子其实也挺好, 自由. 可是有时候看着俩米, 我又觉得这男人得有了孩子, 才算是真正的完全体, 才算是懂得了男人的一生应该怎么度过. 就这样吧, 挺好, 哈哈.</p>
-<p align="right">侯宇峰记录于2022年2月7日, 大年初七</p>
-</p>
-      <div class="post-button"><a class="btn" href="/%E4%BA%8C%E4%BD%8D%E7%B1%B3%E7%88%B7%E7%9A%84%E5%81%87%E6%9C%9F-%E5%89%8D%E7%AF%87/" rel="noopener"><i class="fa fa-angle-double-right fa-fw"></i>Read More</a></div>
     </div>
   </div>
 
