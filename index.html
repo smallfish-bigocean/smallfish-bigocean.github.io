@@ -81,6 +81,39 @@
 
   <div class="lx-entry padding">
     <div>
+      <h2 class="title"><a href="/%E6%B1%82%E7%B4%A2%E9%9B%86%E7%AC%AC%E5%85%AD-%E5%86%99%E5%85%AC%E4%BC%97%E5%8F%B7%E6%96%87%E7%AB%A0%E5%86%8D%E5%8D%87%E7%BA%A7-%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2%E5%A2%A8%E6%BB%B4/">求索集第六: 写公众号文章再升级 - 本地部署墨滴</a></h2>
+      <span class="lx-post-detail"><i class="fa fa-calendar-o"></i> 2022-05-22</span>
+      <p><h1 id="求索集第六-写公众号文章再升级-本地部署墨滴"><a href="#求索集第六-写公众号文章再升级-本地部署墨滴" class="headerlink" title="求索集第六: 写公众号文章再升级 - 本地部署墨滴"></a>求索集第六: 写公众号文章再升级 - 本地部署墨滴</h1><center>一</center>
+
+<p>自从学习了Markdown和hexo, 写Blog就变得更加有趣. 和hexo对Markdown的出色支持不同, 微信公众号有自己的一套格式系统, 对markdown的支持也不是很完美, 因此, 之前把文章导入到公众号的重要步骤就是用墨滴之类的第三方工具把markdown转换成公众号文章, 然后再发表. 概括一下, 整个工作流是:</p>
+<blockquote>
+<p>使用<em><strong>typora</strong></em>编写<em><strong>markdown</strong></em>格式文章 - 在<em><strong>墨滴</strong></em>里对<em><strong>markdown</strong></em>文章进行重新编码和排版 - 发表到微信公众号</p>
+</blockquote>
+<p>这里面存在的一个问题是, 墨滴作为一个出色markdown处理工具, 是基于线上的, 需要连接互联网, 而且数据也是存在墨滴的服务器上. 有时, 出于种种原因, 我们需要数据本地化. 针对本地化需求, 墨滴倒是提供了本地编辑器, 但是只有7天试用时间, 想长期使用就要按年付费. 实际上, 墨滴其实是开源的, 那么, 我们其实就有了自己搞一个本地版本墨滴的可能性.让我们研究一下.</p>
+<center>二</center>
+
+<h3 id="首先-我们先到墨滴的github仓库获取源代码"><a href="#首先-我们先到墨滴的github仓库获取源代码" class="headerlink" title="首先, 我们先到墨滴的github仓库获取源代码:"></a>首先, 我们先到墨滴的github仓库获取源代码:</h3><p><a target="_blank" rel="noopener" href="https://github.com/mdnice/markdown-nice">墨滴 Github仓库</a>, 可以看到, 墨滴使用JS开发的.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Git clone https://github.com/mdnice/markdown-nice.git</span><br></pre></td></tr></table></figure>
+
+<p>这一步相当于把墨滴的最新源代码下载到了本地.</p>
+<h3 id="其次-编译墨滴源代码-生成可以部署的墨滴程序代码"><a href="#其次-编译墨滴源代码-生成可以部署的墨滴程序代码" class="headerlink" title="其次, 编译墨滴源代码, 生成可以部署的墨滴程序代码"></a>其次, 编译墨滴源代码, 生成可以部署的墨滴程序代码</h3><p>进入本地的墨滴源码文件夹, 因为是JS开发的, 百度了一下, 用npm 或 yarn就能对源代码打包:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">H:\learning\markdown-nice&gt;yarn build</span><br></pre></td></tr></table></figure>
+
+<p>打包完毕, 会在墨滴源代码文件夹里看到一个build文件夹, 这里面就是我们要的编译好的程序啦, 进去看看,</p>
+<p>哦哦哦, 原来不是exe程序, 而是网页, 那就更棒了, 因为相对于程序, 网页形式的应用更加方便, 而且有本地网络访问的可能, 换句话说, 局域网里其它的电脑, 手机, 平板也能通过网页浏览器访问墨滴, 那岂不是我那联想平板也能写公众号文章了?</p>
+<p>于是我选择打开index.html, 果然不行, 看来这个编译好的墨滴程序应该是需要网页服务器才能运行了. </p>
+<h3 id="然后-把编译好的墨滴代码部署到本地IIS服务器"><a href="#然后-把编译好的墨滴代码部署到本地IIS服务器" class="headerlink" title="然后, 把编译好的墨滴代码部署到本地IIS服务器"></a>然后, 把编译好的墨滴代码部署到本地IIS服务器</h3><p>于是我开启了Windows Server自带的IIS服务器, 新建一个站点, 站点绑定好本机IP, 然后端口选了个1234 省的和其他应用冲突, 当然防火墙里也需要打开这个端口, 然后把build出来的墨滴代码全部拷贝到站点的文件夹下, 激动的时刻到了,</p>
+<p>浏览器里输入</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://192.168.0.107:1234/</span><br></pre></td></tr></table></figure>
+
+<p>哦也, 墨滴的界面就华丽丽的出现了, 注意, 这可是部署在本地的代码, 就算没有互联网也能运行的哟:)</p>
+<p>然后打开平板, 同样输入本地墨滴的地址, 哦也, 这下平板也能愉快地用markdown写blog和公众号文章了, hoho~~~</p>
+</p>
+      <div class="post-button"><a class="btn" href="/%E6%B1%82%E7%B4%A2%E9%9B%86%E7%AC%AC%E5%85%AD-%E5%86%99%E5%85%AC%E4%BC%97%E5%8F%B7%E6%96%87%E7%AB%A0%E5%86%8D%E5%8D%87%E7%BA%A7-%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2%E5%A2%A8%E6%BB%B4/" rel="noopener"><i class="fa fa-angle-double-right fa-fw"></i>Read More</a></div>
+    </div>
+  </div>
+  <div class="lx-entry padding">
+    <div>
       <h2 class="title"><a href="/%E6%B1%82%E7%B4%A2%E9%9B%86-%E7%AC%AC%E4%BA%94-%E5%88%B0%E5%BA%95%E6%9C%89%E5%A4%9A%E5%B7%AE-%E6%A0%87%E5%87%86%E5%B7%AE-%E6%96%B9%E5%B7%AE-%E5%8D%8F%E6%96%B9%E5%B7%AE/">求索集-第五-到底有多差? 标准差, 方差, 协方差学习笔记一</a></h2>
       <span class="lx-post-detail"><i class="fa fa-calendar-o"></i> 2022-05-15</span>
       <p><h1 id="求索集-第五-到底有多差-标准差-方差-协方差-协方差矩阵学习笔记一"><a href="#求索集-第五-到底有多差-标准差-方差-协方差-协方差矩阵学习笔记一" class="headerlink" title="求索集-第五-到底有多差? 标准差, 方差, 协方差, 协方差矩阵学习笔记一"></a>求索集-第五-到底有多差? 标准差, 方差, 协方差, 协方差矩阵学习笔记一</h1><center>一</center>
@@ -598,80 +631,10 @@
       <div class="post-button"><a class="btn" href="/%E5%AF%84%E8%8A%B1%E9%9B%86-%E7%AC%AC%E4%BA%8C/" rel="noopener"><i class="fa fa-angle-double-right fa-fw"></i>Read More</a></div>
     </div>
   </div>
-  <div class="lx-entry padding">
-    <div>
-      <h2 class="title"><a href="/%E5%AF%84%E8%8A%B1%E9%9B%86-1/">寄花集 第一</a></h2>
-      <span class="lx-post-detail"><i class="fa fa-calendar-o"></i> 2022-02-08</span>
-      <p><h1 id="寄花集-第一"><a href="#寄花集-第一" class="headerlink" title="寄花集 第一"></a>寄花集 第一</h1><center>一</center>
-
-<p>我一直想把写点东西当成习惯, 所以难免会出现两个问题, 第一, 太监了, 也就是有些连贯的东西写着写着就写不下去了, 比如Python教程和温格自传的翻译; 另一个则是凑数, 想写点什么, 但又没得写, 所以凑数就是必然. 这方面我比较服古龙, 老大直接找学生代笔, 而且是明目张胆, 表里一致, 绝不装B, 大丈夫本色.</p>
-<p>我就比较悲催了, 代笔是不可能有人帮忙的, 还好我想出另一个办法, 就是把几个彼此没有一点逻辑关系的小段落排个一二三四五凑在一起, 变成一篇文章, 看起来还有点鲁迅先生的风格, 是不是很NB? 对了, 为了提升格调, 我准备给这类文章统统加个题目, 然后加上第一 第二这样的排序, 以后再也不用担心没得写了, 这就是”寄花集” 这个系列的由来, 这是第一篇.</p>
-<p>寄花的名字, 我是抄的白居易老的一首诗 &lt;&lt;初与元九别后忽梦见之及寤而书适至兼寄桐花诗…此寄&gt;&gt;, 因为其中一句</p>
-<blockquote>
-<p><em>桐花诗八韵，思绪一何深</em>。</p>
-</blockquote>
-<p>是的, 聪明的你一定发现了, 我是百度了”思绪 诗句” 然后出来的结果, 哈哈.</p>
-<p>先装B, 然后坦白自己装B了, 这是我目前比较欣赏的装B模式, 似乎不是那么虚伪了, 有没有?</p>
-<p>另外说一句, 白居易老做梦能梦见元稹老, 这纯爷们儿之间的感情也真够真挚的了…</p>
-<center>二</center>
-
-<p>本次冬奥会, 我看得最多的比赛是混双冰壶和短道速滑. 前者不难理解, 我这么单纯的一个人, 肯定不是冲着范苏圆小姐姐, 我只是单纯喜欢这项运动. 至于短道速滑, 毫无疑问, 比赛本身够</p>
-<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/flowers1/23990432.jpg" alt="范苏圆小姐姐在比赛中"></p>
-<p>激烈刺激, 加上又是中国优势项目, 每每有我国健儿在场, 我都难免血脉偾张, 紧握双拳. 这次冬奥会的速滑比赛, 一大变化就是引入了多台高速摄像机作为裁判的辅助工具, 多角度无死角的准确回放使得比赛判罚的准确性得到大大提升, 最大的受益者就是那些专注比赛的优秀运动员, 当然, 最大的受害者自然就是平时以耍赖玩儿坏著称的某国的下三滥选手, 是的, 说的就是昨晚三名运动员全都被罚出局的韩国队, 就是你们丫挺的. 尤其从汉城奥运会到02世界杯再到平昌冬奥会, 只要你们是东道主, 有你们不玩儿赖的比赛吗? 骂你们臭SB有没有冤枉你们? 你们敢舔着脸说自己有半点体育精神? 玩儿不起的癞皮狗, 活该!</p>
-<p>当然, 新技术的引入和裁判机制多少也影响了比萨的节奏, 尤其比赛结束, 获胜的运动员也不能第一时间尽情庆祝, 而必须多花时间等裁判的最终判决. 这点, 其实和当初足球引入VR很像. 记得刚刚引入VR, 进球后球员不会再像以前那样第一时间激情庆祝, 而是得等裁判的裁决, 一旦VR介入, 那等待时间就更长, 等主裁判判决进球有效, 进球的球员早就进入贤者模式了…</p>
-<p>当然, 无论如何, 科技的进步无可避免会影响到竞技体育, 无论作为比赛参与者的运动员, 裁判员, 还是观众, 都要适应新的变化. 不过只要能让癞皮狗不舒服, 就是进步!</p>
-<center>三</center>
-
-<p>在全球500强企业中, 微软无论如何都是不能被忽视的那个. 无论我们个人是否使用或喜欢微软的产品, 软件或硬件, 无可否认, 微软对整个社会的推动力和影响力远远超出了互联网和信息领域. 话说最近我偶然发现了微软面向普通公众推出的免费学习平台 <a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/learn/">Microsoft Learn</a>. </p>
-<img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/flowers1/learn.png" alt="Microsoft Learn主页" style="zoom:50%;" />
-
-<p>大概看了看, Learn为大家免费提供了包括微软自家几乎全部产品和技术的学习课程, 更难能可贵的是, Learn还包含了不少非微软开发或主导的业界主流技术课程. 而且, 微软就怕我们不知道怎么学, 还支持按职业规划提供学习路径:</p>
-<img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/flowers1/learn2.png" alt="Microsoft Learn 职业规划建议" style="zoom:50%;" />
-
-<p>诚然, 微软这么干也有”推广产品从娃娃抓起”的意思, 但推出如此细致全面的课程和方便的体验, 微软”就怕你不愿意学习”的苦心, 您get到了没?</p>
-<center>四</center>
-
-<p>回到冬奥会. 这次的开幕式我从头到尾看了一个遍, 最大感受大体是两个. 第一, 整个开幕式相当精彩, 无论形式还是内容. 第二, 和08年开幕式比, 央视的转播能力完全没有提升, 很多精彩的地方并没有完全体现出来, 国家队的水准依然有待提升.</p>
-<img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/flowers1/微信图片_20220208183431.jpg" alt="北京冬奥会开幕式 1" style="zoom:50%;" />
-
-
-
-<p>如果和08年奥运会开幕式相比, 08年开幕式大概讲述了一个”我们是谁”的故事. 厚重的历史底蕴, 充满活力的现在, 无与伦比的群体力量, 透过08年开幕式, 一个高速发展的, 走向强大的中国就这样屹立在亚洲的东方, 每个国人都胸怀复兴的梦想和崛起的自信, 锋芒毕露, 光芒四射.</p>
-<img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/flowers1/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20220208183438.jpg" alt="北京冬奥会开幕式 2" style="zoom:50%;" />
-
-
-
-<p>而这次的开幕式, 给我的最大感受是清新, 简练, 温暖. 我们不再急于给全世界上课, 我们不用再费心费力讲故事. 没有铺张的场景, 没有繁文缛节, 我们诚心请您做客, 为您沏上一碗清茶, 和您相向而坐, 没有高谈阔论, 只是朋友间真挚而平和的问候, 而最受关注的火炬点燃仪式, 我们干脆就直接把所有人齐心合力传递的火炬放在了各个国家组成的雪花中间, 远远看上去几乎看不到燃烧的火焰, 而实际上高压氢燃料的火焰虽小, 却坚韧地燃烧着, 温暖着各个国家, 有如现在的世界, 战争, 危机无处不在, 西方霸权和冷战思维依然在延续, 恐怖主义依然猖狂, 疫情侵袭着本就脆弱的经济形势, 而中国自己也面临着很多的问题和隐患… 和平和希望看起来是那么微弱, 但并非不存在, 且依然温暖着这个世界, 就像这枚火炬一样.</p>
-<img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/flowers1/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20220208183441.jpg" alt="北京冬奥会开幕式 2" style="zoom:50%;" />
-
-
-
-<p>尤其这次冬奥会的口号, 已经把我们的想法表露无疑. 是的, 现实世界一片狼藉, 但希望的火种从不曾熄灭. 坚韧, 奋斗, 正直, 学习… 人类拥有的所有美德都是保护火种的最好工具, 只要火种在, 让大多数人都乐于憧憬的未来就在.</p>
-<img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/flowers1/微信图片_20220208183431.jpg" alt="北京冬奥会开幕式 2" style="zoom:50%;" />
-
-
-
-<p>当然了, 开幕式上还是有一些小细节能看出我们刻在DNA里的”大国梦”, 无论是国旗的传递仪式, 还是中国运动员入场后响彻全场的”五星红旗迎风飘扬, 胜利歌声多么想亮”.</p>
-<img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/flowers1/微信图片_20220208183445.jpg" alt="北京冬奥会开幕式 2" style="zoom:50%;" />
-
-
-
-
-
-<p>嗯, 听说这次冬奥会最火的还是这个小胖子. 毕竟谁会拒绝长黑眼圈的胖子呢. 对了, 我还认识一个人也快有黑眼圈了, 而且也有点胖, 小姐姐们有没有兴趣认识一下:)</p>
-<img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/flowers1/5.gif" alt="冰墩墩" style="zoom:100%;" />
-
-
-
-<p>哦对了, 上面冬奥会的图片全部来自新华社, 感谢!</p>
-</p>
-      <div class="post-button"><a class="btn" href="/%E5%AF%84%E8%8A%B1%E9%9B%86-1/" rel="noopener"><i class="fa fa-angle-double-right fa-fw"></i>Read More</a></div>
-    </div>
-  </div>
 
 
 <div id="pagination">
-  <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/"></a>
+  <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/2/"></a>
 </div>
 
 <footer>
