@@ -81,6 +81,63 @@
 
   <div class="lx-entry padding">
     <div>
+      <h2 class="title"><a href="/%E6%B1%82%E7%B4%A2%E9%9B%86-%E7%AC%AC%E4%B8%83-%E4%B9%9F%E8%AE%B8%E8%BF%99%E5%B0%B1%E6%98%AF%E5%AE%87%E5%AE%99%E7%9A%84%E7%9C%9F%E7%9B%B8-%E5%88%9D%E8%AF%86%E9%9A%8F%E6%9C%BA%E6%BC%AB%E6%AD%A5%E6%9C%89%E6%84%9F/">求索集 第七 - 也许这就是人生的真相 初识随机漫步有感</a></h2>
+      <span class="lx-post-detail"><i class="fa fa-calendar-o"></i> 2022-06-05</span>
+      <p><h1 id="求索集-第七-也许这就是人生的真相-初识随机漫步有感"><a href="#求索集-第七-也许这就是人生的真相-初识随机漫步有感" class="headerlink" title="求索集 第七 - 也许这就是人生的真相 初识随机漫步有感"></a>求索集 第七 - 也许这就是人生的真相 初识随机漫步有感</h1><center>壹</center>
+
+<p>端午节, 数据分析开始学习<em><strong>随机漫步</strong></em>. 仅仅接触到一个变量的变化趋势就堪称无穷, 头晕脑胀不明所以, 我突然想起了屈原老爷子的诗句:</p>
+<blockquote>
+<p>朝发轫于苍梧兮，夕余至乎县圃。欲少留此灵琐兮，日忽忽其将暮。吾令羲和弭节兮，望崦嵫而勿迫。路曼曼其修远兮，吾将上下而求索。</p>
+</blockquote>
+<p>这里有几个名词我专门查了一下:</p>
+<ul>
+<li><p>苍梧, 广西地名;</p>
+</li>
+<li><p>县圃, 昆仑山顶, 神仙居所</p>
+</li>
+<li><p>灵琐, 神仙住宅的大门</p>
+</li>
+<li><p>羲和, 太阳女神, 传说中最早的天文学家和历法制定者, 我国去年发射的第一颗探日卫星就是”羲和号”. 关于羲和, 需要注意的大概有两点, 第一, 她虽然好成女神, 但在神话里她是东夷族的族人, 换句话说, 就像神农氏, 轩辕氏, 有巢氏, 燧人氏一样, 虽然好成神, 但中国自古就讲究天人合一, 从不认为世界是神创造的, 只不过神是人的杰出代表罢了.  第二点, 羲和有个孩子,就是在中国文化中象征着太阳的金乌, 或者说是只三足乌鸦. 如今, 乌鸦在国内的地位一落千丈, 不知什么时候被安了个<em><strong>老鸹</strong></em>的别名成了霉运的象征, 反而隔壁日本倒是继承了金乌的形象, 还给起了个名字叫八咫鸟, 成了自己的神鸟. 甚至日本足协直接把金乌放到了自己的标志里, 算是和日本的太阳旗彼此呼应, 只能说, 我们在传承传统文化的道路上, 还有很多事情要做, 远不是吃两根前门楼子造型的冰棍就够了:</p>
+<p><img src="http://5b0988e595225.cdn.sohucs.com/images/20171115/3a9aec99b56c4c71a6575dd1629e5cad.png" alt="日本足协标志"></p>
+</li>
+<li><p>弭节, 停车休息</p>
+</li>
+<li><p>崦嵫, 山名, 甘肃境内</p>
+</li>
+</ul>
+<p>所以屈原老爷子仅仅用了这几句诗, 就展示怹无穷的想象力, 伟大的志向, 尤其是对真理的向往. 而初步知道了<em><strong>随机漫步</strong></em>的概念, 我第一反应就是, 难道这就是宇宙的真相?</p>
+<center>贰</center>
+下面是最基础的随机漫步, 一个变量随机的变化:
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> random</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">positions = <span class="number">0</span></span><br><span class="line">walk = [positions]</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10000</span>):</span><br><span class="line">    steps = <span class="number">3</span> <span class="keyword">if</span> random.randint(<span class="number">0</span>, <span class="number">1</span>) <span class="keyword">else</span> -<span class="number">3</span></span><br><span class="line">    positions = positions + steps</span><br><span class="line">    walk.append(positions)</span><br><span class="line">plt.plot(walk)</span><br></pre></td></tr></table></figure>
+
+<p>我定义了一个变量positions, 它会随着时间变化而随机变化. 它的变化逻辑是:</p>
+<p>每个step, 都会按50%概率让这个变量随机增加3或减少3, 然后这样的随机变化执行10000次, 然后生成变量的变化图像.</p>
+<p>我分别运行了5次代码,得到了5个完全不同的结果:</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/3I86Sef5lTYS0VL9HXmrDWH6E7or4kz7Eopriboe7IydmDiaZvCNsa4N8TObVzbGhQVAiaM6xMeibtJxysODXaML7w/0?wx_fmt=png" alt="第一次结果"></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/3I86Sef5lTYS0VL9HXmrDWH6E7or4kz7deNPBU4m4sElHCamuFkHNZicL0LWp1zbiaTApk6s0slAsedic8pic7aGpQ/0?wx_fmt=png" alt="第二次结果"></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/3I86Sef5lTYS0VL9HXmrDWH6E7or4kz7ogFECupw2S4rhoMmW616PgXvibgsEI0QxicwWfia90AeGTaHeLQvROnyQ/0?wx_fmt=png" alt="第三次结果"></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/3I86Sef5lTYS0VL9HXmrDWH6E7or4kz7bPzlDWzjGQueLVibmx58cZaArZRmbwkn6su9R7v5rgHPdswIzRaanKw/0?wx_fmt=png" alt="第四次结果"></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/3I86Sef5lTYS0VL9HXmrDWH6E7or4kz7YL9tIC2xBze1AkdJfJ59vZYz7j73iasTxKNGsdr8GoATia6OCvbjeGtA/0?wx_fmt=png" alt="第五次结果"></p>
+<p>可以看到, 同样的代码, 最简单的一个变量的随机漫步, 5次结果完全不同. 有的一路走低, 有的先抑后扬, 但总体来说都是大起大落. 注意一下竖轴, 每次同样概率的+3 或 -3, 但有的区间瞬间就一路跌入低谷, 最小值直接到了-300多; 也有的区间意气风发, 昂首挺胸瞬间就到了+200多.</p>
+<p>这样的图形可以附会到很多场景, 比如股市, 比如人生. 我想, 就算是真的有神灵, 就算他真的能写出一个人人生的代码, 他也无法决定这个人人生的走向, 因为在每个step, 人都会做出自己的决定, 这个决定是神灵无法预料的. 唯一能决定是哪种决定的, 只能是人自己.</p>
+<blockquote>
+<p>我命由我不由天</p>
+</blockquote>
+<p>这句话虽然是一个反派喊出来的, 但不可否认, 这个结论是符合逻辑的. 每个人的初始条件不同, 这是客观存在的, 但它只能决定你在每个路口做出决定后的变化幅度, 有的人变一次是 100, 有的人只能是10, 有的人是0.1. 但是我们却能决定, 这100 / 10 / 0.1, 到底是+, 还是-. 只要坚持, 只要努力, 只要做你觉得对的事情, 我想你的人生曲线会和你的期望大致相符.</p>
+<p>&lt;&lt;国际歌&gt;&gt;里有一句话特别好地说出了我的心声:</p>
+<blockquote>
+<p>从来就没有什么救世主</p>
+<p>也不靠神仙皇帝</p>
+<p>要创造人类的幸福</p>
+<p>全靠我们自己</p>
+</blockquote>
+<p>嗯, 唱着<em><strong>国际歌</strong></em>学习<em><strong>Python数据分析</strong></em>, 效果真好</p>
+</p>
+      <div class="post-button"><a class="btn" href="/%E6%B1%82%E7%B4%A2%E9%9B%86-%E7%AC%AC%E4%B8%83-%E4%B9%9F%E8%AE%B8%E8%BF%99%E5%B0%B1%E6%98%AF%E5%AE%87%E5%AE%99%E7%9A%84%E7%9C%9F%E7%9B%B8-%E5%88%9D%E8%AF%86%E9%9A%8F%E6%9C%BA%E6%BC%AB%E6%AD%A5%E6%9C%89%E6%84%9F/" rel="noopener"><i class="fa fa-angle-double-right fa-fw"></i>Read More</a></div>
+    </div>
+  </div>
+  <div class="lx-entry padding">
+    <div>
       <h2 class="title"><a href="/%E6%B1%82%E7%B4%A2%E9%9B%86%E7%AC%AC%E5%85%AD-%E5%86%99%E5%85%AC%E4%BC%97%E5%8F%B7%E6%96%87%E7%AB%A0%E5%86%8D%E5%8D%87%E7%BA%A7-%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2%E5%A2%A8%E6%BB%B4/">求索集第六: 写公众号文章再升级 - 本地部署墨滴</a></h2>
       <span class="lx-post-detail"><i class="fa fa-calendar-o"></i> 2022-05-22</span>
       <p><h1 id="求索集第六-写公众号文章再升级-本地部署墨滴"><a href="#求索集第六-写公众号文章再升级-本地部署墨滴" class="headerlink" title="求索集第六: 写公众号文章再升级 - 本地部署墨滴"></a>求索集第六: 写公众号文章再升级 - 本地部署墨滴</h1><center>一</center>
@@ -562,73 +619,6 @@
 <p>拒绝洗脑的最好办法, 还是提升格局和眼界, 而这, 确实需要一个人全方位的提升. 所以, 请加油 (按说这里应该有个叹号, 不过我刚说完自己不喜欢叹号, 所以, 就什么号都不用了吧~~~)</p>
 </p>
       <div class="post-button"><a class="btn" href="/%E5%AF%84%E8%8A%B1%E9%9B%86-%E7%AC%AC%E4%B8%89/" rel="noopener"><i class="fa fa-angle-double-right fa-fw"></i>Read More</a></div>
-    </div>
-  </div>
-  <div class="lx-entry padding">
-    <div>
-      <h2 class="title"><a href="/%E5%AF%84%E8%8A%B1%E9%9B%86-%E7%AC%AC%E4%BA%8C/">寄花集 第二</a></h2>
-      <span class="lx-post-detail"><i class="fa fa-calendar-o"></i> 2022-02-10</span>
-      <p><h1 id="寄花集-第二"><a href="#寄花集-第二" class="headerlink" title="寄花集 第二"></a>寄花集 第二</h1><center>丰县生育八孩的女子, 你到底叫什么名字</center>
-
-<p>“丰县生育八孩女子”还是有了结论.</p>
-<p>之前县里的调查结果被全部推翻.</p>
-<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/flowers2/yang2.jpeg" alt="县政府的调查结果"></p>
-<p>经部、省、市公安机关的全面调查, 那个被拴着狗链生了8个孩子的女士证明有被拐卖的嫌疑, 而她的”丈夫”则涉嫌非法拘禁. </p>
-<img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/flowers2/yang.jpeg" alt="女人" style="zoom:50%;" />
-
-<p>愤怒, 悲哀. 而实际上, 这是同一种情绪的两面.</p>
-<p>愤怒是因为我只能愤怒, 悲哀是因为我只能悲哀.</p>
-<p>我甚至不知道这位女士真正的名字是什么, 我怀疑她自己都忘了自己叫什么. 但我知道, 她活在地狱里.</p>
-<p>她没有家人, 她只是被几个长得像人的牲畜, 像牲畜一样对待. 我甚至可以想象, 这位女士所处的这个牲口棚, 是一妻多夫, 或者叫共享老婆社会.</p>
-<p>这位女士的遭遇比秦香莲还要糟糕的多. 她的”丈夫”的人性含量比陈世美更低, 而她也没有她的包青天.</p>
-<p>看看之前县里的调查结果就可以知道, 她所处的环境里, 那些能救她的’各位大人们, 其实和她的”丈夫”是一样的, 从动物学角度来说, 很可能它们都是一个种群. 它们具有同样的思想, 对待这个世界有着同样的认知.</p>
-<p>我真的很愤怒, 我真的很悲哀.</p>
-<p>我竟然和这样的它们是同胞? 它们竟然也生活在这个美好的国度, 拥有着这个国家的高山, 森林, 大海, 沙漠, 继承着这个民族光辉灿烂的文化和思想? 它们甚至不用交那么多的税, 为这个社会创造的价值可能还到它们带来伤害的万分之一. 我自问自己没什么大本事, 也没多高尚的人格, 但我确信至少自己是个人, 是个可以昂首挺胸走在阳光下大声说出心里话的人. 它们是什么? 它们敢站在太阳下, 拍着胸膛说它们做的事情哪怕有一件是人类能做的出来的?</p>
-<p>以前我不理解为什么有些人宁可选择举目无亲的大城市, 也不要留在自己的故乡. 现在我懂了. 因为某些故乡, 适合所有动物植物生存, 但不适合人生存. 北上广就算再冷血再无情, 至少有着人性的光辉, 而有些地方, 只是鬼蜮横行的地狱.</p>
-<p>我希望这个新闻还能有下集, 在新的报道里, 希望能看到那位女士能记起自己的名字, 能找到自己的家乡, 甚至, 能想起来自己本来是个人. </p>
-<p>哦对了, 请允许我表达对微博之类自媒体的歉意. 曾经有段时间我认为那是个大粪坑, 我错了. 其实这个国家的进步和效率的提高, 有很大一部分功劳是拜你们所赐. 你们才是这个国家前进的动力</p>
- <center>为什么我的Gitee库又被封了</center>
-
-
-<p>话说随着Github访问越来越不稳定, 我的很多内容开始往Gitee存. 好处自然就是速度快, 而作为GitHub的中国特色版. 缺点也很明显, 内容审查很严格. 比如我写这篇Blog时, 图片怎么也贴不上来了, 上Gitee一看, 果然:</p>
-<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/flowers2/block.png" alt="图床被封了"></p>
-<p>我开始寻思, 难道是我的图片有不太妥当的? 不可能啊, 不妥的都在E盘学习资料里存着呢, 而且还加密+隐藏了, 我都找不着在哪, 怎么我也不会把这些好东西传到Gitee上找不自在不是.于是我只好上下求索, 反复尝试,终于明白, 哦, 原来是某个图片的文件夹名字是某位国家领导人的姓名拼音, 修改文件夹名字, 问题解决. 但之前文件夹里的图片就不能正常显示在Blog的那篇文章里面了. 当然这不是问题, 因为那篇其实挺正面的评价这位领导人的文章已经被微信公众号删掉了.</p>
-<p>其实我不反对对言论, 信息, 数据进行管控. 但比较不方便的是你我并不知道管控的标准和规则到底是什么. 有些明显的字眼我当然知道, 肯定不会触碰, 但有些其实很不好猜, 只能是自己去尝试, 慢慢去体会那个关键字数据库里到底有什么.</p>
-<p>所以在这里我还是想声明, 作为接收九年义务教育的根正苗红的80后, 我知道什么能做什么不能做, 什么能说什么不能说, 我无意触怒任何人, 也不想给任何人添乱. 如果我不小心让您不愉快, 烦请您告知, 我无条件接受所有批评指教, 保证立即整改.</p>
-<p>话说回来, Github现在也够可以了, 访问不稳定我不怪你, 访问时给我这种验证问题是什么意思? 下次就该求傅里叶级数的收敛性了吧? 我有时候想, 是不是有些验证问题其实是钓鱼, 你答出来才说明你不是真实用户? 毕竟有些问题哪个正常人能知道?</p>
-<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/flowers2/verification.png" alt="Github的验证问题"></p>
- <center>Windows 11的服务器版本, 来了</center>
-
-<p><a target="_blank" rel="noopener" href="https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewserver">微软面向开发者和测试人员推出了Windows Server的最新内部预览版本</a>: Windows Server Build 22538. 更新下看看, Wow, 用上Windows 11的内核了.</p>
-<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/flowers2/winver.png" alt="Windows Server 22538 I"></p>
-<p>话说以前, 微软的客户端和服务器端操作系统是两条线, 内核完全不同, 从Windows 2000 以后, 微软把二者的内核统一了, 就像雷凌和卡罗拉, 汉兰达和陆放, 陆地巡洋舰和LX570, 完全就是一个架构上的两种外观. 如Window XP和 Windows Server 2003, Vista和Windows Server 2008, Win 7 和 Server 2008 R2, Win 8 和 Server 2012, Win 8.1 和Server 2012 R2, Win 10和Server 2016 / 2019 / 2022. 是的, Win 10对应了三代服务器版本.</p>
-<p>所谓服务器版本, 无非就是从系统功能上做了一些调整, 比如服务器端往往砍掉了蓝牙, 游戏组件之类的支持, 同时预装软件也很少, 系统资源调度上更倾向于后台服务, 同时增加各种服务器组件. 因为附带的乱七八糟的预装少, 加上和客户端系统相同内核导致可以轻松把系统改造成客户端系统, 很多本来就相信服务器系统比客户端系统稳定的朋友们就乐于自定义和改造服务器系统, 然后在自己的电脑上使用, 我们称之为”服务器党”. 是的, 我其实也是这个党派的成员…</p>
-<p>而现在, 终于Windows Server也来到了 Windows 11的时代.</p>
-<p>因为是测试版本, 因此有过期日期, 到了9月16日以后就会提示无法使用. 不过这不是问题, 等新版测试版甚至正式版出来, 直接升级就行了.</p>
-<img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/flowers2/win11.png" alt="Windows Server 22538 II" style="zoom:50%;" />
-
-
-
-<p>作为客户端用起来和普通的Windows 11没有任何区别, 虽然是测试版系统也没觉得特别不稳定 (因为Windows 11自己也不怎么样), 反正我也不怎么折腾系统, 能用才是王道. 不过使用中还是发现了一点小问题, 比如, 我本来安装的是中文版, 我想把系统界面改成英语版本, 按说Windows改语言是很轻松的, 结果实操一下, 报错了…</p>
-<img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/flowers2/install english error.png" alt="Windows Server 22538 III" style="zoom:50%;" />
-
-<p>正常的安装语言流程是Windows从微软的服务器上把语言包下载到本地安装, 从错误情况看, 我是点完<strong>下载</strong> 就开始报错, 因此我怀疑错误原因是微软压根没把语言包放在服务器上, 导致压根没找到语言包. 好在微软提供了Language and Optional Features 镜像, 甭费劲了, 直接把镜像里面带”en-us”的包全都考出来, 然后安装:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dism /online /add-package /packagepath:&lt;en-us包的存放文件夹&gt;</span><br></pre></td></tr></table></figure>
-
-<img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/flowers2/install english 2.png" alt="Windows Server 22538 IV" style="zoom:50%;" />
-
-<p>果然, 这下正常了, 下面只要切换成英文即可.</p>
-<p>顺便说一下, 向微软反馈问题还是挺麻烦的, 他们会要求你提供一大堆的详细信息. 所以我还是放弃了, 真没时间. </p>
-<p>写到这里, 窗外的雪已经下的很大, 这样的天气, 必须带俩米下楼玩儿雪呀, 不写了, 就到这里了, 拿上从北海道扛回来的雪橇, 出发 ~~~</p>
-<img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/flowers2/snow3.jpg" alt="俩米在北海道 I" style="zoom:50%;" />
-
-<img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/flowers2/snow2.jpg" alt="俩米在北海道 II" style="zoom:50%;" />
-
-<img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/flowers2/snow1.jpg" alt="俩米在北海道 II" style="zoom:50%;" />
-
-<img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/flowers2/snow4.jpg" alt="俩米在北海道 II" style="zoom:50%;" />
-</p>
-      <div class="post-button"><a class="btn" href="/%E5%AF%84%E8%8A%B1%E9%9B%86-%E7%AC%AC%E4%BA%8C/" rel="noopener"><i class="fa fa-angle-double-right fa-fw"></i>Read More</a></div>
     </div>
   </div>
 

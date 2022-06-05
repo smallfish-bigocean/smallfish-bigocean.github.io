@@ -81,6 +81,58 @@
 
   <div class="lx-entry padding">
     <div>
+      <h2 class="title"><a href="/%E8%BF%99%E4%B8%AA11%E6%9C%89%E7%82%B9%E7%8C%9B/">这个11有点猛</a></h2>
+      <span class="lx-post-detail"><i class="fa fa-calendar-o"></i> 2021-06-09</span>
+      <p><h1 id="这个11有点猛"><a href="#这个11有点猛" class="headerlink" title="这个11有点猛"></a>这个11有点猛</h1><p>最近业界比较热的一大新闻，是微软要在6月24日发布下一代操作系统。</p>
+<p>用小米话说，我脑袋当时噔的就是一个问号，然后就是一个叹号。</p>
+<p>按之前微软的思路，今后将以滚动更新的形式更新Windows 10，因此Windows 10将是最后一个版本。从2015年第一版Windows 10 1507， 1511，1607。。。 Windows 10一路走来，版本号从Windows 10.10240已经迭代更新到19043，微软每次更新也没大张旗鼓说这次我们放了颗卫星。之前倒是有个Windows 10X 项目传闻，但后来也被证实被放弃了。直到2021年夏天，似乎要发生什么不一样的改变，以至于微软说要搞个大新闻？</p>
+<p>本着百度不如亲自研究的理念，咱们直接找到微软提供的最新版本开发版Windows 10，看看能不能找到微软即将带给我们什么惊喜。</p>
+<p>进入新系统，并没有看到什么不同呀。一样的桌面，一样的开始菜单。深入一下，看看有什么神秘的发现.</p>
+<img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/newwin/version.png" alt="version" style="zoom:80%;" />
+
+<p>版本号21390，比目前最新正式版 19043高出不少。Dev，评估副本，和过期时间也说明了它处在开发早期阶段的身份。好在这段时间日常使用下来倒是没什么不妥。</p>
+<p>第二个发现来了，Windows Ternimal终于替换CMD和Powershell成为默认终端。要知道这个Windows Terminal可是开源的，而且支持多个平台。微软の野望果然不是盖的。一个Windows揽天下的信念可见一斑。</p>
+<img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/newwin/terminal.png" alt="terminal" style="zoom:67%;" />
+
+<p>发现3，IE没了。开始菜单已经彻底找不到IE。即使在系统文件夹还能看到IE，但执行iexplore.exe，启动的已经是Edge浏览器。看来微软确实开始清理祖传代码，前任们的痕迹正在慢慢被抹去。</p>
+<p>发现4，控制面板不好找了。控制面板这次被扔到管理工具里，而且图标也重绘了。随着越来越多的系统控制模块被迁移到设置应用，控制面板这个老朋友也正在慢慢退出历史舞台。</p>
+<img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/newwin/controlpanel.png" alt="cp" style="zoom:67%;" />
+
+<p>等等，管理工具里这个Power Automate是干嘛的？ 难道是。。。</p>
+<img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/newwin/tools.png" alt="pa" style="zoom:80%;" />
+
+<p>此前，微软在Office套件中提供了一个在线应用，就是这个Power Automate。它的作用是轻松创建自动化工作流, 利用业务流程自动化提高工作效率。比如，你每次更新完你们部门Teams的某个文件，然后你需要给一些人发邮件告知他们注意这个更新，那你可以用Power Automate创建一个流，这样你只需要更新完Teams，所有你指定的人都会受到通知邮件。甚至更新文件这个过程也可以自动完成。“自动化工作流”，这其实也是我之前一直在学习研究的东西，毕竟这段时间我一直在和无脑重复劳动做斗争，成果不少，挑战很多呀。</p>
+<p>之前Power Automate只是作为Office套件存在，涉及的工作流也以Office本身及协同工作为主，这次居然在Windows系统里看到这个家伙，难道？ 打开一看，哎呦，</p>
+<img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/newwin/powerato2.png" alt="pa2" style="zoom:67%;" />
+
+<p>看着左侧操作里这满满腾腾的，涉及系统，办公，邮件，云，数据库。。。 我去，微软大神这不是放卫星啊，这是想制造一个平行宇宙啊这是？ 微软这是想让我这个喜欢文艺的青年沉醉于各种“流”的世界，我可以尽情把自己日常的工作“流”化，然后让Power Automate代我去一一完成，而我，只需要紧锁眉头思考自己和这个宇宙有什么关系。。。一个Power Automate，就值得升级新系统啦！！！</p>
+<p>继续挖掘。听说WSLg也是这次的重磅更新，咱们一起看看。之前的WSL，是Windows加入了对Linux环境的支持，包括执行大部分命令行，实用工具和应用程序，前提是这些程序都是基于终端的，也就是没有图形界面。而所谓WSLg，就是微软在WSL上增加了对图形系统的支持，可以直接运行带图形界面的应用。</p>
+<p>这里需要注意的是，WSLg并不是给WSL里的Linux安装了图形界面，而是提供了Linux下这些图形界面程序需要的环境。这些图形界面程序并不是运行在Linux里，而是运行在Windows下。</p>
+<p>比如我们执行Libre Office的Calc程序(Libre Office是Linux下开源的Office套件，Calc是这个套件中提供Excel功能的程序):</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/newwin/wslg6.png" alt="office"></p>
+<p>可以看到，Calc虽然运行在Windows下，但是你用文件-打开，打开路径全是WSL的Linux里的路径，它并不能直接访问你电脑上的本地文件。这就相当于安装了一个Linux虚拟机，然后把虚拟机里的Linux程序直接拖到Windows下运行一样。</p>
+<p>也正是如此，新版Windows直接把Linux下的所有图形程序直接放到了Windows自己的开始菜单，调用起来和Windows下的程序没有任何区别，爽啊</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/newwin/wslg5.png" alt="gui"></p>
+<p>只能说，微软在最佳开源软件，最佳Linux软件，安卓，苹果IOS的开发厂商的道路上一去不回头了。难怪有人说，Windows快成最佳Linux版本了。</p>
+<p>最后再上几个新图标的样式吧。这次微软重绘了大部分图标，好看不好看的，反正新鲜多了</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/newwin/newicon.png" alt="newicon1"></p>
+<img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/newwin/ico1.png" alt="ico1" style="zoom:67%;" />
+
+<img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/newwin/ico2.png" alt="ico2" style="zoom:67%;" />
+
+<img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/newwin/ico3.png" alt="ico3" style="zoom:67%;" />
+
+
+
+<p>时间有限，一通体验下来，第一感受，如果微软即将发布的系统是基于目前这个开发版的，那确实可以算是一个卫星。理由是，虽然最显而易见的UI部分没有翻天覆地的变化，但微软这次加入的内容，针对“生产力”做出了全新的诠释。说实话，业界以“生产力”标榜自己的系统和产品确实不少，但在这个全新时代下，真正具有普遍意义的生产力系统，真得说微软这位老战士。</p>
+<p>好消息是，似乎工作方式又可以得到进化，坏消息么，还得找时间学习呀我的天。</p>
+<p>这个“11”，超猛，超勇，超期待。</p>
+</p>
+      <div class="post-button"><a class="btn" href="/%E8%BF%99%E4%B8%AA11%E6%9C%89%E7%82%B9%E7%8C%9B/" rel="noopener"><i class="fa fa-angle-double-right fa-fw"></i>Read More</a></div>
+    </div>
+  </div>
+  <div class="lx-entry padding">
+    <div>
       <h2 class="title"><a href="/%E5%AE%9D%E8%B4%9D%E5%84%BF%EF%BC%8C%E4%B8%80%E8%B5%B7%E5%AD%A6Python%E5%91%80-I/">宝贝儿，一起学Python呀 - I</a></h2>
       <span class="lx-post-detail"><i class="fa fa-calendar-o"></i> 2021-06-08</span>
       <p><h1 id="宝贝儿，一起学Python呀-I"><a href="#宝贝儿，一起学Python呀-I" class="headerlink" title="宝贝儿，一起学Python呀 - I"></a>宝贝儿，一起学Python呀 - I</h1><p>这是一系列文章的开始。其实我本意是想跟着中国电子学会的青少年软件编程（Python）等级考试大纲，给俩米介绍一下Python的知识，帮着两个小家伙考个证书，万一小齐一高兴给点零花呢。本来想好文风应该是“小宝宝，今天，粑粑要带你走入程序的世界”这样幼稚又2B的风格，结果一动笔就飘了，小可爱风格也回到老爷们儿侃大山风格，而尽量不说少儿不宜内容，已经算是我最后的坚持。。。</p>
@@ -446,72 +498,6 @@
 <p>弯道超车, 真的容易吗? 故事里的___海洋饼干___, 受了无数的伤,至于它的骑手, 甚至腿被锯断了重新接的… </p>
 </p>
       <div class="post-button"><a class="btn" href="/%E5%BC%AF%E9%81%93%E8%B6%85%E8%BD%A6-%E5%A6%82%E6%AD%A4%E7%AE%80%E5%8D%95/" rel="noopener"><i class="fa fa-angle-double-right fa-fw"></i>Read More</a></div>
-    </div>
-  </div>
-  <div class="lx-entry padding">
-    <div>
-      <h2 class="title"><a href="/%E6%9D%82%E6%84%9F%E4%B8%80/">杂感一</a></h2>
-      <span class="lx-post-detail"><i class="fa fa-calendar-o"></i> 2021-04-12</span>
-      <p><h1 id="杂感之一"><a href="#杂感之一" class="headerlink" title="杂感之一"></a>杂感之一</h1><p>以前看鲁迅先生杂文（当然了，我就没看明白过），总觉得能在一篇文章里哐哐哐写好几段完全不矮边的东西，然后用一二三四五六七区隔开，然后题目叫杂感之类的，是一种逼格很高的写作手法。所以我也准备照着来，题目加上之一，是因为估计以后老得这么干，加上之一之二之三就直接把逼格加到满级，直接晃得对面睁不开眼，哈哈</p>
-<center>一</center>
-
-<p>说到逼格，最近看网上有股潮流，但凡提到MBTI，总有人喜欢往INTP上靠，因此一说到此话题，就会找到一大帮INTP，这就很奇怪了，因为研究表明，INTP在人类中的占比其实很稀有（不到1%）。原因么，估计就是INTP的特立独行很符合这个时代人们的向往。</p>
-<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/miscellaneous1/5366d0160924ab1813ab818733fae6cd7a890bc4.png"></p>
-<p>想象一下，如果有这么一个人：</p>
-<ul>
-<li>对任何感兴趣的事务都有着创造性的见解</li>
-<li>总能在别人想不到的地方开展研究</li>
-<li>热衷于对问题找到一套完整闭环的解决思路</li>
-<li>自主思考能力</li>
-<li>创造力和设计能力</li>
-</ul>
-<p>嗯嗯，听起来不错是吧？看起来任何NB的职位都需要这样的特质。可是在想办法让自己看起来像个INTP的时候，请想象一下，如果这个人:</p>
-<ul>
-<li>超级厌恶社交，宁愿活在自己的世界中</li>
-<li>害怕重复性事务</li>
-<li>恐惧细节，恐惧期限</li>
-<li>在日常的小问题上反而容易卡壳</li>
-<li>内在世界比外面的世界更精彩</li>
-<li>你所爱的人很难理解你脑袋里装的什么玩意</li>
-<li>邋遢，懒惰，认为个人形象的维护是耽误工夫</li>
-</ul>
-<p>怎么样，是不是一个油腻大叔的形象立刻浮现在你眼前？请问，这样的人，又如何面对现在的高压力，快节奏的团队型工作？ 又如何适应规则和流程？又如何从自己的世界中走出来，去维护和家人，和朋友，和同事的关系？</p>
-<p>相信我，INTP一点都不好玩儿，而且活的会很累，尤其当你只是个打工人的情况下，别TM问我怎么知道的。</p>
-<center>二</center>
-
-<p>CentOS果然不玩儿了，哈哈。</p>
-<p>简单梳理梳理，这个事情大概是这么回事儿。</p>
-<p>话说在众多的Linux发行版当中，Red Hat Enterprise Linux是毫无疑问的企业级Linux王者。在无与伦比的稳定性和具有开创性的前瞻技术上，Red Hat Enterprise Linux拥有着完美的平衡。而这一切成果，源自于红帽搞了个社区版Linux 发行版  Fedora 作为 Red Hat Enterprise Linux的试验田，相当于新的技术率先在Fedora 上应用，而拥有大量拥趸的Fedora 用户会把各种问题反馈给红帽进行整改，直到稳定后，把Fedora的稳定版本构建为Red Hat Enterprise Linux。</p>
-<p>Red Hat Enterprise Linux哪儿都好，但问题就是，用Red Hat Enterprise Linux得花钱。准确的说，用Red Hat Enterprise Linux是免费的，但是如果想获得技术支持和安全更新（就是Windows下的Windows Update），您就得花钱。</p>
-<p>Windows花钱我们就忍了，被业界吹上天的Linux还收费，而且还是个开源系统，这不是骗我们钱么，不行！不过人间还是充满了希望的。Red Hat Enterprise Linux最大的问题是收费，但Red Hat Enterprise Linux毕竟还是Linux，它是开源的啊，所以，一帮热爱白PIAO的有志青年直接把 Red Hat Enterprise Linux的源代码拿过来自己编译了一遍，去掉了里面的红帽商标，于是，这个和Red Hat Enterprise Linux代码完全一样，功能完全一样，就是去掉了红帽商标的CentOS诞生了。而且你Red Hat Enterprise Linux怎么更新，我们也怎么更新，因为你们的更新也是开源的。。。</p>
-<p>Fedora, Red Hat Enterprise Linux和CentOS基本就是这么个关系</p>
-<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/miscellaneous1/%E6%BC%94%E7%A4%BA%E6%96%87%E7%A8%BF1.png" alt="三者关系"></p>
-<p>Red Hat Enterprise Linux的版本支持时间是多久？ 10年。 CentOS的版本支持时间呢？ 刚才红帽说几年？10年？得嘞，那我们也是10年，就问你们敢动不。</p>
-<p>眼看着自己业界如此NB的Red Hat Enterprise Linux就这么被别人合理合法地抄（此处给伟大的开源协议鼓掌十分钟，啪啪啪），红帽说我就C… 直到某一天，红帽把CentOS收购了。。。</p>
-<p>后面的故事想必你也明白了。在一个风和日丽的下午，CentOS突然说，我们不再推出CentOS了，对对，就是那个Red Hat Enterprise Linux的无码版，不对，是没有红帽商标版的，支持十年的，大家都爱不花钱白用的那个CentOS，我们不玩儿了。于是广大的企业不干了。你说好支持十年的，说好了是完全复制Red Hat Enterprise Linux的，而且，最可恨的是，你刚刚2020年年底推出的最新版CentOS (CentOS 8 version 2011，完全拷贝于Red Hat Enterprise Linux 8.3)，我看着你说支持10年我才费半天劲部署好，然后你说你们不玩儿了？人家CentOS是这么说的:</p>
-<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/miscellaneous1/Snipaste_2021-04-12_14-48-01.png" alt="CentOS声明"></p>
-<p>这条信息下，这个置顶的评论说出了业界的心声:</p>
-<p>This is dumb. The entire premise and the only reason anyone uses CentOS  is because it’s rebuilt RHEL. Congratulations on undermining that,  nitwits.</p>
-<p>嗯，赤果果的白PIAO失败后的内心独白。</p>
-<p>那么问题来了，CentOS 声明里提到的Stream是个什么鬼？ Stream，不是一个游戏平台么…</p>
-<p>是这样的，CentOS被红帽收编以后，红帽说抄袭版CentOS不许玩儿了，你们这么玩儿:</p>
-<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/miscellaneous1/%E6%BC%94%E7%A4%BA%E6%96%87%E7%A8%BF2.png" alt="新玩儿法"></p>
-<p>看见了吧，CentOS Stream是Red Hat Enterprise Linux的前置预览版，相当于降级了。。。</p>
-<p>企业级使用者对“稳定”的容忍程度，看看Windows 10的普及速度就知道了。这么搞，大家当然不满意。那有办法么？</p>
-<p>来吧，各位INTP，“找到完整闭环解决方案”，展现你们最迷人的特质机会来了。</p>
-<p>其实红帽已经告诉我们怎么做了。</p>
-<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/miscellaneous1/Snipaste_2021-04-12_15-14-14.png" alt="订阅"></p>
-<p>是的，既然不能白PIAO CentOS了，我们为什么不直接白PIAO Red Hat Enterprise Linux？？？ 注册一个开发者账号，你可以在16台物理服务器或虚拟机上安装Red Hat Enterprise Linux，最多不超过128颗处理器，就问你我们红帽仗义不仗义？就问你敢动不敢动？什么，你说你们企业服务器多？ 我的朋友，你多注册几个，谁拦着你了？至于开发者账号是否能用在生产环境，这点红帽也很仗义，和微软家的类似SQL Server开发版不能部署在生产环境不同，红帽允许在生产环境不是开发者订阅，请看红帽的解释:</p>
-<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/miscellaneous1/faq.png" alt="faq"></p>
-<p>当然，这么玩儿也不是没有风险，比如红帽突然有一天说，开发者订阅我们不提供了/ 开发者订阅只能用在开发环境，坦白说，这种风险是有的，但这是目前从马上到期的CentOS平滑过渡的最好办法了，因为无需重新部署，也无需额外费用。</p>
-<center>三</center>
-
-<p>自从接触到HEXO，我的Blog工作流也算完成闭环了 (想靠拢INTP快来记重点： 闭环)。HEXO + Github + VS Code，来自三家的方案竟然结合的如此完美，真是牛大了。三个方案唯一的共同点，都是开源。 开源已经不是属于传说中大神们才玩儿的高端货，旧时王谢堂前燕，飞入寻常百姓家。唯一的问题，GitHub这访问速度真是一言难尽。上面要求本地数据本地存放，加上GitHub的国籍导致的访问问题，催生了国产版GitHub, Gitee。用了一段时间，Gitee的功能相当完善，速度就甭说了，毕竟是本土产品。至于我们担心的数据会不会被扫描，相信我，别担心这个问题了。。。</p>
-<center>四</center>
-
-<p>哦哦哦，一不小心到四了。算是预告吧，接下来我想写一篇关于界面的文章，我想仔细梳理一下自己的思路，聊聊我对好的界面的想法。图形界面就一定好？ 一堆图标和按钮就是好的设计？美观就一定复杂？简陋就一定易用？敲键盘和点鼠标哪个更高级？别着急，慢慢听我跟您聊，如果这段时间积极应对拖延症能初见成效的话 (想靠拢INTP请继续记重点：拖延症)</p>
-</p>
-      <div class="post-button"><a class="btn" href="/%E6%9D%82%E6%84%9F%E4%B8%80/" rel="noopener"><i class="fa fa-angle-double-right fa-fw"></i>Read More</a></div>
     </div>
   </div>
 
