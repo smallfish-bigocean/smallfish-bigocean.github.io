@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content=#58b77a>
+  <title>宝贝儿，一起学Python呀 - 番外篇 | Small fish, big ocean</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Houyufeng 侯宇峄1�7">
+  <meta name="keywords" content="">
+  <meta name="description" content="My blog">
+  <script id="hexo-configurations">
+  var CONFIG = {
+    root: '/',
+    theme: 'hexo-theme-lx-master',
+    version: '0.3.9',
+    localsearch:{
+      "enable": false,
+      "trigger": "auto",
+      "top_n_per_article": 1,
+      "unescape": false,
+      "preload": false
+      },
+    path: 'null'
+  };
+</script>
+
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/css/main.min.css">
+  <style type="text/css">
+    pre,
+    code {
+      font-family: 'Fira Code', monospace;
+    }
+    html {
+      font-family: sans-serif;
+    }
+    body {
+      font-family: sans-serif;
+    }
+    h1, h2, h3, h4, h5, figure {
+      font-family: sans-serif;
+    }
+    .menu-container{
+      font-family: sans-serif;
+    }
+  </style>
+
+  <script src="//cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/js/jquery.jside.menu.js"></script>
+	<script>
+	$(document).ready(function(){
+	$(".menu-container").jSideMenu({
+	    jSidePosition: "position-right",
+	    jSideSticky: true,
+	    jSideSkin: "greenish",
+	     });
+	}); 
+	</script>
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Fira Code:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css">
+<meta name="generator" content="Hexo 6.2.0"></head>
+<body>
+<div class="single">
+
+<div id="page">
+<div id="lx-aside" style="background-image: url(//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/images/post_cover.jpeg)" data-stellar-background-ratio="0.5">
+  <div class="overlay">
+  <div class="page-title">
+    <div class="avatar"><a href="/"><img src="/images/avatar.jpeg"></a></div>
+    <span>2021-07-02</span>
+    <h2>宝贝儿，一起学Pytho...</h2>
+    
+    </div>
+</div>
+</div>
+
+<div id="lx-main-content">
+  <div class="lx-post">
+    <div class="lx-entry padding">
+      <div>
+        <h1 id="宝贝儿，一起学Python呀-番外篇"><a href="#宝贝儿，一起学Python呀-番外篇" class="headerlink" title="宝贝儿，一起学Python呀 - 番外篇"></a>宝贝儿，一起学Python呀 - 番外篇</h1><center>一</center>
+
+<p>话说《宝贝儿，一起学Python呀》第五篇正在激情创作中，嗯，说白了就是没写完，拖延了。。。 但为什么还要突然插一个《番外篇》呢？难道是要恰饭加广告？</p>
+<p>其实我是不反对啦，但这样的美事一时半会儿不会发生。番外篇的由来是这样的，一直以来，我都会把自己的文章放在我的Blog <a href="https://smallfish-bigocean.github.io/">小鱼游大海</a>和微信公众号上，但是这里其实有个问题，因为我使用Markdown写文章，但是微信公众号对于Markdown的支持比较一言难尽，因此我之前都是找转换器进行转换，但是问题依然存在，比如，我特别喜欢的Markdown的代码区块功能，能显示代码行号，代码高亮，显示效果几乎和VS Code写代码完全一致：</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/python/codeblock4.png" alt="codeblock4"></p>
+<center>VS Code中显示的效果</center>
+
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/python/codeblock3.png" alt="codeblock3"></p>
+<center>Markdown中显示的效果</center>
+
+
+
+<p>看起来很舒服，对吧？ 然后转换成HTML发布到Blog上，似乎效果也不错。</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/python/codeblock2.png" alt="codeblock"></p>
+<center>Blog中显示的效果</center>
+
+
+
+<p>结果放到微信公众号里，就变成如此尊容了。。。</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/python/codeblock1.jpg" alt="codeblock1"></p>
+<p>语法高亮没有了，行号没有了，而且直接堆成了一行，手机竖屏下根本就显示不全。。。</p>
+<center>二</center>
+
+<p>我也思考了几个方案，比如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;li&gt;对代码区块进行截图，然后插入图片&lt;/li&gt;</span><br><span class="line">评论:脱了裤子放P</span><br><span class="line">&lt;li&gt;干脆把平台切换到简书或知乎等支持Markdown的平台&lt;/li&gt;</span><br><span class="line">评论:之所以用公众号就是为了利用微信的推广，要是切到其他平台岂不是更麻烦？别看哥们儿公众号关注度只有个位数，万一经过我一番运作就壮大了呢对吧？梦里什么都有！</span><br><span class="line">&lt;li&gt;利用HTML+CSS进行转换处理&lt;/li&gt;</span><br><span class="line">评论:有学习成本，以后再说</span><br></pre></td></tr></table></figure>
+
+<center>三</center>
+
+<p>难道真的没辙了？这时，我想起了一位哲人说过的话:</p>
+<blockquote>
+<p>没有什么是百度解决不了的，如果有，那就换个浏览器再百度一次</p>
+</blockquote>
+<p>那就以”公众号 代码区块”为关键字搜索一番，您猜怎么着？还真有货耶! </p>
+<p><a target="_blank" rel="noopener" href="http://md.aclickall.com/">一位大侠制作的转换工具</a> 貌似能解决这个问题。咱们试试:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">print(&#x27;我是第一行代码&#x27;)</span><br><span class="line">print(&#x27;我是第二行代码&#x27;)</span><br><span class="line">print(&#x27;我是第三行代码&#x27;)</span><br><span class="line">print(&#x27;我是第四行代码&#x27;)</span><br><span class="line">print(&#x27;我是第五行代码&#x27;)</span><br><span class="line">if 3&gt;4 :</span><br><span class="line">	print(&#x27;脑子秀逗了&#x27;)</span><br></pre></td></tr></table></figure>
+
+<p>看起来好像可以呀？ 那就先试试，不行再说。不过最好还是得看看大侠是怎么实现的，万一哪天这个工具关闭了，就不妥了呢。。。</p>
+<center>四</center>
+
+<p>做点自己想做的事情并不容易，但也很有乐趣，从学Markdown，在Gitee部署图床，部署HEXO Blog系统，把HEXO部署到GitHub仓库，把Blog建立到Github… 发现一点问题，就解决一点问题，直到把工作流理顺，还是很有成就感的。有时候我也在想，每天都面对着同样的屏幕，面无表情地拖拽鼠标，就一件显而易见的问题发无数封邮件跟无数人解释。。。挣钱糊口，给别人打工，无所谓乐趣不乐趣，但还是希望自己的人生能多一点色彩，不然，灰头土脸地跟孩子们说这个世界如何如何有趣，你们要勇敢去探索这样的P话，您自己都不信，孩子能信吗？</p>
+<p>目前《宝贝儿，一起学Python呀》第五篇基本有点眉目了，希望这两天就能发布吧，如果大米老人家期末复习顺利的话。</p>
+<p>不对，不是大米老人家，是大米小祖宗。。。</p>
+<p>再见。</p>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="lx-navigation">
+	<div class="lx-cover prev lx-cover-sm" style="background-image: url(//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/images/footer-l.jpeg)">
+		<div class="overlay"></div>
+		<a class="copy" href="/%E5%AE%9D%E8%B4%9D%E5%84%BF%EF%BC%8C%E4%B8%80%E8%B5%B7%E5%AD%A6Python%E5%91%80-6-md/">
+			<div class="display-t">
+				<div class="display-tc">
+					<div>
+						<span>Next</span>
+						<h3>宝贝儿，一起学...</h3>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+        <div class="lx-cover next lx-cover-sm" style="background-image: url(//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/images/footer-r.jpeg)">
+		<div class="overlay"></div>
+		<a class="copy" href="/%E5%AE%9D%E8%B4%9D%E5%84%BF%EF%BC%8C%E4%B8%80%E8%B5%B7%E5%AD%A6Python%E5%91%80-5/">
+			<div class="display-t">
+				<div class="display-tc">
+					<div>
+						<span>Prev</span>
+						<h3>宝贝儿，一起学...</h3>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+</div>
+
+</div>
+
+<footer>
+  <div>
+  Copyright &copy; 2022.<a href="/">Small fish, big ocean</a><br>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme <a href="https://lx.js.org" target="_blank">Lx</a><br>
+  </div>
+</footer>
+
+</div>
+
+<button class="hamburger hamburger--arrow-r" type="button">
+    <div class="hamburger-box">
+      <div class="hamburger-inner"></div>
+    </div>
+</button> 
+<div class="menu visibility">
+  <div class="menu-head">
+    <span class="layer">
+      <div class="col">
+        <div class="row for-pic">
+          <div class="profile-pic">
+            <a href="/"><img src="/images/avatar.jpeg" alt="Houyufeng 侯宇峄1�7"/></a>
+          </div>
+        </div>
+        <div class="row for-name">
+          <p>Houyufeng 侯宇峄1�7</p>
+          <span class="tagline">Hello, World!</span>
+        </div>
+      </div>
+    </span>
+  </div>
+  <nav class="menu-container">
+  <ul class="menu-items">
+    <li><a href="/"><i class="fa fa-home fa-fw"></i>Home</a></li>
+    <li><a href="/archives/"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+    
+    <li class="has-sub"><span class="dropdown-heading">
+      <i class="fa fa-bookmark fa-fw"></i>Pages</span>
+        <ul>
+          <li><a href="/guestbook/">Guestbook</a></li>
+        <li><a href="/about/">About</a></li>
+        </ul>
+    </li>
+    <li class="has-sub"><span class="dropdown-heading">
+      <i class="fa fa-link fa-fw"></i>Friends</span>
+        <ul>
+          </ul>
+    </li>
+  </ul>
+  </nav>
+</div>
+
+<div class="gototop js-top">
+  <a href="#" class="js-gotop"><i class="fa fa-arrow-up"></i></a>
+</div>
+<script src="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/js/jquery.easing.min.js"></script>
+<script>
+(function () {
+	"use strict";
+	var goToTop = function() {
+		$(".js-gotop").on("click", function(event){
+			event.preventDefault();
+			$("html, body").animate({
+				scrollTop: $("html").offset().top
+			}, 500, "easeInOutExpo");
+			return false;
+		});
+		$(window).scroll(function(){
+			var $win = $(window);
+			if ($win.scrollTop() > 200) {
+				$(".js-top").addClass("active");
+			} else {
+				$(".js-top").removeClass("active");
+			}
+		});
+	};
+	$(function(){
+		goToTop();
+	});
+}());
+</script>
+
+
+</body>
+</html>

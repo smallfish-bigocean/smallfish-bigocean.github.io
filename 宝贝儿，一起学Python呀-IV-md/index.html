@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content=#58b77a>
+  <title>宝贝儿，一起学Python呀-IV.md | Small fish, big ocean</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Houyufeng 侯宇峄1�7">
+  <meta name="keywords" content="">
+  <meta name="description" content="My blog">
+  <script id="hexo-configurations">
+  var CONFIG = {
+    root: '/',
+    theme: 'hexo-theme-lx-master',
+    version: '0.3.9',
+    localsearch:{
+      "enable": false,
+      "trigger": "auto",
+      "top_n_per_article": 1,
+      "unescape": false,
+      "preload": false
+      },
+    path: 'null'
+  };
+</script>
+
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/css/main.min.css">
+  <style type="text/css">
+    pre,
+    code {
+      font-family: 'Fira Code', monospace;
+    }
+    html {
+      font-family: sans-serif;
+    }
+    body {
+      font-family: sans-serif;
+    }
+    h1, h2, h3, h4, h5, figure {
+      font-family: sans-serif;
+    }
+    .menu-container{
+      font-family: sans-serif;
+    }
+  </style>
+
+  <script src="//cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/js/jquery.jside.menu.js"></script>
+	<script>
+	$(document).ready(function(){
+	$(".menu-container").jSideMenu({
+	    jSidePosition: "position-right",
+	    jSideSticky: true,
+	    jSideSkin: "greenish",
+	     });
+	}); 
+	</script>
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Fira Code:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css">
+<meta name="generator" content="Hexo 6.2.0"></head>
+<body>
+<div class="single">
+
+<div id="page">
+<div id="lx-aside" style="background-image: url(//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/images/post_cover.jpeg)" data-stellar-background-ratio="0.5">
+  <div class="overlay">
+  <div class="page-title">
+    <div class="avatar"><a href="/"><img src="/images/avatar.jpeg"></a></div>
+    <span>2021-06-22</span>
+    <h2>宝贝儿，一起学Pytho...</h2>
+    
+    </div>
+</div>
+</div>
+
+<div id="lx-main-content">
+  <div class="lx-post">
+    <div class="lx-entry padding">
+      <div>
+        <h1 id="宝贝儿，一起学Python呀-IV"><a href="#宝贝儿，一起学Python呀-IV" class="headerlink" title="宝贝儿，一起学Python呀 - IV"></a>宝贝儿，一起学Python呀 - IV</h1><p>本文也发表于鄙人的Blog <a href="https://smallfish-bigocean.github.io/">小鱼游大海</a></p>
+<p>写文章从小学开始一直是我比较头疼的事情，就算《XXX优秀作文选》也不曾挽救我，而现在，鼓励我能写下去的动力其实来自于好玩儿。这也是前三篇我呜哩哇啦写的还挺开心的原因所在。但是到了第四篇我开始进入一种很郁闷的状态。因为必须得写Python开发的环境准备了。我相信这一定是我这个Python系列里最枯燥最没意思得所在。</p>
+<p>本来，我的初衷是写给孩子们的，所以其实Python开发环境的准备完全没必要写，反正我也会准备好。但是毕竟我是按着“教程”的逻辑写的，跳过去吧，似乎又不合适。这可让人家怎么办涅？</p>
+<p>我之前的一个思路是直接从网上找一篇类似的教程文章，然后贴个链接不就得了？ 我怎么这么聪明呢我？可是百度一圈，发现大神们普遍写的过多，过深，涉及的相关知识过多，不符合我大道至简，够用就得的原则。得嘞，谁让咱是个有追求有底线的男纸呢，还是自己写吧。如果能把枯燥的玩意写出激情，我不就能转行成为狗血网络小说家了不是。</p>
+<h2 id="第四篇-万事开头难？-其实也没那么难。"><a href="#第四篇-万事开头难？-其实也没那么难。" class="headerlink" title="第四篇 万事开头难？ 其实也没那么难。"></a>第四篇 万事开头难？ 其实也没那么难。</h2><center>一 </center>
+
+<p>想在Windows上开发Python，其实就这么几步准备工作：</p>
+<ol>
+<li><p>安装Python并确认安装正确</p>
+</li>
+<li><p>安装Visual Studio Code</p>
+</li>
+<li><p>为Visual Studio Code安装Python插件</p>
+</li>
+<li><p>使用Visual Studio Code编写第一个Python程序</p>
+</li>
+</ol>
+<p>第一步在上回书中，我已经跟您说了，去官网下一个Python程序装好即可，记得把“Add Python to Path”加上。只要您这么做了，就不会出现任何问题，至于百度上那些教程告诉您需要把python加入系统路径然后如何在命令提示行下验证安装是否成功这些，不需要。不是我自信，是因为Python发展这么些年了，都到了3.9.5版本了，安装程序已经做的足够好，足够傻瓜了。</p>
+<center>二</center>
+
+<p>咱们准备好了python环境，但程序还是写不了，因为您伸出您修长的十根手指才发现，往哪里“写”？</p>
+<p>第二步就是解决这个问题的。写Python程序的工具有很多。免费的，收费的都有。其实用起来都大同小异。按照中国电子学会Python考试一级的要求，需要熟悉IDLE、Visual Studio Code  (下面简称VS Code)、Jupyter Notebook这几个工具即可。在Python学习的初始阶段，咱们以VS Code为主开始咱们的Python之旅。Jupyter Notebook么，随着咱们对Python的了解逐渐深入，我会尝试引入并切换到Jupyter Notebook这个牛批克拉斯的好工具。至于IDLE。。。 抱歉我才疏学浅，我对IDLE的认知就是2021年的大学计算机教你Office 97，您知道有这么个东西，参加Python认证考试时能把相关题目答出来就行了。哪位大神是拿IDLE干活儿的，请您告诉我让我膜拜您一下。</p>
+<center>四</center>
+
+<p>Visual Studio Code其实是值得单独写文章介绍的。这是微软开发的一款超级无敌的代码编辑器，微软品质保证+开源+超级庞大的插件就已经注定了VS code必定成功。VS code是微软拥抱开源的里程碑式作品，用VS code写Python程序，对于你我这样的初学者，简直是无与伦比的方便，无与伦比的畅爽。当然了，对我们而言毕竟这是一个新的工具，学习VS code使用稍微需要一点精力，但是绝对值得。因为随着不断熟悉，你会发现VS code的美好。学个Python还能熟悉一个强大的工具，多好呀。而且随着使用，您会逐渐发现，VS Code的功能之强大，使用之方便，简直令人发指。这个后续我也会跟您一起研究探讨。</p>
+<p>首先，我们先下载，安装VS code：<a target="_blank" rel="noopener" href="https://code.visualstudio.com/docs/?dv=win">下载vs code</a></p>
+<p>安装。这个不多介绍，按照默认设定下一步。</p>
+<p>把VS Code快捷方式固定在任务栏上。</p>
+<p>启动VS Code。</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/python/vscode_extension.png" alt="extension"></p>
+<p>进入VS Code左侧边栏的扩展，然后搜索安装这么几个插件:</p>
+<ul>
+<li>Python #必备</li>
+<li>Chinese #把VS Code界面变成中文。需要重启VS Code。</li>
+</ul>
+<p>到这里，您已经完成了编写和运行Python环境的全部准备。怎么样，其实很简单对不对？</p>
+<center>五</center>
+
+<p>下面，终于可以开始激动人心的时刻，我们要开始编写python程序啦。</p>
+<p>在此之前，请您干点小事情，在您的磁盘上建立一个专门的存放您python程序的文件夹，比如，就E:\学习资料\myPython吧。 话说，我怎么那么喜欢学习资料这个文件夹？</p>
+<p>进入这个文件夹，然后右键，点击”通过Code打开”，您的VS Code就会启动，并且左边会展现您存放python程序的文件夹。</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/python/code.png" alt="code"></p>
+<p>这正是VS Code的一大好处。在这里您可以直接创建，管理，维护您的所有程序。并且，将来如果您真的用VS Code编写比较复杂的程序，您也可以通过VS Code提供的资源管理器，根据您编写程序的逻辑层级，设置存放程序文件的文件夹的逻辑结构，并且快速导航到您需要编写的程序。</p>
+<p>想想当初我还奇怪，Windows自带的记事本不香么，还费劲弄个什么额外的VS Code？ 现在看，我真庆幸自己保留了一份好奇心。</p>
+<center>六</center>
+
+<p>太久的等待，太多的闲话，终于，我们要开始进入Python的世界啦。</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/python/code_py1.png" alt="python_code1"></p>
+<p>在VS Code左侧资源管理器的空白处，右键，新建文件，文件名您随便起，但是注意扩展名一定是*.py。所有的Python程序文件都是py文件，总觉得怪怪的，但是后来习惯了，还真习惯了这样的设定呢。</p>
+<p>另外唠叨一句，Python程序文件遵循Windows文件命名的原则，所以特殊符号就不要用了。另外中文文件名是完全OK的，也完全不影响程序的运行。不过吧，本着拉不出屎赖茅房的原则，我们给程序文件起名时尽量还是用平淡无奇的英文好了，比如</p>
+<blockquote>
+<p>wodechengxu.py</p>
+</blockquote>
+<p>一不小心我这多年义务教育培养出来的英文功力就暴露了，低调， 低调。</p>
+<p>下面咱们就开始编写第一个程序啦，走你。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;Hello World&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;小侯是个好孩子&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>简单吧，把您想对我说的话加上’’放在print()的括号里。注意内容不要过于火辣，虽然经过社会的捶打我的尺度还是可以的，但是毕竟内心还是那个会害羞的男孩。至于您信不信，我反正信了。</p>
+<p>您会发现我这两个print()语句就是这么单摆浮搁放这里了，没有逗号，没有分号，没有句号，什么号都没有。这就是Python语言的一个特点:</p>
+<blockquote>
+<p>一条语句占一行，每句结束无符号。语法简练规矩少，男女老少哈哈笑。</p>
+</blockquote>
+<p>抱歉抱歉，我这最近湿性大发，一不注意就湿气外露，所以您可以叫我湿人。。。</p>
+<p>另外跟您说一个刚开始写Python程序常出现的问题。其实不止Python，写其它程序都会面临这个问题，那就是，注意在英文模式下写程序。比如print(‘小侯是个好孩子’) 这里的括号和引号，一定都是英文模式下的符号，这在程序中输入中文时很容易出现的问题，如果不注意保证运行时报错报的您怀疑人生，尤其是长一点，比如几十行的程序，真的不好发现。</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/python/code_py2.png" alt="python code 2"></p>
+<p>您现在已经写了一堆的print()，下面，咱们可以开始运行这个程序了。</p>
+<p>在此之前，您会注意到，您这个程序的标签页上有个圆点。出现这个圆点，表示您这个程序文件没有保存，您可以使用Ctrl+S快捷键保存，这样圆点就消失了。强大的快捷键，也是VS Code的一大特点。另外其实这种圆点方式我是在Linux下见到的很多，不知道是不是微软从开源社区吸取的经验。Linux下很多的操作方式看似复杂且需要学习成本，但一旦适应，那叫一个方便。这种感觉就像男人之间沟通，看着简单粗暴，但其实非常高效，很多事情就这么在东单公园解决了。。。</p>
+<p>好好好，回到主题。咱们接着运行这个程序。您在编写的程序文件上右键，点击“在终端中运行Python文件”，然后就好啦！</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/python/code_py3.png" alt="python code 3"></p>
+<p>终端里出现了您运行的程序结果。</p>
+<p>相信您除了有点小开心，还会有点不满。“就这？我裤子都脱了你就给我看这个？”</p>
+<p>嗯。。。 请您听我解释，这个完全可以解释，冷静冷静。</p>
+<p>是这个样事儿的我的亲。 我承认就一黑不溜秋的终端里蹦出两行字是有点LOW。但是是这样，您想想咱们拿Python干活儿的场景，比如您拿Python哐哐哐处理一大堆的Excel文件，再比如您拿Python嗷嗷嗷抓取一大堆网页信息，您想想，是不是您写Python程序的目的就是让Python把这些Excel或网页信息处理的服服帖帖的，然后把处理好的Excel文件放到您指定的文件夹里，或者网页信息已经发到您指定的邮箱里了，那活儿不就干完了么？这会儿，您只需要在程序最后写一条:</p>
+<blockquote>
+<p>print(‘您好，您需要的学习资料已经全部处理完毕，已经存放到E:\学习资料\日本_韩国文件夹下’)</p>
+</blockquote>
+<p>这样Python干完您的活儿，给您终端里来这么一条儿跟您汇报一下，您说是不是就够了？ 您是不是只要拉窗帘儿准备手纸就完事儿了？您需要那些花花绿绿的玩意么？而且，Python也不光是只会在傻大黑粗的终端里打字儿玩儿，花花绿绿让您看了脸红红心跳跳的各种好康的东东，人家也会呀，比如</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/python/visualchart.jpg" alt="visualchart"></p>
+<p>利用Python强大无比的可视化数据能力，多少数据分析科学家往Python里哐哐哐猛灌数据，然后让Python消化完这些数据再从中后偏下部位搞出各种奇奇怪怪的东西，让科学家们看了都说好，就问您刺激不刺激？再比如，Python提供了多种强大的GUI库，一样可以写出花里胡哨的图形界面。所以说嘛，Python是个万金油，您需要什么，它就会变成什么样子。至于为什么我接触的总是终端的傻大黑粗，这个其实我也不太明白。。。</p>
+<center>结尾</center>
+
+<p>写到这里，我真的想欢呼。跟枯燥的玩意打交道一向不是我最擅长的，但还好，我还是坚持了下来。学习任何一种知识，进入任何一种全新的知识体系，一开始都会非常困难。所以，我们需要建立强大的内在驱动力，推动着自己向前努力。我们不能把未来想的过于功利，不要被互联网时代的浮躁影响。反而，我们努力成为一个用于探索的人，那你会发现，互联网，真的是一座宝库。</p>
+<p>今天的内容差不多了。我们准备好了编写并运行Python的环境，还成功把对我的表白打在了终端屏幕上，您真棒！</p>
+<p>下一篇，我还没动笔，这就是自己给自己干活儿的好处，不用着急，有了感觉再开始，真好 ~~~</p>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="lx-navigation">
+	<div class="lx-cover prev lx-cover-sm" style="background-image: url(//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/images/footer-l.jpeg)">
+		<div class="overlay"></div>
+		<a class="copy" href="/%E7%B3%9F%E4%BA%86%EF%BC%8C%E6%98%AF%E5%BF%83%E5%8A%A8%E7%9A%84%E6%84%9F%E8%A7%89%E3%80%82%E5%86%99%E5%9C%A8Windows-11%E5%8F%91%E5%B8%83%E4%B9%8B%E5%88%9D/">
+			<div class="display-t">
+				<div class="display-tc">
+					<div>
+						<span>Next</span>
+						<h3>哥们儿，先别急...</h3>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+        <div class="lx-cover next lx-cover-sm" style="background-image: url(//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/images/footer-r.jpeg)">
+		<div class="overlay"></div>
+		<a class="copy" href="/%E5%AE%9D%E8%B4%9D%E5%84%BF%EF%BC%8C%E4%B8%80%E8%B5%B7%E5%AD%A6Python%E5%91%80-III/">
+			<div class="display-t">
+				<div class="display-tc">
+					<div>
+						<span>Prev</span>
+						<h3>宝贝儿，一起学...</h3>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+</div>
+
+</div>
+
+<footer>
+  <div>
+  Copyright &copy; 2022.<a href="/">Small fish, big ocean</a><br>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme <a href="https://lx.js.org" target="_blank">Lx</a><br>
+  </div>
+</footer>
+
+</div>
+
+<button class="hamburger hamburger--arrow-r" type="button">
+    <div class="hamburger-box">
+      <div class="hamburger-inner"></div>
+    </div>
+</button> 
+<div class="menu visibility">
+  <div class="menu-head">
+    <span class="layer">
+      <div class="col">
+        <div class="row for-pic">
+          <div class="profile-pic">
+            <a href="/"><img src="/images/avatar.jpeg" alt="Houyufeng 侯宇峄1�7"/></a>
+          </div>
+        </div>
+        <div class="row for-name">
+          <p>Houyufeng 侯宇峄1�7</p>
+          <span class="tagline">Hello, World!</span>
+        </div>
+      </div>
+    </span>
+  </div>
+  <nav class="menu-container">
+  <ul class="menu-items">
+    <li><a href="/"><i class="fa fa-home fa-fw"></i>Home</a></li>
+    <li><a href="/archives/"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+    
+    <li class="has-sub"><span class="dropdown-heading">
+      <i class="fa fa-bookmark fa-fw"></i>Pages</span>
+        <ul>
+          <li><a href="/guestbook/">Guestbook</a></li>
+        <li><a href="/about/">About</a></li>
+        </ul>
+    </li>
+    <li class="has-sub"><span class="dropdown-heading">
+      <i class="fa fa-link fa-fw"></i>Friends</span>
+        <ul>
+          </ul>
+    </li>
+  </ul>
+  </nav>
+</div>
+
+<div class="gototop js-top">
+  <a href="#" class="js-gotop"><i class="fa fa-arrow-up"></i></a>
+</div>
+<script src="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/js/jquery.easing.min.js"></script>
+<script>
+(function () {
+	"use strict";
+	var goToTop = function() {
+		$(".js-gotop").on("click", function(event){
+			event.preventDefault();
+			$("html, body").animate({
+				scrollTop: $("html").offset().top
+			}, 500, "easeInOutExpo");
+			return false;
+		});
+		$(window).scroll(function(){
+			var $win = $(window);
+			if ($win.scrollTop() > 200) {
+				$(".js-top").addClass("active");
+			} else {
+				$(".js-top").removeClass("active");
+			}
+		});
+	};
+	$(function(){
+		goToTop();
+	});
+}());
+</script>
+
+
+</body>
+</html>

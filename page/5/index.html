@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content=#58b77a>
+  <title>Small fish, big ocean</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Houyufeng 侯宇峄1�7">
+  <meta name="keywords" content="">
+  <meta name="description" content="My blog">
+  <script id="hexo-configurations">
+  var CONFIG = {
+    root: '/',
+    theme: 'hexo-theme-lx-master',
+    version: '0.3.9',
+    localsearch:{
+      "enable": false,
+      "trigger": "auto",
+      "top_n_per_article": 1,
+      "unescape": false,
+      "preload": false
+      },
+    path: 'null'
+  };
+</script>
+
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/css/main.min.css">
+  <style type="text/css">
+    pre,
+    code {
+      font-family: 'Fira Code', monospace;
+    }
+    html {
+      font-family: sans-serif;
+    }
+    body {
+      font-family: sans-serif;
+    }
+    h1, h2, h3, h4, h5, figure {
+      font-family: sans-serif;
+    }
+    .menu-container{
+      font-family: sans-serif;
+    }
+  </style>
+
+  <script src="//cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/js/jquery.jside.menu.js"></script>
+	<script>
+	$(document).ready(function(){
+	$(".menu-container").jSideMenu({
+	    jSidePosition: "position-right",
+	    jSideSticky: true,
+	    jSideSkin: "greenish",
+	     });
+	}); 
+	</script>
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Fira Code:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css">
+<meta name="generator" content="Hexo 6.2.0"></head>
+<body>
+<div id="page">
+
+<div id="lx-aside" style="background-image: url(https://gitee.com/houyufengatgitee/img_bed/raw/master/hexo/cover.jpeg)">
+  <div class="overlay">
+  <div class="featured">
+    <div class="avatar"><a href="/"><img src="/images/avatar.jpeg"></a></div>
+    <span>Houyufeng 侯宇峄1�7</span>
+    <h1>Small fish, big ocean</h1>
+    
+    
+  </div>
+  </div>
+</div>
+
+<div id="lx-main-content">
+  <div class="lx-post">
+
+  <div class="lx-entry padding">
+    <div>
+      <h2 class="title"><a href="/%E5%AE%9D%E8%B4%9D%E5%84%BF%EF%BC%8C%E4%B8%80%E8%B5%B7%E5%AD%A6Python%E5%91%80-5/">宝贝儿，一起学Python呀 - V</a></h2>
+      <span class="lx-post-detail"><i class="fa fa-calendar-o"></i> 2021-07-01</span>
+      <p><h1 id="宝贝儿，一起学Python呀-V"><a href="#宝贝儿，一起学Python呀-V" class="headerlink" title="宝贝儿，一起学Python呀 - V"></a>宝贝儿，一起学Python呀 - V</h1><h2 id="一切从print-说起"><a href="#一切从print-说起" class="headerlink" title="一切从print()说起"></a>一切从print()说起</h2><p>今天是&lt;&lt;宝贝儿，一起学Python呀&gt;&gt;的第五篇，这一篇里，咱们一起聊聊Python的print()函数，然后初步认识一下整型和字符串这两种数据类型。</p>
+<p>对了，今天开始会有课后作业。我很希望您能在VS Code里实际写一写作业里的神秘小代码，感受一下Python带给您的乐趣。如果您确实体会到了乐趣，记得找我一起去安定医院挂号。。。</p>
+<center>一</center>
+
+<p>前文书曾经说过，一般入门编程教程的第一个实例程序都是让屏幕输出”Hello World”。据说这是一种能带来好运的习惯。那咱看看能不能好运喽:)</p>
+<p>前排提示：还记得怎么用VS Code写Python程序么？下图有没有让您回忆起什么?</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/python/helloworld.png" alt="hello world1"></p>
+<p>对了，要点是在您集中存放Python程序的文件夹，使用右键菜单选择“使用Code打开”，然后新建一个.py文件,然后输入如下的语句:</p>
+<blockquote>
+<p>print(Hello World)</p>
+</blockquote>
+<p>然后在文件上右键单击，选择”在终端中运行Python文件”</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/python/helloworld2.png" alt="helloworld2"></p>
+<p>怎么样？是不是报错了？您应该收到了这样的错误信息:</p>
+<blockquote>
+<p>SyntaxError: invalid syntax</p>
+</blockquote>
+<p>这个报错表示代码有语法错误，而且Python解释器会很贴心告诉您错误在哪。</p>
+<p>那错误在哪呢？下面请清空所有代码，咱们重新输入如下代码，然后分析分析：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;Hello World&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello World&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;It&#x27; s a good day&quot;</span>) <span class="comment">#双引号</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;&#x27;&#x27;Hello </span></span><br><span class="line"><span class="string">World&#x27;&#x27;&#x27;</span>) <span class="comment">#三个单引号</span></span><br><span class="line"><span class="built_in">print</span>(<span class="number">1</span>+<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+<p>请注意， # 后面的文字是我写给您的注释，并不是代码的一部分。我也很推荐您在写代码时，把自己的一些想法注释在这里。当然了，我有时也会在自己千辛万苦之后终于跑通的代码后面会以注释的形式赋诗一首。。。这个也无所谓了，自己玩儿，开心和乐趣很重要哒。</p>
+<p>另外需要注意的是，# 是单行注释，不能换行，换行就变成代码了。</p>
+<p>下面我们再执行一下，这次没有报错了，反馈结果是: ( 为了方便观察，我把代码以注释形式放在后面)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 所有符号均是英文模式下的符号</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;Hello World&#x27;</span>) <span class="comment"># 输出Hello World</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello World&quot;</span>) <span class="comment"># 输出Hello World</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;It&#x27; s a good day&quot;</span>) <span class="comment"># 输出It&#x27; s a good day</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;&#x27;&#x27;Hello</span></span><br><span class="line"><span class="string">World&#x27;&#x27;&#x27;</span>) <span class="comment"># 输出Hello World, Hello后面换行 </span></span><br><span class="line"><span class="built_in">print</span>(<span class="number">1</span>+<span class="number">3</span>) <span class="comment"># 输出4</span></span><br></pre></td></tr></table></figure>
+
+<p>看见了吧，下面咱们逐个分析分析。</p>
+<p>print(‘Hello World’)和print(“Hello World”)都能输出Hello World，所以一般情况下，把字符串用单引号双引号括起来都行。二者的区别在print(“It’ s a good day”)这里体现。使用双引号括起的字符串，字符串里的单引号会以字符的形式正常输出，而这时如果是单引号括起来，那就会报错了。至于三个引号，那就是完全找原样输出。三个引号内字符串有换行，print()输出一样会换行。</p>
+<p>至于print(1+3)，Python会进行计算，然后把结果转换为字符串输出。</p>
+<p>所以我们可以大致得出关于Python的print()的结论:</p>
+<blockquote>
+<p>对于print(‘’)，直接输出字符串，但字符串不能含有’</p>
+<p>对于print(“”), 直接输出字符串，且字符串可以包含’</p>
+<p>对于print(‘’’’’’), 直接输出字符串，且可以换行</p>
+<p>对于print(表达式), 计算表达式的结果，然后转换为字符串输出</p>
+</blockquote>
+<p>所以这也就能理解，我们第一次的代码print(Hello World)为什么Python会报错，因为既没有’’说明这是字符串，也不是一个能被Python理解的表达式。</p>
+<p>我们写代码时最常用的print()，基本上了解这些就可以了。值得注意的是，虽然print()里面可以是表达式，甚至是数字，比如print(1234567), Python都可以很好的识别，但这里其实有个小隐藏步骤，就是print()其实还是把要输出的内容转化为了字符串。</p>
+<p>对了，还得补充一句，这里的print()叫做函数，()里的内容就是这个函数的参数。有的函数不需要参数。比如：</p>
+<blockquote>
+<p>帮我买东西(要买的东西)</p>
+</blockquote>
+<p>这个函数就是带参数的，每次调用这个函数，您需要把要买的东西作为参数写在函数后面的括号里。如果没写，就会报错“出错，您没有说明您让我帮忙买的东西”。</p>
+<p>再比如:</p>
+<blockquote>
+<p>帮我洗袜子()</p>
+</blockquote>
+<p>这个函数没有参数，但括号不能省略，每次使用这个函数，需要写成 帮我洗袜子()就行了。</p>
+<p>至于print()，理论上是需要带参数的，参数就是您想输出的内容。但实际上，在代码里写成print()，括号里什么都没有，程序也不会报错，只是什么也不干罢了。至于为什么Python的设计者要这么做，而不是抛出一个错误，那我就不知道了。好在谁也不会真的写个print()占字数，没听哪位程序员说工资是按照程序行数结算的。</p>
+<blockquote>
+<p>另外相信您也看见了，Python的程序是每句话一行，结尾不用任何符号表示结束。看起来很简单是吧？ 等以后加上缩进表示逻辑层级时，相信您会感受到被对齐Tab支配的恐惧:)</p>
+</blockquote>
+<center>二</center>
+
+<p>上面提到了数据类型，比如，1，2，3，4，这个都是整数，Python里都叫整型。 </p>
+<p>1.3， 2.4，这些都是小数，Python里叫浮点。</p>
+<p>至于字符串，自然就是字符组成的串了，怎么样，解释非常科学吧。</p>
+<p>Python下定义数据类型非常简单，比如</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="number">1</span> <span class="comment"># 定义一个整型变量</span></span><br><span class="line">y = <span class="number">2.4</span> <span class="comment"># 定义一个浮点型变量</span></span><br><span class="line">z = <span class="string">&#x27;伦家是个字符串&#x27;</span> <span class="comment"># 定义一个字符串。Python中用&#x27;&#x27;或&quot;&quot;括起来的就是字符串</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>看出来了吧，Python 无需想其它语言那样需要事先约定数据类型。如C++就这么定义:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> x = <span class="number">1</span>; <span class="comment">//定义一个整型变量</span></span><br></pre></td></tr></table></figure>
+
+<p>Python定义变量非常简单，也比较随意，对于使用者非常友好，但是这也要求我们在编程时需要脑子很清楚，不然很容易出错。举个例子，我设计这么一个密码锁小程序:</p>
+<blockquote>
+<p>我事先给门锁预定一个密码，666666吧，反正我也想不出来什么复杂密码。然后我请您输入密码，如果一致，把门打开，如果不一致，继续请您输入。</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">password = <span class="string">&#x27;&#x27;</span> <span class="comment"># 定义password变量，类型是字符串，但我没有预设任何内容，目的仅仅是接收您输入的密码字符串</span></span><br><span class="line"><span class="keyword">while</span> password !=<span class="string">&#x27;666666&#x27;</span>: <span class="comment"># 条件判断，!=的意思是不等于。这行密码的意义是，判断密码是否是我预设的666666</span></span><br><span class="line">	password = <span class="built_in">input</span>(<span class="string">&#x27;请尝试输入密码： &#x27;</span>) <span class="comment"># input()函数的作用是捕捉键盘的输入。&#x27;请尝试输入密码： &#x27;是终端提示，没有提示，您面对着黑黑的终端估计也不知道要干嘛不是:) 注意这一行前面是空了一个制表符的。 这就是缩进。Python的缩进是我学习使用Python中遇到的第一个障碍，没事，有我在，我会让您和我感同身受哒</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;欢迎回家&#x27;</span>) <span class="comment"># 您的密码输对了，那就跳出循环，显示欢迎回家。不然就得一直让您输密码，直到输对了算。。。</span></span><br></pre></td></tr></table></figure>
+
+<p>这段代码的关键就是这个条件判断</p>
+<blockquote>
+<p>while password !&#x3D;’666666’:</p>
+</blockquote>
+<p>注意到了么，这里的666666是加了’’的，考考您，这是什么数据类型？对了，不是整型数字，是字符串。password是input()函数捕捉到的键盘输入，类型是字符串，都是字符串才有比较的意义。如果666666没加’’，变成了</p>
+<blockquote>
+<p>while password !&#x3D;666666:</p>
+</blockquote>
+<p>那只能说，您今天怕是不能回家了。就算您把键盘按烂了，无论如何您按出来的这个字符串也是不可能等于一个数字666666的。就像小哥哥再温柔体贴善良正直，长得不行还没钱，只有一辆马自达，那无论小哥哥说什么甜言蜜语，有些只喜欢在宝马车上哭的小姐姐也只当是放P。社会如此，我们无法改变。现在买不起宝马，将来也总买得起，相信我，到那时，你会发现当初当舔狗的自己有多SB，你也会知道哪个只认识宝马标，却不知道宝马X1还不如马自达CX-5贵的小姐姐和当初当舔狗的自己其实智力也没差多少，你一定会释然，并且微笑。</p>
+<p>我去，跑题了跑题了。总之，咱们今天讲了print()的使用，认识了整型，浮点型两种数字类型，初识了字符串类型。那亲爱的朋友，咱们做几道题复习复习如何？请解答以下题目，然后自己在VS Code里实际写出来，运行一下看看您的解答是不是对的。</p>
+<p>第一题：程序输入结果是什么？</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="number">123</span>+<span class="string">&#x27;456&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>第二题: 程序最后打出了谁的名字？</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">name=<span class="string">&#x27;长泽雅美&#x27;</span></span><br><span class="line">name=<span class="string">&#x27;石原里美&#x27;</span></span><br><span class="line">name=<span class="string">&#x27;新垣结衣&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(name)</span><br></pre></td></tr></table></figure>
+
+
+
+<p>今天就到这里啦，再见。下一篇，我尝试着写一下最简单的循环基础，以及另一个超级无敌常用的数据类型：列表。</p>
+<p>再见，爱你，么么哒。</p>
+</p>
+      <div class="post-button"><a class="btn" href="/%E5%AE%9D%E8%B4%9D%E5%84%BF%EF%BC%8C%E4%B8%80%E8%B5%B7%E5%AD%A6Python%E5%91%80-5/" rel="noopener"><i class="fa fa-angle-double-right fa-fw"></i>Read More</a></div>
+    </div>
+  </div>
+  <div class="lx-entry padding">
+    <div>
+      <h2 class="title"><a href="/%E7%B3%9F%E4%BA%86%EF%BC%8C%E6%98%AF%E5%BF%83%E5%8A%A8%E7%9A%84%E6%84%9F%E8%A7%89%E3%80%82%E5%86%99%E5%9C%A8Windows-11%E5%8F%91%E5%B8%83%E4%B9%8B%E5%88%9D/">哥们儿，先别急着心动 - 写在Windows 11发布之初</a></h2>
+      <span class="lx-post-detail"><i class="fa fa-calendar-o"></i> 2021-06-26</span>
+      <p><h1 id="哥们儿，先别急着心动-写在Windows-11发布之初"><a href="#哥们儿，先别急着心动-写在Windows-11发布之初" class="headerlink" title="哥们儿，先别急着心动 - 写在Windows 11发布之初"></a>哥们儿，先别急着心动 - 写在Windows 11发布之初</h1><center>一</center>
+
+<p>曾经，你一跟聊天的小姐姐聊天，小姐姐就去洗澡。</p>
+<p>后来，干脆你一上线，小姐姐就直接下线。</p>
+<p>你气馁，你嘶吼着以后不再跪舔，你想起了你的尊严。</p>
+<p>但每当想到她的脸庞，她的轻声细语，她的前凸后翘，你又忍不住继续舔。</p>
+<p>直到有一天，她突然出现，和你说，你曾经说过的，现在还算数吗？</p>
+<p>那一瞬间，你的大脑完全进入单核Boost模式。</p>
+<p>你的心跳突然加速，只为让血液更快到达大脑，所以你血压迅速升高。</p>
+<p>你的血压迅速升高，所以你的心跳开始加速。</p>
+<p>朋友，你心动了。</p>
+<p>但是，我想说，哥们儿，先别急着心动。</p>
+<p>是的，这篇文章和感情，接盘，绿帽侠的个人修养没有P的关系。</p>
+<p>这是一篇科技文章。关于最新发布的Windows 11.</p>
+<p>是的，哥们儿，我知道你心动了。</p>
+<center>二</center>
+
+<p>先看看微软发布的这段Windows 11 介绍视频：</p>
+<video>
+  <source src="https://www.lenovo.com/content/dam/lenovo/pcsd/global/en/psref/windows11/Upgrade%20to%20the%20New%20Windows%2011%20OS_2.mp4" type="video/mp4" />
+</video>
+
+<p>大概总结一下，新的Windows 11大概有以下主要更新:</p>
+<ul>
+<li><p>全新的UI设计，经典的圆角窗口又回来啦 (Windows 7: ???; MacOS: ???)</p>
+<p>是的。新的界面实在有点像MacOS… 而圆角的回归，不知道是不是Windows 7 视觉设计师也回归了。另外浅色主题对视觉效果的提升很有帮助，不信？您把现在的Windows 10切成浅色主题，一样好看。只是打工人都喜欢用黑色主题，那时是否还能如此优美，不好说呢。</p>
+</li>
+</ul>
+<p><img src="https://news-cdn.softpedia.com/images/news2/microsoft-officially-announces-windows-11-533329-2.jpg" alt="new UI"></p>
+<ul>
+<li><p>Windows Snap 窗口管理</p>
+<p>绝对的提升生产力的好东西，之前必须依靠第三方收费软件才能实现的功能，现在直接提供啦。试想，每次进入或唤醒桌面，您干的那些活儿就按照您的要求一下子整整齐齐排列在您的两个大显示器上，糟了，这绝对是心动的感觉呀！</p>
+<p><img src="https://c.s-microsoft.com/en-us/CMSImages/1083_Panel05_Picture_Productivity_new.jpg?version=ab711fb1-9b76-e18c-2523-b574bf6d0b34" alt="windows"></p>
+</li>
+<li><p>支持原生安卓应用</p>
+<p>从泄露的照片分析，应该是可以直接在微软商店下载安装安卓应用，而全部安卓应用则由亚马逊提供。全球桌面最强生产力全面支持全球最主流移动应用群，这已经不是心动了，这简直就是女神对大兄弟说我要去洗澡了，但是这次我会给你开直播。。。</p>
+<p><img src="https://news-cdn.softpedia.com/images/news2/windows-11-will-be-able-to-run-android-apps-533331-2.jpg" alt="安卓"></p>
+</li>
+<li><p>Widgets小部件回来啦 (Windows 7: ？？？)</p>
+<p>和Windows 7的小部件不同，据说Windows 11上是基于Edge浏览器引擎提供。不过这里有个悖论。如果不做本地化，那这部分的信息量其实有限，但一旦做了本地化，结合本土那些互联网媒体的尿性，估计天天得给我推送羞羞哒新闻，然后点看一看全是TM广告。。。</p>
+<p><img src="https://c.s-microsoft.com/en-us/CMSImages/1920_Panel08_Picture_Content_new.jpg?version=fb57830e-8c79-be9c-2442-328fb40b04fb" alt="小部件"></p>
+</li>
+<li><p>性能提升 (Windows 95&#x2F;97&#x2F;98&#x2F;Me&#x2F;2000&#x2F;Vista&#x2F;7&#x2F;8&#x2F;8.1&#x2F;10: ？？？)</p>
+<p>每次新系统都能带来巨大的性能提升，我完全相信。因为每次新系统的都会提出新的硬件要求。当然了，身为联想员工，你问我支持不支持？ 我当然支持啦！</p>
+</li>
+<li><p>继续免费</p>
+<p>没事儿，隐私换系统，我无所谓啦</p>
+</li>
+<li><p>集成Teams (Windows Messenger: ???)</p>
+<p>在企业环境下，微软已经把Teams树立为企业协同办公系统的核心，也是Office系统的核心组件。它的功能我不评价，反正如果只是单纯聊天肯定没法跟我那一个皇冠俩太阳的QQ相提并论。但它本身集成的大量应用确实让Teams成为协同办公的全能平台。</p>
+<p><img src="https://c.s-microsoft.com/en-us/CMSImages/1920_Panel06_Picture_Productivity.jpg?version=f5b88275-f9a7-a5d6-3524-7ac8d2adc684" alt="Teams"></p>
+</li>
+</ul>
+<center>三</center>
+
+<p>相信看着小姐姐按下自拍键，哥们儿您已经准备找手纸。。。</p>
+<p>是找手纸擦口水，对不？</p>
+<p>但是还是那句话，天上不会随便掉馅饼，所以，Windows 11，看着很美，真的是你我的菜？</p>
+<center>四</center>
+
+<p>首先，您的电脑不见得能装上Windows 11。</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/windows11/systemrequirements.png" alt="system"></p>
+<p>看起来不高是吧。其实不止如此。就像女神跟你说，我对男生的要求并不高。你真信了那才是天真。Windows 11也是如此。根据我的研其次，UEFI看见没？UEFI看起来一般近些年的主板就能支持，但其实对显卡也有要求，不支持UEFI的显卡用起来会有各种限制。<br>最主要的，TPM 2.0。之前有消息说微软把要求降低到1.2，这只是误传。微软这次铁了心要淘汰一批旧硬件，所以这方面是不会放宽要求的。而且，在我国，因为政策要求，TPM 2.0 在国内销售的电脑上并非标配，因此肯定有为数不少的国内销售电脑无法升级Windows 11.至于是否有路子绕过这些限制，不好说。</p>
+<center>五</center>
+
+<p>第二部分，是安卓。</p>
+<p>我研究了一下，微软是依托亚马逊安卓应用商店提供安卓应用的安装。这个事情喜忧参半。喜的是，没用Google Play意味着大陆Windows 11用户很可能也能享受这个功能，毕竟亚马逊安卓应用商店在大陆是正常运营的。忧的是，这个亚马逊应用商店是在是在RUA了，不信您看：</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/windows11/QQ%E5%9B%BE%E7%89%8720210626194622.jpg" alt="app"></p>
+<p>微信？木有。QQ？木有。至于输入法，毛都没有。。。 那么我要你何用？除非开放apk文件直装，否则基本没卵用啊。但是微软说这次跑安卓使用了Intel Bridge技术，貌似是个软件实时编译器，怎么看怎么觉得玄的慌。。。</p>
+<center>六</center>
+
+<p>微软表示下周就会开放Windows 11测试版的下载使用。到时候再看看会不会有什么新发现吧。但是无论如何，看起来Windows 11的方向都是更具生产力，更加开放，越来越香，不是吗。所以，为了Windows 11， 买台新联想电脑，又有何不可呢 ~~~</p>
+</p>
+      <div class="post-button"><a class="btn" href="/%E7%B3%9F%E4%BA%86%EF%BC%8C%E6%98%AF%E5%BF%83%E5%8A%A8%E7%9A%84%E6%84%9F%E8%A7%89%E3%80%82%E5%86%99%E5%9C%A8Windows-11%E5%8F%91%E5%B8%83%E4%B9%8B%E5%88%9D/" rel="noopener"><i class="fa fa-angle-double-right fa-fw"></i>Read More</a></div>
+    </div>
+  </div>
+  <div class="lx-entry padding">
+    <div>
+      <h2 class="title"><a href="/%E5%AE%9D%E8%B4%9D%E5%84%BF%EF%BC%8C%E4%B8%80%E8%B5%B7%E5%AD%A6Python%E5%91%80-IV-md/">宝贝儿，一起学Python呀-IV.md</a></h2>
+      <span class="lx-post-detail"><i class="fa fa-calendar-o"></i> 2021-06-22</span>
+      <p><h1 id="宝贝儿，一起学Python呀-IV"><a href="#宝贝儿，一起学Python呀-IV" class="headerlink" title="宝贝儿，一起学Python呀 - IV"></a>宝贝儿，一起学Python呀 - IV</h1><p>本文也发表于鄙人的Blog <a href="https://smallfish-bigocean.github.io/">小鱼游大海</a></p>
+<p>写文章从小学开始一直是我比较头疼的事情，就算《XXX优秀作文选》也不曾挽救我，而现在，鼓励我能写下去的动力其实来自于好玩儿。这也是前三篇我呜哩哇啦写的还挺开心的原因所在。但是到了第四篇我开始进入一种很郁闷的状态。因为必须得写Python开发的环境准备了。我相信这一定是我这个Python系列里最枯燥最没意思得所在。</p>
+<p>本来，我的初衷是写给孩子们的，所以其实Python开发环境的准备完全没必要写，反正我也会准备好。但是毕竟我是按着“教程”的逻辑写的，跳过去吧，似乎又不合适。这可让人家怎么办涅？</p>
+<p>我之前的一个思路是直接从网上找一篇类似的教程文章，然后贴个链接不就得了？ 我怎么这么聪明呢我？可是百度一圈，发现大神们普遍写的过多，过深，涉及的相关知识过多，不符合我大道至简，够用就得的原则。得嘞，谁让咱是个有追求有底线的男纸呢，还是自己写吧。如果能把枯燥的玩意写出激情，我不就能转行成为狗血网络小说家了不是。</p>
+<h2 id="第四篇-万事开头难？-其实也没那么难。"><a href="#第四篇-万事开头难？-其实也没那么难。" class="headerlink" title="第四篇 万事开头难？ 其实也没那么难。"></a>第四篇 万事开头难？ 其实也没那么难。</h2><center>一 </center>
+
+<p>想在Windows上开发Python，其实就这么几步准备工作：</p>
+<ol>
+<li><p>安装Python并确认安装正确</p>
+</li>
+<li><p>安装Visual Studio Code</p>
+</li>
+<li><p>为Visual Studio Code安装Python插件</p>
+</li>
+<li><p>使用Visual Studio Code编写第一个Python程序</p>
+</li>
+</ol>
+<p>第一步在上回书中，我已经跟您说了，去官网下一个Python程序装好即可，记得把“Add Python to Path”加上。只要您这么做了，就不会出现任何问题，至于百度上那些教程告诉您需要把python加入系统路径然后如何在命令提示行下验证安装是否成功这些，不需要。不是我自信，是因为Python发展这么些年了，都到了3.9.5版本了，安装程序已经做的足够好，足够傻瓜了。</p>
+<center>二</center>
+
+<p>咱们准备好了python环境，但程序还是写不了，因为您伸出您修长的十根手指才发现，往哪里“写”？</p>
+<p>第二步就是解决这个问题的。写Python程序的工具有很多。免费的，收费的都有。其实用起来都大同小异。按照中国电子学会Python考试一级的要求，需要熟悉IDLE、Visual Studio Code  (下面简称VS Code)、Jupyter Notebook这几个工具即可。在Python学习的初始阶段，咱们以VS Code为主开始咱们的Python之旅。Jupyter Notebook么，随着咱们对Python的了解逐渐深入，我会尝试引入并切换到Jupyter Notebook这个牛批克拉斯的好工具。至于IDLE。。。 抱歉我才疏学浅，我对IDLE的认知就是2021年的大学计算机教你Office 97，您知道有这么个东西，参加Python认证考试时能把相关题目答出来就行了。哪位大神是拿IDLE干活儿的，请您告诉我让我膜拜您一下。</p>
+<center>四</center>
+
+<p>Visual Studio Code其实是值得单独写文章介绍的。这是微软开发的一款超级无敌的代码编辑器，微软品质保证+开源+超级庞大的插件就已经注定了VS code必定成功。VS code是微软拥抱开源的里程碑式作品，用VS code写Python程序，对于你我这样的初学者，简直是无与伦比的方便，无与伦比的畅爽。当然了，对我们而言毕竟这是一个新的工具，学习VS code使用稍微需要一点精力，但是绝对值得。因为随着不断熟悉，你会发现VS code的美好。学个Python还能熟悉一个强大的工具，多好呀。而且随着使用，您会逐渐发现，VS Code的功能之强大，使用之方便，简直令人发指。这个后续我也会跟您一起研究探讨。</p>
+<p>首先，我们先下载，安装VS code：<a target="_blank" rel="noopener" href="https://code.visualstudio.com/docs/?dv=win">下载vs code</a></p>
+<p>安装。这个不多介绍，按照默认设定下一步。</p>
+<p>把VS Code快捷方式固定在任务栏上。</p>
+<p>启动VS Code。</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/python/vscode_extension.png" alt="extension"></p>
+<p>进入VS Code左侧边栏的扩展，然后搜索安装这么几个插件:</p>
+<ul>
+<li>Python #必备</li>
+<li>Chinese #把VS Code界面变成中文。需要重启VS Code。</li>
+</ul>
+<p>到这里，您已经完成了编写和运行Python环境的全部准备。怎么样，其实很简单对不对？</p>
+<center>五</center>
+
+<p>下面，终于可以开始激动人心的时刻，我们要开始编写python程序啦。</p>
+<p>在此之前，请您干点小事情，在您的磁盘上建立一个专门的存放您python程序的文件夹，比如，就E:\学习资料\myPython吧。 话说，我怎么那么喜欢学习资料这个文件夹？</p>
+<p>进入这个文件夹，然后右键，点击”通过Code打开”，您的VS Code就会启动，并且左边会展现您存放python程序的文件夹。</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/python/code.png" alt="code"></p>
+<p>这正是VS Code的一大好处。在这里您可以直接创建，管理，维护您的所有程序。并且，将来如果您真的用VS Code编写比较复杂的程序，您也可以通过VS Code提供的资源管理器，根据您编写程序的逻辑层级，设置存放程序文件的文件夹的逻辑结构，并且快速导航到您需要编写的程序。</p>
+<p>想想当初我还奇怪，Windows自带的记事本不香么，还费劲弄个什么额外的VS Code？ 现在看，我真庆幸自己保留了一份好奇心。</p>
+<center>六</center>
+
+<p>太久的等待，太多的闲话，终于，我们要开始进入Python的世界啦。</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/python/code_py1.png" alt="python_code1"></p>
+<p>在VS Code左侧资源管理器的空白处，右键，新建文件，文件名您随便起，但是注意扩展名一定是*.py。所有的Python程序文件都是py文件，总觉得怪怪的，但是后来习惯了，还真习惯了这样的设定呢。</p>
+<p>另外唠叨一句，Python程序文件遵循Windows文件命名的原则，所以特殊符号就不要用了。另外中文文件名是完全OK的，也完全不影响程序的运行。不过吧，本着拉不出屎赖茅房的原则，我们给程序文件起名时尽量还是用平淡无奇的英文好了，比如</p>
+<blockquote>
+<p>wodechengxu.py</p>
+</blockquote>
+<p>一不小心我这多年义务教育培养出来的英文功力就暴露了，低调， 低调。</p>
+<p>下面咱们就开始编写第一个程序啦，走你。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;Hello World&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;小侯是个好孩子&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>简单吧，把您想对我说的话加上’’放在print()的括号里。注意内容不要过于火辣，虽然经过社会的捶打我的尺度还是可以的，但是毕竟内心还是那个会害羞的男孩。至于您信不信，我反正信了。</p>
+<p>您会发现我这两个print()语句就是这么单摆浮搁放这里了，没有逗号，没有分号，没有句号，什么号都没有。这就是Python语言的一个特点:</p>
+<blockquote>
+<p>一条语句占一行，每句结束无符号。语法简练规矩少，男女老少哈哈笑。</p>
+</blockquote>
+<p>抱歉抱歉，我这最近湿性大发，一不注意就湿气外露，所以您可以叫我湿人。。。</p>
+<p>另外跟您说一个刚开始写Python程序常出现的问题。其实不止Python，写其它程序都会面临这个问题，那就是，注意在英文模式下写程序。比如print(‘小侯是个好孩子’) 这里的括号和引号，一定都是英文模式下的符号，这在程序中输入中文时很容易出现的问题，如果不注意保证运行时报错报的您怀疑人生，尤其是长一点，比如几十行的程序，真的不好发现。</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/python/code_py2.png" alt="python code 2"></p>
+<p>您现在已经写了一堆的print()，下面，咱们可以开始运行这个程序了。</p>
+<p>在此之前，您会注意到，您这个程序的标签页上有个圆点。出现这个圆点，表示您这个程序文件没有保存，您可以使用Ctrl+S快捷键保存，这样圆点就消失了。强大的快捷键，也是VS Code的一大特点。另外其实这种圆点方式我是在Linux下见到的很多，不知道是不是微软从开源社区吸取的经验。Linux下很多的操作方式看似复杂且需要学习成本，但一旦适应，那叫一个方便。这种感觉就像男人之间沟通，看着简单粗暴，但其实非常高效，很多事情就这么在东单公园解决了。。。</p>
+<p>好好好，回到主题。咱们接着运行这个程序。您在编写的程序文件上右键，点击“在终端中运行Python文件”，然后就好啦！</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/python/code_py3.png" alt="python code 3"></p>
+<p>终端里出现了您运行的程序结果。</p>
+<p>相信您除了有点小开心，还会有点不满。“就这？我裤子都脱了你就给我看这个？”</p>
+<p>嗯。。。 请您听我解释，这个完全可以解释，冷静冷静。</p>
+<p>是这个样事儿的我的亲。 我承认就一黑不溜秋的终端里蹦出两行字是有点LOW。但是是这样，您想想咱们拿Python干活儿的场景，比如您拿Python哐哐哐处理一大堆的Excel文件，再比如您拿Python嗷嗷嗷抓取一大堆网页信息，您想想，是不是您写Python程序的目的就是让Python把这些Excel或网页信息处理的服服帖帖的，然后把处理好的Excel文件放到您指定的文件夹里，或者网页信息已经发到您指定的邮箱里了，那活儿不就干完了么？这会儿，您只需要在程序最后写一条:</p>
+<blockquote>
+<p>print(‘您好，您需要的学习资料已经全部处理完毕，已经存放到E:\学习资料\日本_韩国文件夹下’)</p>
+</blockquote>
+<p>这样Python干完您的活儿，给您终端里来这么一条儿跟您汇报一下，您说是不是就够了？ 您是不是只要拉窗帘儿准备手纸就完事儿了？您需要那些花花绿绿的玩意么？而且，Python也不光是只会在傻大黑粗的终端里打字儿玩儿，花花绿绿让您看了脸红红心跳跳的各种好康的东东，人家也会呀，比如</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/python/visualchart.jpg" alt="visualchart"></p>
+<p>利用Python强大无比的可视化数据能力，多少数据分析科学家往Python里哐哐哐猛灌数据，然后让Python消化完这些数据再从中后偏下部位搞出各种奇奇怪怪的东西，让科学家们看了都说好，就问您刺激不刺激？再比如，Python提供了多种强大的GUI库，一样可以写出花里胡哨的图形界面。所以说嘛，Python是个万金油，您需要什么，它就会变成什么样子。至于为什么我接触的总是终端的傻大黑粗，这个其实我也不太明白。。。</p>
+<center>结尾</center>
+
+<p>写到这里，我真的想欢呼。跟枯燥的玩意打交道一向不是我最擅长的，但还好，我还是坚持了下来。学习任何一种知识，进入任何一种全新的知识体系，一开始都会非常困难。所以，我们需要建立强大的内在驱动力，推动着自己向前努力。我们不能把未来想的过于功利，不要被互联网时代的浮躁影响。反而，我们努力成为一个用于探索的人，那你会发现，互联网，真的是一座宝库。</p>
+<p>今天的内容差不多了。我们准备好了编写并运行Python的环境，还成功把对我的表白打在了终端屏幕上，您真棒！</p>
+<p>下一篇，我还没动笔，这就是自己给自己干活儿的好处，不用着急，有了感觉再开始，真好 ~~~</p>
+</p>
+      <div class="post-button"><a class="btn" href="/%E5%AE%9D%E8%B4%9D%E5%84%BF%EF%BC%8C%E4%B8%80%E8%B5%B7%E5%AD%A6Python%E5%91%80-IV-md/" rel="noopener"><i class="fa fa-angle-double-right fa-fw"></i>Read More</a></div>
+    </div>
+  </div>
+  <div class="lx-entry padding">
+    <div>
+      <h2 class="title"><a href="/%E5%AE%9D%E8%B4%9D%E5%84%BF%EF%BC%8C%E4%B8%80%E8%B5%B7%E5%AD%A6Python%E5%91%80-III/">宝贝儿，一起学Python呀-III</a></h2>
+      <span class="lx-post-detail"><i class="fa fa-calendar-o"></i> 2021-06-16</span>
+      <p><h1 id="宝贝儿，一起学Python呀-III"><a href="#宝贝儿，一起学Python呀-III" class="headerlink" title="宝贝儿，一起学Python呀-III"></a>宝贝儿，一起学Python呀-III</h1><h2 id="第三篇-跟World-Say-Hello前，咱们还得絮叨絮叨"><a href="#第三篇-跟World-Say-Hello前，咱们还得絮叨絮叨" class="headerlink" title="第三篇 跟World Say Hello前，咱们还得絮叨絮叨"></a>第三篇 跟World Say Hello前，咱们还得絮叨絮叨</h2><center>一</center>
+
+<p>不知不觉，Python已经写到了第三篇，好消息是，我的拖延症暂时被控制住了，没太发作。坏消息嘛，到目前为止写了5000多字，连个正经东西还没看到，这真是花钱买本书，您说亏不亏？您觉得没正经东西，那是因为您没听过评书。您要是听过王玥波王老板的评书，好家伙，那垫话用的，好家伙了。要是赶上剧情里有打尖儿的，那今天的书就没别的了，保证就是王老板跟您侃老北京炸酱面的12种做法。。。听怹的书，您得有过日子心。同理可证，听我书，不是，听我给您侃大山，您也得有过日子心不是。</p>
+<p>要说一般的编程教材，一般的结构都是先花一大章节告诉你怎么去安装语言本身和编译环境，然后再推荐您个IDE(集成开发环境)，然后就是如何让屏幕输出”Hello World”。您费了半天劲，就为了打个“你好世界”，怎么看怎么像奥运会又要来了不是。</p>
+<p>所以说，不急，不急。咱不着急跟世界说你好，咱们先聊聊Python是怎么回事。</p>
+<p>Python， 蟒蛇也。(祖国母亲普及义务教育的好处，我脑子里立刻响起“永州之野产异蛇，黑质而白章”，旧社会，老百姓苦啊，还是社会主义好。我就等着接班社会主义事业了。。。) 这大蟒蛇貌似学名叫Python bivittatus。而蟒蛇家族里，其中一种在缅甸生活，因为白化病而呈现黄金色，所以叫黄金蟒。俩米，就是大米小米，这俩位就是黄金蟒的铁粉，每次去任何城市的动物园，都会找爬行动物馆然后找黄金蟒过过瘾，然后跟我探讨家里养一条的可能性。。。</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/python/python.jpg" alt="黄金蟒"></p>
+<p>也许Python软件基金会，也就是Python的维护组织，倾听到了俩米的心声，所以Python的Logo里，就是两只蟒蛇的形象，其中就有黄金蟒。</p>
+<p><img src="https://www.python.org/static/community_logos/python-logo-master-v3-TM.png" alt="Python"></p>
+<p>所以，既然如此有缘分，亲爱的俩米，你们要想办法通过中国电子学会的Python考试认证哟~~~</p>
+<p>又跑题了，又跑题了。当您决定给自己的电脑装个Python，您通过百度到达了<a href="www.python.org">Python的官网</a>, 一看，我的妈呀，怎么那么多版本？ (顺便说一句，您应该关注到了，Python是org域名，就问您NB不NB)</p>
+<p>很多时候，我们都会面对一个问题，就是版本选择。比如一些朋友想买台电脑时，通常都会陷入那么多Windows 10版本，我该装哪个版本的苦恼。哪个版本才是最强大最NB最爽的？(有机会我写个文章聊聊Windows 10 的大家族，跟您聊聊这些版本都是干嘛的，哪个让您用的最爽歪歪，呼呼)</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/python/win10.png" alt="Windows 10 Edition"></p>
+<p>如果说Windows带给您的是选择困难症standard edition, 那Python就是选择困难症 data centre edition啦。看看我们的主要Python版本:</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/python/pythonversion.png" alt="pythonvsersion">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             </p>
+<p>这就完了？ nonono，我专门抓取了Python目前开放下载的版本，是这个样式儿的:<a href="https://smallfish-bigocean.github.io/Python-Release-History/">Python release history</a> 您可以直接点击页面链接下载，当然，我也截图贴上来，您感受一下:</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/python/pyrelease.png" alt="pythonversion"></p>
+<p>从2001年至今，从Python 2.0.1 到 3.9.5，是不是很开心？因为您正在接触的，是一个有着深厚内功，久经历练的非常成熟却又在科学，信息，金融等前沿领域有着广泛应用的超级语言。</p>
+<center>二</center>
+
+<p>那么，您应该选哪个版本？</p>
+<blockquote>
+<p>子曰: 三长一短选最短,三短一长选最长 两长两短就选B,同长同短就选A 长短不一选择D,参差不齐C无敌 以抄为主,以懵为辅 抄辅结合,定能及格。。。</p>
+</blockquote>
+<p>一不留神又说实话了。。。 我们现在都很忙，没必要浪费时间学没用的，不喜欢的。所以这个大招就不上了。我给您换一个。</p>
+<blockquote>
+<p>安装最新版。对于目前而言，就是Python 3.9.5</p>
+</blockquote>
+<p>相信您会有疑问，一个软件，装最新版本这个难道还需要讨论？莫非小侯你想按篇幅收费？</p>
+<blockquote>
+<p>是的，我想</p>
+</blockquote>
+<p>嗯嗯，请忽略我无法抑制的内心独白。其实事情是这样，您在学习和使用Python时，最常使用的方法，肯定是百度。比如，您想研究怎么用Python打开一个Excel文件，您会百度”Python打开excel文件”，然后您会搜索到很多网页，基本内容大同小异，基本就是互相抄的。当然这不是重点，这些代码基本都是对的，您只要拷贝到您的编辑器里，稍微改改，似乎应该就能用了。</p>
+<p>但其实不是这样的。我在学习和使用Python编程时，遇到的最多的问题就是，人家代码我抄的真真儿的，就是哐哐哐报错，什么哎呀你长得不行啦，哎呀你收入不行啦，哎呀你开马自达但我想在宝马里哭啦。。。 这时保证您的内心是崩溃的，是的，这是任何一种编程语言初学者都要面对的问题：</p>
+<blockquote>
+<p>人家运行好好的代码，我原样复制就是报错，就是跑不通，难道就因为我用的电脑不是联想ThinkPad吗？</p>
+</blockquote>
+<p>对此，我想说，</p>
+<blockquote>
+<p>是的呢</p>
+</blockquote>
+<p>哈哈。放轻松大兄弟。这里我就想和您谈到的第一个我经常遇到的Python版本问题：</p>
+<h5 id="您抄的代码运行不了，第一就很可能是Python-版本的不同"><a href="#您抄的代码运行不了，第一就很可能是Python-版本的不同" class="headerlink" title="您抄的代码运行不了，第一就很可能是Python 版本的不同"></a>您抄的代码运行不了，第一就很可能是Python 版本的不同</h5><p>您要知道，您百度出来的信息，指不定是哪年的了。人家用的，说不定是多老的版本，甚至很可能是Python 2.7时代的祖传代码。您拿祖传代码在Python 3.x环境运行，哐哐报错不是很正常吗？</p>
+<p>最简单的，屏幕输出print函数，Python 2时代可以写成这样，就像声明一个变量:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span> <span class="string">&#x27;小侯哥哥，你好好帅呀&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>您这么运行，您的显示器就会输出一句大实话。但是在Python 3时代，这就报错了，因为Python 3 的print只能是函数形式，所以您想夸我，就得写成带括号的带参数的函数形式:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;小侯哥哥，你好好帅呀&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>再比如另外一个常用的input函数，python 2下，input得到的是一个整数，但python 3的input得到的是字符串。所以，如果您不小心拷贝到了祖传代码，不关注这些问题，很可能就会出问题。</p>
+<p>除了Python 2 和 3 之间的巨大差异，另一个我会遇到的Python版本问题是:</p>
+<h5 id="某些Python的第三方库不支持最新的版本"><a href="#某些Python的第三方库不支持最新的版本" class="headerlink" title="某些Python的第三方库不支持最新的版本"></a>某些Python的第三方库不支持最新的版本</h5><p>比如，我之前用过的一个爬虫库，就只能支持到Python 3.7.x版本。您如果运行更新的3.8或3.9，在安装库时就会遇到问题。</p>
+<p>好消息是，这些问题都不会阻碍Python成为您的好帮手。这些问题都能解决，只要您有耐心，愿意多思考，多尝试，这些都不是问题。</p>
+<p>总之一句话，请您安装最新的Python 版本，目前就是<a target="_blank" rel="noopener" href="https://www.python.org/ftp/python/3.9.5/python-3.9.5-amd64.exe">Python 3.9.5</a>.</p>
+<p>您安装的，其实是一个Python的运行环境。Linux和MacOS都内置对Python的支持，Windows只需要单独安装一下就行。另外说一句，很多Python教程都会一步一步截图告诉您应该怎么按下一步。其实没那么复杂，安装默认的来就行，只有一个要注意，就是把”Add Python 3.9 to Path”给勾上，这样您就能在您系统的任何一个文件夹，任何一个位置直接运行您的Python程序了。其他的嘛，看得懂的您就选选，看不懂的就默认，不会有什么问题。</p>
+<center>三</center>
+
+<p>开始使用Python的准备工作很简单，一共就2步: Step 1 安装Python。</p>
+<p>下一篇，我再跟您聊聊用什么软件开发Python程序。但是我还是想说，工具永远是其次，您需要的是，改变自己，改变旧习惯的信念。</p>
+<center>四</center>
+
+<p>以下算是番外篇吧，对我们学习用处不大，但似乎不说又不够专业。</p>
+<h6 id="Python是开源的。"><a href="#Python是开源的。" class="headerlink" title="Python是开源的。"></a>Python是开源的。</h6><p>您认为这对我们不重要，但这其实很重要。</p>
+<p>Python很强大的一点就在于官方和无数爱好者提供了大量的库，利用这些库，我们能很方便简单地写出我们需要的程序 (我会专门谈谈我对库的理解，应该是在下两篇以内)。正是因为开源，我们才能免费而且随意地去使用它们。您甚至可以直接打开这些库文件，学习人家是怎么实现这些功能的。我一直在赞美开源，因为开源让每个人都在无私地贡献自己的才智，平等造福于世界上的每个人。我甚至觉得开源思想的出现让我相信共产主义也许不是幻想。正因为如此，如果不涉及我服务企业的内部信息或者我或者任何其他人的隐私，我写的每篇文章，每段代码都是开源的。</p>
+<h5 id="Python是跨平台的"><a href="#Python是跨平台的" class="headerlink" title="Python是跨平台的"></a>Python是跨平台的</h5><p>对计算机语言而言，跨平台其实已经算是一个基本要求。跨平台，意味着您的代码可以做到“一次编写，到处运行”。但其实，很多时候计算机语言都做不到跨平台，因为我们的代码很难不跟操作系统打交道，比如这样的逻辑:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">加载 操作系统文件管理的方法库</span><br><span class="line">路径 = &quot;E:\学习资料&quot;</span><br><span class="line">列出文件数量(路径)</span><br></pre></td></tr></table></figure>
+
+<p>这里我用了逻辑而不是具体的语言，这里我用的是伪代码让您了解编程语言的工作逻辑，与具体什么语言关系不大。这段逻辑，我想设置了一个路径，引用了操作系统文件管理的方法库里面能列出文件数量的方法，目的是想用这两行代码算算我现在已经收集了多少学习资料，咳咳。</p>
+<p>这样的代码，显然时不能跨平台的，因为不同操作系统管理文件的方式是不一样的。Windows会理解E盘是个什么。但像Linux就会懵B, “学习资料我隐隐能理解大概是干嘛用的，但是这个E盘是个什么玩意？” 要知道，Linux管理硬盘完全不是用CDE这样的分区管理方式，所以这样的代码就不能跨平台。当然，绝大多数情况下，我们都可以通过只修改少量代码就能让代码实现跨平台。</p>
+<center>五</center>
+
+<p>最后，还是想聊聊为什么我想写点东西。周末带孩子上课外班，坐在那里放眼望去，多数的家长还是看手机的多。我一开始也这样。后来想想，看手机最可怕的不是浪费时间，而是手机带给我们的其实都是碎片化信息。各种官媒，自媒体都在用各自的手段释放各种吸引眼球的信息，但仔细想想，说句不客气的，这些信息，垃圾居多。当我们懒得自己去探索，去思考，而是习惯被动接受各种垃圾信息，然后陶醉在“互联网时代获取信息的渠道就是NB”时，其实和以前没有互联网相比，真的有什么本质区别么？ 未必。未必。</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/python/enviroment.jpg" alt="环境"></p>
+<p>所以，我希望能引入学习 - 思考 -总结 - 构建属于自己的知识体系 这样的循环去充实自己。不然，我真的害怕某天自己会习惯，会坦然，那可就真的是躺平了。</p>
+<p>得嘞，今天就写到这里了，下一篇，我跟您聊聊开始动手写第一个代码吧，不然真成废话连载了。</p>
+</p>
+      <div class="post-button"><a class="btn" href="/%E5%AE%9D%E8%B4%9D%E5%84%BF%EF%BC%8C%E4%B8%80%E8%B5%B7%E5%AD%A6Python%E5%91%80-III/" rel="noopener"><i class="fa fa-angle-double-right fa-fw"></i>Read More</a></div>
+    </div>
+  </div>
+  <div class="lx-entry padding">
+    <div>
+      <h2 class="title"><a href="/%E5%AE%9D%E8%B4%9D%E5%84%BF%EF%BC%8C%E4%B8%80%E8%B5%B7%E5%AD%A6Python%E5%91%80-II/">宝贝儿，一起学Python呀 - II</a></h2>
+      <span class="lx-post-detail"><i class="fa fa-calendar-o"></i> 2021-06-11</span>
+      <p><h1 id="宝贝儿，一起学Python呀-II"><a href="#宝贝儿，一起学Python呀-II" class="headerlink" title="宝贝儿，一起学Python呀 - II"></a>宝贝儿，一起学Python呀 - II</h1><p>前一篇请见 <a href="https://smallfish-bigocean.github.io/%E5%AE%9D%E8%B4%9D%E5%84%BF%EF%BC%8C%E4%B8%80%E8%B5%B7%E5%AD%A6Python%E5%91%80-I/">宝贝儿，一起学Python呀 - I</a></p>
+<p>本文也发表于鄙人的Blog <a href="https://smallfish-bigocean.github.io/">小鱼游大海</a></p>
+<p>本章节，我尝试和您探讨学习的方法，以及离开学校，走上工作岗位以后，我们如何切实可行地快速学习。毕竟谁也不想在忙了一天，又伺候完小主写作业睡觉之后，还得睡眼惺忪地学东西。</p>
+<h2 id="第二篇-我那无处安放的被C支配的恐惧"><a href="#第二篇-我那无处安放的被C支配的恐惧" class="headerlink" title="第二篇 我那无处安放的被C支配的恐惧"></a>第二篇 我那无处安放的被C支配的恐惧</h2><center>一</center>
+
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/python/C.jpg" alt="C语言"></p>
+<p>当年风华正茂的你，坐在大学的课堂里，说不定还挨着你心仪的女生。你的小纸条上只有一句话，但却是你字斟句酌后情真意切的表达。你准备下了这节课就想办法趁别人不备偷偷把纸条塞给女生，你还得盘算着别让自己宿舍那几块料看见，不然回宿舍指不定老几位得怎么起哄架秧子。她宿舍那几位女生也得躲开，不然以我在女生中的口碑，这事儿就别指望了。</p>
+<p>亲爱的读者朋友您以为我跑题了？ 那不能够。因为这节课是C语言，对，是不是开始颤抖，是不是又唤起了你不好的青春回忆？当我满脑子都被i+&#x3D;(++i)+(i++)占据时，我当时真得很想怒吼，这是什么玩意啊？ 编程的人脑子有包吧？为什么这玩意要5学分？还有那个Turbo C的编程环境，我草，微软的Windows图形桌面环境都发展到了Windows XP，我还对着干巴巴的蓝色屏幕跟大傻子一样的打字，我是不是被玩儿了？？？ 后来，我真正了解到C语言本身在计算机发展史上的地位，我才理解为什么哪怕和信息沾点边的学校都要开设C语言这门课程。但是，我已经错过了学习这门伟大语言的最佳时机。这不能说又多大遗憾。</p>
+<center>二</center>
+
+<p>我们接着聊Python。学Python，如果还是这种学法，第一节课，准备Python环境，第二节，面向对象的思想，基础数据类型，第三节，基本的结构。。。</p>
+<p>相信结果还是一样的。你学了一大堆东西，如果做做选择题填空题是够了，但是你连一个程序都写不出来。因为没有主线。</p>
+<p>人生从学生走到工作岗位，我们已经没有足量时间去从0学起，学习每个环节。我们需要一根主线，把这些环节这些知识体系重新组织起来，把无数平面分布的点立体起来，形成体系。</p>
+<p>这根线，就是我们实际要做的事情。</p>
+<p>举例说明，Python下处理文件系统的内置OS模块光方法就有六十几个。</p>
+<blockquote>
+<p>以前的学习方法是哐哐哐把这六十几个方法挨个讲一遍，然后出到选择题，如果我想获取E:\学习资料 下全部文件的创建时间，那我应该使用的方法是:</p>
+<p>A. os.path.getmtime(path)  B. os.path.getctime(path)  C.os.path.getatime(path)  D. os.path.ismount(path)  </p>
+</blockquote>
+<p>然后相信我，等你真的需要写个程序做这件事，你保证想不起来应该怎么干了。既然无用，为何不扔？</p>
+<p>相信你已经明白了，事情其实并不复杂。一个高效率的学习方式，应该是:</p>
+<ul>
+<li>准备Python的运行环境，确保Python代码能跑起来</li>
+<li>了解Python程序的基本结构和格式</li>
+<li>分解任务，利用伪代码或流程图之类的工具分析任务逻辑</li>
+<li>尝试用Python实现，也就是写代码。这一步要求边学边写，边写边学</li>
+<li>排错，执行代码</li>
+<li>复盘，建立并完善关于Python的知识体系</li>
+</ul>
+<p>顺便说一句，其实快速学习的另一个前提是好奇心。我上面说了一句话，</p>
+<blockquote>
+<p>Python下处理文件系统的内置OS模块光方法就有六十几个</p>
+</blockquote>
+<p>这里有几个点，内置，OS，模块，方法。</p>
+<p>如果好奇心足够，现在就应该已经去百度一番这都是什么东东。如果能弄清这几个问题，其实Python就已经入门了。</p>
+<p>好嘞，让我们抛弃以前的恐惧，愉快地开始在Python的世界里玩儿起来吧。记住，边干活儿边学习，这样活儿也干完了，学也学会喽。</p>
+</p>
+      <div class="post-button"><a class="btn" href="/%E5%AE%9D%E8%B4%9D%E5%84%BF%EF%BC%8C%E4%B8%80%E8%B5%B7%E5%AD%A6Python%E5%91%80-II/" rel="noopener"><i class="fa fa-angle-double-right fa-fw"></i>Read More</a></div>
+    </div>
+  </div>
+  <div class="lx-entry padding">
+    <div>
+      <h2 class="title"><a href="/%E8%BF%99%E4%B8%AA11%E6%9C%89%E7%82%B9%E7%8C%9B/">这个11有点猛</a></h2>
+      <span class="lx-post-detail"><i class="fa fa-calendar-o"></i> 2021-06-09</span>
+      <p><h1 id="这个11有点猛"><a href="#这个11有点猛" class="headerlink" title="这个11有点猛"></a>这个11有点猛</h1><p>最近业界比较热的一大新闻，是微软要在6月24日发布下一代操作系统。</p>
+<p>用小米话说，我脑袋当时噔的就是一个问号，然后就是一个叹号。</p>
+<p>按之前微软的思路，今后将以滚动更新的形式更新Windows 10，因此Windows 10将是最后一个版本。从2015年第一版Windows 10 1507， 1511，1607。。。 Windows 10一路走来，版本号从Windows 10.10240已经迭代更新到19043，微软每次更新也没大张旗鼓说这次我们放了颗卫星。之前倒是有个Windows 10X 项目传闻，但后来也被证实被放弃了。直到2021年夏天，似乎要发生什么不一样的改变，以至于微软说要搞个大新闻？</p>
+<p>本着百度不如亲自研究的理念，咱们直接找到微软提供的最新版本开发版Windows 10，看看能不能找到微软即将带给我们什么惊喜。</p>
+<p>进入新系统，并没有看到什么不同呀。一样的桌面，一样的开始菜单。深入一下，看看有什么神秘的发现.</p>
+<img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/newwin/version.png" alt="version" style="zoom:80%;" />
+
+<p>版本号21390，比目前最新正式版 19043高出不少。Dev，评估副本，和过期时间也说明了它处在开发早期阶段的身份。好在这段时间日常使用下来倒是没什么不妥。</p>
+<p>第二个发现来了，Windows Ternimal终于替换CMD和Powershell成为默认终端。要知道这个Windows Terminal可是开源的，而且支持多个平台。微软の野望果然不是盖的。一个Windows揽天下的信念可见一斑。</p>
+<img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/newwin/terminal.png" alt="terminal" style="zoom:67%;" />
+
+<p>发现3，IE没了。开始菜单已经彻底找不到IE。即使在系统文件夹还能看到IE，但执行iexplore.exe，启动的已经是Edge浏览器。看来微软确实开始清理祖传代码，前任们的痕迹正在慢慢被抹去。</p>
+<p>发现4，控制面板不好找了。控制面板这次被扔到管理工具里，而且图标也重绘了。随着越来越多的系统控制模块被迁移到设置应用，控制面板这个老朋友也正在慢慢退出历史舞台。</p>
+<img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/newwin/controlpanel.png" alt="cp" style="zoom:67%;" />
+
+<p>等等，管理工具里这个Power Automate是干嘛的？ 难道是。。。</p>
+<img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/newwin/tools.png" alt="pa" style="zoom:80%;" />
+
+<p>此前，微软在Office套件中提供了一个在线应用，就是这个Power Automate。它的作用是轻松创建自动化工作流, 利用业务流程自动化提高工作效率。比如，你每次更新完你们部门Teams的某个文件，然后你需要给一些人发邮件告知他们注意这个更新，那你可以用Power Automate创建一个流，这样你只需要更新完Teams，所有你指定的人都会受到通知邮件。甚至更新文件这个过程也可以自动完成。“自动化工作流”，这其实也是我之前一直在学习研究的东西，毕竟这段时间我一直在和无脑重复劳动做斗争，成果不少，挑战很多呀。</p>
+<p>之前Power Automate只是作为Office套件存在，涉及的工作流也以Office本身及协同工作为主，这次居然在Windows系统里看到这个家伙，难道？ 打开一看，哎呦，</p>
+<img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/newwin/powerato2.png" alt="pa2" style="zoom:67%;" />
+
+<p>看着左侧操作里这满满腾腾的，涉及系统，办公，邮件，云，数据库。。。 我去，微软大神这不是放卫星啊，这是想制造一个平行宇宙啊这是？ 微软这是想让我这个喜欢文艺的青年沉醉于各种“流”的世界，我可以尽情把自己日常的工作“流”化，然后让Power Automate代我去一一完成，而我，只需要紧锁眉头思考自己和这个宇宙有什么关系。。。一个Power Automate，就值得升级新系统啦！！！</p>
+<p>继续挖掘。听说WSLg也是这次的重磅更新，咱们一起看看。之前的WSL，是Windows加入了对Linux环境的支持，包括执行大部分命令行，实用工具和应用程序，前提是这些程序都是基于终端的，也就是没有图形界面。而所谓WSLg，就是微软在WSL上增加了对图形系统的支持，可以直接运行带图形界面的应用。</p>
+<p>这里需要注意的是，WSLg并不是给WSL里的Linux安装了图形界面，而是提供了Linux下这些图形界面程序需要的环境。这些图形界面程序并不是运行在Linux里，而是运行在Windows下。</p>
+<p>比如我们执行Libre Office的Calc程序(Libre Office是Linux下开源的Office套件，Calc是这个套件中提供Excel功能的程序):</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/newwin/wslg6.png" alt="office"></p>
+<p>可以看到，Calc虽然运行在Windows下，但是你用文件-打开，打开路径全是WSL的Linux里的路径，它并不能直接访问你电脑上的本地文件。这就相当于安装了一个Linux虚拟机，然后把虚拟机里的Linux程序直接拖到Windows下运行一样。</p>
+<p>也正是如此，新版Windows直接把Linux下的所有图形程序直接放到了Windows自己的开始菜单，调用起来和Windows下的程序没有任何区别，爽啊</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/newwin/wslg5.png" alt="gui"></p>
+<p>只能说，微软在最佳开源软件，最佳Linux软件，安卓，苹果IOS的开发厂商的道路上一去不回头了。难怪有人说，Windows快成最佳Linux版本了。</p>
+<p>最后再上几个新图标的样式吧。这次微软重绘了大部分图标，好看不好看的，反正新鲜多了</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/newwin/newicon.png" alt="newicon1"></p>
+<img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/newwin/ico1.png" alt="ico1" style="zoom:67%;" />
+
+<img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/newwin/ico2.png" alt="ico2" style="zoom:67%;" />
+
+<img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/newwin/ico3.png" alt="ico3" style="zoom:67%;" />
+
+
+
+<p>时间有限，一通体验下来，第一感受，如果微软即将发布的系统是基于目前这个开发版的，那确实可以算是一个卫星。理由是，虽然最显而易见的UI部分没有翻天覆地的变化，但微软这次加入的内容，针对“生产力”做出了全新的诠释。说实话，业界以“生产力”标榜自己的系统和产品确实不少，但在这个全新时代下，真正具有普遍意义的生产力系统，真得说微软这位老战士。</p>
+<p>好消息是，似乎工作方式又可以得到进化，坏消息么，还得找时间学习呀我的天。</p>
+<p>这个“11”，超猛，超勇，超期待。</p>
+</p>
+      <div class="post-button"><a class="btn" href="/%E8%BF%99%E4%B8%AA11%E6%9C%89%E7%82%B9%E7%8C%9B/" rel="noopener"><i class="fa fa-angle-double-right fa-fw"></i>Read More</a></div>
+    </div>
+  </div>
+  <div class="lx-entry padding">
+    <div>
+      <h2 class="title"><a href="/%E5%AE%9D%E8%B4%9D%E5%84%BF%EF%BC%8C%E4%B8%80%E8%B5%B7%E5%AD%A6Python%E5%91%80-I/">宝贝儿，一起学Python呀 - I</a></h2>
+      <span class="lx-post-detail"><i class="fa fa-calendar-o"></i> 2021-06-08</span>
+      <p><h1 id="宝贝儿，一起学Python呀-I"><a href="#宝贝儿，一起学Python呀-I" class="headerlink" title="宝贝儿，一起学Python呀 - I"></a>宝贝儿，一起学Python呀 - I</h1><p>这是一系列文章的开始。其实我本意是想跟着中国电子学会的青少年软件编程（Python）等级考试大纲，给俩米介绍一下Python的知识，帮着两个小家伙考个证书，万一小齐一高兴给点零花呢。本来想好文风应该是“小宝宝，今天，粑粑要带你走入程序的世界”这样幼稚又2B的风格，结果一动笔就飘了，小可爱风格也回到老爷们儿侃大山风格，而尽量不说少儿不宜内容，已经算是我最后的坚持。。。</p>
+<p>得了，我这高阶拖延症就别说那么多了，咱们聊起来。</p>
+<h2 id="第一篇-又不想当程序员，学编程干嘛？"><a href="#第一篇-又不想当程序员，学编程干嘛？" class="headerlink" title="第一篇 又不想当程序员，学编程干嘛？"></a>第一篇 又不想当程序员，学编程干嘛？</h2><center>算是前言</center>
+
+<p>说实话，就我这水平还好意思写这个其实挺有点厚脸皮的。我从事的工作和编程没有任何关系，也不是程序员，唯一沾边的就是头发似乎也不怎么多。。。 而且我这水平和知识储备其实也不够写东西的，抄袭就算了，不是多高尚，一提起不费脑子就费手的活儿我就头大。</p>
+<p>在这个系列的文章里，我想和你们聊聊我是怎么走进编程的世界，编程是如何帮助我提高工作效率，如何改变我的思考方式，甚至影响到我对这个世界的感受。我相信我的人生正在孕育着一些不一样的种子，我也确信，我有能力让自己变得和以前不一样。所以我必须从一些简单的事情做起，比如，尝试让自己写下这一系列Python文章。</p>
+<p>由于我并不是程序员，也没有任何专业背景，所以我准备以中国电子学会的青少年软件编程（Python）等级考试大纲为主线。不否认，我写这个系列的文章也希望能帮助你们通过这个考试，学习之余还能获得个证书，岂不快哉？</p>
+<p>写这种文章，对我来说最大的挑战是我毕竟不是程序员，我对编程的理解还停留在很浅薄的程度，甚至至今我的代码库里还有程序错误没有解决方案，这也导致我内心其实非常忐忑，一旦写错什么，误导了别人就不好了。 但是我坚信我们不应该因为害怕犯错而什么都不去做，学习本来就离不开犯错。虽然这个世界告诉我们躺平会减少很多烦恼，在郁闷的时候我也想劝自己放弃挣扎算了。但是，还是努努吧，努努就有希望，万一有呢，是吧。</p>
+<p>当然，任何事物都有两个方面。也正因为我不是专业人员，所以我很了解初学者战战兢兢的心情。站在Python这座风景秀丽的大山前，站在这座山前，我们第一个反应应该不是期待山巅的风景，而是扪心自问，我爬的上去吗？ 这是很正常的心态，但是相信我，这个星球上有很多很多人，他们都不是专业人员，也不是程序员，也不是计算机专家，他们只是学生，老师，科研人员，普通上班族，他们都很好的用Python在帮助自己。我们学习踢球，不是为了成为梅西C罗，我们也没必要强迫自己学会连过五人或者倒钩破门。只是为了平时能和朋友踢几脚球，那足球没那么复杂。Python最大的魅力也正在于此，不管使用者的程度如何，它都能帮助你。</p>
+<center>有那么多好用的程序，干嘛还要自己编程？</center>
+
+<p>这应该是一个特别好的问题。以前我遇到问题的时候，总会先“百度”一下有没有软件能解决我的问题。但是很多时候，其实我的问题太“小”了，太细节了。 比如说，你们一定知道PPT这个软件 (准确的说，我们说的应该是微软Office套件中的演示软件Powerpoint，PPT仅仅是这个软件支持的一种文件格式，而且现在这个格式也早就进化成了PPTX。PPT只是一种通俗的说法)。PPT是一个特别棒的软件，功能非常庞大，能做很多事情。但有时候我的需要只是画个流程图，这个流程图只包含文本框，箭头之类的形状。为了这么简单的功能，而下载一个庞大而且不怎么便宜的软件，似乎有点大炮打蚊子的感觉，但我们仅仅只需要一个蚊子拍，而我这个小小的“蚊子拍”，很难让那些专业的软件厂商，或者程序员，来专门耗时间帮我写个小程序来解决问题，这个确实不怎么现实。即使有程序员愿意提供软件定制服务，恐怕价格也不是我能承受的。</p>
+<p>再比如，我举个实际的例子。我平时会定期处理一堆Excel表格，大概20来个吧. 这些表格有相同的结构，也就是说它的列(行话叫字段，不过咱不是专业人士，不在乎)都是一样的。我需要定期从每个表格当中按照一定的格式读取一系列数据，然后把这些数据按照一定的规则处理一下，然后把处理好的数据整合在一起。</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/python/excel.png" alt="excel"></p>
+<p>可以想象，如果每次都要用Excel程序来依次打开这些文件，然后靠着我的双眼皮大眼睛去处理数据，然后再一个一个拷贝出来，然后找个地方贴上去。。。 我想这一天我会非常的忙碌。也许看起来这样的员工好像很努力很认真，但是我自己知道，这是在浪费生命。我完全可以让电脑来做这件事情，然后把省下来的时间用来思考更多更有价值的问题，这样说不定我也能让我自己更加有价值呢，是吧。</p>
+<p>这件事情我当然可以找微软，因为其实Excel就提供了强大的VBA程序来做这件事。但VBA有很大的问题，第一，它只能在微软的Excel里运行，不具备通用性。第二，Excel VBA不怎么好学（得，一不小心把实话说出来了）。我之前确实有用Excel VBA来做这件事，但是相信我，仅仅在“自动打开表格并读取数据后，关闭这个表格”这个问题上，就已经让我卡了。天书一样的代码，看着就让人没有生活的情趣，虽然后来依靠一些手段解决了，但总觉得不那么“高级”和“优雅”。</p>
+<p>所以有没有这种可能，就是有一个不怎么难学的编程软件，能提供各种各样的工具，就像乐高里各种各样的现成的积木和连接件一样，让我只要使用这些积木和连接件，就能拼出我想要的小程序小部件，而不是连最基础的积木连接件都得我自己搞，这不是很美好吗？就像这样：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> 引入读写Excel的工具</span><br><span class="line"><span class="number">2.</span> 设置Excel表格的存储位置为E:\学习资料\</span><br><span class="line"><span class="number">3.</span> 使用读写Excel的工具读取存储位置中的所有Excel文件中的第一个文件</span><br><span class="line"><span class="number">4.</span> 读取这个文件中符合以下条件的行</span><br><span class="line">   条件一</span><br><span class="line">   条件二</span><br><span class="line">   条件三</span><br><span class="line"><span class="number">5.</span> 把符合条件的行按以下规则进行处理</span><br><span class="line">   规则一</span><br><span class="line">   规则二</span><br><span class="line">   规则三</span><br><span class="line"><span class="number">6.</span> 把处理好的数据存放到新的位置</span><br><span class="line"><span class="number">7.</span> 打开下一个文件</span><br><span class="line"><span class="number">8.</span> 重复<span class="number">4</span>-<span class="number">6</span></span><br><span class="line"><span class="number">9.</span> 指定文件夹下所有文件都已经处理完毕，程序执行完毕，您可以继续浏览学习资料中的其他文件</span><br></pre></td></tr></table></figure>
+
+<p>我并不需要了解Excel本身的接口啊，API啊，SDK啊（这些都是什么？？？），我只需要把注意力集中优化我自己需要做的事情的逻辑或工作流，然后按照这个编程语言的要求和规则写出来就可以了，这不是挺好吗。</p>
+<center>这么说，Python很勇咯</center>
+
+<p>初学者经常面对的第一个问题，恐怕就是一键三联: “好学吗？””功能强大吗？”“和XXX比如何呢？”</p>
+<p>我想说，如果您的智商和我差不多，那很遗憾，Python不复杂，但也没到一下子就能学会的程度。不然干嘛Python程序员的收入都那么高，要是那么容易就玩儿透了，我不早就人生巅峰了么。 要知道一般应用场景下，Python本身其实没什么太复杂太难理解的东西，但您要了解的远不止程序本身。比如，如果您想用Python抓取某只股票的股价，嗯，这叫爬虫，Python的看家本领，任何一本Python教程都会教我们怎么用Python写爬虫。我也有用Python定期抓取股票价格，然后当价格高于某个点时给我发邮件提示洒家要发财了。不过遗憾的是，这么长时间我就没收到过这样的邮件，走上人生巅峰也依然是遥不可及的梦。经测试，不是程序有问题，而是股票不给力。。。 好了我接着说，如果您想写个抓取股价的程序，那您不能这样:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Python, 爷买了港股00992，给爷查股价，现在马上Now！股价到了<span class="number">15</span>块，给爷发个邮件，主题是“您要当高富帅走上人生巅峰了呢”</span><br></pre></td></tr></table></figure>
+
+<p>虽然Python很NB，但如此简单粗暴，怕也是不行的。您就算对着Siri或者小度或者小爱或者小冰（这都是什么奇怪的东东）这么说，弄不好都不会有什么回应。用Python实现这样的功能，您不会在代码本身遇到太多问题，但是您需要了解一些Python代码以外的知识和问题，比如</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">您了解您想抓取信息的这个网站吗？</span><br><span class="line">请求方式用 Get / POST？是否需要带请求参数? <span class="comment">#现在很多网站都是动态网页，还用了Ajax，所以不带参数毛都找不到。</span></span><br><span class="line">分析HTML代码？ <span class="comment"># Python会帮您抓取解析HTML代码，但您得自己从里面找到股价信息</span></span><br><span class="line">如何处理找到的股价？ 发电子邮件？ <span class="comment"># 那您得会Python涉及电子邮件的包了，而且还得了解SMTP。。。</span></span><br><span class="line">写到文件里？<span class="comment">#操作系统的相关基础知识，相对路径绝对路径什么的您得了解，要是涉及到其它文件格式比如Word文档，那您还得研究研究Python提供的Word处理包的使用了</span></span><br><span class="line">发个短信？<span class="comment">#那您得自己找SMS服务提供商，了解他们提供的API怎么玩儿。。。</span></span><br></pre></td></tr></table></figure>
+
+<p>哈哈，相信看到这里您已经准备打退堂鼓了。但是我是这么想的，像我们这样的普通人，每天早起睁眼就要催孩子起床，送孩子上学，然后在车流滚滚的城市中挤到办公室，然后面无表情地坐在电脑前面点鼠标，大脑甚至连一小时有价值的思考都不用做，难道这就是我们想要的工作，想要的生活？难道我们真的只能用忙碌来安慰自己，用消耗自己生命的代价来告诉公司告诉老板我的价值？我们并不奢求自己能飞多高，也并不想把希望寄托在别人的认可上，但至少，做一些能让自己认可的事情，能让自己平凡的生活不那么平庸，我觉得这还是可以做到的。每天给自己一些时间思考，每天做出一些切实的小小改变，每天引入一些新东西 帮助自己更有效率，这难道不比做个键盘鼠标操作员更能让我们的人生多一些颜色么？这不是鸡汤，这是我们奖励给自己的鸡腿呀！</p>
+<p>Python是很勇，但真正超勇的，正是我们那依然奔腾如少年的内心呐。</p>
+<p>第一篇就写到这儿，下周见。</p>
+</p>
+      <div class="post-button"><a class="btn" href="/%E5%AE%9D%E8%B4%9D%E5%84%BF%EF%BC%8C%E4%B8%80%E8%B5%B7%E5%AD%A6Python%E5%91%80-I/" rel="noopener"><i class="fa fa-angle-double-right fa-fw"></i>Read More</a></div>
+    </div>
+  </div>
+  <div class="lx-entry padding">
+    <div>
+      <h2 class="title"><a href="/%E8%8A%B1%E4%B8%AD%E9%86%89%E5%8D%A7%E7%9C%9F%E5%A5%BD%E6%B1%89%EF%BC%8C%E7%95%99%E5%BE%97%E8%8A%B3%E9%A6%99%E6%BB%A1%E4%BA%BA%E9%97%B4/">花中醉卧真好汉，留得芳香满人间</a></h2>
+      <span class="lx-post-detail"><i class="fa fa-calendar-o"></i> 2021-06-07</span>
+      <p><h1 id="花中醉卧真好汉，留得芳香满人间"><a href="#花中醉卧真好汉，留得芳香满人间" class="headerlink" title="花中醉卧真好汉，留得芳香满人间"></a>花中醉卧真好汉，留得芳香满人间</h1><h4 id="写在古龙诞辰83周年"><a href="#写在古龙诞辰83周年" class="headerlink" title="写在古龙诞辰83周年"></a>写在古龙诞辰83周年</h4><center>一</center>
+
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/gulong/gl.jpg" alt="古龙"></p>
+<p>“身高一米五，头大如麦斗。好色如虎狼，一日不无酒”。</p>
+<p>其貌不扬，好色，酒鬼，这可能是个废柴渣男。</p>
+<p>他，也可能是古龙。</p>
+<p>我最喜欢的武侠小说家，没有之一。</p>
+<p>这个范围，包括金庸先生。</p>
+<center>二</center>
+
+<p>金庸先生写过很多江湖，写过江湖里有令狐冲这样的浪子。</p>
+<p>古龙自己就在江湖，古龙自己就是浪子。</p>
+<p>古龙的故事里，写的都是他自己的样子。</p>
+<center>三</center>
+
+<p>古龙什么功夫也不会，估计打架未必是我的对手。</p>
+<p>但古龙真的打过架，</p>
+<p>为了保护心爱的女人。</p>
+<p>其实不能算打架，因为古龙傻乎乎地用手去接人家的刀。</p>
+<p>可悲的是，刀在，</p>
+<p>可喜的是，手也在。</p>
+<p>所以古龙还能写书。</p>
+<center>四</center>
+
+<p>古龙的小说，</p>
+<p>经典不少，</p>
+<p>垃圾也不少。</p>
+<p>公开找人代笔更不少。</p>
+<p>“为了等钱吃饭而写稿，虽然不是作家共同的悲哀，却是我的悲哀，我也相信有这种悲哀的人大概不止我一个”</p>
+<p>因为他的这句话，我认为，只要一个人还能真诚地面对自己，那他就算不是大家或圣人，至少还可以做好汉。</p>
+<center>五</center>
+
+<p>古龙说自己写书，分为几个阶段。</p>
+<p>我看古龙的书，也经历过几个阶段。</p>
+<p>早期，年轻，热血，</p>
+<p>执迷于情节，胜负。</p>
+<p>李寻欢到底能不能战胜上官金虹？</p>
+<p>飞剑客和荆无命谁才是真的快剑？</p>
+<p>傅红雪的刀能否砍断路小佳的剑？</p>
+<p>楚留香和陆小凤谁的轻功更高？</p>
+<p>剑神西门吹雪是否真的天下无敌？</p>
+<p>。。。</p>
+<p>当然，还有女人。</p>
+<p>古龙还没到“此处需要删除XX字”的程度。</p>
+<p>但已经足以让年少轻狂的我，</p>
+<p>看的瞠目结舌，遐想连篇。</p>
+<p>后来，后来，在后来。</p>
+<p>再看古龙的书，</p>
+<p>我只觉得悲伤。</p>
+<p>蝴蝶一样美丽的生命。</p>
+<p>快意恩仇的剑，</p>
+<p>却都只如流星一般。</p>
+<p>但哪怕只有一瞬，</p>
+<p>却此生无悔。</p>
+<p>这是古龙笔下的人。</p>
+<p>这是古龙。</p>
+<center>六</center>
+
+<p>古龙死于酒。</p>
+<p>年48.</p>
+<p>埋葬48年生命的，</p>
+<p>是挚友买下的48瓶美酒。</p>
+<p>书好，</p>
+<p>比书好的，</p>
+<p>是人。</p>
+<p>比人好的，</p>
+<p>是酒。</p>
+<center>七</center>
+
+<p>“儿须成名，酒须醉。酒后倾诉，是心言”</p>
+<p>不知道啤酒您喝不喝。</p>
+<p>但请满饮此杯。</p>
+<p align="right">又是六月七日</p>
+<p align="right">于北京</p>
+<p align="right">我也有酒</p>
+
+</p>
+      <div class="post-button"><a class="btn" href="/%E8%8A%B1%E4%B8%AD%E9%86%89%E5%8D%A7%E7%9C%9F%E5%A5%BD%E6%B1%89%EF%BC%8C%E7%95%99%E5%BE%97%E8%8A%B3%E9%A6%99%E6%BB%A1%E4%BA%BA%E9%97%B4/" rel="noopener"><i class="fa fa-angle-double-right fa-fw"></i>Read More</a></div>
+    </div>
+  </div>
+  <div class="lx-entry padding">
+    <div>
+      <h2 class="title"><a href="/%E6%88%91%E5%8F%AF%E8%83%BD%E5%BE%97%E4%BA%B2%E4%BA%B2%E4%BD%A0/">我可能得亲亲你</a></h2>
+      <span class="lx-post-detail"><i class="fa fa-calendar-o"></i> 2021-06-03</span>
+      <p><h2 id="我可能得亲亲你"><a href="#我可能得亲亲你" class="headerlink" title="我可能得亲亲你"></a>我可能得亲亲你</h2><p>本文也发表于鄙人的Blog <a href="https://smallfish-bigocean.github.io/">小鱼游大海</a></p>
+<center>一</center>
+
+<p>大象进入昆明边界了。</p>
+<p>庄稼地里吃过粮，高速上边压马路。革命小酒天天有，谁管家乡在何处。</p>
+<p>十五头亚洲象，就这么从西双版纳州一路北上，逛吃逛吃，所到之处可谓人仰马翻，但人家体型巨大，脑袋灵活，保护动物会武术，天下流氓挡不住。一头小象干掉200斤酒糟直接醉倒，脱离象群。不要以为这会影响象群旅游的决心，人家带头母象居然找到了这位纪律堪忧的小家伙，继续逛吃，于是经过400公里徒步，这群吃货即将进入昆明市界，如果林业部门再不采取措施，估计昆明就得改成保护区了。。。</p>
+<p>说到大象，其实大象和北京也颇有渊源，比如象来街。</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/14ce36d3d539b6003af37b45e81c222ac65c113819a7.png" alt="14ce36d3d539b6003af37b45e81c222ac65c113819a7"></p>
+<p>话说明朝开始，东南亚各国开始来北京朝贡，而要说最有分量的贡品，显然就是当地特产，大象。于是就在宣武门内西侧靠着城墙设置了象房来饲养这些贡品。每到大象洗澡的日子，一群大象在饲养员的引导下溜达到宣武门外的护城河沐浴一番，能想象当年绝对是北京一景。</p>
+<p>希望这些准备在昆明潇洒一番的大象朋友遵守交规，不要随地乱坐，不然一屁股把人家豪车坐瘪就不好了，怕是保险也不好理赔这种情况。。。</p>
+<center>二</center>
+
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20210602162535.jpg" alt="微信图片_20210602162535"></p>
+<p>带孩子出门的时候，我很喜欢观察别的孩子的举动，并猜测这个家庭的状况，比如谁会照顾孩子多一些(A)？ 孩子发展情况如何(B)？夫妻关系如何(C)？ 家庭成员之间的关系又是怎样(D)？</p>
+<p>比如，有的家庭明显妈妈照顾孩子多一些，孩子明显对妈妈又更多依赖，而爸爸会更倾向于玩儿手机，跟妈妈和孩子几乎没什么交流。这样的家庭特点一般是孩子不能离开妈妈，一旦妈妈去洗手间或干点别的，孩子会立刻陷入到无助和缺乏安全感。这种情况下的家庭，孩子一般没有同年龄段应该具有的独立游戏，吃饭的能力，更多需要妈妈的陪伴。这种情况的家庭，一般ABCD四维都有很大潜力空间，只要找对方法，短期就能有很大改善。</p>
+<p>而另外有的家庭，则是老人照顾孩子。比如吃饭时，老人会帮孩子喂饭，爸爸妈妈则交流很多。这种环境下，ABCD四维中一般ACD都有不错的发展，B的潜力也会很高。</p>
+<p>每个家庭都有各自的情况，也都有各自要面对的问题。但是站在爸爸的角度，我想，努力平衡好工作，家庭和个人爱好的关系，提升自身的能力，修养，勤练内功，应该是每个爸爸的重要工作。</p>
+<p>哦对了，还有，时不时的对家人腻乎腻乎，其实也挺好玩儿的。</p>
+</p>
+      <div class="post-button"><a class="btn" href="/%E6%88%91%E5%8F%AF%E8%83%BD%E5%BE%97%E4%BA%B2%E4%BA%B2%E4%BD%A0/" rel="noopener"><i class="fa fa-angle-double-right fa-fw"></i>Read More</a></div>
+    </div>
+  </div>
+  <div class="lx-entry padding">
+    <div>
+      <h2 class="title"><a href="/%E5%B0%8F%E9%BD%90%E8%A6%81%E6%B1%82%E6%88%91%E5%86%8D%E5%86%99%E4%B8%80%E7%AF%87%E5%8C%85%E5%90%AB%E5%B0%8F%E7%B1%B3%E7%9A%84%E4%BD%9C%E6%96%87%EF%BC%8C%E4%B8%8D%E5%B0%91%E4%BA%8E800%E5%AD%97%EF%BC%8C%E8%A6%81%E6%B1%82%E7%9C%9F%E6%83%85%E5%AE%9E%E6%84%9F/">小齐要求我再写一篇包含小米的作文，不少于800字，要求真情实感</a></h2>
+      <span class="lx-post-detail"><i class="fa fa-calendar-o"></i> 2021-05-26</span>
+      <p><h2 id="小齐要求我再写一篇包含小米的作文，不少于800字，要求真情实感"><a href="#小齐要求我再写一篇包含小米的作文，不少于800字，要求真情实感" class="headerlink" title="小齐要求我再写一篇包含小米的作文，不少于800字，要求真情实感"></a>小齐要求我再写一篇包含小米的作文，不少于800字，要求真情实感</h2><p>上一篇文章我当了标题党，谈及啤酒不应该加入大米时，把真大米给加进来了。直接后果就是小齐不开心了，表示我不该偏心，必须再写篇作文，这次得把小米加进来，而且不能刻意，还得感情真实。。。</p>
+<p>多年以后，居然还能体会被命题作文支配的恐惧，我果然还是年轻人。。。</p>
+<p>好吧，趁着俩米写作业，开始我今天充满感情的作文，满分走起 ~~~</p>
+<center>一</center>
+
+<p>Windows Server 2022 预览版已经发布到了微软体验中心和Azure. 作为面向未来的最新Windows Server系统，还是挺让人兴奋的，于是迫不及待安装到给我带来无限快乐的SOHO专用大ThinkPad W工作站，结果发现不能从Windows Server 2019升级,只能从头再来一遍，我勒个去…</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/py1/winserver2022.png" alt="version"></p>
+<p>21H2 20348，这个版本要比目前最新的正式版Win 10新 (当前Win10 好像是19043)，能看到明显的评估字样，按微软一贯做法，等到正式版发布是可以转换到正式版本的，从评估系统过渡到生产系统的平滑一向是微软的特长。</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/py1/%E5%80%92%E8%AE%A1%E6%97%B6.png" alt="倒计时"></p>
+<p>评估版本的图形环境右下角会有许可倒计时。Windows Server 2022 评估版照例提供180天激活时间，到期后可以rearm重置再来180天，可以来5次，所以可以白用900天 ~~~ 当然了，相信没有人真的会在生产环境部署评估版系统，钱是老板的，出事儿可是自己的</p>
+<p>来看看Windows Server 2022的新变化:</p>
+<blockquote>
+<p><strong>Windows Server 2022 Preview</strong> introduces  advanced multi-layer security, hybrid capabilities with Azure, and a  flexible application platform. As part of this release, we are bringing  secured-core capabilities to help protect hardware, firmware, and  Windows Server OS capabilities against advanced security threats.  Secured-core server builds on technologies such as Windows Defender  System Guard and Virtualization-based Security to minimize risk from  firmware vulnerabilities and advanced malware. The new release also  provides secured connectivity that introduces several new capabilities  such as faster and more secure encrypted HTTPS connections, industry  standard SMB AES 256 encryption and more.</p>
+<p>Windows Server 2022 Preview improves hybrid server  management with significantly improved VM management, an enhanced event  viewer, and many more new capabilities in <a target="_blank" rel="noopener" href="https://www.microsoft.com/en-us/evalcenter/evaluate-windows-admin-center">Windows Admin Center</a>. Furthermore, this release includes significant improvements to Windows  containers, such as smaller image sizes for faster download, simplified  network policy implementation and containerization tools for .NET  applications.</p>
+</blockquote>
+<p>安全性，和Azure云的完美融合，更加灵活的应用平台，安全性的全面提升，更强大的虚拟化能力。 看来微软给这个版本集成了目前业界能看得见的所有新技术，而且作为LTSC通道的最新版本，拥有微软10年技术支持的生命周期保证，服务器党 (指喜欢在个人环境运行服务器系统而不是像Win 10这样的客户端系统，目的是追求稳定的同志们) 这次又可以过节了~~~</p>
+<p>微软的销售话述过于虚无缥缈，还是咱们自己跑起来看看。最明显的变化，Edge浏览器集成进来了，IE终于从肉眼可见的地方被挪走了。然后就是因为内核升级到了20348, Windows Terminal这个神器终于可以用了，激动人心的时刻</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/py1/terminal.png" alt="terminal"></p>
+<p>SB的事情来了。原本Windows Server 2019能正常使用的Onenote, 便笺UWP全不能用了，直接闪退! 怀疑应该和2022缺少某个登录微软账号相关的组件有关，记得一位阿拉伯哲学家曾经说过，人生不如意十有八九，就这么着吧。</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/py1/%E6%B2%99%E9%9A%86%E5%B7%B4%E6%96%AF.jpg" alt="沙隆巴斯"></p>
+<p>目前看倒是没发现别的问题，那就先这么评估着了，哈哈</p>
+<center>二</center>
+
+<p>嗯，写了这么多，小齐表示还没看到小米出场，看这意思再不请出小米就不妥了。别着急，小米这就来啦。</p>
+<p>话说给大米报名机器人二级时，突然发现竟然还有Python的考级，我赛，我顿时觉得体现价值的时候到了，仿佛俩米的Python之路，说了，是大米和小米（小米出现了哟）的Python之路仿佛就在眼前。程序员我怕是干不上了，当俩米Python的导师，嗯，想想还有点小激动呢。</p>
+<blockquote>
+<p>“这么说，你很勇喽”</p>
+<p>“当然，我超勇的好不好”</p>
+</blockquote>
+<p>话说本着严谨的态度，我们先康康Python 一级都考什么, 拉上网线， 走你！</p>
+<p><a target="_blank" rel="noopener" href="https://www.qceit.org.cn/fileroot/resource/ec4a4d72-0f10-40fb-979b-1419cfb275b1/%E5%85%A8%E5%9B%BD%E9%9D%92%E5%B0%91%E5%B9%B4%E8%BD%AF%E4%BB%B6%E7%BC%96%E7%A8%8B%E7%AD%89%E7%BA%A7%E8%80%83%E8%AF%95%E6%A0%87%E5%87%86%EF%BC%88Python1%E7%BA%A7-6%E7%BA%A7%EF%BC%89-20191030.pdf">Python一级标准</a></p>
+<p>嗯嗯，从知识点来看并不难，虽然我不用IDEL写Python，技术上应该不难。不过难点恐怕在于怎么把令人头秃的知识点建立知识体系，然后转换成俩米能理解的语言，还得能联系实际，这个应该是个大活儿，但应该是一件很有意义的事情。决定了，现在开始利用业余时间想想这个怎么搞，如果能做好了，小齐一高兴再给涨点零花钱，岂不美哉。</p>
+<center>三</center>
+
+<p>就这么决定了，下一步的大活儿就是动笔写一部面向孩子的Python一级考试教程，我想应该有以下要求:</p>
+<ul>
+<li>清晰的脉络和体系</li>
+<li>易读性</li>
+<li>趣味性</li>
+<li>结合实际</li>
+</ul>
+<p>当然了，写作还是要用Markdown完成，我突然觉得花时间学学Markdown是多么好玩儿的名字啦。</p>
+<center>四</center>
+
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/py1/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20210526164531.jpg" alt="小米"></p>
+<p>小米，一个机灵，快活，敏感的小家伙儿~~~</p>
+<p>卧槽，刚发现这张照片是在大面包包里拍的，我和小齐的第一辆车呀，真TM怀念，兄弟你还好吗？</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/2/123.jpg" alt="哈弗H3"></p>
+</p>
+      <div class="post-button"><a class="btn" href="/%E5%B0%8F%E9%BD%90%E8%A6%81%E6%B1%82%E6%88%91%E5%86%8D%E5%86%99%E4%B8%80%E7%AF%87%E5%8C%85%E5%90%AB%E5%B0%8F%E7%B1%B3%E7%9A%84%E4%BD%9C%E6%96%87%EF%BC%8C%E4%B8%8D%E5%B0%91%E4%BA%8E800%E5%AD%97%EF%BC%8C%E8%A6%81%E6%B1%82%E7%9C%9F%E6%83%85%E5%AE%9E%E6%84%9F/" rel="noopener"><i class="fa fa-angle-double-right fa-fw"></i>Read More</a></div>
+    </div>
+  </div>
+
+
+<div id="pagination">
+  <a class="extend prev" rel="prev" href="/page/4/"></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/6/"></a>
+</div>
+
+<footer>
+  <div>
+  Copyright &copy; 2022.<a href="/">Small fish, big ocean</a><br>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme <a href="https://lx.js.org" target="_blank">Lx</a><br>
+  </div>
+</footer>
+
+  </div>
+</div>
+</div>
+
+<button class="hamburger hamburger--arrow-r" type="button">
+    <div class="hamburger-box">
+      <div class="hamburger-inner"></div>
+    </div>
+</button> 
+<div class="menu visibility">
+  <div class="menu-head">
+    <span class="layer">
+      <div class="col">
+        <div class="row for-pic">
+          <div class="profile-pic">
+            <a href="/"><img src="/images/avatar.jpeg" alt="Houyufeng 侯宇峄1�7"/></a>
+          </div>
+        </div>
+        <div class="row for-name">
+          <p>Houyufeng 侯宇峄1�7</p>
+          <span class="tagline">Hello, World!</span>
+        </div>
+      </div>
+    </span>
+  </div>
+  <nav class="menu-container">
+  <ul class="menu-items">
+    <li><a href="/"><i class="fa fa-home fa-fw"></i>Home</a></li>
+    <li><a href="/archives/"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+    
+    <li class="has-sub"><span class="dropdown-heading">
+      <i class="fa fa-bookmark fa-fw"></i>Pages</span>
+        <ul>
+          <li><a href="/guestbook/">Guestbook</a></li>
+        <li><a href="/about/">About</a></li>
+        </ul>
+    </li>
+    <li class="has-sub"><span class="dropdown-heading">
+      <i class="fa fa-link fa-fw"></i>Friends</span>
+        <ul>
+          </ul>
+    </li>
+  </ul>
+  </nav>
+</div>
+
+<div class="gototop js-top">
+  <a href="#" class="js-gotop"><i class="fa fa-arrow-up"></i></a>
+</div>
+<script src="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/js/jquery.easing.min.js"></script>
+<script>
+(function () {
+	"use strict";
+	var goToTop = function() {
+		$(".js-gotop").on("click", function(event){
+			event.preventDefault();
+			$("html, body").animate({
+				scrollTop: $("html").offset().top
+			}, 500, "easeInOutExpo");
+			return false;
+		});
+		$(window).scroll(function(){
+			var $win = $(window);
+			if ($win.scrollTop() > 200) {
+				$(".js-top").addClass("active");
+			} else {
+				$(".js-top").removeClass("active");
+			}
+		});
+	};
+	$(function(){
+		goToTop();
+	});
+}());
+</script>
+
+
+</body>
+</html>

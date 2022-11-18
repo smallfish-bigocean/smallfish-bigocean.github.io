@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content=#58b77a>
+  <title>Small fish, big ocean</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Houyufeng 侯宇峄1�7">
+  <meta name="keywords" content="">
+  <meta name="description" content="My blog">
+  <script id="hexo-configurations">
+  var CONFIG = {
+    root: '/',
+    theme: 'hexo-theme-lx-master',
+    version: '0.3.9',
+    localsearch:{
+      "enable": false,
+      "trigger": "auto",
+      "top_n_per_article": 1,
+      "unescape": false,
+      "preload": false
+      },
+    path: 'null'
+  };
+</script>
+
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/css/main.min.css">
+  <style type="text/css">
+    pre,
+    code {
+      font-family: 'Fira Code', monospace;
+    }
+    html {
+      font-family: sans-serif;
+    }
+    body {
+      font-family: sans-serif;
+    }
+    h1, h2, h3, h4, h5, figure {
+      font-family: sans-serif;
+    }
+    .menu-container{
+      font-family: sans-serif;
+    }
+  </style>
+
+  <script src="//cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/js/jquery.jside.menu.js"></script>
+	<script>
+	$(document).ready(function(){
+	$(".menu-container").jSideMenu({
+	    jSidePosition: "position-right",
+	    jSideSticky: true,
+	    jSideSkin: "greenish",
+	     });
+	}); 
+	</script>
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Fira Code:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css">
+<meta name="generator" content="Hexo 6.2.0"></head>
+<body>
+<div id="page">
+
+<div id="lx-aside" style="background-image: url(https://gitee.com/houyufengatgitee/img_bed/raw/master/hexo/cover.jpeg)">
+  <div class="overlay">
+  <div class="featured">
+    <div class="avatar"><a href="/"><img src="/images/avatar.jpeg"></a></div>
+    <span>Houyufeng 侯宇峄1�7</span>
+    <h1>Small fish, big ocean</h1>
+    
+    
+  </div>
+  </div>
+</div>
+
+<div id="lx-main-content">
+  <div class="lx-post">
+
+  <div class="lx-entry padding">
+    <div>
+      <h2 class="title"><a href="/%E7%94%A8Linux%E6%9D%A5%E5%B7%A5%E4%BD%9C%EF%BC%8C%E4%B8%AD%E8%BF%98%E6%98%AF%E4%B8%8D%E4%B8%AD%E5%92%A7/">用Linux来工作，中还是不中咧</a></h2>
+      <span class="lx-post-detail"><i class="fa fa-calendar-o"></i> 2021-04-02</span>
+      <p><h1 id="用Linux来工作，中还是不中咧"><a href="#用Linux来工作，中还是不中咧" class="headerlink" title="用Linux来工作，中还是不中咧"></a>用Linux来工作，中还是不中咧</h1><blockquote>
+<p>Linux和Windows孰优孰劣的争执似乎由来已久。总有一些人似乎想证明Linux用于工作会同样优秀，那么花一些时间研究研究Linux到底能不能满足我的需要，还是挺有意思的一件事。</p>
+</blockquote>
+<p>毫无疑问，Windows 10在敏捷开发的时代变得无比强大，Windows早已成为无所不在的各式各样的云的入口。无与伦比的性能，浩如烟海的应用库，海纳百川的兼容能力带来的强大生产力已经直接挤兑的苹果在PC领域放弃了Intel平台和微软竞争，转而专修自有芯片在专门领域闷声发大财。</p>
+<p>但Windows无比强大的同时，Linux凭借自由的思想吸引着业内最强悍的大佬们前仆后继，Linux已经不仅仅是一个平台，而是早已演变成一种哲学思想，席卷整个世界，就连微软也成了自由开源世界的重要参与者。至于基于Linux的安卓系统，则已经统治了全球智能手机市场（是的，基于IDC数据，安卓的全球市场占有率已经接近90%）。</p>
+<p>Windows和Linux彼此是如此不同，却又彼此吸引着对方，彼此融合，两种伟大的思想必将碰撞出最华丽的火花，照亮这个世界的每个角落。</p>
+<p>扯远了，在没人给稿费的文章里乱扯显然是不聪明的，回到今天主题，如果把Linux从它最擅长的企业级基础平台应用上请下神坛，转而为小小的我服务，当个桌面系统干活儿，那会怎样呢？</p>
+<p>和上次一样，今天我们依然请出Red Hat Enterprise Linux：</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/workonlinux/lockscreen.jpg" alt="lock">  </p>
+<ul>
+<li>Office</li>
+</ul>
+<p>毫无疑问，Office应用集是每天干活最常用的。邮件，Excel， PPT， Onenote已经成了四大开机必启动应用。Linux下的Office有很多，但相信我，没有一个能像微软的Office一样好用，所以别浪费时间尝试了，微软已经提供了强大的web版Office。</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/workonlinux/office.jpg" alt="office"></p>
+<p>可以看到，web版Office作为Office应用集的入口，已经提供了完整的功能访问入口，甚至比Windows下本地安装的Office更快捷，更强大。</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/workonlinux/excel.jpg" alt="excel"></p>
+<p>随便打开一个Excel，桌面版的功能一个不少，唯一的问题是相应速度还是差了一些，如果仅仅作为excel file viewer是完全没有问题了。</p>
+<p>另外如果在Linux下用Chrome打开Office，还可以用Chrome的功能把Web 版Office直接做成仿本地应用的形式，直接从Linux的启动栏就能直接访问.</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/workonlinux/desktop.jpg" alt="desktop"></p>
+<p>  当然，由于微软并未提供Linux下的Onedrive应用，因此实时同步文件就别想了，除非把文件放在Windows上然后从Linux访问。</p>
+<ul>
+<li>Teams</li>
+</ul>
+<p>Teams作为现在微软在企业大力推广的写作办公系统，虽然理论上是Office应用集的一部分，但还是值得拿出来单说的。Linux下Teams当然可以在前面提到的web Office里找到，但其实如果访问teams.microsoft.com，你会发现微软竟然提供了Linux版本, 最佳Linux和安卓软件开发商非微软莫属…</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/workonlinux/Teams.jpg" alt="teams"></p>
+<ul>
+<li>其它基于浏览器的工作</li>
+</ul>
+<p>Linux自己集成的火狐已经足以完成全部工作，而且由于火狐本来就是我在Windows上的主力浏览器，在Linux上设置好同步，所有数据包括书签，密码，插件百分之百顺利迁移. 安装Chrome后，两个浏览器能够完成所有的工作，唯一的遗憾，最佳Linux软件开发商微软并未推出Linux下的Edge浏览器，不然Chrome在正规方式下不能同步的遗憾就彻底被解决了。</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/workonlinux/firefox.jpg" alt="firefox"></p>
+<p>咦，热搜居然是又要涨养老金，我得赶紧告诉米爷爷米奶奶米姥爷米姥姥这个好消息，我和小齐的养老金没白交，感谢祖国~~~</p>
+<ul>
+<li>vpn</li>
+</ul>
+<p>在办公室以外办公，使用VPN是访问企业内部文件的主要方式。谢谢IT部门的同事，居然提供了VPN的Linux版本，我试了一下，连接速度貌似比Windows下还快了那么一点点。。。</p>
+<ul>
+<li>Typora</li>
+</ul>
+<p>为什么这个小东东要单独拿出来说？ 因为这应该算是Linux给我的一个小惊喜。 是的，顺便我也坦白好了，每次写公众号文章我都是用Typora这个棒棒哒markdown语法编辑器 （以后有机会我会和您聊聊markdown，总之一句话，用了markdown，写作有力气，Word拜拜啦），小而美的杰出代表。就这个东东您猜怎么着，竟然有Linux客户端，还是64位的…</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/workonlinux/typora.jpg" alt="typora"></p>
+<p>请允许我为这个软件的开发者致以深深的敬意，大哥 &#x2F; 大姐，我真服了你了, 真的~~~</p>
+<ul>
+<li>我就要用Windows，你打我呀</li>
+</ul>
+<p>Linux下有支持RDP协议的远程桌面软件，实在有什么必须在Windows上干的活儿，直接远程，速度还是相当可以的。另外如果想完全脱离Windows，还可以在Linux下跑Windows虚拟机，反正强大的联想ThinkStation 桌面工作站和ThinkPad P系移动工作站的强大能力干这点事情纯粹有点性能过剩 ~~~</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/workonlinux/rdpwindows.jpg" alt="remote"></p>
+<ul>
+<li><p>git &#x2F; python &#x2F; vscode</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/workonlinux/git.jpg" alt="git"></p>
+</li>
+</ul>
+<p>git 系统自带，python和VS code需要现装，用起来和Windows下并没有什么不一样。不过之前Windows下写的python代码有的会报错，毕竟猫摇尾巴和狗摇尾巴不是一个意思。</p>
+<p>对了，再次表扬Linux最佳软件开发商检开源社区最佳贡献者微软大神，VS Code完全开源不说，Linux下更新速度和Windows完全一样。我看微软也是深得我党两手都要抓，两手都要硬的精髓，微软，你其实很硬!</p>
+<ul>
+<li>其它常用应用和行业软件</li>
+</ul>
+<p>像QQ，微信，建议使用手机版或者虚拟机&#x2F;远程桌面在Windows下运行算了，别跟自己较劲。</p>
+<p>至于Adobe家族，建议同上。</p>
+<hr>
+<p>用Linux来工作小实验到现在暂时告一段落，基本上可以看到目前我的工作环境，Linux已经基本满足需求，而且这种满足并非是凑合，而是完全符合工作流的要求和规范，这才是这个实验以后Linux最让我满意的一点。</p>
+<p>当然，Linux在易用性上还是得吐槽。比如安装Chrome浏览器，用常规的办法会哐哐哐报告一堆依赖性问题，你得一个一个去把依赖的包装好，过程保证吐血，后来我才发现，得用</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum localinstall &lt;chrome安装包&gt;</span><br></pre></td></tr></table></figure>
+
+<p>这个命令，Linux会自己帮你解决依赖性问题。。。看来Linux确实不是给伸手党设计的，不过一旦接受了这个设定，内心也就不再挣扎。</p>
+<blockquote>
+<p>写到这里，今天的时间也就差不多了。坦白说我开始享受这种感觉，就是业余时间把眼睛从手机上移开，多陪陪大人孩子，趁他们做自己的事情时，也做点自己喜欢的事情，想点事情，写点东西。有时我们也不要那么功利，仿佛做什么都要看利益。多想，多动手，多让自己跳出现在的圈子做点和之前不一样的。时间对每个人都是公平的，只要用心，就会精彩，好玩儿。</p>
+</blockquote>
+<p>哦对了，今天的实验仅仅是一个开始，我并不会把工作环境马上切过来，毕竟还有一些任务，比如CTO数据从系统导出到Excel再导入数据库再按照需求和规则进行处理并导出的工作流我目前完全在微软的Windows平台下的Visual Studio + SQL Server完成，我相信Linux肯定有同样的玩儿法，但怎么玩儿，怕是得花几个周末再研究研究了。。。</p>
+<p>下次见我的朋友，周末愉快 :smile:</p>
+<p>我去，文章结束了我才知道markdown一样支持插入表情，讨厌厌:sob::cry::cold_sweat:</p>
+<p>我又去，发布到公众号表情就全没了。国内互联网环境真的是自成体系啊, 我对天发誓我在写文章的时候表情是有的，讨厌厌一百遍…</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/workonlinux/emoji.jpg" alt="emoji"></p>
+</p>
+      <div class="post-button"><a class="btn" href="/%E7%94%A8Linux%E6%9D%A5%E5%B7%A5%E4%BD%9C%EF%BC%8C%E4%B8%AD%E8%BF%98%E6%98%AF%E4%B8%8D%E4%B8%AD%E5%92%A7/" rel="noopener"><i class="fa fa-angle-double-right fa-fw"></i>Read More</a></div>
+    </div>
+  </div>
+  <div class="lx-entry padding">
+    <div>
+      <h2 class="title"><a href="/%E5%9B%A0%E4%B8%BA%E7%AE%80%E5%8D%95%EF%BC%8C%E6%89%80%E4%BB%A5%E5%BC%BA%E5%A4%A7/">因为简单，所以强大</a></h2>
+      <span class="lx-post-detail"><i class="fa fa-calendar-o"></i> 2021-04-02</span>
+      <p><h1 id="因为简单，所以强大"><a href="#因为简单，所以强大" class="headerlink" title="因为简单，所以强大"></a>因为简单，所以强大</h1><blockquote>
+<p>谨以此文，献给所有想写点什么却不知从何开始的朋友。</p>
+<p>谨以此文，感谢发明Markdown的大牛，以及普及Markdown的前辈们</p>
+<p>谨以此文，感谢开发Typora的大牛</p>
+<p>自由思考万岁</p>
+</blockquote>
+<p>终于有机会，可以写一篇关于Markdown的文章，但这不是一篇技术类或教程类文章。显然，以我的技术水准，写这些东西实在浪费时间，尤其互联网上有那么多大牛们贡献的文字或视频的优秀教程。我就聊聊我是怎么误打误撞，闯进Markdown这个坑，从此喜欢上这个简洁而伟大工具的经历的吧。如果您恰好也想写点东西，为了工具而发愁，那这篇文章就是为您写的。</p>
+<p>当我决定开始学着写点东西的时候，第一个想到的，就是我应该什么样的工作流来做呢？我想，大概应该是这样:</p>
+<ol>
+<li>思考</li>
+<li>写作</li>
+<li>保存和分享</li>
+</ol>
+<p>思考不用多说，大脑来干，然后用思维导图也可以帮助总结。保存和分享也没什么，博客，公众号都是很好的平台。那么问题就集中在2上。我想这个写作的平台应该是这样的</p>
+<ul>
+<li>能让我集中于内容创作，保持思路的连贯</li>
+<li>支持基本的文本格式，比如标题，段落格式，列表，区块，项目符号</li>
+<li>支持插入图片或表格</li>
+<li>能很简单的发布到博客和公众号</li>
+<li>操作简单，最好别还得费劲记一堆快捷键，或者键盘鼠标齐上阵</li>
+</ul>
+<p>而这些，Markdown都能满足。</p>
+<p><strong>作为超轻量级标记语言，Markdown和HTML一样，使用简单的标记就能实现常用的格式</strong>，比如，我只需要在我想当标题的文字前，打个＃</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="section"># 我是一级标题</span></span><br><span class="line"><span class="section">## 我是二级标题</span></span><br><span class="line"><span class="section">### 我是三级标题</span></span><br></pre></td></tr></table></figure>
+
+<p>就能实现这样的效果。</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/markdown/title.jpg"></p>
+<p>再比如，我只需要在文字前加个&gt; ，就能实现区块的效果:</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="quote">&gt; 我是大区块</span></span><br><span class="line"><span class="quote">&gt; 大区块是我</span></span><br><span class="line"><span class="quote">&gt; 大区块我是</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>我是大区块<br>大区块是我<br>大区块我是</p>
+</blockquote>
+<p>再比如插入图片，只需要用![文字](图片链接)就能插入图片。</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">图片替换文字，图片显示不出来就会显示这个文字</span>](<span class="link">http://www.老师.com/images/老师学习资料.jpg</span>)</span><br></pre></td></tr></table></figure>
+
+<p>怎么样，是不是超级简单？这里我想有些朋友会想，<strong>何不用Word乎</strong>？毕竟Markdown再简单也有学习成本，Word拿来就用，岂不美哉？</p>
+<p>是的，Word作为文字处理应用的扛把子，下到记事本，上到专业排版软件的初级使用，都在Word的能力范围之内。我需要的，Word都有，只是除了一点:</p>
+<blockquote>
+<p>能让我集中于内容创作，保持思路的连贯</p>
+</blockquote>
+<p>是的。Word的功能实在太强大了，达到它95%的功能我在写作时都用不到。而且，Word的设计思路不是面向思想的，而是面向文字的，是的，作为字处理软件，Word的理念是文字本身，而不是思想。在Word里，文字和格式是分离的。我必须要停下思考和打字，不停用鼠标去选中一段文字，然后去设置它的格式，标题，区块，项目符号。。。 而Markdown则不然，因为是标记语言，我可以在写作时打一个符号，就能把这段文字属于标题，区块，代码，还是普通文字交代清楚，思考和文字输入的过程是连贯的，从头到尾都不会打断，那种一气呵成的感觉，实在太爽了。</p>
+<p>形象一点，如果用Word，可能声音是这样的，噼里啪啦，中断2秒，咔嚓，中断2秒，咔嚓，噼里啪啦。。。输入，操作鼠标，寻找菜单和按钮。。</p>
+<p>而Markdown，则是噼里啪啦噼里啪啦噼里啪啦噼里啪啦噼里啪啦噼里啪啦噼里啪啦噼里啪啦噼里啪啦噼里啪啦噼里啪啦噼里啪啦，从始至终，我的脑子专注于整词儿，我的两根食指在打字 (嗯，作为信息技术从业人员，我只会二指禅，就问你敢动不敢动)，我的嘴里嘀嘀咕咕，写到高兴处，不时露出弱智一样的傻笑，这种感觉，咱不说写的东西是不是稀烂，这畅爽的感觉，像极了当年教授执教下那支在英超战无不胜，进攻如水银泻地般流畅迅疾的兵工厂阿森纳，这正是:</p>
+<blockquote>
+<p>我厂虐我千百遍，我待我厂如初恋</p>
+</blockquote>
+<p>真的，用Markdown，你会发现，一顿操作猛如虎，作文轻松就完成。</p>
+<p>一顿噼里啪啦猛敲键盘，居然<strong>该介绍Markdown的学习成本了</strong>。是的，像我这个年龄和个人情况的打工人，虽然嘴里说着要保持学习的习惯，但确实学习成本和学习效益是需要考虑的问题，尤其更多时候，我已经很难按照从入门到精通的慢节奏学习一门知识，像 <em><strong>快速学习 - 应用 - 再学习 - 更深入的应用</strong></em>  这样的快速学习方式已经成了接触新领域的主要模式。</p>
+<p>好消息是，Markdown恰好就是这种类型。 正常情况下，掌握Markdown的常用功能并能开始写作一篇文章大概只需要二十分钟到半小时，唯一需要的就是边上放一个Markdown的字典作为参考。而随着写作的增加，Markdown会越用越熟，很快就能完全放弃字典。易学易用是Markdown的一大特点，因为___Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档___ 正是John Gruber发明这种语言的初衷。</p>
+<p>当然了，光会语言还不够，还得有个编辑器让我们更舒适的使用Markdown来写作，这里，我严重推荐<strong>Typora</strong>，一款无比出色的Markdown编辑器。<strong>小而美</strong>是我对它的全部评价。</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/markdown/typora.jpg" alt="typora"></p>
+<p>小，它小到我甚至不需要学习它的功能，打开程序，思考，输入，这就够了。我甚至到现在都没看过它的菜单里有什么，因为真的不需要，</p>
+<p>美，是因为它的设计理念完全和Markdown一致，简洁的背后，我能感受到作者对于写作这件事的态度，</p>
+<blockquote>
+<p>写作, 是一种谁都可以拥有的享受. 每个人都拥有写作的权利。只要你有想法，</p>
+</blockquote>
+<p><strong>如果你想开始尝试试试Markdown，那么请允许我给您一点如何开始的建议</strong></p>
+<p>第一，请您花20分钟，来看看B站上一位小姐姐的Markdown教程。相信我，小姐姐说的很清楚，声音也很好听，你会喜欢的 ，而且你会嫌20分钟太短。。。  <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av8819726">来B站看小姐姐教你Markdown喽</a></p>
+<p>第二，请您关掉循环看了N遍的小姐姐的教程，咱们把Typora下载回来。<a target="_blank" rel="noopener" href="https://www.typora.io/">Typora官网</a></p>
+<p>第三，打开Typora，开始写作</p>
+<p>第四，如果忘了Markdown语法，比如怎么写标题，怎么加粗字体，怎么加个区块，怎么把文字写成项目列表形式，请把这份<a target="_blank" rel="noopener" href="https://www.runoob.com/markdown/md-tutorial.html">Markdown语法参考</a>放在显示屏边上,就像这样：</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/markdown/writing.jpg" alt="双屏"></p>
+<p>重复3-4，等写上几篇文章，你会发现，Markdown已经变成了你双手的一部分，你不需要大脑去思考语法，你只需要思考你的想法，然后把它们写出来。专注思考，享受写作。</p>
+<p>文章到此也差不多得结束了。用碎片化时间写作，我的一个经验，就是把想说的事情分解成一个一个小事情，然后把这一件事情说清楚就挺好的了。不然如果主题是<em><strong>如何搭建完整的写作和发布工作流</strong></em>，那可能几天也写不完一篇文章，很可能就会放弃写作这件事情。</p>
+<blockquote>
+<p>一点一点积累成就感，对于建设积极的自我评价体系是很有帮助的</p>
+</blockquote>
+<p>好了，是时候说晚安了，下次见</p>
+</p>
+      <div class="post-button"><a class="btn" href="/%E5%9B%A0%E4%B8%BA%E7%AE%80%E5%8D%95%EF%BC%8C%E6%89%80%E4%BB%A5%E5%BC%BA%E5%A4%A7/" rel="noopener"><i class="fa fa-angle-double-right fa-fw"></i>Read More</a></div>
+    </div>
+  </div>
+  <div class="lx-entry padding">
+    <div>
+      <h2 class="title"><a href="/%E4%B8%80%E4%B8%AA%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%B8%A6%E6%9D%A5%E7%9A%84%E6%96%B0%E6%94%B6%E8%8E%B7/">一个小程序带来的新收获</a></h2>
+      <span class="lx-post-detail"><i class="fa fa-calendar-o"></i> 2021-04-02</span>
+      <p><h1 id="一个小程序带来的新收获"><a href="#一个小程序带来的新收获" class="headerlink" title="一个小程序带来的新收获"></a>一个小程序带来的新收获</h1><p>最近自己想了个小需求，比如我有一堆的MTM，想获得他们的BOM信息。</p>
+<pre><code>20SU001LAU
+20SU001MAU
+20SU001CAU
+20SU001DAU
+20SU001NAU
+20SU001GAU
+20SU000XAU
+</code></pre>
+<p>以前的方式是一个一个的搜索，然后把网页上的信息进行截图或者抓到Excel里，如果是后者，还得考虑网页拷到表格里的格式问题。</p>
+<p>按照“去除重复劳动，提高工作效率”的原则，用python尝试做做看。</p>
+<p>先把工作流想明白，大体是： </p>
+<ol>
+<li>把MTM按行存放在文本文件里</li>
+<li>按行读取文本文件，获取MTM </li>
+<li>建立一个工作簿， 包含的工作表数量就是MTM数量，目的是每个MTM一张表，分别存放自己的BOM信息</li>
+<li>登录服务器抓取每个MTM 信息  </li>
+<li>将MTM信息写入相应工作表</li>
+<li>保存工作簿</li>
+</ol>
+<p>工作流想明白了，下面还得琢磨琢磨需要的功能模块</p>
+<ol>
+<li>抓取数据，这次我决定用十全大补汤BeautifulSoup模块。Selenium模拟浏览器大法虽然逻辑简单，但太费资源，打工人没有一MB内存是多余的…</li>
+<li>由于MTM列表和存放结果的Excel表格我都准备放在桌面上，所以还得想办法获取用户桌面的路径，毕竟每个人的用户名都不一样。经过百度，用winreg模块读取注册表的桌面路径是个好办法。</li>
+<li>Excel这块肯定还是用无敌的openpyxl模块，就是我这基础知识，唉，百度着来吧…</li>
+</ol>
+<p>想明白了需要的模块，那就把哥儿几个都招呼进来：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests </span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line"><span class="keyword">from</span>  openpyxl <span class="keyword">import</span>  Workbook </span><br><span class="line"><span class="keyword">from</span> openpyxl <span class="keyword">import</span> load_workbook</span><br><span class="line"><span class="keyword">import</span> winreg</span><br></pre></td></tr></table></figure>
+
+<p>下面我把包含MTM  number的文本取名mtmlist.txt，然后放到桌面。下面就可以先读取桌面路径了.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#读取当前用户桌面路径</span></span><br><span class="line">key = winreg.OpenKey(winreg.HKEY_CURRENT_USER, <span class="string">r&#x27;Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders&#x27;</span>)</span><br><span class="line">mydesktop = winreg.QueryValueEx(key,<span class="string">&quot;Desktop&quot;</span>)[<span class="number">0</span>]</span><br><span class="line">mydesktop = mydesktop.replace(<span class="string">&#x27;\\&#x27;</span>, <span class="string">&#x27;\\\\&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>用\\\\替换\\是因为Python的”\“字符另有用处，要想得到 C:\ABC\DEF这样的结果，就得这么干。这是我这次的第一个大收获，就这地方我研究了一晚上…</p>
+</blockquote>
+<p>下面就是读取mtmlist.txt然后根据MTM数量建立工作簿.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#读取MTM Text</span></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(mydesktop+<span class="string">&#x27;\\\\mtmlist.txt&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line"></span><br><span class="line">  MTMlist = f.readlines()</span><br><span class="line"></span><br><span class="line"><span class="comment">#预先创建结果保存的表格</span></span><br><span class="line"></span><br><span class="line">wb = Workbook()</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> MTMlist:</span><br><span class="line"></span><br><span class="line">  ws = wb.create_sheet(i)</span><br><span class="line"></span><br><span class="line">  ws.title = i</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>如何根据MTM长度建立工作簿也让我闹腾半天。究其原因还是快速学习带来的基础知识不牢靠，以及在此基础上大量时间用来分析和测试</p>
+</blockquote>
+<p>下面就是第4步，抓取信息。 按说最核心的部分，结果以看居然成了最简单的，唯一的问题是源数据表格的定位，这是第三个大收获.</p>
+<blockquote>
+<p>需要引用页面中第n个表格，则方法是：</p>
+<p>tables &#x3D; soup.find_all(‘table’)</p>
+<p>table &#x3D; tables[n]</p>
+</blockquote>
+<p>嗯嗯，这下妈妈再也不用担心我们找不到自己想要的表格了。顺便想问一句，为什么程序员大哥开发页面时，这么爱用表格…</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#抓取MTM信息</span></span><br><span class="line">headers = &#123;<span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko)&#x27;</span></span><br><span class="line"><span class="string">&#x27;Chrome/51.0.2704.63 Safari/537.36&#x27;</span>&#125;</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> MTMlist:</span><br><span class="line">    res = requests.get(这段信息被我老人家加密了，因为是公司内部信息...想看这里请购买VIP会员，免费送老师的学习资料哟~~~)</span><br><span class="line">    html = res.text</span><br><span class="line">    soup = BeautifulSoup( html,<span class="string">&#x27;html.parser&#x27;</span>)</span><br><span class="line">    tables = soup.find_all(这段信息被我老人家加密了，因为是公司内部信息...想看这里请购买VIP会员，免费送老师的学习资料哟~~~)</span><br><span class="line">    table = 这段信息被我老人家加密了，因为是公司内部信息...想看这里请购买VIP会员，免费送老师的学习资料哟~~~</span><br><span class="line">    ws = wb.worksheets[MTMlist.index(i)+<span class="number">1</span>] <span class="comment">#我勒个去，不这么干的话存MTM BOM信息会从一个叫sheet的表格开始...</span></span><br><span class="line">    lists = []</span><br><span class="line">    <span class="keyword">for</span> tr <span class="keyword">in</span> table.find_all(这段信息被我老人家加密了，因为是公司内部信息...想看这里请购买VIP会员，免费送老师的学习资料哟~~~):</span><br><span class="line">        <span class="keyword">for</span> td <span class="keyword">in</span> tr.find_all(这段信息被我老人家加密了，因为是公司内部信息...想看这里请购买VIP会员，免费送老师的学习资料哟~~~):</span><br><span class="line">            lists.append(td.text)</span><br><span class="line">        ws.append(lists)</span><br><span class="line">        lists.clear()</span><br><span class="line">    list1 = [<span class="string">&#x27;MTM number&#x27;</span>,i] <span class="comment">#这三行的目的是把MTM No写在工作表尾部</span></span><br><span class="line">    ws.append(list1)</span><br><span class="line">    ws.delete_rows(<span class="number">1</span>,<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+
+<p>最后，把看着讨厌厌而且还不知道怎么搞出来的多余Sheet表格删掉，只要我不尴尬，尴尬的就是别人，哈哈。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#处理表格并保存到桌面，嗯，桌面乱哄哄显得专业   </span></span><br><span class="line">ws = wb[<span class="string">&#x27;Sheet&#x27;</span>]</span><br><span class="line">wb.remove(ws)</span><br><span class="line">wb.save(mydesktop+<span class="string">&#x27;\\\\MTM_boms_list.xlsx&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>经测试，获取30个MTM的BOM信息才用了不到20秒，这要是自己一个一个拿手做，嘿嘿。</p>
+<p>能力和时间所限，程序还不完整，比如没考虑如果MTM查不到应该怎么处理，比如如果能做个图形界面是不是更好看。好在我始终没忘了自己的初心，那就是:</p>
+<blockquote>
+<p>大哥，就咱这水平，能用就行了，真的，别那么多要求了</p>
+</blockquote>
+<p>啰啰嗦嗦把这个小项目说完，其实我还是挺感慨的。大学时学过C和Java，可是除了会打个Hello world或者算个1+1，然后应付应付考试，编程这块真的一点都不会。Python作为我现在解决重复劳动的主要工具，边学边实践，到现在能写个简单的小程序小脚本，真的挺好玩儿的。Python作为目前最火的语言，甚至出现在孩子们的编程课里，其实是有道理的。不需要理解复杂的面向对象的概念，编程过程基本和实际生活中的问题解决思路贴合，如果愿意，挤出写蹲马桶看手机的时间，边学边练，还是能有点收获的。</p>
+<p>您可能也看到了，除非是涉及公司内部信息，我是非常乐于公开我的源代码的，原因只有一个，我被开源思想洗脑了。。。 水平差的，通过开源获得让大牛指导的机会；自己就是大牛的，则能通过开源让更多人分享自己的思想。你有我有全都有，岂不快哉。</p>
+<p>我其实很乐意在github上搞个仓库，把自己写的东西开源在上面，何等拉风。慢慢来吧。</p>
+<p>对了，说好要写的超级无敌写作王者 Markdown语言的分享还得等等，现在某人给俩米留的作业那叫一个多，一个文艺青年每天晚上净盯着孩子写作业了，这就是生活…</p>
+<p>以上，晚安。</p>
+</p>
+      <div class="post-button"><a class="btn" href="/%E4%B8%80%E4%B8%AA%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%B8%A6%E6%9D%A5%E7%9A%84%E6%96%B0%E6%94%B6%E8%8E%B7/" rel="noopener"><i class="fa fa-angle-double-right fa-fw"></i>Read More</a></div>
+    </div>
+  </div>
+  <div class="lx-entry padding">
+    <div>
+      <h2 class="title"><a href="/%E4%BD%A0%E7%9A%84%E8%82%A5%E5%AE%85%E5%BF%AB%E4%B9%90%E6%B0%B4%EF%BC%8C%E5%88%B0%E5%BA%95%E8%97%8F%E7%9D%80%E4%BB%80%E4%B9%88%E7%A7%98%E5%AF%86/">你的肥宅快乐水，到底藏着什么秘密</a></h2>
+      <span class="lx-post-detail"><i class="fa fa-calendar-o"></i> 2021-04-02</span>
+      <p><h1 id="你的肥宅快乐水，到底藏着什么秘密"><a href="#你的肥宅快乐水，到底藏着什么秘密" class="headerlink" title="你的肥宅快乐水，到底藏着什么秘密?"></a>你的肥宅快乐水，到底藏着什么秘密?</h1><blockquote>
+<p>话说学生时代，能一呼百应的，肯定是男生课间一起去洗手间。 时光荏苒，当年的小鲜肉，现在都成了大叔。如果说还有什么能让大叔们一呼百应的，那肯定是谁振臂一呼，“买可乐去！”</p>
+</blockquote>
+<p>对于女生而言，神仙水是SKY II， 对于男生，神仙水，肯定是Cola,不管是Pepsi还是Coca。</p>
+<p>作为漫漫人生必备之物，可乐带给我们无限的快乐。一口可乐，带给我们的是直击灵魂的快感和畅爽，而这一切不过才3块钱，简直就是工资卡上交之后人生不多的乐趣。而可口可乐和百事可乐也深谙全世界中年大叔的人生，不断推出全新的产品，尤其是无糖可乐的出现，简直让我们这些钱包没鼓起来，肚子却先鼓起来的人群喝的放心，快乐的无负担。</p>
+<p>不过作为理工科钢铁直男，喝了这么多年快乐水，虽然每次都有飘飘欲仙的感觉，但其实还是想了解一下，每天伴随着我成长的可乐，到底里面被施了怎样的魔法，才会如此迷人？之前关于可乐对人体危害的争议也始终不绝于耳，什么杀精，什么影响钙吸收，不过由于我一向心大，反正咱有1个亿，也不在乎少个一两百万。不过这次借着想哥给我发了一个可乐里含果葡糖浆介绍的视频，我实在按捺不住自己的好奇，于是特意去超市找了几种可乐，看看里面到底有什么。作为对比，我还把美年达和元气森林给加进来，一起看看。</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/cola/2.jpg" alt="百事树莓"></p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/cola/3.jpg" alt="可乐"></p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/cola/4.jpg" alt="可乐纤维"></p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/cola/5.jpg" alt="百事桂花"></p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/cola/7.jpg" alt="美年达"></p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/cola/6.jpg" alt="元气"></p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/cola/8.jpg" alt="百事树莓"></p>
+<p>几位选手已经就绪，下面还是用一张汇总表总结一下，如下所示:</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/cola/1.jpg" alt="可乐成分"></p>
+<p>毕竟我没系统学过专业的营养学，但是看是能看出个大概。首先我们先做几个假设作为公理:</p>
+<ul>
+<li>以上每种成分，在安全剂量内，都是安全的</li>
+<li>每天正常饮用一瓶（600ml），在安全剂量以内</li>
+<li>天然材料比人工合成材料安全性更高，如白砂糖 &gt; 阿斯巴甜</li>
+</ul>
+<p>下面我们就可以很容易得出结论：</p>
+<ul>
+<li><p>越基础的产品，成分越简单。 例如可口可乐，作为可乐产品系列中最基础得产品，其成分也最为简单，除了可乐口味碳酸饮料必备的碳酸+咖啡因，也仅仅有两种甜味剂和一种色素及一种增加口感的酸味剂，而且两种甜味剂，还都是天才成分</p>
+</li>
+<li><p>仿果汁口味碳酸饮料的成分远比可乐复杂。既要有碳酸饮料本身的酸爽，又要模仿果汁的味道及外观，还不能含有果汁成分，因此不加点料是不可能的了</p>
+</li>
+<li><p>元气森林简直是业界良心，居然是用真的果汁作为饮料中果味的来源，难怪价格要比兄弟们贵上50%</p>
+</li>
+</ul>
+<p>因此如果不考虑口味的喜好和控糖得需要，其实最基础的可口可乐才是最值得推荐的既健康又快乐的男士必备之物，当然了，你要是敢跟家囤一箱，估计也得挨说~~~</p>
+<h3 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h3><p>我相信这应该是一系列后续研究的开始。目前的数据相当不完善，比如缺少北冰洋，健怡等等同样热点很高的饮料；只有定性分析没有定量分析，当然这个也很难实现，毕竟配方是各个饮料企业的核心机密。。。 反正咱也不是专业搞这个的，就当玩儿了，希望和有同样兴趣的朋友一起研究，相互学习，玩儿呗</p>
+</p>
+      <div class="post-button"><a class="btn" href="/%E4%BD%A0%E7%9A%84%E8%82%A5%E5%AE%85%E5%BF%AB%E4%B9%90%E6%B0%B4%EF%BC%8C%E5%88%B0%E5%BA%95%E8%97%8F%E7%9D%80%E4%BB%80%E4%B9%88%E7%A7%98%E5%AF%86/" rel="noopener"><i class="fa fa-angle-double-right fa-fw"></i>Read More</a></div>
+    </div>
+  </div>
+  <div class="lx-entry padding">
+    <div>
+      <h2 class="title"><a href="/%E7%8C%9B%E7%94%B7%E4%B9%9F%E6%9C%89%E5%B0%91%E5%A5%B3%E8%88%AC%E7%9A%84%E6%98%A5%E5%A4%A9-%E6%8D%B7%E5%AE%89%E7%89%B9-XTC-820-%E6%B2%99%E6%BC%A0%E9%BC%A0%E5%B0%BE%E8%8D%89-%E6%8F%90%E8%BD%A6%E8%AE%B0/">猛男也有少女般的春天 - 捷安特 XTC 820 沙漠鼠尾草 提车记</a></h2>
+      <span class="lx-post-detail"><i class="fa fa-calendar-o"></i> 2021-04-02</span>
+      <p><h1 id="猛男也有少女般的春天-捷安特-XTC-820-沙漠鼠尾草-提车记"><a href="#猛男也有少女般的春天-捷安特-XTC-820-沙漠鼠尾草-提车记" class="headerlink" title="猛男也有少女般的春天 - 捷安特 XTC 820 沙漠鼠尾草 提车记"></a>猛男也有少女般的春天 - 捷安特 XTC 820 沙漠鼠尾草 提车记</h1><blockquote>
+<p>2020年，那是一个春天，有位猛男，提了传说中的越野长途买菜接娃通勤全无敌的捷安特汉特。</p>
+<p>2021年，还是一个春天，这位猛男，又开始了新的骚里骚气的生活。。。</p>
+</blockquote>
+<p>假期结束，汉特君就被留在父母那里成了周末带娃通勤，于是，我偷偷开始了下一轮小车车升级计划。网上一通研究，开始目标定在了传说中性价比极高的 定位off road 专业入门级别的捷安特 XTC 800，谁知道这个人气极高的家伙还有个哥哥，XTC 8系顶配产品 XTC 820。</p>
+<p>作为理工科百分之百纯直来直去不拐弯的猛男，咱不能跟女生似的买个东西先看外观对吧？于是我就在裂纹黑和沙漠鼠尾草配色之间开始纠结。。。 有些朋友似乎质疑我的言论，认为我也是外观党。 大谬也。 女生专挑粉的， 我可是纠结于黑色和绿色，能一样吗？</p>
+<p>好吧，我承认，一开始，我实在被 裂纹黑 那无敌的质感吸引了。 触摸它的肌肤时，那略显粗糙但却不失细腻的质感激起了我白皙的皮肤上一系列的鸡皮疙瘩，甚至在我内心也起了一圈圈的涟漪。本猛男的眼眶竟然有些湿润，这时许久不曾有过的悸动。。。</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/giant/%E8%A3%82%E7%BA%B9%E9%BB%91.png" alt="裂纹黑"></p>
+<p>我以为我再也不会爱上别的选择，我知道自己是多么深情，多么专注，移情别恋从不会出现在我的字典里，因为我就没有字典。直到3秒之后，我看到了，沙漠鼠尾草…</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/giant/origin.jpg" alt="沙漠鼠尾草"></p>
+<p>一瞬间，我的感受已经不再是悸动，而是阵阵春风拂面而来，我仿佛看到2001年10月21日的那个傍晚，那令人魂牵梦绕的身影迈着轻盈的脚步走到我面前，我遍背了满脑子的八扇屏报菜名全都忘得干干净净，这是什么？ 这是初恋的滋味啊我的天！</p>
+<p>于是，我不再犹豫，不再执着，不再怀疑，我直接跟老板说，给我来个那个亮黑色的吧。。。</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/giant/%E4%BA%AE%E9%BB%91.png" alt="亮黑"></p>
+<p>是的，我没选择青春，也没选择涟漪，我TM选了个最平平无奇的亮黑。</p>
+<blockquote>
+<p>颜色太花容易丢</p>
+<p>还得装儿童座椅，裂纹黑容易破漆</p>
+<p>我这年龄还是跟低调的颜色更配</p>
+</blockquote>
+<p>理由总是那么充分，我都快被自己说服了，接受平凡，老老实实回到人群里，这也许就是宿命。</p>
+<p>阴郁的天空下是我阴郁的心情。我默默走路，脑子里全是自己在劝说自己还是好好体会买东西的快感吧，其实现在也挺好，真的。。</p>
+<p>真的？？？</p>
+<p>走到一个转弯处，我突然掏出手机，开始给捷安特打电话，对，对，老板，我改主意了，我不要亮黑了，多亮我也不要，对，麻烦您，给我换成沙漠鼠尾草，对，沙漠鼠尾草 ！！！对，就是刚才我在您店里摸了几百遍的那个沙漠鼠尾草！！！！！！！！！！！！！</p>
+<p>这就是一段缘分的开始，真突然，就像那个夜晚，我脑子一热，却做出了影响一生的决定。</p>
+<p>故事的结尾，捷安特车店老板冲我一通摇头，表示“捷安特好不容易减下来的重量，您这货架车筐又给加回来了”</p>
+<p>我笑了笑，没说话。</p>
+<blockquote>
+<p>猛男可以拥有春天，但猛男也得带娃</p>
+</blockquote>
+</p>
+      <div class="post-button"><a class="btn" href="/%E7%8C%9B%E7%94%B7%E4%B9%9F%E6%9C%89%E5%B0%91%E5%A5%B3%E8%88%AC%E7%9A%84%E6%98%A5%E5%A4%A9-%E6%8D%B7%E5%AE%89%E7%89%B9-XTC-820-%E6%B2%99%E6%BC%A0%E9%BC%A0%E5%B0%BE%E8%8D%89-%E6%8F%90%E8%BD%A6%E8%AE%B0/" rel="noopener"><i class="fa fa-angle-double-right fa-fw"></i>Read More</a></div>
+    </div>
+  </div>
+  <div class="lx-entry padding">
+    <div>
+      <h2 class="title"><a href="/%E6%88%91%E7%9A%84%E7%BB%88%E7%82%B9%EF%BC%8C%E5%8F%AA%E6%98%AF%E4%BD%A0%E7%9A%84%E8%B5%B7%E7%82%B9/">我的终点，只是你的起点</a></h2>
+      <span class="lx-post-detail"><i class="fa fa-calendar-o"></i> 2021-04-02</span>
+      <p><h1 id="我的终点，只是你的起点"><a href="#我的终点，只是你的起点" class="headerlink" title="我的终点，只是你的起点"></a>我的终点，只是你的起点</h1><blockquote>
+<p>网上经常有Windows和Linux孰优孰劣的问题，通过一个简单的安装Visual Studio Code操作，我们从一个侧面来分析一下这二位大哥的特点和思路</p>
+</blockquote>
+<p>Visual Studio Code是我这段时间用的比较多的文本编辑器。搞搞简单python代码，写个HTML格式 邮件，简直是好用到爆炸，不愧是微软大神一本正经的作品。</p>
+<p>Windows下安装Visual Studio Code简单到爆，百度-下载-双击，完毕</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/Linux_Windows/vscodeonwindows.png" alt="vscodeonwindows"></p>
+<p>至于Linux，当当当，我们请出可爱的Red Hat Enterprise Linux 7.9 (以下简称rhel)，传说中完美代表Linux用在大型商用环境的超级无敌Linux系统，让我们看看伟大的Linux是怎么使用简单方便的yum软件包管理系统来安装Visual Studio Code的。答应我看完，真的很简单。</p>
+<p>第一步，正所谓欲练神功，必先那啥，所以咱们得先卸掉rhel自带的yum，然后装个新的yum。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rpm -aq|grep yum //查询rhel原来自带的yum</span><br><span class="line">rpm -qa | grep yum | xargs rpm -e --nodeps //删除所有yum的包</span><br></pre></td></tr></table></figure>
+
+<p>为什么要这么做？ 因为rhel自带的yum只针对花钱注册的订阅用户有效，一分钱没花还想和人家大客户争小姐姐的青睐，这不是那什么想吃那什么么。所以我们使用移花接木大法，把小红帽另一个孩子免费版rhel - CentOS的yum换过来，然后设置成国内速度嗷嗷快的yum源，这样就能愉快的在rhel上使用yum了呢，怎么样，不花钱白那啥是不是很爽？</p>
+<p>第二步，我们已经把欲练神功的准备工作做好，现在我们真正正正干干净净没有头屑也没有蛀牙，一身轻松进入贤者模式，世间万物再也与我没有关系。但这不是我们的追求，我们不能逃避世间的纷纷扰扰，还得重入红尘，所以，我们得把yum再装回来。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">wget https://mirrors.aliyun.com/centos/7.9.2009/os/x86_64/Packages/python-iniparse-0.4-9.el7.noarch.rpm</span><br><span class="line">wget https://mirrors.aliyun.com/centos/7.9.2009/os/x86_64/Packages/yum-3.4.3-168.el7.centos.noarch.rpm</span><br><span class="line">wget https://mirrors.aliyun.com/centos/7.9.2009/os/x86_64/Packages/yum-metadata-parser-1.1.4-10.el7.x86_64.rpm</span><br><span class="line">wget https://mirrors.aliyun.com/centos/7.9.2009/os/x86_64/Packages/yum-plugin-fastestmirror-1.1.31-54.el7_8.noarch.rpm</span><br></pre></td></tr></table></figure>
+
+<p>使用以上命令，我们就把CentOS的yum给弄下来了。注意路径这里是&#x2F;centos&#x2F;7.9.2009&#x2F;, 因为我用的rhel 7.9对应的就是CentOS 7.9.2009，这样自体移植才能保证不出排异反应，就跟自己原来的那个一样棒棒。</p>
+<p>第三步，把下载回来的个yum包给装上。顺序不能乱，不然会报依赖性问题，这就像你必须先脱衣服才能洗澡，乱了顺序就不爽了</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">rpm -ivh python-iniparse-0.4-9.el7.noarch.rpm</span><br><span class="line">rpm -ivh yum-3.4.3-168.el7.centos.noarch.rpm</span><br><span class="line">rpm -ivh yum-metadata-parser-1.1.4-10.el7.x86_64.rpm</span><br><span class="line">rpm -ivh yum-plugin-fastestmirror-1.1.31-54.el7_8.noarch.rpm</span><br></pre></td></tr></table></figure>
+
+<p>第四步，你装好了yum，然后你以为你就可以开始愉快的yum了？ 错我的朋友，你还没配置呢。先安装，再配置，我也不知道Linux为什么这么设计，大哥你直接把配置文件准备好不行吗？我真想知道那些Linux用户都是何方神圣。。。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd /etc/yum.repos.d/</span><br><span class="line">ls</span><br><span class="line">mv redhat.repo redhat.repo.backup //备份rhel自己的仓库文件，我要知道这么做的原因我是那个!!!</span><br><span class="line">vim CentOS-Base.repo //使用vim这个难用到爆的破文本编辑器编辑yum仓库配置文件</span><br></pre></td></tr></table></figure>
+
+<p>说到vim，百度vim全是溢美之词，反正和vim一比，Windows自带的记事本就是个比渣男还渣的废柴，恕我直言，对于普通智力的正常人，vim真是反人类的母亲，真他妈反人类。来我们感受一下:</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/Linux_Windows/vim.png" alt="vim"></p>
+<p>朋友，你以为你现在可以直接编辑了？ 错，你得先敲个i进入输入模式。你以为你输入完了可以直接文件-保存？ 错，你得先ESC进入命令模式然后在敲个:进入底线命令模式，然后再输入w保存，q退出…</p>
+<p>好了，现在我们先把刀放下，因为我突然想起来显示器是我自己买的，咱们先不砸了。下面跟我一起，把这个文档中的$releasever统统替换成7. 让我们很轻松的点ESC进入命令模式，然后输入:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">%s/$releasever/7/</span><br></pre></td></tr></table></figure>
+
+<p>然后再输入:，然后输入w,然后输入:,然后再输入q，哦也，我们就把yum库配置文件修改完毕了呢，好简单对不对？咦朋友你为什么要把头扬起45度？不要流泪，皇冠会掉，记住，丰田皇冠已经在国内停产了，掉了就没地方买了。。。</p>
+<p>第五步，现在我们已经看到曙光了，加油!</p>
+<figure class="highlight plaintext"><figcaption><span>clean all</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum clean all //清除yum原来的缓存</span><br><span class="line">yum makecache //建立新的yum缓存</span><br></pre></td></tr></table></figure>
+
+<p>和前四步里的那些命令一样，我要是知道为什么要做这个，我就是那个。</p>
+<p>我觉得使用Linux最重要的心态，就是:</p>
+<blockquote>
+<p>别问那么多，吻我</p>
+<p>别问那么多，能用就行了</p>
+<p>别问那么多，能用您丫就偷着乐去吧</p>
+</blockquote>
+<p>终于，我们的yum就这么卸载掉，然后又装回来了呢，是不是棒棒哒？</p>
+<p>来到第六步的你，一定已经猜到，下面我们就要开始安装Visual Studio Code了，而且，只需要再他妈输入四条命令就好了呢，好开心对不对?</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo rpm --<span class="keyword">import</span> <span class="attr">https</span>:<span class="comment">//packages.microsoft.com/keys/microsoft.asc</span></span><br><span class="line">sudo sh -c <span class="string">&#x27;echo -e &quot;[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc&quot; &gt; /etc/yum.repos.d/vscode.repo&#x27;</span></span><br><span class="line">yum check-update</span><br><span class="line">sudo yum install code</span><br></pre></td></tr></table></figure>
+
+<p>和刚才一样，我完全不知道这是在干嘛，照着复制就对了呢。</p>
+<p>好了，现在我们终于可以启动Visual Studio Code了，相信您现在一定已经哭出声了。相信我，要坚强，因为后面问题多着呢。。。</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/Linux_Windows/vscodeonlinux.png" alt="vscodeonlinux"></p>
+<p>作为带有浪漫主义倾向的实用主义者，我并不想因为安装一个软件而否定Linux。在使用Linux时，它的设计思路上体现无与伦比的逻辑性，缜密性，自主性，而这是Windows不会呈现的哲学。Windows我觉得更像是把大象装进冰箱需要3步，至于冰箱的大小，大象的大小，谁有那么大力气能把大象塞进去，这些逻辑Windows的用户是不用考虑的。我觉得只能这么说，</p>
+<blockquote>
+<p>Linux用户费了半天劲，仅仅是为了到达Windows用户的起点。但达到这个结果的时候，Linux用户已经是另外一个境界。如果非要举个例子，那Windows就像一个60级的魔兽新玩家，而Linux就像已经练过3个满级号，又重新建了个1级新小号的玩家。你看着他弱，其实他已经把这个世界的逻辑都弄明白了。</p>
+</blockquote>
+<p>对了，如果您想体验Red Hat Enterprise Linux带来的无与伦比的性能和稳定性，请一定要购买联想ThinkStaion台式工作站和联想ThinkPad P系列移动工作站，联想工作站产品全系通过Red Hat Enterprise Linux认证，品牌高大上，性能全无敌，稳定有保证，赶紧订购吧</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/Linux_Windows/ws.jpg" alt="ws"></p>
+</p>
+      <div class="post-button"><a class="btn" href="/%E6%88%91%E7%9A%84%E7%BB%88%E7%82%B9%EF%BC%8C%E5%8F%AA%E6%98%AF%E4%BD%A0%E7%9A%84%E8%B5%B7%E7%82%B9/" rel="noopener"><i class="fa fa-angle-double-right fa-fw"></i>Read More</a></div>
+    </div>
+  </div>
+  <div class="lx-entry padding">
+    <div>
+      <h2 class="title"><a href="/%E5%85%B3%E4%BA%8E%E6%88%91/">关于我</a></h2>
+      <span class="lx-post-detail"><i class="fa fa-calendar-o"></i> 2021-04-01</span>
+      <p><p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/sfbo/pexels-miles-hardacre-2404365.jpg" alt="fish and ocean"></p>
+<p>您好。</p>
+<p>我叫侯宇峰，来自北京，男性，已婚，有健康的父母，温柔的爱人 (好吧，我得严谨一点，偶尔可能不那么温柔)，两个可爱的小家伙。</p>
+<p>这是我在Github创建的第五个仓库，也是第一个公开的库。</p>
+<p>我创建这个库的目的是，我想在这里放一些我觉得有趣的，小小的东西。</p>
+<p>然后分享给您。</p>
+<p>可能是一段代码，来解决一个小问题。</p>
+<p>可能是一篇文字，来诉说一个想法。</p>
+<p>唯一的共同点，</p>
+<p>它们都是我的原创，就算参考了别人的想法，我也会转换成我的语言，然后向原作者表示感谢。</p>
+<p>我使用了MIT协议，这意味着您可以随意使用我的任何分享。</p>
+<p>我只是进入了开源世界的一个角落，但我已经无法自拔。</p>
+<p>如果说开源世界是个巨大的海洋，那我就是一条刚刚从小溪游向大海的一条小鱼。</p>
+<p>请允许我向我所在的世界表达感谢。</p>
+<p>无论是真实世界还是开源世界。</p>
+<p>感谢我的家人。</p>
+<p>感谢你们赐予我这个世界。</p>
+<p>好小好小的鱼。</p>
+<p>好大好大的海洋。</p>
+<p>欢迎访问我的Github主页 <a target="_blank" rel="noopener" href="https://github.com/hou-yufeng/smallfish-bigocean.git">Small fish, big ocean</a></p>
+<p>How have you been?</p>
+<p>My name is Hou Yufeng, I am from Beijing, male, married, with healthy parents, gentle lover (well, I have to be careful, occasionally not so gentle), two lovely little guys.</p>
+<p>This is the fifth repository I’ve created on GitHub, and the first one to be made public.</p>
+<p>I created this library because I wanted to put a little thing here that I thought was interesting.</p>
+<p>Then share it with you.</p>
+<p>It could be a piece of code that solves a small problem.</p>
+<p>It could be a piece of text that tells an idea.</p>
+<p>The only thing we have in common,</p>
+<p>They are all my originals, and even if I refer to other people’s ideas, I will translate them into my own language and thank the original author.</p>
+<p>I use the MIT protocol, which means you are free to use any of my shares.</p>
+<p>I’ve entered a corner of the open source world, but I can’t get out of it.</p>
+<p>If the open source world is a big ocean, then I am a small fish that just swim from a stream to the ocean.</p>
+<p>Please allow me to express my gratitude to the world in which I live.</p>
+<p>Both in the real world and in the open source world.</p>
+<p>Thank you to my family.</p>
+<p>Thank you for giving me the world.</p>
+<p>Maybe I’m just a small, small fish.</p>
+<p>But I own a big ocean.</p>
+<p>Welcome to my Github:  <a target="_blank" rel="noopener" href="https://github.com/hou-yufeng/smallfish-bigocean.git">Small fish, big ocean</a></p>
+</p>
+      <div class="post-button"><a class="btn" href="/%E5%85%B3%E4%BA%8E%E6%88%91/" rel="noopener"><i class="fa fa-angle-double-right fa-fw"></i>Read More</a></div>
+    </div>
+  </div>
+
+
+<div id="pagination">
+  <a class="extend prev" rel="prev" href="/page/6/"></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span>
+</div>
+
+<footer>
+  <div>
+  Copyright &copy; 2022.<a href="/">Small fish, big ocean</a><br>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme <a href="https://lx.js.org" target="_blank">Lx</a><br>
+  </div>
+</footer>
+
+  </div>
+</div>
+</div>
+
+<button class="hamburger hamburger--arrow-r" type="button">
+    <div class="hamburger-box">
+      <div class="hamburger-inner"></div>
+    </div>
+</button> 
+<div class="menu visibility">
+  <div class="menu-head">
+    <span class="layer">
+      <div class="col">
+        <div class="row for-pic">
+          <div class="profile-pic">
+            <a href="/"><img src="/images/avatar.jpeg" alt="Houyufeng 侯宇峄1�7"/></a>
+          </div>
+        </div>
+        <div class="row for-name">
+          <p>Houyufeng 侯宇峄1�7</p>
+          <span class="tagline">Hello, World!</span>
+        </div>
+      </div>
+    </span>
+  </div>
+  <nav class="menu-container">
+  <ul class="menu-items">
+    <li><a href="/"><i class="fa fa-home fa-fw"></i>Home</a></li>
+    <li><a href="/archives/"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+    
+    <li class="has-sub"><span class="dropdown-heading">
+      <i class="fa fa-bookmark fa-fw"></i>Pages</span>
+        <ul>
+          <li><a href="/guestbook/">Guestbook</a></li>
+        <li><a href="/about/">About</a></li>
+        </ul>
+    </li>
+    <li class="has-sub"><span class="dropdown-heading">
+      <i class="fa fa-link fa-fw"></i>Friends</span>
+        <ul>
+          </ul>
+    </li>
+  </ul>
+  </nav>
+</div>
+
+<div class="gototop js-top">
+  <a href="#" class="js-gotop"><i class="fa fa-arrow-up"></i></a>
+</div>
+<script src="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/js/jquery.easing.min.js"></script>
+<script>
+(function () {
+	"use strict";
+	var goToTop = function() {
+		$(".js-gotop").on("click", function(event){
+			event.preventDefault();
+			$("html, body").animate({
+				scrollTop: $("html").offset().top
+			}, 500, "easeInOutExpo");
+			return false;
+		});
+		$(window).scroll(function(){
+			var $win = $(window);
+			if ($win.scrollTop() > 200) {
+				$(".js-top").addClass("active");
+			} else {
+				$(".js-top").removeClass("active");
+			}
+		});
+	};
+	$(function(){
+		goToTop();
+	});
+}());
+</script>
+
+
+</body>
+</html>

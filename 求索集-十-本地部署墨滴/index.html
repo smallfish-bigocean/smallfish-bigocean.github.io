@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content=#58b77a>
+  <title>求索集-十-本地部署墨滴 | Small fish, big ocean</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Houyufeng 侯宇峄1�7">
+  <meta name="keywords" content="">
+  <meta name="description" content="My blog">
+  <script id="hexo-configurations">
+  var CONFIG = {
+    root: '/',
+    theme: 'hexo-theme-lx-master',
+    version: '0.3.9',
+    localsearch:{
+      "enable": false,
+      "trigger": "auto",
+      "top_n_per_article": 1,
+      "unescape": false,
+      "preload": false
+      },
+    path: 'null'
+  };
+</script>
+
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/css/main.min.css">
+  <style type="text/css">
+    pre,
+    code {
+      font-family: 'Fira Code', monospace;
+    }
+    html {
+      font-family: sans-serif;
+    }
+    body {
+      font-family: sans-serif;
+    }
+    h1, h2, h3, h4, h5, figure {
+      font-family: sans-serif;
+    }
+    .menu-container{
+      font-family: sans-serif;
+    }
+  </style>
+
+  <script src="//cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/js/jquery.jside.menu.js"></script>
+	<script>
+	$(document).ready(function(){
+	$(".menu-container").jSideMenu({
+	    jSidePosition: "position-right",
+	    jSideSticky: true,
+	    jSideSkin: "greenish",
+	     });
+	}); 
+	</script>
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Fira Code:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css">
+<meta name="generator" content="Hexo 6.2.0"></head>
+<body>
+<div class="single">
+
+<div id="page">
+<div id="lx-aside" style="background-image: url(//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/images/post_cover.jpeg)" data-stellar-background-ratio="0.5">
+  <div class="overlay">
+  <div class="page-title">
+    <div class="avatar"><a href="/"><img src="/images/avatar.jpeg"></a></div>
+    <span>2022-08-20</span>
+    <h2>求索集-十-本地部署墨滴</h2>
+    
+    </div>
+</div>
+</div>
+
+<div id="lx-main-content">
+  <div class="lx-post">
+    <div class="lx-entry padding">
+      <div>
+        <h1 id="求索集-十-本地部署墨滴"><a href="#求索集-十-本地部署墨滴" class="headerlink" title="求索集-十-本地部署墨滴"></a>求索集-十-本地部署墨滴</h1><p>目前, 我的写作流程是:</p>
+<ul>
+<li>使用Hexo新建一篇文章</li>
+<li>用Typora程序写作, 写作时使用Markdown语言 (<em><strong>此处再次安利, 第一是Markdown, 写作文章非常优秀的标记语言, 开源,简单易学, 兼容HTML代码, 可近乎完美转换为PDF或者网页, 是当今的绝对主流; 第二是Typora, 虽然现在不免费了, 但是作为一款非常精致的支持Markdown的写作软件, 干净, 雅致, 简洁的写作环境非常能让我这样的一写作文就想睡觉的学渣都能专心写作, 一顿烤串的钱, 安利安利</strong></em>)</li>
+<li>使用Hexo将文章发布到GitHub上的Blog页面</li>
+<li>同时, 使用<a target="_blank" rel="noopener" href="https://editor.mdnice.com/">墨滴</a> 将Markdown转换为微信公众号支持的样式, 然后发布到微信公众号</li>
+</ul>
+<p>将Markdown转换为微信公众号支持的样式是非常重要的一步, 因为微信公众号并不支持Markdown. 这点其实也挺无奈, 我们似乎从上到下都特别喜欢搞自己的一套标准, 但问题是, 第一, 这套标准不兼容世界主流标准; 第二, 其实我们建立的标准完全是建立在人家标准基础之上的, 并非是我们自主研发的. 我们”借鉴”了别人的技术, 然后建立了一套不兼容别人的标准, 这个话题将来我会展开讨论, 此处不做展开.</p>
+<p>这里的转换我比较推荐墨滴, 但墨滴是个在线工具, 我对这种基于网页的在线工具一向有个奢望:</p>
+<blockquote>
+<p>有没有可能部署到本地? 这样哪怕有一天网站不经营了, 我也能继续使用</p>
+</blockquote>
+<p>程序和数据本地化, 也是我比较在意的事情, 不仅仅是隐私, 更为了安全.</p>
+<p>非常棒的是, 墨滴支持本地部署, 而且是完全开源的. 我的天, <strong>本地</strong>, <strong>开源</strong>, <strong>免费</strong>, <strong>易用</strong>, 简直就像给女生送花一样, 直接击中我的红心~~~</p>
+<p> 部署过程很简单, 先说环境准备:</p>
+<ul>
+<li>Windows+ IIS. 其他Web服务器应该也行, Linux应该也没问题, 但我就会用Windows, 就会用IIS, 所以咱就Windows + IIS了哈</li>
+<li>安装node.js, 安装最新版本就行, 安装时选择默认设置即可</li>
+</ul>
+<p>下面就开始本地部署墨滴:</p>
+<ul>
+<li><p>从Github下载<a target="_blank" rel="noopener" href="https://github.com/mdnice/markdown-nice">墨滴源文件</a>, 下载完应该是个zip包, 文件名类似 <em>markdown-nice-master.zip</em></p>
+</li>
+<li><p>解压缩这个压缩包, 然后进入解压缩后的文件夹, 执行</p>
+<pre><code>npm i --legacy-peer-deps #这一步是为了安装需要的依赖. --legacy-peer-deps不加的话会报错
+npm run build #打包墨滴程序
+</code></pre>
+</li>
+<li><p>打包完毕后, 就会在文件夹里看到多了一个<em>build</em>文件夹</p>
+</li>
+<li><p>这个<em>build</em>里面就是墨滴的程序了, 看到<em>index.html</em>了吧, 这就是墨滴的主页了</p>
+</li>
+<li><p>IIS里新建站点, 把站点目录定位到build文件夹, 设置好本地端口, OK了您内</p>
+</li>
+<li><p>在防火墙李把端口打开, 然后给IIS服务器配置一个公网ip和域名, 你就能在任何地方使用专属于自己的墨滴了</p>
+</li>
+</ul>
+<p><img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg-blog.csdnimg.cn%2F20200205031512765.png%3Fx-oss-process%3Dimage%2Fwatermark%2Ctype_ZmFuZ3poZW5naGVpdGk%2Cshadow_10%2Ctext_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3podW9xaW5nam9raW5nOTcyOTg%3D%2Csize_16%2Ccolor_FFFFFF%2Ct_70%23pic_center&refer=http%3A%2F%2Fimg-blog.csdnimg.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1663589054&t=e8bf44d02d81d56b17882d70ccdcc01e" alt="墨滴界面"></p>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="lx-navigation">
+	<div class="lx-cover prev lx-cover-sm" style="background-image: url(//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/images/footer-l.jpeg)">
+		<div class="overlay"></div>
+		<a class="copy" href="/%E6%88%91%E4%BB%AC%E7%8E%B0%E5%9C%A8%E6%9C%80%E9%9C%80%E8%A6%81%E7%9A%84%E4%B8%96%E7%95%8C%E6%9D%AF-%E6%9D%A5%E4%BA%86/">
+			<div class="display-t">
+				<div class="display-tc">
+					<div>
+						<span>Next</span>
+						<h3>我们现在最需要...</h3>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+        <div class="lx-cover next lx-cover-sm" style="background-image: url(//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/images/footer-r.jpeg)">
+		<div class="overlay"></div>
+		<a class="copy" href="/%E6%B1%82%E7%B4%A2%E9%9B%86-%E4%B9%9D-%E5%B0%8F%E6%BD%98%E5%B0%8F%E6%BD%98%E5%91%8A%E8%AF%89%E6%88%91-%E6%8B%9C%E4%BB%81%E6%85%95%E5%B0%BC%E9%BB%91%E8%BF%98%E6%9C%89%E5%A4%9A%E5%B0%91%E5%BE%B7%E5%9B%BD%E7%90%83%E5%91%98/">
+			<div class="display-t">
+				<div class="display-tc">
+					<div>
+						<span>Prev</span>
+						<h3>求索集 - 九...</h3>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+</div>
+
+</div>
+
+<footer>
+  <div>
+  Copyright &copy; 2022.<a href="/">Small fish, big ocean</a><br>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme <a href="https://lx.js.org" target="_blank">Lx</a><br>
+  </div>
+</footer>
+
+</div>
+
+<button class="hamburger hamburger--arrow-r" type="button">
+    <div class="hamburger-box">
+      <div class="hamburger-inner"></div>
+    </div>
+</button> 
+<div class="menu visibility">
+  <div class="menu-head">
+    <span class="layer">
+      <div class="col">
+        <div class="row for-pic">
+          <div class="profile-pic">
+            <a href="/"><img src="/images/avatar.jpeg" alt="Houyufeng 侯宇峄1�7"/></a>
+          </div>
+        </div>
+        <div class="row for-name">
+          <p>Houyufeng 侯宇峄1�7</p>
+          <span class="tagline">Hello, World!</span>
+        </div>
+      </div>
+    </span>
+  </div>
+  <nav class="menu-container">
+  <ul class="menu-items">
+    <li><a href="/"><i class="fa fa-home fa-fw"></i>Home</a></li>
+    <li><a href="/archives/"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+    
+    <li class="has-sub"><span class="dropdown-heading">
+      <i class="fa fa-bookmark fa-fw"></i>Pages</span>
+        <ul>
+          <li><a href="/guestbook/">Guestbook</a></li>
+        <li><a href="/about/">About</a></li>
+        </ul>
+    </li>
+    <li class="has-sub"><span class="dropdown-heading">
+      <i class="fa fa-link fa-fw"></i>Friends</span>
+        <ul>
+          </ul>
+    </li>
+  </ul>
+  </nav>
+</div>
+
+<div class="gototop js-top">
+  <a href="#" class="js-gotop"><i class="fa fa-arrow-up"></i></a>
+</div>
+<script src="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/js/jquery.easing.min.js"></script>
+<script>
+(function () {
+	"use strict";
+	var goToTop = function() {
+		$(".js-gotop").on("click", function(event){
+			event.preventDefault();
+			$("html, body").animate({
+				scrollTop: $("html").offset().top
+			}, 500, "easeInOutExpo");
+			return false;
+		});
+		$(window).scroll(function(){
+			var $win = $(window);
+			if ($win.scrollTop() > 200) {
+				$(".js-top").addClass("active");
+			} else {
+				$(".js-top").removeClass("active");
+			}
+		});
+	};
+	$(function(){
+		goToTop();
+	});
+}());
+</script>
+
+
+</body>
+</html>

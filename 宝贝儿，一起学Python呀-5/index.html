@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content=#58b77a>
+  <title>宝贝儿，一起学Python呀 - V | Small fish, big ocean</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Houyufeng 侯宇峄1�7">
+  <meta name="keywords" content="">
+  <meta name="description" content="My blog">
+  <script id="hexo-configurations">
+  var CONFIG = {
+    root: '/',
+    theme: 'hexo-theme-lx-master',
+    version: '0.3.9',
+    localsearch:{
+      "enable": false,
+      "trigger": "auto",
+      "top_n_per_article": 1,
+      "unescape": false,
+      "preload": false
+      },
+    path: 'null'
+  };
+</script>
+
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/css/main.min.css">
+  <style type="text/css">
+    pre,
+    code {
+      font-family: 'Fira Code', monospace;
+    }
+    html {
+      font-family: sans-serif;
+    }
+    body {
+      font-family: sans-serif;
+    }
+    h1, h2, h3, h4, h5, figure {
+      font-family: sans-serif;
+    }
+    .menu-container{
+      font-family: sans-serif;
+    }
+  </style>
+
+  <script src="//cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/js/jquery.jside.menu.js"></script>
+	<script>
+	$(document).ready(function(){
+	$(".menu-container").jSideMenu({
+	    jSidePosition: "position-right",
+	    jSideSticky: true,
+	    jSideSkin: "greenish",
+	     });
+	}); 
+	</script>
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Fira Code:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css">
+<meta name="generator" content="Hexo 6.2.0"></head>
+<body>
+<div class="single">
+
+<div id="page">
+<div id="lx-aside" style="background-image: url(//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/images/post_cover.jpeg)" data-stellar-background-ratio="0.5">
+  <div class="overlay">
+  <div class="page-title">
+    <div class="avatar"><a href="/"><img src="/images/avatar.jpeg"></a></div>
+    <span>2021-07-01</span>
+    <h2>宝贝儿，一起学Pytho...</h2>
+    
+    </div>
+</div>
+</div>
+
+<div id="lx-main-content">
+  <div class="lx-post">
+    <div class="lx-entry padding">
+      <div>
+        <h1 id="宝贝儿，一起学Python呀-V"><a href="#宝贝儿，一起学Python呀-V" class="headerlink" title="宝贝儿，一起学Python呀 - V"></a>宝贝儿，一起学Python呀 - V</h1><h2 id="一切从print-说起"><a href="#一切从print-说起" class="headerlink" title="一切从print()说起"></a>一切从print()说起</h2><p>今天是&lt;&lt;宝贝儿，一起学Python呀&gt;&gt;的第五篇，这一篇里，咱们一起聊聊Python的print()函数，然后初步认识一下整型和字符串这两种数据类型。</p>
+<p>对了，今天开始会有课后作业。我很希望您能在VS Code里实际写一写作业里的神秘小代码，感受一下Python带给您的乐趣。如果您确实体会到了乐趣，记得找我一起去安定医院挂号。。。</p>
+<center>一</center>
+
+<p>前文书曾经说过，一般入门编程教程的第一个实例程序都是让屏幕输出”Hello World”。据说这是一种能带来好运的习惯。那咱看看能不能好运喽:)</p>
+<p>前排提示：还记得怎么用VS Code写Python程序么？下图有没有让您回忆起什么?</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/python/helloworld.png" alt="hello world1"></p>
+<p>对了，要点是在您集中存放Python程序的文件夹，使用右键菜单选择“使用Code打开”，然后新建一个.py文件,然后输入如下的语句:</p>
+<blockquote>
+<p>print(Hello World)</p>
+</blockquote>
+<p>然后在文件上右键单击，选择”在终端中运行Python文件”</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/python/helloworld2.png" alt="helloworld2"></p>
+<p>怎么样？是不是报错了？您应该收到了这样的错误信息:</p>
+<blockquote>
+<p>SyntaxError: invalid syntax</p>
+</blockquote>
+<p>这个报错表示代码有语法错误，而且Python解释器会很贴心告诉您错误在哪。</p>
+<p>那错误在哪呢？下面请清空所有代码，咱们重新输入如下代码，然后分析分析：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;Hello World&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello World&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;It&#x27; s a good day&quot;</span>) <span class="comment">#双引号</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;&#x27;&#x27;Hello </span></span><br><span class="line"><span class="string">World&#x27;&#x27;&#x27;</span>) <span class="comment">#三个单引号</span></span><br><span class="line"><span class="built_in">print</span>(<span class="number">1</span>+<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+<p>请注意， # 后面的文字是我写给您的注释，并不是代码的一部分。我也很推荐您在写代码时，把自己的一些想法注释在这里。当然了，我有时也会在自己千辛万苦之后终于跑通的代码后面会以注释的形式赋诗一首。。。这个也无所谓了，自己玩儿，开心和乐趣很重要哒。</p>
+<p>另外需要注意的是，# 是单行注释，不能换行，换行就变成代码了。</p>
+<p>下面我们再执行一下，这次没有报错了，反馈结果是: ( 为了方便观察，我把代码以注释形式放在后面)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 所有符号均是英文模式下的符号</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;Hello World&#x27;</span>) <span class="comment"># 输出Hello World</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello World&quot;</span>) <span class="comment"># 输出Hello World</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;It&#x27; s a good day&quot;</span>) <span class="comment"># 输出It&#x27; s a good day</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;&#x27;&#x27;Hello</span></span><br><span class="line"><span class="string">World&#x27;&#x27;&#x27;</span>) <span class="comment"># 输出Hello World, Hello后面换行 </span></span><br><span class="line"><span class="built_in">print</span>(<span class="number">1</span>+<span class="number">3</span>) <span class="comment"># 输出4</span></span><br></pre></td></tr></table></figure>
+
+<p>看见了吧，下面咱们逐个分析分析。</p>
+<p>print(‘Hello World’)和print(“Hello World”)都能输出Hello World，所以一般情况下，把字符串用单引号双引号括起来都行。二者的区别在print(“It’ s a good day”)这里体现。使用双引号括起的字符串，字符串里的单引号会以字符的形式正常输出，而这时如果是单引号括起来，那就会报错了。至于三个引号，那就是完全找原样输出。三个引号内字符串有换行，print()输出一样会换行。</p>
+<p>至于print(1+3)，Python会进行计算，然后把结果转换为字符串输出。</p>
+<p>所以我们可以大致得出关于Python的print()的结论:</p>
+<blockquote>
+<p>对于print(‘’)，直接输出字符串，但字符串不能含有’</p>
+<p>对于print(“”), 直接输出字符串，且字符串可以包含’</p>
+<p>对于print(‘’’’’’), 直接输出字符串，且可以换行</p>
+<p>对于print(表达式), 计算表达式的结果，然后转换为字符串输出</p>
+</blockquote>
+<p>所以这也就能理解，我们第一次的代码print(Hello World)为什么Python会报错，因为既没有’’说明这是字符串，也不是一个能被Python理解的表达式。</p>
+<p>我们写代码时最常用的print()，基本上了解这些就可以了。值得注意的是，虽然print()里面可以是表达式，甚至是数字，比如print(1234567), Python都可以很好的识别，但这里其实有个小隐藏步骤，就是print()其实还是把要输出的内容转化为了字符串。</p>
+<p>对了，还得补充一句，这里的print()叫做函数，()里的内容就是这个函数的参数。有的函数不需要参数。比如：</p>
+<blockquote>
+<p>帮我买东西(要买的东西)</p>
+</blockquote>
+<p>这个函数就是带参数的，每次调用这个函数，您需要把要买的东西作为参数写在函数后面的括号里。如果没写，就会报错“出错，您没有说明您让我帮忙买的东西”。</p>
+<p>再比如:</p>
+<blockquote>
+<p>帮我洗袜子()</p>
+</blockquote>
+<p>这个函数没有参数，但括号不能省略，每次使用这个函数，需要写成 帮我洗袜子()就行了。</p>
+<p>至于print()，理论上是需要带参数的，参数就是您想输出的内容。但实际上，在代码里写成print()，括号里什么都没有，程序也不会报错，只是什么也不干罢了。至于为什么Python的设计者要这么做，而不是抛出一个错误，那我就不知道了。好在谁也不会真的写个print()占字数，没听哪位程序员说工资是按照程序行数结算的。</p>
+<blockquote>
+<p>另外相信您也看见了，Python的程序是每句话一行，结尾不用任何符号表示结束。看起来很简单是吧？ 等以后加上缩进表示逻辑层级时，相信您会感受到被对齐Tab支配的恐惧:)</p>
+</blockquote>
+<center>二</center>
+
+<p>上面提到了数据类型，比如，1，2，3，4，这个都是整数，Python里都叫整型。 </p>
+<p>1.3， 2.4，这些都是小数，Python里叫浮点。</p>
+<p>至于字符串，自然就是字符组成的串了，怎么样，解释非常科学吧。</p>
+<p>Python下定义数据类型非常简单，比如</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="number">1</span> <span class="comment"># 定义一个整型变量</span></span><br><span class="line">y = <span class="number">2.4</span> <span class="comment"># 定义一个浮点型变量</span></span><br><span class="line">z = <span class="string">&#x27;伦家是个字符串&#x27;</span> <span class="comment"># 定义一个字符串。Python中用&#x27;&#x27;或&quot;&quot;括起来的就是字符串</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>看出来了吧，Python 无需想其它语言那样需要事先约定数据类型。如C++就这么定义:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> x = <span class="number">1</span>; <span class="comment">//定义一个整型变量</span></span><br></pre></td></tr></table></figure>
+
+<p>Python定义变量非常简单，也比较随意，对于使用者非常友好，但是这也要求我们在编程时需要脑子很清楚，不然很容易出错。举个例子，我设计这么一个密码锁小程序:</p>
+<blockquote>
+<p>我事先给门锁预定一个密码，666666吧，反正我也想不出来什么复杂密码。然后我请您输入密码，如果一致，把门打开，如果不一致，继续请您输入。</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">password = <span class="string">&#x27;&#x27;</span> <span class="comment"># 定义password变量，类型是字符串，但我没有预设任何内容，目的仅仅是接收您输入的密码字符串</span></span><br><span class="line"><span class="keyword">while</span> password !=<span class="string">&#x27;666666&#x27;</span>: <span class="comment"># 条件判断，!=的意思是不等于。这行密码的意义是，判断密码是否是我预设的666666</span></span><br><span class="line">	password = <span class="built_in">input</span>(<span class="string">&#x27;请尝试输入密码： &#x27;</span>) <span class="comment"># input()函数的作用是捕捉键盘的输入。&#x27;请尝试输入密码： &#x27;是终端提示，没有提示，您面对着黑黑的终端估计也不知道要干嘛不是:) 注意这一行前面是空了一个制表符的。 这就是缩进。Python的缩进是我学习使用Python中遇到的第一个障碍，没事，有我在，我会让您和我感同身受哒</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;欢迎回家&#x27;</span>) <span class="comment"># 您的密码输对了，那就跳出循环，显示欢迎回家。不然就得一直让您输密码，直到输对了算。。。</span></span><br></pre></td></tr></table></figure>
+
+<p>这段代码的关键就是这个条件判断</p>
+<blockquote>
+<p>while password !&#x3D;’666666’:</p>
+</blockquote>
+<p>注意到了么，这里的666666是加了’’的，考考您，这是什么数据类型？对了，不是整型数字，是字符串。password是input()函数捕捉到的键盘输入，类型是字符串，都是字符串才有比较的意义。如果666666没加’’，变成了</p>
+<blockquote>
+<p>while password !&#x3D;666666:</p>
+</blockquote>
+<p>那只能说，您今天怕是不能回家了。就算您把键盘按烂了，无论如何您按出来的这个字符串也是不可能等于一个数字666666的。就像小哥哥再温柔体贴善良正直，长得不行还没钱，只有一辆马自达，那无论小哥哥说什么甜言蜜语，有些只喜欢在宝马车上哭的小姐姐也只当是放P。社会如此，我们无法改变。现在买不起宝马，将来也总买得起，相信我，到那时，你会发现当初当舔狗的自己有多SB，你也会知道哪个只认识宝马标，却不知道宝马X1还不如马自达CX-5贵的小姐姐和当初当舔狗的自己其实智力也没差多少，你一定会释然，并且微笑。</p>
+<p>我去，跑题了跑题了。总之，咱们今天讲了print()的使用，认识了整型，浮点型两种数字类型，初识了字符串类型。那亲爱的朋友，咱们做几道题复习复习如何？请解答以下题目，然后自己在VS Code里实际写出来，运行一下看看您的解答是不是对的。</p>
+<p>第一题：程序输入结果是什么？</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="number">123</span>+<span class="string">&#x27;456&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>第二题: 程序最后打出了谁的名字？</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">name=<span class="string">&#x27;长泽雅美&#x27;</span></span><br><span class="line">name=<span class="string">&#x27;石原里美&#x27;</span></span><br><span class="line">name=<span class="string">&#x27;新垣结衣&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(name)</span><br></pre></td></tr></table></figure>
+
+
+
+<p>今天就到这里啦，再见。下一篇，我尝试着写一下最简单的循环基础，以及另一个超级无敌常用的数据类型：列表。</p>
+<p>再见，爱你，么么哒。</p>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="lx-navigation">
+	<div class="lx-cover prev lx-cover-sm" style="background-image: url(//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/images/footer-l.jpeg)">
+		<div class="overlay"></div>
+		<a class="copy" href="/%E5%AE%9D%E8%B4%9D%E5%84%BF%EF%BC%8C%E4%B8%80%E8%B5%B7%E5%AD%A6Python%E5%91%80-%E7%95%AA%E5%A4%96%E7%AF%87/">
+			<div class="display-t">
+				<div class="display-tc">
+					<div>
+						<span>Next</span>
+						<h3>宝贝儿，一起学...</h3>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+        <div class="lx-cover next lx-cover-sm" style="background-image: url(//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/images/footer-r.jpeg)">
+		<div class="overlay"></div>
+		<a class="copy" href="/%E7%B3%9F%E4%BA%86%EF%BC%8C%E6%98%AF%E5%BF%83%E5%8A%A8%E7%9A%84%E6%84%9F%E8%A7%89%E3%80%82%E5%86%99%E5%9C%A8Windows-11%E5%8F%91%E5%B8%83%E4%B9%8B%E5%88%9D/">
+			<div class="display-t">
+				<div class="display-tc">
+					<div>
+						<span>Prev</span>
+						<h3>哥们儿，先别急...</h3>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+</div>
+
+</div>
+
+<footer>
+  <div>
+  Copyright &copy; 2022.<a href="/">Small fish, big ocean</a><br>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme <a href="https://lx.js.org" target="_blank">Lx</a><br>
+  </div>
+</footer>
+
+</div>
+
+<button class="hamburger hamburger--arrow-r" type="button">
+    <div class="hamburger-box">
+      <div class="hamburger-inner"></div>
+    </div>
+</button> 
+<div class="menu visibility">
+  <div class="menu-head">
+    <span class="layer">
+      <div class="col">
+        <div class="row for-pic">
+          <div class="profile-pic">
+            <a href="/"><img src="/images/avatar.jpeg" alt="Houyufeng 侯宇峄1�7"/></a>
+          </div>
+        </div>
+        <div class="row for-name">
+          <p>Houyufeng 侯宇峄1�7</p>
+          <span class="tagline">Hello, World!</span>
+        </div>
+      </div>
+    </span>
+  </div>
+  <nav class="menu-container">
+  <ul class="menu-items">
+    <li><a href="/"><i class="fa fa-home fa-fw"></i>Home</a></li>
+    <li><a href="/archives/"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+    
+    <li class="has-sub"><span class="dropdown-heading">
+      <i class="fa fa-bookmark fa-fw"></i>Pages</span>
+        <ul>
+          <li><a href="/guestbook/">Guestbook</a></li>
+        <li><a href="/about/">About</a></li>
+        </ul>
+    </li>
+    <li class="has-sub"><span class="dropdown-heading">
+      <i class="fa fa-link fa-fw"></i>Friends</span>
+        <ul>
+          </ul>
+    </li>
+  </ul>
+  </nav>
+</div>
+
+<div class="gototop js-top">
+  <a href="#" class="js-gotop"><i class="fa fa-arrow-up"></i></a>
+</div>
+<script src="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/js/jquery.easing.min.js"></script>
+<script>
+(function () {
+	"use strict";
+	var goToTop = function() {
+		$(".js-gotop").on("click", function(event){
+			event.preventDefault();
+			$("html, body").animate({
+				scrollTop: $("html").offset().top
+			}, 500, "easeInOutExpo");
+			return false;
+		});
+		$(window).scroll(function(){
+			var $win = $(window);
+			if ($win.scrollTop() > 200) {
+				$(".js-top").addClass("active");
+			} else {
+				$(".js-top").removeClass("active");
+			}
+		});
+	};
+	$(function(){
+		goToTop();
+	});
+}());
+</script>
+
+
+</body>
+</html>

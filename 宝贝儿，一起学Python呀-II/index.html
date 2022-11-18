@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content=#58b77a>
+  <title>宝贝儿，一起学Python呀 - II | Small fish, big ocean</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Houyufeng 侯宇峄1�7">
+  <meta name="keywords" content="">
+  <meta name="description" content="My blog">
+  <script id="hexo-configurations">
+  var CONFIG = {
+    root: '/',
+    theme: 'hexo-theme-lx-master',
+    version: '0.3.9',
+    localsearch:{
+      "enable": false,
+      "trigger": "auto",
+      "top_n_per_article": 1,
+      "unescape": false,
+      "preload": false
+      },
+    path: 'null'
+  };
+</script>
+
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/css/main.min.css">
+  <style type="text/css">
+    pre,
+    code {
+      font-family: 'Fira Code', monospace;
+    }
+    html {
+      font-family: sans-serif;
+    }
+    body {
+      font-family: sans-serif;
+    }
+    h1, h2, h3, h4, h5, figure {
+      font-family: sans-serif;
+    }
+    .menu-container{
+      font-family: sans-serif;
+    }
+  </style>
+
+  <script src="//cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/js/jquery.jside.menu.js"></script>
+	<script>
+	$(document).ready(function(){
+	$(".menu-container").jSideMenu({
+	    jSidePosition: "position-right",
+	    jSideSticky: true,
+	    jSideSkin: "greenish",
+	     });
+	}); 
+	</script>
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Fira Code:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css">
+<meta name="generator" content="Hexo 6.2.0"></head>
+<body>
+<div class="single">
+
+<div id="page">
+<div id="lx-aside" style="background-image: url(//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/images/post_cover.jpeg)" data-stellar-background-ratio="0.5">
+  <div class="overlay">
+  <div class="page-title">
+    <div class="avatar"><a href="/"><img src="/images/avatar.jpeg"></a></div>
+    <span>2021-06-11</span>
+    <h2>宝贝儿，一起学Pytho...</h2>
+    
+    </div>
+</div>
+</div>
+
+<div id="lx-main-content">
+  <div class="lx-post">
+    <div class="lx-entry padding">
+      <div>
+        <h1 id="宝贝儿，一起学Python呀-II"><a href="#宝贝儿，一起学Python呀-II" class="headerlink" title="宝贝儿，一起学Python呀 - II"></a>宝贝儿，一起学Python呀 - II</h1><p>前一篇请见 <a href="https://smallfish-bigocean.github.io/%E5%AE%9D%E8%B4%9D%E5%84%BF%EF%BC%8C%E4%B8%80%E8%B5%B7%E5%AD%A6Python%E5%91%80-I/">宝贝儿，一起学Python呀 - I</a></p>
+<p>本文也发表于鄙人的Blog <a href="https://smallfish-bigocean.github.io/">小鱼游大海</a></p>
+<p>本章节，我尝试和您探讨学习的方法，以及离开学校，走上工作岗位以后，我们如何切实可行地快速学习。毕竟谁也不想在忙了一天，又伺候完小主写作业睡觉之后，还得睡眼惺忪地学东西。</p>
+<h2 id="第二篇-我那无处安放的被C支配的恐惧"><a href="#第二篇-我那无处安放的被C支配的恐惧" class="headerlink" title="第二篇 我那无处安放的被C支配的恐惧"></a>第二篇 我那无处安放的被C支配的恐惧</h2><center>一</center>
+
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/python/C.jpg" alt="C语言"></p>
+<p>当年风华正茂的你，坐在大学的课堂里，说不定还挨着你心仪的女生。你的小纸条上只有一句话，但却是你字斟句酌后情真意切的表达。你准备下了这节课就想办法趁别人不备偷偷把纸条塞给女生，你还得盘算着别让自己宿舍那几块料看见，不然回宿舍指不定老几位得怎么起哄架秧子。她宿舍那几位女生也得躲开，不然以我在女生中的口碑，这事儿就别指望了。</p>
+<p>亲爱的读者朋友您以为我跑题了？ 那不能够。因为这节课是C语言，对，是不是开始颤抖，是不是又唤起了你不好的青春回忆？当我满脑子都被i+&#x3D;(++i)+(i++)占据时，我当时真得很想怒吼，这是什么玩意啊？ 编程的人脑子有包吧？为什么这玩意要5学分？还有那个Turbo C的编程环境，我草，微软的Windows图形桌面环境都发展到了Windows XP，我还对着干巴巴的蓝色屏幕跟大傻子一样的打字，我是不是被玩儿了？？？ 后来，我真正了解到C语言本身在计算机发展史上的地位，我才理解为什么哪怕和信息沾点边的学校都要开设C语言这门课程。但是，我已经错过了学习这门伟大语言的最佳时机。这不能说又多大遗憾。</p>
+<center>二</center>
+
+<p>我们接着聊Python。学Python，如果还是这种学法，第一节课，准备Python环境，第二节，面向对象的思想，基础数据类型，第三节，基本的结构。。。</p>
+<p>相信结果还是一样的。你学了一大堆东西，如果做做选择题填空题是够了，但是你连一个程序都写不出来。因为没有主线。</p>
+<p>人生从学生走到工作岗位，我们已经没有足量时间去从0学起，学习每个环节。我们需要一根主线，把这些环节这些知识体系重新组织起来，把无数平面分布的点立体起来，形成体系。</p>
+<p>这根线，就是我们实际要做的事情。</p>
+<p>举例说明，Python下处理文件系统的内置OS模块光方法就有六十几个。</p>
+<blockquote>
+<p>以前的学习方法是哐哐哐把这六十几个方法挨个讲一遍，然后出到选择题，如果我想获取E:\学习资料 下全部文件的创建时间，那我应该使用的方法是:</p>
+<p>A. os.path.getmtime(path)  B. os.path.getctime(path)  C.os.path.getatime(path)  D. os.path.ismount(path)  </p>
+</blockquote>
+<p>然后相信我，等你真的需要写个程序做这件事，你保证想不起来应该怎么干了。既然无用，为何不扔？</p>
+<p>相信你已经明白了，事情其实并不复杂。一个高效率的学习方式，应该是:</p>
+<ul>
+<li>准备Python的运行环境，确保Python代码能跑起来</li>
+<li>了解Python程序的基本结构和格式</li>
+<li>分解任务，利用伪代码或流程图之类的工具分析任务逻辑</li>
+<li>尝试用Python实现，也就是写代码。这一步要求边学边写，边写边学</li>
+<li>排错，执行代码</li>
+<li>复盘，建立并完善关于Python的知识体系</li>
+</ul>
+<p>顺便说一句，其实快速学习的另一个前提是好奇心。我上面说了一句话，</p>
+<blockquote>
+<p>Python下处理文件系统的内置OS模块光方法就有六十几个</p>
+</blockquote>
+<p>这里有几个点，内置，OS，模块，方法。</p>
+<p>如果好奇心足够，现在就应该已经去百度一番这都是什么东东。如果能弄清这几个问题，其实Python就已经入门了。</p>
+<p>好嘞，让我们抛弃以前的恐惧，愉快地开始在Python的世界里玩儿起来吧。记住，边干活儿边学习，这样活儿也干完了，学也学会喽。</p>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="lx-navigation">
+	<div class="lx-cover prev lx-cover-sm" style="background-image: url(//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/images/footer-l.jpeg)">
+		<div class="overlay"></div>
+		<a class="copy" href="/%E5%AE%9D%E8%B4%9D%E5%84%BF%EF%BC%8C%E4%B8%80%E8%B5%B7%E5%AD%A6Python%E5%91%80-III/">
+			<div class="display-t">
+				<div class="display-tc">
+					<div>
+						<span>Next</span>
+						<h3>宝贝儿，一起学...</h3>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+        <div class="lx-cover next lx-cover-sm" style="background-image: url(//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/images/footer-r.jpeg)">
+		<div class="overlay"></div>
+		<a class="copy" href="/%E8%BF%99%E4%B8%AA11%E6%9C%89%E7%82%B9%E7%8C%9B/">
+			<div class="display-t">
+				<div class="display-tc">
+					<div>
+						<span>Prev</span>
+						<h3>这个11有点猛</h3>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+</div>
+
+</div>
+
+<footer>
+  <div>
+  Copyright &copy; 2022.<a href="/">Small fish, big ocean</a><br>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme <a href="https://lx.js.org" target="_blank">Lx</a><br>
+  </div>
+</footer>
+
+</div>
+
+<button class="hamburger hamburger--arrow-r" type="button">
+    <div class="hamburger-box">
+      <div class="hamburger-inner"></div>
+    </div>
+</button> 
+<div class="menu visibility">
+  <div class="menu-head">
+    <span class="layer">
+      <div class="col">
+        <div class="row for-pic">
+          <div class="profile-pic">
+            <a href="/"><img src="/images/avatar.jpeg" alt="Houyufeng 侯宇峄1�7"/></a>
+          </div>
+        </div>
+        <div class="row for-name">
+          <p>Houyufeng 侯宇峄1�7</p>
+          <span class="tagline">Hello, World!</span>
+        </div>
+      </div>
+    </span>
+  </div>
+  <nav class="menu-container">
+  <ul class="menu-items">
+    <li><a href="/"><i class="fa fa-home fa-fw"></i>Home</a></li>
+    <li><a href="/archives/"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+    
+    <li class="has-sub"><span class="dropdown-heading">
+      <i class="fa fa-bookmark fa-fw"></i>Pages</span>
+        <ul>
+          <li><a href="/guestbook/">Guestbook</a></li>
+        <li><a href="/about/">About</a></li>
+        </ul>
+    </li>
+    <li class="has-sub"><span class="dropdown-heading">
+      <i class="fa fa-link fa-fw"></i>Friends</span>
+        <ul>
+          </ul>
+    </li>
+  </ul>
+  </nav>
+</div>
+
+<div class="gototop js-top">
+  <a href="#" class="js-gotop"><i class="fa fa-arrow-up"></i></a>
+</div>
+<script src="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/js/jquery.easing.min.js"></script>
+<script>
+(function () {
+	"use strict";
+	var goToTop = function() {
+		$(".js-gotop").on("click", function(event){
+			event.preventDefault();
+			$("html, body").animate({
+				scrollTop: $("html").offset().top
+			}, 500, "easeInOutExpo");
+			return false;
+		});
+		$(window).scroll(function(){
+			var $win = $(window);
+			if ($win.scrollTop() > 200) {
+				$(".js-top").addClass("active");
+			} else {
+				$(".js-top").removeClass("active");
+			}
+		});
+	};
+	$(function(){
+		goToTop();
+	});
+}());
+</script>
+
+
+</body>
+</html>

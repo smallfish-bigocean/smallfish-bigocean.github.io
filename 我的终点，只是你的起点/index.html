@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content=#58b77a>
+  <title>我的终点，只是你的起点 | Small fish, big ocean</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Houyufeng 侯宇峄1�7">
+  <meta name="keywords" content="">
+  <meta name="description" content="My blog">
+  <script id="hexo-configurations">
+  var CONFIG = {
+    root: '/',
+    theme: 'hexo-theme-lx-master',
+    version: '0.3.9',
+    localsearch:{
+      "enable": false,
+      "trigger": "auto",
+      "top_n_per_article": 1,
+      "unescape": false,
+      "preload": false
+      },
+    path: 'null'
+  };
+</script>
+
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/css/main.min.css">
+  <style type="text/css">
+    pre,
+    code {
+      font-family: 'Fira Code', monospace;
+    }
+    html {
+      font-family: sans-serif;
+    }
+    body {
+      font-family: sans-serif;
+    }
+    h1, h2, h3, h4, h5, figure {
+      font-family: sans-serif;
+    }
+    .menu-container{
+      font-family: sans-serif;
+    }
+  </style>
+
+  <script src="//cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/js/jquery.jside.menu.js"></script>
+	<script>
+	$(document).ready(function(){
+	$(".menu-container").jSideMenu({
+	    jSidePosition: "position-right",
+	    jSideSticky: true,
+	    jSideSkin: "greenish",
+	     });
+	}); 
+	</script>
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Fira Code:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css">
+<meta name="generator" content="Hexo 6.2.0"></head>
+<body>
+<div class="single">
+
+<div id="page">
+<div id="lx-aside" style="background-image: url(//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/images/post_cover.jpeg)" data-stellar-background-ratio="0.5">
+  <div class="overlay">
+  <div class="page-title">
+    <div class="avatar"><a href="/"><img src="/images/avatar.jpeg"></a></div>
+    <span>2021-04-02</span>
+    <h2>我的终点，只是你的起点</h2>
+    
+    </div>
+</div>
+</div>
+
+<div id="lx-main-content">
+  <div class="lx-post">
+    <div class="lx-entry padding">
+      <div>
+        <h1 id="我的终点，只是你的起点"><a href="#我的终点，只是你的起点" class="headerlink" title="我的终点，只是你的起点"></a>我的终点，只是你的起点</h1><blockquote>
+<p>网上经常有Windows和Linux孰优孰劣的问题，通过一个简单的安装Visual Studio Code操作，我们从一个侧面来分析一下这二位大哥的特点和思路</p>
+</blockquote>
+<p>Visual Studio Code是我这段时间用的比较多的文本编辑器。搞搞简单python代码，写个HTML格式 邮件，简直是好用到爆炸，不愧是微软大神一本正经的作品。</p>
+<p>Windows下安装Visual Studio Code简单到爆，百度-下载-双击，完毕</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/Linux_Windows/vscodeonwindows.png" alt="vscodeonwindows"></p>
+<p>至于Linux，当当当，我们请出可爱的Red Hat Enterprise Linux 7.9 (以下简称rhel)，传说中完美代表Linux用在大型商用环境的超级无敌Linux系统，让我们看看伟大的Linux是怎么使用简单方便的yum软件包管理系统来安装Visual Studio Code的。答应我看完，真的很简单。</p>
+<p>第一步，正所谓欲练神功，必先那啥，所以咱们得先卸掉rhel自带的yum，然后装个新的yum。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rpm -aq|grep yum //查询rhel原来自带的yum</span><br><span class="line">rpm -qa | grep yum | xargs rpm -e --nodeps //删除所有yum的包</span><br></pre></td></tr></table></figure>
+
+<p>为什么要这么做？ 因为rhel自带的yum只针对花钱注册的订阅用户有效，一分钱没花还想和人家大客户争小姐姐的青睐，这不是那什么想吃那什么么。所以我们使用移花接木大法，把小红帽另一个孩子免费版rhel - CentOS的yum换过来，然后设置成国内速度嗷嗷快的yum源，这样就能愉快的在rhel上使用yum了呢，怎么样，不花钱白那啥是不是很爽？</p>
+<p>第二步，我们已经把欲练神功的准备工作做好，现在我们真正正正干干净净没有头屑也没有蛀牙，一身轻松进入贤者模式，世间万物再也与我没有关系。但这不是我们的追求，我们不能逃避世间的纷纷扰扰，还得重入红尘，所以，我们得把yum再装回来。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">wget https://mirrors.aliyun.com/centos/7.9.2009/os/x86_64/Packages/python-iniparse-0.4-9.el7.noarch.rpm</span><br><span class="line">wget https://mirrors.aliyun.com/centos/7.9.2009/os/x86_64/Packages/yum-3.4.3-168.el7.centos.noarch.rpm</span><br><span class="line">wget https://mirrors.aliyun.com/centos/7.9.2009/os/x86_64/Packages/yum-metadata-parser-1.1.4-10.el7.x86_64.rpm</span><br><span class="line">wget https://mirrors.aliyun.com/centos/7.9.2009/os/x86_64/Packages/yum-plugin-fastestmirror-1.1.31-54.el7_8.noarch.rpm</span><br></pre></td></tr></table></figure>
+
+<p>使用以上命令，我们就把CentOS的yum给弄下来了。注意路径这里是&#x2F;centos&#x2F;7.9.2009&#x2F;, 因为我用的rhel 7.9对应的就是CentOS 7.9.2009，这样自体移植才能保证不出排异反应，就跟自己原来的那个一样棒棒。</p>
+<p>第三步，把下载回来的个yum包给装上。顺序不能乱，不然会报依赖性问题，这就像你必须先脱衣服才能洗澡，乱了顺序就不爽了</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">rpm -ivh python-iniparse-0.4-9.el7.noarch.rpm</span><br><span class="line">rpm -ivh yum-3.4.3-168.el7.centos.noarch.rpm</span><br><span class="line">rpm -ivh yum-metadata-parser-1.1.4-10.el7.x86_64.rpm</span><br><span class="line">rpm -ivh yum-plugin-fastestmirror-1.1.31-54.el7_8.noarch.rpm</span><br></pre></td></tr></table></figure>
+
+<p>第四步，你装好了yum，然后你以为你就可以开始愉快的yum了？ 错我的朋友，你还没配置呢。先安装，再配置，我也不知道Linux为什么这么设计，大哥你直接把配置文件准备好不行吗？我真想知道那些Linux用户都是何方神圣。。。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd /etc/yum.repos.d/</span><br><span class="line">ls</span><br><span class="line">mv redhat.repo redhat.repo.backup //备份rhel自己的仓库文件，我要知道这么做的原因我是那个!!!</span><br><span class="line">vim CentOS-Base.repo //使用vim这个难用到爆的破文本编辑器编辑yum仓库配置文件</span><br></pre></td></tr></table></figure>
+
+<p>说到vim，百度vim全是溢美之词，反正和vim一比，Windows自带的记事本就是个比渣男还渣的废柴，恕我直言，对于普通智力的正常人，vim真是反人类的母亲，真他妈反人类。来我们感受一下:</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/Linux_Windows/vim.png" alt="vim"></p>
+<p>朋友，你以为你现在可以直接编辑了？ 错，你得先敲个i进入输入模式。你以为你输入完了可以直接文件-保存？ 错，你得先ESC进入命令模式然后在敲个:进入底线命令模式，然后再输入w保存，q退出…</p>
+<p>好了，现在我们先把刀放下，因为我突然想起来显示器是我自己买的，咱们先不砸了。下面跟我一起，把这个文档中的$releasever统统替换成7. 让我们很轻松的点ESC进入命令模式，然后输入:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">%s/$releasever/7/</span><br></pre></td></tr></table></figure>
+
+<p>然后再输入:，然后输入w,然后输入:,然后再输入q，哦也，我们就把yum库配置文件修改完毕了呢，好简单对不对？咦朋友你为什么要把头扬起45度？不要流泪，皇冠会掉，记住，丰田皇冠已经在国内停产了，掉了就没地方买了。。。</p>
+<p>第五步，现在我们已经看到曙光了，加油!</p>
+<figure class="highlight plaintext"><figcaption><span>clean all</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum clean all //清除yum原来的缓存</span><br><span class="line">yum makecache //建立新的yum缓存</span><br></pre></td></tr></table></figure>
+
+<p>和前四步里的那些命令一样，我要是知道为什么要做这个，我就是那个。</p>
+<p>我觉得使用Linux最重要的心态，就是:</p>
+<blockquote>
+<p>别问那么多，吻我</p>
+<p>别问那么多，能用就行了</p>
+<p>别问那么多，能用您丫就偷着乐去吧</p>
+</blockquote>
+<p>终于，我们的yum就这么卸载掉，然后又装回来了呢，是不是棒棒哒？</p>
+<p>来到第六步的你，一定已经猜到，下面我们就要开始安装Visual Studio Code了，而且，只需要再他妈输入四条命令就好了呢，好开心对不对?</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo rpm --<span class="keyword">import</span> <span class="attr">https</span>:<span class="comment">//packages.microsoft.com/keys/microsoft.asc</span></span><br><span class="line">sudo sh -c <span class="string">&#x27;echo -e &quot;[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc&quot; &gt; /etc/yum.repos.d/vscode.repo&#x27;</span></span><br><span class="line">yum check-update</span><br><span class="line">sudo yum install code</span><br></pre></td></tr></table></figure>
+
+<p>和刚才一样，我完全不知道这是在干嘛，照着复制就对了呢。</p>
+<p>好了，现在我们终于可以启动Visual Studio Code了，相信您现在一定已经哭出声了。相信我，要坚强，因为后面问题多着呢。。。</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/Linux_Windows/vscodeonlinux.png" alt="vscodeonlinux"></p>
+<p>作为带有浪漫主义倾向的实用主义者，我并不想因为安装一个软件而否定Linux。在使用Linux时，它的设计思路上体现无与伦比的逻辑性，缜密性，自主性，而这是Windows不会呈现的哲学。Windows我觉得更像是把大象装进冰箱需要3步，至于冰箱的大小，大象的大小，谁有那么大力气能把大象塞进去，这些逻辑Windows的用户是不用考虑的。我觉得只能这么说，</p>
+<blockquote>
+<p>Linux用户费了半天劲，仅仅是为了到达Windows用户的起点。但达到这个结果的时候，Linux用户已经是另外一个境界。如果非要举个例子，那Windows就像一个60级的魔兽新玩家，而Linux就像已经练过3个满级号，又重新建了个1级新小号的玩家。你看着他弱，其实他已经把这个世界的逻辑都弄明白了。</p>
+</blockquote>
+<p>对了，如果您想体验Red Hat Enterprise Linux带来的无与伦比的性能和稳定性，请一定要购买联想ThinkStaion台式工作站和联想ThinkPad P系列移动工作站，联想工作站产品全系通过Red Hat Enterprise Linux认证，品牌高大上，性能全无敌，稳定有保证，赶紧订购吧</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/Linux_Windows/ws.jpg" alt="ws"></p>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="lx-navigation">
+	<div class="lx-cover prev lx-cover-sm" style="background-image: url(//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/images/footer-l.jpeg)">
+		<div class="overlay"></div>
+		<a class="copy" href="/%E7%8C%9B%E7%94%B7%E4%B9%9F%E6%9C%89%E5%B0%91%E5%A5%B3%E8%88%AC%E7%9A%84%E6%98%A5%E5%A4%A9-%E6%8D%B7%E5%AE%89%E7%89%B9-XTC-820-%E6%B2%99%E6%BC%A0%E9%BC%A0%E5%B0%BE%E8%8D%89-%E6%8F%90%E8%BD%A6%E8%AE%B0/">
+			<div class="display-t">
+				<div class="display-tc">
+					<div>
+						<span>Next</span>
+						<h3>猛男也有少女般...</h3>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+        <div class="lx-cover next lx-cover-sm" style="background-image: url(//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/images/footer-r.jpeg)">
+		<div class="overlay"></div>
+		<a class="copy" href="/%E5%85%B3%E4%BA%8E%E6%88%91/">
+			<div class="display-t">
+				<div class="display-tc">
+					<div>
+						<span>Prev</span>
+						<h3>关于我</h3>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+</div>
+
+</div>
+
+<footer>
+  <div>
+  Copyright &copy; 2022.<a href="/">Small fish, big ocean</a><br>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme <a href="https://lx.js.org" target="_blank">Lx</a><br>
+  </div>
+</footer>
+
+</div>
+
+<button class="hamburger hamburger--arrow-r" type="button">
+    <div class="hamburger-box">
+      <div class="hamburger-inner"></div>
+    </div>
+</button> 
+<div class="menu visibility">
+  <div class="menu-head">
+    <span class="layer">
+      <div class="col">
+        <div class="row for-pic">
+          <div class="profile-pic">
+            <a href="/"><img src="/images/avatar.jpeg" alt="Houyufeng 侯宇峄1�7"/></a>
+          </div>
+        </div>
+        <div class="row for-name">
+          <p>Houyufeng 侯宇峄1�7</p>
+          <span class="tagline">Hello, World!</span>
+        </div>
+      </div>
+    </span>
+  </div>
+  <nav class="menu-container">
+  <ul class="menu-items">
+    <li><a href="/"><i class="fa fa-home fa-fw"></i>Home</a></li>
+    <li><a href="/archives/"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+    
+    <li class="has-sub"><span class="dropdown-heading">
+      <i class="fa fa-bookmark fa-fw"></i>Pages</span>
+        <ul>
+          <li><a href="/guestbook/">Guestbook</a></li>
+        <li><a href="/about/">About</a></li>
+        </ul>
+    </li>
+    <li class="has-sub"><span class="dropdown-heading">
+      <i class="fa fa-link fa-fw"></i>Friends</span>
+        <ul>
+          </ul>
+    </li>
+  </ul>
+  </nav>
+</div>
+
+<div class="gototop js-top">
+  <a href="#" class="js-gotop"><i class="fa fa-arrow-up"></i></a>
+</div>
+<script src="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/js/jquery.easing.min.js"></script>
+<script>
+(function () {
+	"use strict";
+	var goToTop = function() {
+		$(".js-gotop").on("click", function(event){
+			event.preventDefault();
+			$("html, body").animate({
+				scrollTop: $("html").offset().top
+			}, 500, "easeInOutExpo");
+			return false;
+		});
+		$(window).scroll(function(){
+			var $win = $(window);
+			if ($win.scrollTop() > 200) {
+				$(".js-top").addClass("active");
+			} else {
+				$(".js-top").removeClass("active");
+			}
+		});
+	};
+	$(function(){
+		goToTop();
+	});
+}());
+</script>
+
+
+</body>
+</html>

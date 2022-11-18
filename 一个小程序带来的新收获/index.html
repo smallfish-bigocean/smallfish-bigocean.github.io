@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content=#58b77a>
+  <title>一个小程序带来的新收获 | Small fish, big ocean</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Houyufeng 侯宇峄1�7">
+  <meta name="keywords" content="">
+  <meta name="description" content="My blog">
+  <script id="hexo-configurations">
+  var CONFIG = {
+    root: '/',
+    theme: 'hexo-theme-lx-master',
+    version: '0.3.9',
+    localsearch:{
+      "enable": false,
+      "trigger": "auto",
+      "top_n_per_article": 1,
+      "unescape": false,
+      "preload": false
+      },
+    path: 'null'
+  };
+</script>
+
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/css/main.min.css">
+  <style type="text/css">
+    pre,
+    code {
+      font-family: 'Fira Code', monospace;
+    }
+    html {
+      font-family: sans-serif;
+    }
+    body {
+      font-family: sans-serif;
+    }
+    h1, h2, h3, h4, h5, figure {
+      font-family: sans-serif;
+    }
+    .menu-container{
+      font-family: sans-serif;
+    }
+  </style>
+
+  <script src="//cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/js/jquery.jside.menu.js"></script>
+	<script>
+	$(document).ready(function(){
+	$(".menu-container").jSideMenu({
+	    jSidePosition: "position-right",
+	    jSideSticky: true,
+	    jSideSkin: "greenish",
+	     });
+	}); 
+	</script>
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Fira Code:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css">
+<meta name="generator" content="Hexo 6.2.0"></head>
+<body>
+<div class="single">
+
+<div id="page">
+<div id="lx-aside" style="background-image: url(//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/images/post_cover.jpeg)" data-stellar-background-ratio="0.5">
+  <div class="overlay">
+  <div class="page-title">
+    <div class="avatar"><a href="/"><img src="/images/avatar.jpeg"></a></div>
+    <span>2021-04-02</span>
+    <h2>一个小程序带来的新收获</h2>
+    
+    </div>
+</div>
+</div>
+
+<div id="lx-main-content">
+  <div class="lx-post">
+    <div class="lx-entry padding">
+      <div>
+        <h1 id="一个小程序带来的新收获"><a href="#一个小程序带来的新收获" class="headerlink" title="一个小程序带来的新收获"></a>一个小程序带来的新收获</h1><p>最近自己想了个小需求，比如我有一堆的MTM，想获得他们的BOM信息。</p>
+<pre><code>20SU001LAU
+20SU001MAU
+20SU001CAU
+20SU001DAU
+20SU001NAU
+20SU001GAU
+20SU000XAU
+</code></pre>
+<p>以前的方式是一个一个的搜索，然后把网页上的信息进行截图或者抓到Excel里，如果是后者，还得考虑网页拷到表格里的格式问题。</p>
+<p>按照“去除重复劳动，提高工作效率”的原则，用python尝试做做看。</p>
+<p>先把工作流想明白，大体是： </p>
+<ol>
+<li>把MTM按行存放在文本文件里</li>
+<li>按行读取文本文件，获取MTM </li>
+<li>建立一个工作簿， 包含的工作表数量就是MTM数量，目的是每个MTM一张表，分别存放自己的BOM信息</li>
+<li>登录服务器抓取每个MTM 信息  </li>
+<li>将MTM信息写入相应工作表</li>
+<li>保存工作簿</li>
+</ol>
+<p>工作流想明白了，下面还得琢磨琢磨需要的功能模块</p>
+<ol>
+<li>抓取数据，这次我决定用十全大补汤BeautifulSoup模块。Selenium模拟浏览器大法虽然逻辑简单，但太费资源，打工人没有一MB内存是多余的…</li>
+<li>由于MTM列表和存放结果的Excel表格我都准备放在桌面上，所以还得想办法获取用户桌面的路径，毕竟每个人的用户名都不一样。经过百度，用winreg模块读取注册表的桌面路径是个好办法。</li>
+<li>Excel这块肯定还是用无敌的openpyxl模块，就是我这基础知识，唉，百度着来吧…</li>
+</ol>
+<p>想明白了需要的模块，那就把哥儿几个都招呼进来：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests </span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line"><span class="keyword">from</span>  openpyxl <span class="keyword">import</span>  Workbook </span><br><span class="line"><span class="keyword">from</span> openpyxl <span class="keyword">import</span> load_workbook</span><br><span class="line"><span class="keyword">import</span> winreg</span><br></pre></td></tr></table></figure>
+
+<p>下面我把包含MTM  number的文本取名mtmlist.txt，然后放到桌面。下面就可以先读取桌面路径了.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#读取当前用户桌面路径</span></span><br><span class="line">key = winreg.OpenKey(winreg.HKEY_CURRENT_USER, <span class="string">r&#x27;Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders&#x27;</span>)</span><br><span class="line">mydesktop = winreg.QueryValueEx(key,<span class="string">&quot;Desktop&quot;</span>)[<span class="number">0</span>]</span><br><span class="line">mydesktop = mydesktop.replace(<span class="string">&#x27;\\&#x27;</span>, <span class="string">&#x27;\\\\&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>用\\\\替换\\是因为Python的”\“字符另有用处，要想得到 C:\ABC\DEF这样的结果，就得这么干。这是我这次的第一个大收获，就这地方我研究了一晚上…</p>
+</blockquote>
+<p>下面就是读取mtmlist.txt然后根据MTM数量建立工作簿.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#读取MTM Text</span></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(mydesktop+<span class="string">&#x27;\\\\mtmlist.txt&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line"></span><br><span class="line">  MTMlist = f.readlines()</span><br><span class="line"></span><br><span class="line"><span class="comment">#预先创建结果保存的表格</span></span><br><span class="line"></span><br><span class="line">wb = Workbook()</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> MTMlist:</span><br><span class="line"></span><br><span class="line">  ws = wb.create_sheet(i)</span><br><span class="line"></span><br><span class="line">  ws.title = i</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>如何根据MTM长度建立工作簿也让我闹腾半天。究其原因还是快速学习带来的基础知识不牢靠，以及在此基础上大量时间用来分析和测试</p>
+</blockquote>
+<p>下面就是第4步，抓取信息。 按说最核心的部分，结果以看居然成了最简单的，唯一的问题是源数据表格的定位，这是第三个大收获.</p>
+<blockquote>
+<p>需要引用页面中第n个表格，则方法是：</p>
+<p>tables &#x3D; soup.find_all(‘table’)</p>
+<p>table &#x3D; tables[n]</p>
+</blockquote>
+<p>嗯嗯，这下妈妈再也不用担心我们找不到自己想要的表格了。顺便想问一句，为什么程序员大哥开发页面时，这么爱用表格…</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#抓取MTM信息</span></span><br><span class="line">headers = &#123;<span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko)&#x27;</span></span><br><span class="line"><span class="string">&#x27;Chrome/51.0.2704.63 Safari/537.36&#x27;</span>&#125;</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> MTMlist:</span><br><span class="line">    res = requests.get(这段信息被我老人家加密了，因为是公司内部信息...想看这里请购买VIP会员，免费送老师的学习资料哟~~~)</span><br><span class="line">    html = res.text</span><br><span class="line">    soup = BeautifulSoup( html,<span class="string">&#x27;html.parser&#x27;</span>)</span><br><span class="line">    tables = soup.find_all(这段信息被我老人家加密了，因为是公司内部信息...想看这里请购买VIP会员，免费送老师的学习资料哟~~~)</span><br><span class="line">    table = 这段信息被我老人家加密了，因为是公司内部信息...想看这里请购买VIP会员，免费送老师的学习资料哟~~~</span><br><span class="line">    ws = wb.worksheets[MTMlist.index(i)+<span class="number">1</span>] <span class="comment">#我勒个去，不这么干的话存MTM BOM信息会从一个叫sheet的表格开始...</span></span><br><span class="line">    lists = []</span><br><span class="line">    <span class="keyword">for</span> tr <span class="keyword">in</span> table.find_all(这段信息被我老人家加密了，因为是公司内部信息...想看这里请购买VIP会员，免费送老师的学习资料哟~~~):</span><br><span class="line">        <span class="keyword">for</span> td <span class="keyword">in</span> tr.find_all(这段信息被我老人家加密了，因为是公司内部信息...想看这里请购买VIP会员，免费送老师的学习资料哟~~~):</span><br><span class="line">            lists.append(td.text)</span><br><span class="line">        ws.append(lists)</span><br><span class="line">        lists.clear()</span><br><span class="line">    list1 = [<span class="string">&#x27;MTM number&#x27;</span>,i] <span class="comment">#这三行的目的是把MTM No写在工作表尾部</span></span><br><span class="line">    ws.append(list1)</span><br><span class="line">    ws.delete_rows(<span class="number">1</span>,<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+
+<p>最后，把看着讨厌厌而且还不知道怎么搞出来的多余Sheet表格删掉，只要我不尴尬，尴尬的就是别人，哈哈。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#处理表格并保存到桌面，嗯，桌面乱哄哄显得专业   </span></span><br><span class="line">ws = wb[<span class="string">&#x27;Sheet&#x27;</span>]</span><br><span class="line">wb.remove(ws)</span><br><span class="line">wb.save(mydesktop+<span class="string">&#x27;\\\\MTM_boms_list.xlsx&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>经测试，获取30个MTM的BOM信息才用了不到20秒，这要是自己一个一个拿手做，嘿嘿。</p>
+<p>能力和时间所限，程序还不完整，比如没考虑如果MTM查不到应该怎么处理，比如如果能做个图形界面是不是更好看。好在我始终没忘了自己的初心，那就是:</p>
+<blockquote>
+<p>大哥，就咱这水平，能用就行了，真的，别那么多要求了</p>
+</blockquote>
+<p>啰啰嗦嗦把这个小项目说完，其实我还是挺感慨的。大学时学过C和Java，可是除了会打个Hello world或者算个1+1，然后应付应付考试，编程这块真的一点都不会。Python作为我现在解决重复劳动的主要工具，边学边实践，到现在能写个简单的小程序小脚本，真的挺好玩儿的。Python作为目前最火的语言，甚至出现在孩子们的编程课里，其实是有道理的。不需要理解复杂的面向对象的概念，编程过程基本和实际生活中的问题解决思路贴合，如果愿意，挤出写蹲马桶看手机的时间，边学边练，还是能有点收获的。</p>
+<p>您可能也看到了，除非是涉及公司内部信息，我是非常乐于公开我的源代码的，原因只有一个，我被开源思想洗脑了。。。 水平差的，通过开源获得让大牛指导的机会；自己就是大牛的，则能通过开源让更多人分享自己的思想。你有我有全都有，岂不快哉。</p>
+<p>我其实很乐意在github上搞个仓库，把自己写的东西开源在上面，何等拉风。慢慢来吧。</p>
+<p>对了，说好要写的超级无敌写作王者 Markdown语言的分享还得等等，现在某人给俩米留的作业那叫一个多，一个文艺青年每天晚上净盯着孩子写作业了，这就是生活…</p>
+<p>以上，晚安。</p>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="lx-navigation">
+	<div class="lx-cover prev lx-cover-sm" style="background-image: url(//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/images/footer-l.jpeg)">
+		<div class="overlay"></div>
+		<a class="copy" href="/%E5%9B%A0%E4%B8%BA%E7%AE%80%E5%8D%95%EF%BC%8C%E6%89%80%E4%BB%A5%E5%BC%BA%E5%A4%A7/">
+			<div class="display-t">
+				<div class="display-tc">
+					<div>
+						<span>Next</span>
+						<h3>因为简单，所以强大</h3>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+        <div class="lx-cover next lx-cover-sm" style="background-image: url(//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/images/footer-r.jpeg)">
+		<div class="overlay"></div>
+		<a class="copy" href="/%E4%BD%A0%E7%9A%84%E8%82%A5%E5%AE%85%E5%BF%AB%E4%B9%90%E6%B0%B4%EF%BC%8C%E5%88%B0%E5%BA%95%E8%97%8F%E7%9D%80%E4%BB%80%E4%B9%88%E7%A7%98%E5%AF%86/">
+			<div class="display-t">
+				<div class="display-tc">
+					<div>
+						<span>Prev</span>
+						<h3>你的肥宅快乐水...</h3>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+</div>
+
+</div>
+
+<footer>
+  <div>
+  Copyright &copy; 2022.<a href="/">Small fish, big ocean</a><br>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme <a href="https://lx.js.org" target="_blank">Lx</a><br>
+  </div>
+</footer>
+
+</div>
+
+<button class="hamburger hamburger--arrow-r" type="button">
+    <div class="hamburger-box">
+      <div class="hamburger-inner"></div>
+    </div>
+</button> 
+<div class="menu visibility">
+  <div class="menu-head">
+    <span class="layer">
+      <div class="col">
+        <div class="row for-pic">
+          <div class="profile-pic">
+            <a href="/"><img src="/images/avatar.jpeg" alt="Houyufeng 侯宇峄1�7"/></a>
+          </div>
+        </div>
+        <div class="row for-name">
+          <p>Houyufeng 侯宇峄1�7</p>
+          <span class="tagline">Hello, World!</span>
+        </div>
+      </div>
+    </span>
+  </div>
+  <nav class="menu-container">
+  <ul class="menu-items">
+    <li><a href="/"><i class="fa fa-home fa-fw"></i>Home</a></li>
+    <li><a href="/archives/"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+    
+    <li class="has-sub"><span class="dropdown-heading">
+      <i class="fa fa-bookmark fa-fw"></i>Pages</span>
+        <ul>
+          <li><a href="/guestbook/">Guestbook</a></li>
+        <li><a href="/about/">About</a></li>
+        </ul>
+    </li>
+    <li class="has-sub"><span class="dropdown-heading">
+      <i class="fa fa-link fa-fw"></i>Friends</span>
+        <ul>
+          </ul>
+    </li>
+  </ul>
+  </nav>
+</div>
+
+<div class="gototop js-top">
+  <a href="#" class="js-gotop"><i class="fa fa-arrow-up"></i></a>
+</div>
+<script src="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/js/jquery.easing.min.js"></script>
+<script>
+(function () {
+	"use strict";
+	var goToTop = function() {
+		$(".js-gotop").on("click", function(event){
+			event.preventDefault();
+			$("html, body").animate({
+				scrollTop: $("html").offset().top
+			}, 500, "easeInOutExpo");
+			return false;
+		});
+		$(window).scroll(function(){
+			var $win = $(window);
+			if ($win.scrollTop() > 200) {
+				$(".js-top").addClass("active");
+			} else {
+				$(".js-top").removeClass("active");
+			}
+		});
+	};
+	$(function(){
+		goToTop();
+	});
+}());
+</script>
+
+
+</body>
+</html>

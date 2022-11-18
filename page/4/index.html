@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content=#58b77a>
+  <title>Small fish, big ocean</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Houyufeng 侯宇峄1�7">
+  <meta name="keywords" content="">
+  <meta name="description" content="My blog">
+  <script id="hexo-configurations">
+  var CONFIG = {
+    root: '/',
+    theme: 'hexo-theme-lx-master',
+    version: '0.3.9',
+    localsearch:{
+      "enable": false,
+      "trigger": "auto",
+      "top_n_per_article": 1,
+      "unescape": false,
+      "preload": false
+      },
+    path: 'null'
+  };
+</script>
+
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/css/main.min.css">
+  <style type="text/css">
+    pre,
+    code {
+      font-family: 'Fira Code', monospace;
+    }
+    html {
+      font-family: sans-serif;
+    }
+    body {
+      font-family: sans-serif;
+    }
+    h1, h2, h3, h4, h5, figure {
+      font-family: sans-serif;
+    }
+    .menu-container{
+      font-family: sans-serif;
+    }
+  </style>
+
+  <script src="//cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/js/jquery.jside.menu.js"></script>
+	<script>
+	$(document).ready(function(){
+	$(".menu-container").jSideMenu({
+	    jSidePosition: "position-right",
+	    jSideSticky: true,
+	    jSideSkin: "greenish",
+	     });
+	}); 
+	</script>
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Fira Code:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css">
+<meta name="generator" content="Hexo 6.2.0"></head>
+<body>
+<div id="page">
+
+<div id="lx-aside" style="background-image: url(https://gitee.com/houyufengatgitee/img_bed/raw/master/hexo/cover.jpeg)">
+  <div class="overlay">
+  <div class="featured">
+    <div class="avatar"><a href="/"><img src="/images/avatar.jpeg"></a></div>
+    <span>Houyufeng 侯宇峄1�7</span>
+    <h1>Small fish, big ocean</h1>
+    
+    
+  </div>
+  </div>
+</div>
+
+<div id="lx-main-content">
+  <div class="lx-post">
+
+  <div class="lx-entry padding">
+    <div>
+      <h2 class="title"><a href="/%E9%82%A3%E4%B8%80%E5%A4%9C-%E6%88%91%E7%AB%9F%E7%84%B6%E5%81%9A%E4%BA%86%E8%BF%99%E6%A0%B7%E7%9A%84%E4%BA%8B%E5%84%BF/">那一夜, 我竟然做了这样的事儿...</a></h2>
+      <span class="lx-post-detail"><i class="fa fa-calendar-o"></i> 2021-10-28</span>
+      <p><h1 id="那一夜-我竟然做了这样的事儿…"><a href="#那一夜-我竟然做了这样的事儿…" class="headerlink" title="那一夜, 我竟然做了这样的事儿…"></a>那一夜, 我竟然做了这样的事儿…</h1><center>一</center>
+
+<p>问题: 用Python做数据分析时, 安装相关的包会报错</p>
+<p>解决方案: 请使用我做的一键安装Python数据科学包小工具:)</p>
+<center>二</center>
+
+<p>最近喜欢上了这种写问题解决类文章的结构,就是先说问题和解决方案,而把详细思路放在后面.因为据我观察,大家更喜欢知道如何解决,而不是分析和解决思路.</p>
+<p>话说Python学都学了, 门也入了,不搞搞数据分析实在说不过去. 于是老老实实找来&lt;&lt;Python for Data Analysis, 2nd Edition&gt;&gt;, 翻开第一页, “欲练神功, 挥刀…”, 抱歉串台了, 是”欲练神功, 先装包包”. 包嘛, Python最NB的两大法宝之一.Python之所以NB,就是因为它就像万能的百宝箱, 能满足您的一切需求 (当然了,生理需求还得靠吃喝拉撒睡以及花钱解决,但最近朝阳群众发挥出色,学钢琴有危险…), 而包,就是百宝箱里的宝贝啦.</p>
+<p>按照书的要求, 拿Python搞数据大体需要以下包:</p>
+<blockquote>
+<p>numpy<br>pandas<br>matplotlib<br>lxml<br>seaborn<br>statsmodels<br>scipy<br>patsy<br>scikit-learn<br>beautifulsoup4</p>
+</blockquote>
+<p>我一看, 嘿, 您别说, 除了不认识的, 就是认识的. numpy, Python搞数学的利器, 最近帮我做线性代数作业好用的一批, 那矩阵运算功能, 嗷嗷好用, 比我算的快多了而且没错过, 反正错了我也发现不了. pandas, 之前数据分析入门时用过, 而且还能处理Excel, 好东西. beautifulsoup4, 非常哇塞, Python看家功能 - 爬虫的基础包, 分析HTML, 找个神秘代码什么的, 嗷嗷好用. 剩下的,就是它认识我, 我不认识它了. 不认识没事儿, 装包咱会呀, 给Python装包可比装B简单多了. 走你! 直接打开Windows Terminal, 执行:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install &lt;包名&gt;</span><br></pre></td></tr></table></figure>
+
+<p>然后,我就收到了这样温馨的提示:</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/datapackage/error.png" alt="error info"></p>
+<p>我去, 不是说好要做彼此的天使么, 为何如此为难一个单纯善良的少男? 这满屏的红色都是什么玩意? 没关系, 书中自有颜如玉, 打开 &lt;&lt;Python for Data Analysis, 2nd Edition&gt;&gt;, NB, 不愧是一部超级好的Python数据分析教材, 装包装出错一点没讲, 如此不多赚稿费的行为, 请允许我为您点赞.</p>
+<p>这下就有点尴尬了. 话说我只是个使用者, 说好听点, 数据科学领域的学习者, 难道还没在知识的海洋里徜徉, 我刚到沙滩就被晒太阳的比基尼小姐姐绊倒了? 当然我其实不介意, 只是总觉得中华民族伟大复兴事业刚刚如火如荼开展, 我怎么能就这么四仰八叉躺在知识海洋的沙滩上胡吃闷睡呢? 绝不允许呀! 于是, 我决定动用我不怎么丰富的知识找找思路.</p>
+<p>网络问题? 确实Python的包都是从互联网的库里下的, 但是我已经把库改成了清华大学开源网站, 不会经过太平洋海底的光缆, 无非就是从海淀跑到西城, 这网络还不是咔咔的? </p>
+<p>好吧, 为了确保不是晚高峰堵车导致数据包全卡在了三环路上, 我从网上把需要的包手动一个一个地下载到本地, 我本地离线安装, 这下没问题了吧?</p>
+<p>结果, 奇迹没有出现, Windows Terminal 还是仿佛满山杜鹃花, 红成了一片. 我就奇怪了, 为什么我最爱的 00992号港股就没这么红呢? 8块出头的股价什么时候才能涨到80? 为什么人生不如意, 十有八九? 难道阿拉伯著名哲学家说的都是对的?</p>
+<p>难道是Windows 11的问题? 自从把系统升级到了Win 11, 我已经被漂亮的输入法工具栏迷上了, 甚至为了随时见到它的身影, 我把积攒多年词库的QQ输入法都抛弃了, 你们知道里面有多少优雅的陪伴我成长的词汇? 不可能, 不可能是Windows 11的问题. 我的理性思维告诉我, Windows 11这么漂亮, 不可能会有错! 而且作为 “中国反舔狗协会北京市西城区西长安街街道分会副会长” 同时兼任”中国反颜值即正义协会海淀区马连洼街道软件园分会男秘书”的我, 从不相信长得好看就不会错, 所以肯定不是漂亮的Windows 11的错, 就这么愉快而理智地决定了!</p>
+<p>难道是我包下错了? 不可能, 我的Python是最新的3.10版本, 而我下的每一个包都写明了是 for 3.10, 作为61分高分通过大学四级英语考试的我而言, for 3.10 里的那个for简直就是明白无误地告诉我这是给3.10版Python用的, 怎么可能我下错包? 那种下了一个晚上&lt;&lt;七个男子闯入年轻夫妻家然后发生不可描述事件.mp4&gt;&gt; 最后一看是TM葫芦娃的2B行为, 肯定不是我干的, 我怎么可能下错包? 我怎么可能用512K的ADSL拨号上网下了一宿然后下个葫芦娃…</p>
+<p>包没错, Win 11没错, 我也没错, 大家都没错, 那错的是什么? 难道其实Windows Terminal 里面红色的Error其实是安装完毕的意思? 难道这是美帝的最新阴谋, 目的就是让我这样为中华崛起而奋斗的年轻才俊知难而退? 嗯, 很可能是这样. 我已经决定close掉这个问题, 安然入睡. 但是, 我胸前隐藏的红领巾告诉我, 勇敢的狮子座黄金圣斗士, 要勇敢面对, 不要就这样睡去啊! 而且您睡前不想去个洗手间么?</p>
+<p>唉?! 想去洗手间的念头出现在脑海里, 迅速激活了我大脑丘脑前核群以及穹窿峡的反馈, 难道是这样? 赶紧起床打开笔记本电脑, 对, 是那台ThinkPad W系列移动工作站, 是的, 联想的移动工作站非常好用我的朋友, 赶紧在我的每一行安装代码后面加上了那串神秘的字符:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">TOKYO HOT Original Movie Collection</span><br></pre></td></tr></table></figure>
+
+<p>抱歉抱歉我脑袋调错信息了,是</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install &lt;包名&gt; --user</span><br></pre></td></tr></table></figure>
+
+<p>哈哈哈, 见证奇迹的时刻, 所有包安装完毕! 没有报错! 没有问题! 没有红色! </p>
+<center>三</center>
+
+<p>搞定了包, 我突然想到, 遇到这样问题的肯定不止我一个, 大家都是Python的使用者而非程序员或专家, 遇到问题难道就如此知男而退? 这难道不会让人男上加男或者左右为男? 我觉得, 作为一个受党教育多年的超龄少先队员, 我有必要把安装所有Python数据分析需要的包做成一个简单的能一键成功的工具包, 而且本着开源的精神, 我应该把包以及代码都放到Github上. 于是, 就有了我维护的这个仓库:</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/hou-yufeng/python_packages">Data Science Packages for Python (Github)</a><br><a target="_blank" rel="noopener" href="https://gitee.com/houyufengatgitee/python_packages">Data Science Packages for Python (Gitee)</a></p>
+<p>使用方法很简单, 我也在仓库首页写了readme, 简单到家啦</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/datapackage/123.png" alt="Install instruction"></p>
+<center>四</center>
+
+<p>没想到整个过程最麻烦的不是写bat程序, 也不是下载包, 而是把包放到哪里供大家使用. 放到网盘然后分享? 请允许我对国内的网盘环境表示遗憾. 免费的不好用, 好用的不免费也不敢用就是目前国内网盘市场的现状.</p>
+<p>那就只能Github了. 国内访问Github真是太TM一言难尽了. 整个git push过程令人抓狂, 每次报错的信息都不一样, 要么是”人家去洗澡了”, 要么是”人家要睡觉了”, 要么是”人家要边洗澡边睡觉了”, 要么就是连理由都懒得找了直接就卡那里一动不动. 每次看着Git Bash报错都唤起了我对美国联邦政府的愤恨, 要不是你们瞎闹腾, 我至于还得弄个Gitee仓库玩儿双飞, 不是, 双修吗? 每次挂两个仓库push两次, 你知道我多累吗? 一个已婚带娃男人的肉体, 禁得起这么折腾吗? 不过这次折腾也不是没有收获, 我又知道一件事:</p>
+<blockquote>
+<p>Git上传大文件, 需要安装并启用Git-LFS组件</p>
+</blockquote>
+<p>NB, 从下载到安装全搞定, 问题真的可以Close喽, 睡觉去喽.</p>
+<p>当然了说这些不是让您感谢我, 更不是希望您们为了鼓励我给我发红包转账, 虽然我的支付宝微信随便你们往里转账,但你们都了解我, 我是见钱眼开的人吗? </p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/datapackage/123.jpg" alt="不接受红包"></p>
+</p>
+      <div class="post-button"><a class="btn" href="/%E9%82%A3%E4%B8%80%E5%A4%9C-%E6%88%91%E7%AB%9F%E7%84%B6%E5%81%9A%E4%BA%86%E8%BF%99%E6%A0%B7%E7%9A%84%E4%BA%8B%E5%84%BF/" rel="noopener"><i class="fa fa-angle-double-right fa-fw"></i>Read More</a></div>
+    </div>
+  </div>
+  <div class="lx-entry padding">
+    <div>
+      <h2 class="title"><a href="/%E4%BF%A1%E6%81%AF%E7%A2%8E%E7%89%87%E5%8C%96%E6%97%B6%E4%BB%A3%EF%BC%8C%E6%9B%B4%E8%A6%81%E8%AF%BB%E4%B9%A6/">信息碎片化时代，更要读书</a></h2>
+      <span class="lx-post-detail"><i class="fa fa-calendar-o"></i> 2021-09-26</span>
+      <p><h1 id="信息碎片化时代，更要读书"><a href="#信息碎片化时代，更要读书" class="headerlink" title="信息碎片化时代，更要读书"></a>信息碎片化时代，更要读书</h1><center>一</center>
+
+<p>随着最近某女士回国的消息铺天盖地宏轰炸互联网的各个角落，又一轮正反大辩论开始了。各路人马怀揣着不同的目的和心态纷纷加入，于是又是一番昏天黑地，腥风血雨。人们一方面自己纷纷站队，另一方面给不同意见者挨个儿贴上标签，就和几十年前一样，真是一幅热闹景象。</p>
+<p>眼前的一切纷乱和浮躁，让我前些年开始涌上心头的想法愈加强烈。</p>
+<blockquote>
+<p>信息碎片化时代，我们更要读书。</p>
+</blockquote>
+<p>如果非要论证这个问题的合理性，我觉得大概是这么几个前置公理：</p>
+<blockquote>
+<p>公理一: 信息碎片化带来的问题一，是垃圾信息占比极高。 </p>
+</blockquote>
+<blockquote>
+<p>公理二: 信息碎片化带来的问题二，信息碎片化会导致信息接收方的思维更加趋于二维化和扁平化</p>
+</blockquote>
+<blockquote>
+<p>公理三: 思维趋于二维化和偏平化，会导致更加依赖信息碎片化，从而陷入恶性循坏当中</p>
+</blockquote>
+<blockquote>
+<p>公理四: 思维二维化和偏平化，最终的结果是人无法建立自己的知识和价值体系，失去自我</p>
+</blockquote>
+<p>所以，跳出信息碎片化怪圈的最好办法，就是回到人类最经典最传统最初的信息获取机制：读书。</p>
+<p>读书的好处，那些名人名言早就说烂了，除了那些大家们提到的种种，我对读书最大的感受，就是:</p>
+<blockquote>
+<p>一本书，就是作者一段时间内思想体系的总结</p>
+</blockquote>
+<p>这也是我认为读书区别于其它信息渠道最大的优势。譬如，同样是描写西门大官人，如果你看的是某个自媒体的文章，哪怕是质量再高，那最多也就是个小黄文而已。给读者带来的收获，可能也不过就是一片小爽文罢了。而一旦你看了《金瓶梅》，那你就会穿越几百年的历史，走进一个普通明朝文人的内心，了解他对所处时代的憎恨，批判，否定，以及思考。你还会了解到当时人们的生活方式，市井文化。当然了，还有一些不可描述的文字，其形象，精致，文学价值，也远非现在那些碎片化文章所能比拟。这也正印证了一句话，传播《金瓶梅》小电影是犯罪，传播《金瓶梅》小说就没事，因为人家那是文学艺术，经典名著。</p>
+<center>二</center>
+
+<p>读书的第二个问题，就是选书。选书，我的建议是，先确定你想了解的内容，然后尽量首先选择那些观点更加中立客观的书籍。比如，我目前读的是这本书:</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/read/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20210926171424.jpg" alt="江泽民传"></p>
+<p>原因就是作为80后，我想更深入地了解我的青少年时期，当时这个国家的领导人到底是怎样的。既然主题选定了，在选择书籍的时候，我会刻意避开那些主流的作品，因为可想而知里面会充满很多主观意识的内容，而这些主观的意识对我来说并没有任何参考价值。于是，我选择了一个外国人的著作。当然能在大陆出版，能想象内容上肯定也会有些考虑和调整，但至少，作者描述了大量的客观事实，而不是作者的主观评价和感受。这样，基本读过本书，我就能在自己的知识体系里初步建立一个对他的信息库，从而为下一步进一步丰富和完善这个库而继续学习。如果不是读书，而是从互联网搜集那些快餐信息，那我想我只能得到两种内容：要么是缺少事实支撑的大量的主流观点，要么是带有浓厚意识形态色彩的信息。而这些对我而言，价值就很低了。</p>
+<center>三</center>
+
+<p>我想，对于现在大多数人而言，读书的最大障碍并非是时间。毕竟玩儿手机的时间就足够读书了。读书的最大障碍，应该是很难坚持。我想解决这个问题，最好的办法就是:</p>
+<blockquote>
+<p>别跟自己较劲，读一本自己想读的书</p>
+</blockquote>
+<p>是的，别问自己该读什么书，就问问自己想读什么书。</p>
+</p>
+      <div class="post-button"><a class="btn" href="/%E4%BF%A1%E6%81%AF%E7%A2%8E%E7%89%87%E5%8C%96%E6%97%B6%E4%BB%A3%EF%BC%8C%E6%9B%B4%E8%A6%81%E8%AF%BB%E4%B9%A6/" rel="noopener"><i class="fa fa-angle-double-right fa-fw"></i>Read More</a></div>
+    </div>
+  </div>
+  <div class="lx-entry padding">
+    <div>
+      <h2 class="title"><a href="/%E4%B8%80%E6%AC%A1%E6%88%90%E5%8A%9F%E7%9A%84%E8%83%8C%E8%AF%97/">一次成功的背诗</a></h2>
+      <span class="lx-post-detail"><i class="fa fa-calendar-o"></i> 2021-09-23</span>
+      <p><h1 id="一次成功的背诗"><a href="#一次成功的背诗" class="headerlink" title="一次成功的背诗"></a>一次成功的背诗</h1><p>话说某晚，我给小米查作业，照例，每次我都会帮小家伙查出N个应该做，但没做的作业，这次也不例外，而且是小朋友最不喜闻不乐见得项目，背诗。</p>
+<p>按照之前“熟读唐诗三百首，不会吟诗也会吟”的无脑背诗大法，小米开始了面无表情复读机模式。我在边上表面正襟危坐一脸正经，其实心里想的东西么，似乎也不是那么正经。不过偶尔给一耳朵，发现这次要背的是王安石的《梅花》。</p>
+<blockquote>
+<p>《梅花》 [宋]王安石</p>
+<p>墙角数枝梅，凌寒独自开。</p>
+<p>遥知不是雪，为有暗香来。</p>
+</blockquote>
+<p>我顿时脑子一机灵，顿时思绪万千，心里开始念叨这个名字，王安石。</p>
+<p>最早知道王安石，也是小米这么大，大概就是例行的姓名，年代，头衔，顺便发散一下唐宋八大家以及《元日》《伤仲永》，历史书里再讲讲王安石变法，结束。一个非常平面的人物，给我的最初感觉，就是大哥官做的NB，文章写得NB，还挺喜欢搞创新。</p>
+<p>然后，上高中时迷上了了冯梦龙先生的三言（什么明朝白话小说的代表作都是自我安慰，其实我为什么喜欢看，你懂的。。。），里面关于王安石的篇幅着实不小，反正翻来覆去不是难为人家苏东坡，就是号称“拗相公”，老顽固，嫉贤妒能，跟所有好人做对，实在不怎么招人喜欢。</p>
+<p>直到后来，真正开始读了《宋史》和相关严肃历史著作，了解了檀渊之盟后宋的积弱，了解了李继迁到李元昊三代党项人对中原的烧杀抢掠，了解了吐蕃的扩张，了解了经济繁荣背后的国家羸弱和巨大危机，了解了歌舞升平背后，一群有理想有志气的爱国青年怀抱着远大的志向走上历史舞台，为了国家富强统一，甘愿奉献一生，不惜背上种种骂名。</p>
+<p>王安石，是的，这群曾经豪情万丈的年轻人中，最耀眼的，就是王安石。</p>
+<p>王安石，骂你的，说你顽固，瞎折腾，吃饱了撑的想红。夸你的，会挑起大拇指，说你是真好汉，真豪杰，真英雄。</p>
+<p>王安石自己的想法呢？ 这首《梅花》已经说得很清楚了。我想，如果用我自己的语言去翻译，应该是这样：</p>
+<blockquote>
+<p>我的心中，有一朵花</p>
+<p>它不是雍容华贵的牡丹 &#x2F; 它不是香艳多情的玫瑰 &#x2F; 它不是人人称道的莲花</p>
+<p>它不开在富丽堂皇的高楼 &#x2F; 它不开在秀美写意的庭院 &#x2F; 它不开在人潮涌动的花园</p>
+<p>它不喜欢和煦的春风 &#x2F; 它不喜欢热情的夏日 &#x2F; 它不喜欢多情而丰美的秋天</p>
+<p>它没有香气扑鼻  &#x2F; 它从不引人注目 &#x2F; 它不渴望名利</p>
+<p>它只喜欢在严寒的时刻</p>
+<p>为饥寒中的人们</p>
+<p>送来温暖</p>
+<p>带去清香</p>
+<p>如果你也喜欢它</p>
+<p>请不要寻找它在哪里</p>
+<p>它</p>
+<p>就开放在我的心里</p>
+</blockquote>
+<p>我无所谓。我无所谓你们是否懂我，夸我还是骂我。我的梦想早已告诉我人生的方向。我就是我。</p>
+<p>王安石，中国伟大的改革家，政治家，思想家，文学家。</p>
+<p>是的，把改革家放在第一，这是我心目中王安石的第一头衔。王安石，一个梦想改变世界的男人。</p>
+<p>当我哐哐哐把我的想法向着小米娓娓道来，小米竟然主动开始做起了笔记，然后用更大的声音去读诗。没几遍就背完了。</p>
+<p>这真是一次成功的背诗经历。</p>
+</p>
+      <div class="post-button"><a class="btn" href="/%E4%B8%80%E6%AC%A1%E6%88%90%E5%8A%9F%E7%9A%84%E8%83%8C%E8%AF%97/" rel="noopener"><i class="fa fa-angle-double-right fa-fw"></i>Read More</a></div>
+    </div>
+  </div>
+  <div class="lx-entry padding">
+    <div>
+      <h2 class="title"><a href="/%E5%A5%87%E5%A5%87%E6%80%AA%E6%80%AA%E5%8F%AF%E5%8F%AF%E7%88%B1%E7%88%B1/">废话，就是没用的话？</a></h2>
+      <span class="lx-post-detail"><i class="fa fa-calendar-o"></i> 2021-09-14</span>
+      <p><h1 id="废话，就是没用的话？"><a href="#废话，就是没用的话？" class="headerlink" title="废话，就是没用的话？"></a>废话，就是没用的话？</h1><blockquote>
+<p>“听君一席话，如听一席话”</p>
+<p>“这个点还没睡的人，一定还没睡吧。”</p>
+<p>“谁能想到，一名16岁的少女，4年前只是一位12岁的少女？”</p>
+<p>“嘿，咱老北京人，早上一睁眼，您猜怎么着？醒了！”</p>
+</blockquote>
+<p>最近不知为何，突然开始盛行废话梗。看着满篇废话，想必你我的内心颇为崩溃。</p>
+<p>可是，请想想一下，如果您收到了一段这样的文字：</p>
+<p>“</p>
+<ul>
+<li>以求真务实的态度，积极参与综合调研。 </li>
+<li>以为领导决策服务为目的，把好信息督查关。 </li>
+<li>以体现xx水平为责任，进一步规范工作。 </li>
+<li>以畅通安全为保障，全力指导机要保密工作。 </li>
+<li>以立此存照为借鉴，协调推进档案史志工作。 </li>
+<li>以安全稳定为基础，积极稳妥做好信访工作。 </li>
+<li>以服务机关为宗旨，全面保障后勤服务。 </li>
+<li>以整体推进为出发点，协调做好xx工作。 </li>
+<li>以周到服务为前提，xx工作迅速到位。 </li>
+<li>以提高服务水平为目标，开始推行xx。</li>
+</ul>
+<p>“</p>
+<p>此时最能代表你内心真实感受的感想，会是什么呢？ 你早已厌恶这样的官样文章，你早已疲于应对浮夸的面子工程，你对形式主义深恶痛绝，你觉得这些信息都是彻头彻尾的垃圾信息。</p>
+<p>可是你不敢说。 《皇帝的新衣》并不是童话，是现实。混迹社会多年，你不敢说你的真实想法。但你又有你的坚持，你的原则，你不想违背自己的底线，你怎么办？</p>
+<h3 id="“听君一席话，如听一席话”"><a href="#“听君一席话，如听一席话”" class="headerlink" title="“听君一席话，如听一席话”"></a>“听君一席话，如听一席话”</h3><p>于是，你也说了一句废话。但是，你的废话里隐藏了你的真情实感，你用这句废话表达了你的坚持，你的原则，你的底线。你用这句废话表达了你对废话的态度，总结起来，废话梗在我看来，最大的闪光点在于：</p>
+<blockquote>
+<p>表达态度，放弃对抗。不想躺平，接受命运。</p>
+</blockquote>
+<p>我想，这也就是我心目中年轻人的样子，勇敢，坚强，幽默，乐观，在生活的压力和理想与现实的差距面前，可以低头，但从未放弃。</p>
+<p>向年轻人学习！</p>
+</p>
+      <div class="post-button"><a class="btn" href="/%E5%A5%87%E5%A5%87%E6%80%AA%E6%80%AA%E5%8F%AF%E5%8F%AF%E7%88%B1%E7%88%B1/" rel="noopener"><i class="fa fa-angle-double-right fa-fw"></i>Read More</a></div>
+    </div>
+  </div>
+  <div class="lx-entry padding">
+    <div>
+      <h2 class="title"><a href="/%E9%87%8A%E6%80%80%EF%BC%8C%E6%98%AF%E6%9C%80%E5%A5%BD%E7%9A%84%E5%81%87%E6%9C%9F/">释怀，是最好的假期</a></h2>
+      <span class="lx-post-detail"><i class="fa fa-calendar-o"></i> 2021-09-14</span>
+      <p><h1 id="释怀，是最好的假期"><a href="#释怀，是最好的假期" class="headerlink" title="释怀，是最好的假期"></a>释怀，是最好的假期</h1><center>一</center>
+
+<p>我几乎不怎么看电视剧，尤其国产电视剧，尤其是现代都市题材的国产电视剧。瞎耽误功夫不说，现代都市题材国产电视剧是烂片的重灾区。 一帮大傻X在富丽堂皇且具有浓厚工作室风格的办公室里上演着一幕幕和现实脱节的狗血剧情。俊男靓女们勾心斗角谈情说爱，可就是TMD不干活儿不工作。有点良心的导演，好歹还能在办公室拉上帘来点少儿不宜的情节，如果碰上又没良心又没脑子的导演，那就没一点盼头了。</p>
+<p>所以，现代都市题材国产电视剧对我而言，不说吸引，怕是连一点共鸣都没有，直到我碰上了B站出品的这部《突如其来的假期》。</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/ladytough/p2671372133.jpg" alt="海报"></p>
+<p>至于怎么碰上的，说来颇有缘分。B站给我推送了一个视频，正是这部剧的片段，一个姐们儿挤公交时摔倒了，直接躺在了地上。结果这个姐们儿没着急站起来，也没顾忌路人的眼光，而是躺在地上，看起了天上白云飘过，给自己放了个小假。</p>
+<p>这样的剧情，一般人可能很难引起共鸣，可是我岂是一般人？曾经某日，恰好春暖花开，我骑车到单位，结果刚进大门，也不知道怎么搞的，我就在同事们面前结结实实从我的捷安特XTC 820上直接飞了出去，然后结结实实臀部先着地，然后结结实实躺在了地上。话说当时还没来得及尴尬，也没来得及接收人们的惊呼，躺在地上的我突然发现，自己原来是摔在了路边的草地上。感谢我的250的大脑，老兄也可能看到我躺下的姿势过于安逸，于是切断了我与外界的联系，反而第一时间让我闻到青草的香气，看到了蓝天，白云。于是，我干脆翘起腿，把胳膊垫在脑袋后面，就这么哼着口哨数云彩。捷安特也了解到了我的情绪，于是没有着急向我报告它哪儿摔疼了。就这样，一人一车，在公司大门口的草地上，度过了一个短暂的假期。</p>
+<p>所以现在您明白我为什么要安利这部剧了。就这么一个情节，击中了我的内心。选剧如选人，不求面面俱到，只要有一个点能契合，那就是知己呀。</p>
+<center>二</center>
+
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/ladytough/p2670132119.jpg" alt="海报2"></p>
+<p>现代女性，都市，怎么想怎么觉得这种题材招人反感，弄不好就两头不待见。好在这部剧的角度比较独特，从女主的内心视角出发，在颇为夸张的剧情中，通过女主出人意料的行为，一点点展示出女主从懵懂，纠结，苦闷，宣泄，到寻找，探求，和解，最终释然的一段人生经历。剧情颇多脱离现实的情节，但这种经历，想必是每个人都要经历的。这正是这部剧能让我看下去的第二个原因。</p>
+<center>三</center>
+
+<p>我们每天都会面对不同的问题，有的只和我有关，有的也会牵涉到别人，但说到底都和我有关。而这些问题之所以成为问题，因为我拿不出更好的解决办法呀。夫妻关系，亲子关系，子女教育，个人发展；今天食堂大妈给我盛的鸡丁真TM少，卫生间防水没做好，骑车没有非机动车道，最近疫情又厉害了，升职加薪依然遥远。。。大的小的，有的没的，这些问题，就像八大行星围着太阳一样甩不开。对了，说着说着就多了个问题，为什么那些科学家把冥王星给开除了？不知道九才是圆满的数字吗？冥王星需要你们开工资？多算一个怎么了？？？</p>
+<p>面对问题，最令人心力憔悴的，怕就是无解。越长大，我以为我懂得越多，结果阅历的增加远远赶不上问题的增速。鸡汤？鸡腿都无法治疗我了。就像没有攻略的游戏，好不容易稀里糊涂打败了BOSS，结果发现这个BOSS只是另一个BOSS的小弟，艹。</p>
+<p>在问题面前，特立独行是个很好的姿态。注意，是姿态，不是解决办法。特立独行确实会让自己觉得很爽，很自由，无所畏惧，在问题面前，谁不想说一句WQNMLGBD？可是特立独行，是需要勇气，更需要底气的。</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/ladytough/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20210803151137.jpg" alt="剧照1"></p>
+<p>特立独行，追求梦想，个性解放，这些看起来很NB的字眼，其实最大的障碍就是成本。你我皆凡人，普通老百姓，资质平庸，就是空有一番个性，又有多少资本去追求？更何况，多数人连自己追求的是什么都搞不明白，只是为了不同而不同，为了个性而个性，那又有什么用？</p>
+<p>本剧则试图用12集的篇幅，向我们展示了女主及身边的朋友是如何面对这些问题。她们的经历完全不同，处于的人生阶段完全不同，面临的情况也完全不同。但她们分别用自己的态度去面对，成长，她们最终没有找到答案，但是她们都在内心深入给自己放了一个假 - 接纳，然后释怀。不讲大道理，这是我能看下去的第三个原因。</p>
+<center>四</center>
+
+<p>带有喜剧标签，难免会加入一些荒诞的内容。装怀孕请假，要把别人扔的破烂沙发搬回家，为了省饭钱不停相亲。。。看起来离我们的生活如此遥远，但仔细想想，这些情节没在我的身上发生过，就是不真实么？ 如同女主摔倒后不站起来，躺在那里看蓝天，也许别人眼中是如此荒谬，可这却是我的真实操作呀。</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/ladytough/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20210803151141.jpg" alt="剧照2"></p>
+<center>五</center>
+
+<p>对于我喜欢的，在意的，觉得有趣的，我会想办法去辩护。反之，则多一分都不会关注，不是鄙视，不是抨击，而是无视。唯一算是反击的，应该就是有时，我会故意展示自己的弱点或错误作为陷阱，然后看着别人一下子踩进去。欣赏别人着在我面前展示着优秀，我却暗中享受“你果然如我所想”的快乐。也许，这也是一种释然的态度。我不愿你如此，但我知道世事本来如此，所以我接受你如此，而你果然如此，所以世事果然如此。世界和我想的不一样，但世界和它自己很一样，所以如果我想的能和世界一样了，不也就释怀了？</p>
+<center>六</center>
+
+<p>这部剧能让我看下去的第四个原因，则是时长。类似日剧一样的短小精干，12集，每集30分钟。每集一个主题，由一个极短的情景喜剧引出本期，结尾以女主写给父亲的信作为结束，前后呼应，看着不累。</p>
+<center>七</center>
+
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/ladytough/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20210803151145.jpg" alt="剧照四"></p>
+<p>看下去的第五个原因，风景。对于精致的滨海城市，我从来没有抵抗力。大连，青岛皆是如此，而本剧选择的拍摄地厦门，同样符合。曲折蜿蜒的老街，朝气蓬勃的新马路，还有无需加任何修饰词的海边。情节无聊，看看景色不是也挺好？</p>
+<center>八</center>
+
+<p>剧名《突如其来的假期》，有点像《东京爱情故事》的主题曲《突如其来的爱情》。而本剧女主，性格和相貌也有三分像《东爱》女主角赤名莉香。算是安利本剧的第六大原因吧。</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/ladytough/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20210803151116.jpg" alt="剧照六"></p>
+<center>九</center>
+
+<p>嗯嗯，你看，科学家们凑不齐九大行星，而我硬是凑了9个章节。其实写作本文时，这部电视剧我才看了一半。但是无所谓了，哪怕后面都时糟粕，我也喜欢，我也安利。所谓假期，并非真得要郑重其事请上几天年假，然后跑到另一个地方吃喝玩乐。只要有这么一个时间，一个场景，一个片段，你放松了，然后放下了，这不就是一个跟好的假期么？</p>
+<p>释怀，是最好的假期呀。</p>
+</p>
+      <div class="post-button"><a class="btn" href="/%E9%87%8A%E6%80%80%EF%BC%8C%E6%98%AF%E6%9C%80%E5%A5%BD%E7%9A%84%E5%81%87%E6%9C%9F/" rel="noopener"><i class="fa fa-angle-double-right fa-fw"></i>Read More</a></div>
+    </div>
+  </div>
+  <div class="lx-entry padding">
+    <div>
+      <h2 class="title"><a href="/%E6%88%91%E8%83%A1%E6%B1%89%E4%B8%89%E5%8F%88%E5%9B%9E%E6%9D%A5%E4%BA%86/">乡亲们，我胡汉三又回来了</a></h2>
+      <span class="lx-post-detail"><i class="fa fa-calendar-o"></i> 2021-09-13</span>
+      <p><h1 id="乡亲们，我胡汉三又回来了"><a href="#乡亲们，我胡汉三又回来了" class="headerlink" title="乡亲们，我胡汉三又回来了"></a>乡亲们，我胡汉三又回来了</h1><p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/lovelyinternet/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20210913165651.jpg" alt="我的故事"></p>
+<center>一</center>
+
+<p>话说从8月2日更新完长白山之行的照片，我已经一个多月没更新Blog了。相信关心我的N个朋友们 （请别揭露N &#x3D;&#x3D; 0的事实，我的心会痛。 至于为什么是两个等号，咱也是Python从入门到接近出家的水准了，一个&#x3D;是赋值啊大兄弟，两个&#x3D;才是真的等于呀），一定会奇怪这段时间我在干什么。好的，下面我就满足N个朋友们的小渴望，下面我要自爆八卦时间啦！</p>
+<p>话说这段时间，我的主要精力在:</p>
+<blockquote>
+<ol>
+<li>工作 (勤恳老黄牛的人设你们爱信不信，我反正信了)</li>
+<li>俩米的暑假作业以及补作业 (小齐同志给予了我很高评价，说俩孩子对待暑假作业的态度跟我是一样一样的，过奖过奖)</li>
+<li>小米的机器人二级考试 (好吧，现在乐高课的老师们也都听过了我对小米的怒吼，好爸爸的人设是彻底立不住了，有点想自暴自弃了呢)</li>
+<li>陪小齐玩儿哈利波特手游 (其实我这么正直，是拒绝游戏的，玩物丧志的道理谁都懂，所以赢下这局我就不玩儿了，只是比我还弱的玩儿家怎么就没有呢我了个去)</li>
+<li>什么都不想干，就想待着</li>
+</ol>
+</blockquote>
+<p>但我知道，如果再这么下去，好不容易养成的写Blog的习惯就会就此中断，更严重的是，那种每天找时间学习，思考，总结 的节奏也就此结束，而我，也许又将陷入每天庸庸碌碌，两只眼睛不会眺望天空的循规蹈矩状态。我听到了自己内心的呼喊：</p>
+<blockquote>
+<p>我再也不要回到那个状态了，可以平凡，但真TM不能平庸啊</p>
+</blockquote>
+<p>于是，我决定，回来。</p>
+<center>二</center>
+
+<p>话说我准备先git pull然后开始写作，结果就遇到这个问题:</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/lovelyinternet/passwordisfailed.png" alt="Github不再支持密码登录"></p>
+<p>？？？ 我不在的日子里，坏坏的GitHub竟然不再允许用密码登录，而是必须用网站生成的Token,这是什么骚操作？ 再一看，我去，竟然是从8月13日就开始了，话说那天不是七夕节么，为什么微软选择这么一个普天同庆炮火连天的日子干这个，岂不是让我中华大好高质量程序员男儿只能忙着改git设置？ 真是危害性不大，侮辱性极强啊。</p>
+<p>话说回来，为什么我写作前先要Git Pull? 因为我其实写作地点是飘忽不定的，基本上几台笔记本都是我的写作平台，而我用的HEXO博客系统偏偏是基于本地的，这就要求我每台笔记本都需要有完整的文章备份，不然一旦在某台文章不全的笔记本发布，那我的Blog网站上的文章也就跟着参差不齐啦。</p>
+<p>而在不同电脑之间进行数据同步和版本管理的，还有比Git跟好用的玩意吗？ 有机会，有机会我跟您聊聊Git和GitHub，绝对是工作学习的好朋友好伙伴。</p>
+<center>三</center>
+
+<p>话说按照GitHub的提示改成用Token登录，赶紧同步好之前的文章，终于可以开始新的写作喽。最近发生的事情其实挺多的，很多东西都想总结总结，一时竟然不知道从何说起。那还是说孩子吧。</p>
+<center>四</center>
+
+<p>这周，小米的机器人等级考试总算结束了。能不能通过已经不重要了，重要的是在整个学习和考试的过程中，我再一次感受到了教育的重要性。</p>
+<p>不是教育孩子，是教育父母。</p>
+<p>小米这孩子，相对于一会儿一个主意，超级自信的大米来说，其实性格是慢热的。同样进入一个新的领域，大米是东张西望，这里捅一下，那边给一脚，错了也无所谓，所以大米在学习新东西的时候，往往进展会快一些。小米则显得不那么自信，这也不敢试，那也不敢碰，导致学习进度会更缓慢。偏偏我这脾气有比较急躁，直接结果就是对小米的要求让小家伙无所适从，从而更加不自信，更加不敢尝试，恶性循环下去，小米也学不高兴，我也挺着急，结果可想而知。</p>
+<p>其实在孩子的教育问题上，我一直认为，在教给孩子自信的问题上，爸爸责无旁贷。一个男人，可以没那么细心，可以不怎么勤快，但是在孩子需要支持，需要鼓励，需要保护的时候，爸爸必须第一个站出来，并且无条件支持孩子。很遗憾，似乎我距离自己设定的及格线好像差的很远。我问题在于，上限其实挺高，孩子不敢淘气，我带头淘气然后爷儿俩一块儿挨说的事儿没少干，因此孩子们其实还挺喜欢和我玩儿，但问题在于，我下限太低了，赶上每个月状态不好的那几天，真是点火就着，我甚至怀疑俩米可能会觉得我精神有问题？</p>
+<center>五</center>
+
+<p>从大米出生的第一天，我就一直被一个问题困扰，孩子会喜欢我这个爸爸的设定么？ 做我的孩子，会幸福会开心么？我真能做好么？直到后来，在小齐的帮助下，我明白了一个道理，多陪伴。真的要多陪伴。想当好父母的焦虑是无法根除的，唯有陪伴，可以解忧。</p>
+<center>六</center>
+
+<p>我的Blog里之前一直坚持更新的Python教程，可能要暂停更新了，原因就是我想继续在Python的数据分析这块再深入学习学习。现在的to-do列表已经很长了，所以我想先集中精力各个击破。Python这块我会使用更有效率的办法和您分享我的心得，比如完成的小代码的分享，比如心得体会。当然，我更希望自己的Blog能更好玩儿更有趣，而不是骂街吐槽的场所。</p>
+<p>OK，就这样，再见，88，哈哈</p>
+</p>
+      <div class="post-button"><a class="btn" href="/%E6%88%91%E8%83%A1%E6%B1%89%E4%B8%89%E5%8F%88%E5%9B%9E%E6%9D%A5%E4%BA%86/" rel="noopener"><i class="fa fa-angle-double-right fa-fw"></i>Read More</a></div>
+    </div>
+  </div>
+  <div class="lx-entry padding">
+    <div>
+      <h2 class="title"><a href="/%E6%9C%8B%E5%8F%8B%EF%BC%8C%E4%BD%A0%E5%8F%AF%E8%83%BD%E5%BE%97%E6%9C%89%E5%BA%A7%E5%B1%B1/">我的心里，多了座山</a></h2>
+      <span class="lx-post-detail"><i class="fa fa-calendar-o"></i> 2021-08-02</span>
+      <p><h1 id="我的心里，多了座山"><a href="#我的心里，多了座山" class="headerlink" title="我的心里，多了座山"></a>我的心里，多了座山</h1><p>之前和小齐自驾趟川藏线，走了一圈川西川北，被高反折腾得上吐下泻之余，却也见识到了山的美丽。有雪的，有树的，有缆车的，有温泉的，有6000多米的。。。 当时的感觉是，每天都生活在哇塞之中，到后来多巴胺已经不够用的了，到后来都有点贤者模式。。。 那次之后，我对山开始有了一种满足感，似乎不太像再看什么山了，直到某天，我突然想起来，好像山顶有个大湖的，我还没看过呀！得嘞，长白山，天池，走着！</p>
+<p>交通不必赘述，到了长白山才知道，敢情这长白山看天池可以从北东南三个坡都可以看，唯独东坡不行，因为东边不是我们的领土。于是我从最经典的看天池的西坡入手。吭哧坑出怕了1442级台阶，2700多米都快逼出了高反的快乐回忆，好在天公给面子，于是我第一次看到了天池。</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/%E9%95%BF%E7%99%BD%E5%B1%B1/IMG_20210727_103153__01.jpg" alt="天池1"></p>
+<p>蓝宝石般的湖水就这么安静镶嵌在山顶。水下如何暗流涌动我不晓得，但水面竟然如此平静，对于观景台上的人们的赞叹全无反应。酷，太酷。</p>
+<p>从西坡还能看到中朝两国的界碑。这也应该是我离国境线最近的一次。不过总觉得这个国界怪怪的。长白山作为满族祖先发祥之地，当初被康熙敇封长白山之神礼典如五岳，并下令封禁圣山，怎么现在就成了中朝界山，而且还有一部分成了朝鲜领土，真是奇怪。好在小齐劝我与揽胜无关之事，不必多想，那就这样吧。</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/%E9%95%BF%E7%99%BD%E5%B1%B1/IMG_20210727_100717__01.JPG" alt="界碑"></p>
+<p>从西坡回来，得知南坡就在这个月刚刚开放，于是又奔向南边。100多公里的路程从长白山西绕到南，可见长白山有多大。到了南坡，潦草走了一小段路，就看到了另一个天池:</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/%E9%95%BF%E7%99%BD%E5%B1%B1/IMG_20210729_121207__01.jpg" alt="天池2"></p>
+<p>由于南坡更高，视野更广阔的，天池的形象也更加清晰。而南坡的风景，远不止天池一处。如背向天池一侧，则是我中华大好河山:</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/%E9%95%BF%E7%99%BD%E5%B1%B1/DJI_20210729_124100_191_pano__01.jpg" alt="天池2"></p>
+<p>皑皑白云下，山清水秀，壮丽雄浑，大美。</p>
+<p>从南坡上山，还能看到瀑布，而雨云，则就在头顶飘过。</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/%E9%95%BF%E7%99%BD%E5%B1%B1/IMG_20210729_141359__01.jpg" alt="瀑布"></p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/%E9%95%BF%E7%99%BD%E5%B1%B1/IMG_20210729_115338.JPG" alt="雨云"></p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/%E9%95%BF%E7%99%BD%E5%B1%B1/IMG_20210729_134448.JPG" alt="雨云"></p>
+<p>当然，还有铁丝网把长白山一分为二。</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/%E9%95%BF%E7%99%BD%E5%B1%B1/IMG_20210729_132156__01.jpg" alt="国境"></p>
+<p>西南坡都看到了天池，北坡就没在上去，而是在周边转了转。</p>
+<p>北坡的瀑布，68米高。</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/%E9%95%BF%E7%99%BD%E5%B1%B1/1627623389597.jpg" alt="瀑布"></p>
+<p>北坡的山峦更陡峭</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/%E9%95%BF%E7%99%BD%E5%B1%B1/IMG_20210730_123602.JPG" alt="北坡"></p>
+<p>长白山的植被极为丰富，原始森林覆盖了87%的山区。</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/%E9%95%BF%E7%99%BD%E5%B1%B1/IMG_20210727_131127__01.jpg" alt="长白山"></p>
+<p>花，草，树，长白山美丽的外衣。</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/%E9%95%BF%E7%99%BD%E5%B1%B1/IMG_20210729_141710__01.jpg" alt="花"></p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/%E9%95%BF%E7%99%BD%E5%B1%B1/IMG_20210729_142320.jpg" alt="花"></p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/%E9%95%BF%E7%99%BD%E5%B1%B1/IMG_20210729_141232__01.jpg" alt="花"></p>
+<p>住在长白山，美不胜收。</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/%E9%95%BF%E7%99%BD%E5%B1%B1/dji1627441669037.jpg" alt="住宿"></p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/%E9%95%BF%E7%99%BD%E5%B1%B1/dji1627441668702.jpg" alt="住宿"></p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/%E9%95%BF%E7%99%BD%E5%B1%B1/dji1627441668588.jpg" alt="住宿"></p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/%E9%95%BF%E7%99%BD%E5%B1%B1/IMG_20210728_134935.jpg" alt="住宿"></p>
+<p>我的心里从此多了一座山的名字。</p>
+</p>
+      <div class="post-button"><a class="btn" href="/%E6%9C%8B%E5%8F%8B%EF%BC%8C%E4%BD%A0%E5%8F%AF%E8%83%BD%E5%BE%97%E6%9C%89%E5%BA%A7%E5%B1%B1/" rel="noopener"><i class="fa fa-angle-double-right fa-fw"></i>Read More</a></div>
+    </div>
+  </div>
+  <div class="lx-entry padding">
+    <div>
+      <h2 class="title"><a href="/%E5%AE%9D%E8%B4%9D%E5%84%BF%EF%BC%8C%E4%B8%80%E8%B5%B7%E5%AD%A6Python-7/">宝贝儿，一起学Python - 7</a></h2>
+      <span class="lx-post-detail"><i class="fa fa-calendar-o"></i> 2021-07-17</span>
+      <p><h1 id="宝贝儿，一起学Python-7-今天咱们做个任务-前篇"><a href="#宝贝儿，一起学Python-7-今天咱们做个任务-前篇" class="headerlink" title="宝贝儿，一起学Python - 7  今天咱们做个任务 前篇"></a>宝贝儿，一起学Python - 7  今天咱们做个任务 前篇</h1><p>本文同步发表于我的blog <a href="https://smallfish-bigocean.github.io/%E5%AE%9D%E8%B4%9D%E5%84%BF%EF%BC%8C%E4%B8%80%E8%B5%B7%E5%AD%A6Python-7/">小鱼游大海</a></p>
+<center>一</center>
+
+<p>经过一学期鸡飞狗跳，俩米终于迎来了假期，以及。。。</p>
+<p>假期作业。</p>
+<p>话说小齐同学把学校留的大米假期作业中的口算部分要求让我看了一下，我一下子头就大了，话说，这要求是不是多了点？？？</p>
+<p>口算内容包括:</p>
+<ul>
+<li>整十除以一位数</li>
+<li>整百除以一位数</li>
+<li>整千除以一位数</li>
+<li>几百几十除以一位数</li>
+<li>两位数乘以一位数</li>
+<li>几百几十数乘以一位数</li>
+<li>两位数乘整十</li>
+<li>两位是乘整百</li>
+<li>一位小数加减口算</li>
+</ul>
+<p>每天口算都得包含这九部分内容，做题的同学什么心情我不知道，我这负责出题的反正是想静静。我正准备盘算盘算是用小猿口算或者作业帮之类的出题呢，还是百度一下呢？但是要求内容这么多，怎么想怎么觉得都不靠谱，想一键生成每天的口算题，太难了。</p>
+<p>等等。</p>
+<p>先等等。</p>
+<p>一键。。。？？？</p>
+<p>是的，每次我想偷懒，省事儿把活儿干了，我的脑海里仿佛出现一个声音。</p>
+<blockquote>
+<p>何不用Python乎？</p>
+</blockquote>
+<p>脑子里赶紧过一下大概其的任务流，出题，输出到Excel，排版，然后循环这一过程就可以实现一键生成每天的口算作业。。。这哪一步Python都能干那！</p>
+<p>得嘞，这下子我连这期的Python选题都有了。今天，我和您一起，咱们研究研究如何用Python做一个完整的程序。</p>
+<p>任务要求: 生成42份假期口算题，Excel格式。要求每份Excel文件包含以上所有内容要点的口算题，每个要点5道题，一共45道题。这些题要求排版规范。以上工作要求一键生成，后续只需要批量打印生成的Excel文件，无需进入Excel编辑任何内容。</p>
+<p>实现的效果，大概就是:</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/python/%E7%94%9F%E6%88%90%E5%8F%A3%E7%AE%97.gif" alt="结果"></p>
+<center>二</center>
+
+<p>目标明确了，下面我们得好好想想这个事情怎么做。按照项目管理中学到的知识，咱们先把项目拆分成一个一个的工作包，或者说，基本单元。</p>
+<p>程序大概分成三部分，生成口算题，输出到Excel，然后对Excel进行排版。口算题这部分很简单，用随机数就能解决。输出到Excel，目前我的知识库里openpyxl或Pandas都能完成。至于排版，显然这就是openpyxl负责实现了。</p>
+<p>好的，工作包拆解完毕，而且每个工作包都能有技术实现，差不多可以动手了。别看咱PMP认证过期好久了，关键内容还是记得的，看来我这张旧船票，还有机会登上人生巅峰的客船那！</p>
+<p>说到这里您肯定骂街了。上一篇刚刚说完Python中列表这种数据结构，怎么这次又是随机数，又是openpyxl，甚至连奠定Python数据分析龙头地位的Pandas都出来了，你这是要干嘛？</p>
+<p>这正是我在学习Python中学到最好的学习方法，今天借此机会介绍给您，就是:</p>
+<blockquote>
+<p>边学边用，边用边学。学是用的方法，用是学的目的</p>
+</blockquote>
+<p>我们这个人生阶段学东西，不是为了学历，也不是为了证书，转行显然也不是特别实际。更多的时候，我们希望能引入新的思路解决我们的问题，让我们的时间更有效率，让我们的人生更有意义，最起码的，我们不会觉得自己是机器，是工具。</p>
+<p>请问，如果您需要先把所有Python的相关知识都学明白才开始干活儿，您学的明白么？您学得完么？难道不把《Oxford Advanced Learner’s Dictionary》背完，咱还不开口说英文了？</p>
+<p>Python就像一座陌生的城市，我们并不需要认识这个城市的每个角落。我们只要了解交规，分得清方向，我们就能在这座城市里徜徉，而指引我们的导航，就是网上丰富的Python教程和资源。而我，仅仅是负责把您带到这座城市的高速出口而已。</p>
+<center>三</center>
+
+<p>第一个工作包，出口算题。我特别推崇一种学习做事的思路，就是我们在整理分析一件事情的逻辑时，最好的办法就是自己先走一遍，然后抓规律。比如，口算题里有这么一项内容:</p>
+<blockquote>
+<p>整十除以一位数</p>
+</blockquote>
+<p>如果是我人工出这道题，会是怎样的思路呢？</p>
+<ol>
+<li>我先随便想一个一位数，然后乘以10，这就得到了一个整十数。这个一位数显然不能是0。</li>
+<li>我再想一个一位数，然后用刚才的整十数除以这个一位数。显然，这个一位数不能是0，这样会让除法算式不成立。当然也不能是1，这会让大米乐出鼻涕泡，众所周知，合格的父母是不会让孩子欢乐过假期的。。。</li>
+<li>然后，我还会想想这个整十数能不能被一位数整除呢？ 如果行，那这道题就是一道好题，可以存到Excel里让大米做。如果不行，那这道题就作废了，我还得再想一个，直到我找到一个能被整除的算式为止。</li>
+<li>我需要找出5道这样的算式。</li>
+</ol>
+<p>因此，出一道好题的逻辑就应该是这样的:</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/python/Diagram1.png" alt="flow"></p>
+<p>这里显然我们需要Python给我们提供这么几个帮助:</p>
+<ol>
+<li>生成随机数</li>
+<li>连续生成5道好题</li>
+</ol>
+<p>通过分析，我们会发现，其它8种题目要求其实也都需要且仅需要Python提供这两个功能就行了，无非就是随机数的用法不一样而已。</p>
+<p>下面，我们就打开浏览器，百度”Python 生成随机数”。Python的学习，离不开搜索引擎的帮助。</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/python/baidu.png" alt="baidu"></p>
+<p>我们看看搜索结果，第一条是百度匹配的最佳答案，第二个是菜鸟教程提供的答案，第三个，看网址就能知道这是Python官网的文档。一般而言我比较推荐菜鸟，您甚至可以把菜鸟教程当做Python词典一样使用。我们看看菜鸟是怎么说的。</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/python/cainiao1.png" alt="菜鸟"></p>
+<p>怎么样，有例子有讲解，还愁学不会么。</p>
+<p>这里有几个小细节，您注意一下:</p>
+<ol>
+<li><p>实例里是真正的代码，#之前说过，#起头的这行文字是注释，菜鸟把对代码的解释写在了这里。</p>
+</li>
+<li><p>咱们之前写代码时都是直接print()，这次多了一个import。是这样。我们用Python写程序时，会调用各种Python提供的功能(好吧，行话叫函数，其实英文都收function)，我们就当是各种工具吧。这些工具，有的存放在Python随身的包包里，我们叫内置库，内置库的工具，我们拿过来就用，比如print()，您新建一个Python程序文件，上来就写print(‘小侯哥哥你真帅’)，保证正常运行，不会有任何报错或反对意见。第二种，是标准库，这种库里的工具也是Python自带的，但是和内置库不一样的是，这些工具不是Python随身携带的，而是存在Python库房里的，因此需要请Python去库房把工具拿出来，具体的语法就是上面实例给出的:</p>
+<blockquote>
+<p>import &lt;库名&gt;</p>
+</blockquote>
+<p>这里的库名就是您需要的工具所在的库房。至于您需要的功能是哪些Python工具提供的，而这些工具又是在哪些仓库里，就得查Python文档了，说白了，就得百度。像这次，我们需要Python提供随机数功能，就得需要引入random仓库，然后使用这个库里的randint工具来生成一个随机数。</p>
+</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> random <span class="comment">#导入random库房，这个库房里存放着各种生成随机数的工具</span></span><br><span class="line">random.randint(a,b) <span class="comment">#使用random库房里的randint方法，这个方法用来生成随机的整数，生成范围介于整数a和b之间。我们通过给randint传参数a和b的方法来告诉Python我们想要的随机整数的范围。</span></span><br></pre></td></tr></table></figure>
+
+<p>把这个过程转换成一般性的格式，就是:</p>
+<blockquote>
+<p>import 库名</p>
+<p>库名.工具名(可选参数1，可选参数2…)</p>
+</blockquote>
+<p>所以，生成一个整十数可以这么弄:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> random    </span><br><span class="line">double_digit = <span class="number">10</span>*random.randint(<span class="number">1</span>,<span class="number">9</span>) <span class="comment">#用一个非0一位数乘以10，岂不就是整十数了</span></span><br><span class="line">divisor = random.randint(<span class="number">2</span>,<span class="number">9</span>) <span class="comment">#再生成一个一位数当除数，前面说了，除数不能是，也不能是1</span></span><br></pre></td></tr></table></figure>
+
+<p>这里我创建了两个变量double_digit和divisor来存放整十数和一位数分别当被除数和除数。用变量存放数值好处多多，比如好记好理解，利于重复使用。当然了，这里我建议变量尽量起名起的有意义一点，尤其是有实际意义的。不然程序里全是x &#x3D;, y &#x3D;，读起来会特别费劲，您会有一种解多元方程的感觉。</p>
+<p>好了，现在我们创建了被除数和除数，下面我们还得看看，被除数能否被除数整除？如果能，那这道题就是一道好题。于是，我们要请出所有编程都会涉及的最基础概念，条件。</p>
+<p>条件本身在我们的生活中就是无处不在的。条件给的合适，我就追求这份工作；姑娘长得漂亮，我就没事多跟人家搭搭话；后面司机老拿远光晃我，我就。。。在编程中，条件也是极为重要的十字路口，它能决定下面程序要做什么。</p>
+<p>“被除数能否被除数整除”本身就是一个条件，它决定着未来的走向，如果把这段逻辑用“伪代码”表示，大概就是这样:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">double_digit 是被除数，divisor是除数</span><br><span class="line">如果double_digit能被divisor整除</span><br><span class="line">	那么double_digit除以divisor就是一道好题</span><br><span class="line">如果double_digit不能被divisor整除</span><br><span class="line">	那么double_digit除以divisor就是一道坏题</span><br></pre></td></tr></table></figure>
+
+<p>插一句，伪代码其实是一种特别好的帮我们整理分析思路的工具，尤其是简体中文版:)</p>
+<p>那么，Python是如何实现这段条件判断呢?</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">double_digit = <span class="number">10</span>*random.randint(<span class="number">1</span>,<span class="number">9</span>) <span class="comment">#生成被除数</span></span><br><span class="line">divisor = random.randint(<span class="number">2</span>,<span class="number">9</span>) <span class="comment">#生成除数</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">str</span>(double_digit)+<span class="string">&#x27;除以&#x27;</span>+<span class="built_in">str</span>(divisor)) <span class="comment">#把随机生成的题目打印出来。+用来连接要打印的几部分内容，str(double_digit)是把double_digit转成字符串，因为double_digit是整数，但print()只能在屏幕打印字符串，所以要用Python提供的str()转换一下格式</span></span><br><span class="line"><span class="keyword">if</span> double_digit % divisor == <span class="number">0</span>: <span class="comment"># 判断的条件是什么，这个条件写在if后面。a % b 表示求a除以b的余数，为0就说明能整除</span></span><br><span class="line">	<span class="built_in">print</span>(<span class="string">&#x27;double_digit除以divisor就是一道好题&#x27;</span>) <span class="comment">#能整除，那就打出一段文字告诉我们这是个好题， 注意这里是有缩进的</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">	<span class="built_in">print</span>(double_digit除以divisor就是一道坏题) <span class="comment">#不能整除，那就打出一段文字告诉我们这是个坏题， 注意这里是有缩进的</span></span><br></pre></td></tr></table></figure>
+
+<p>好了，到这里，我们就完成了两位整十数除以一位数除法题的主要逻辑。但是，这显然仅仅是一个开始。这段代码仅仅是生成了一道除法题，但是，我们最需要的事情，它一件没做：</p>
+<ul>
+<li>如果是好题，得帮我存起来，这样后面才能输出到Excel表里呀</li>
+<li>如果是坏题，那光显示“这是一道坏题”不行啊，您得给我出好题才行啊</li>
+<li>我们需要5道好题，这个也没实现</li>
+</ul>
+<p>所以，下一篇，我们来实现以上的所有需求。</p>
+<center>四</center>
+
+<p>这一篇，我们接触了不少内容，算是我写这个系列文章以来，干货较多的一次了，显然，开车的情节也少了，也乏味了不少，后面我会持续改进，呼呼。</p>
+<p>下面，我以问题的形式帮您回顾一下今天我们谈到的内容，如果有问题答不出来，您可能就得再读读这篇稍显无聊的文章了..</p>
+<blockquote>
+<ol>
+<li>我们决定用编程解决一个问题的时候，最好的做法是什么？是马上百度？是马上查书？马上问别人？ 还是。。。？</li>
+<li>用Python编程时，为什么有时候我们可以直接写程序，有时候，我们需要import &lt;库&gt;？</li>
+<li>如果 a &#x3D; 3,那么print(a)可以直接让屏幕输出3么，如果不行，需要怎么做？</li>
+<li>请用条件判断做这么一件事, 定义两个变量 a和b，分别赋值，然后判断a和b的大小，输出’a比b大’，或者’a’比’b’小</li>
+</ol>
+</blockquote>
+<p>咱们下周见喽，么么哒</p>
+</p>
+      <div class="post-button"><a class="btn" href="/%E5%AE%9D%E8%B4%9D%E5%84%BF%EF%BC%8C%E4%B8%80%E8%B5%B7%E5%AD%A6Python-7/" rel="noopener"><i class="fa fa-angle-double-right fa-fw"></i>Read More</a></div>
+    </div>
+  </div>
+  <div class="lx-entry padding">
+    <div>
+      <h2 class="title"><a href="/%E5%AE%9D%E8%B4%9D%E5%84%BF%EF%BC%8C%E4%B8%80%E8%B5%B7%E5%AD%A6Python%E5%91%80-6-md/">宝贝儿，一起学Python呀-6.md</a></h2>
+      <span class="lx-post-detail"><i class="fa fa-calendar-o"></i> 2021-07-10</span>
+      <p><h1 id="宝贝儿，一起学Python呀-VI-什么结衣雅美，我全都要！"><a href="#宝贝儿，一起学Python呀-VI-什么结衣雅美，我全都要！" class="headerlink" title="宝贝儿，一起学Python呀 - VI - 什么结衣雅美，我全都要！"></a>宝贝儿，一起学Python呀 - VI - 什么结衣雅美，我全都要！</h1><h3 id="Python中的列表和循环"><a href="#Python中的列表和循环" class="headerlink" title="Python中的列表和循环"></a>Python中的列表和循环</h3><p>还记得上篇结尾，我留的小作业吗?</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">name=<span class="string">&#x27;长泽雅美&#x27;</span></span><br><span class="line">name=<span class="string">&#x27;石原里美&#x27;</span></span><br><span class="line">name=<span class="string">&#x27;新垣结衣&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(name)</span><br></pre></td></tr></table></figure>
+
+<p>是的，打印name, 结果是’新垣结衣’。相信随着新垣结衣和星野源宣布合体，无数中国宅男纷纷表示无比的悲痛，更有甚者开始分析中国老爷们儿完爆日本男人的99999条理由，反正不知道星野源这家伙到底用了什么手段迷惑了我们新垣结衣。</p>
+<p>想必您也看出来了，别人着急我不急，急坏身体无人替。为什么我能如此镇定？因为我是长泽雅美的粉儿。。。</p>
+<p>常规性跑题。话说 name &#x3D; ‘长泽雅美’ 您都知道，这是一个赋值语句，作用是把一个值赋值给变量name. 这里咱们也别费劲讲什么变量啦，内存啦，指针啦什么的。我不会肯定是一个原因，另外就是咱们拿Python干活儿，一时半会儿用不上这个。等真能用上，估计您也得转行程序员了。</p>
+<p>上篇也说了，Python对待变量的态度很随便。不用声明变量支持的数据类型，您灌什么值变量就是什么类型。但是这里有个问题，就是取变量存的值时，Python只会取最近一次存入的，就如同上面例子中，输出name的结果是新垣结衣。</p>
+<p>有身体好的大哥说了，选什么选，老子全都要！什么雅美里美结衣悠亚阿香的，都给我整来！那普通的数据类型是满足不了您了，这时，我们就得请列表出山喽!</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">name = [<span class="string">&#x27;石原里美&#x27;</span>,<span class="string">&#x27;新垣结衣&#x27;</span>,<span class="string">&#x27;长泽雅美&#x27;</span>] <span class="comment"># []表示这是列表类型，列表里的元素用,隔开</span></span><br></pre></td></tr></table></figure>
+
+<p>怎么样，像不像您买了栋大别墅，然后把小姐姐们都请进来入住？在Python中，表示列表的标记就是[]，列表里每一项用，隔开。列表里的每一项都可以是任意的数据类型，而且无需一样，比如:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">list1 = [<span class="string">&#x27;联想&#x27;</span>,<span class="number">1984</span>]</span><br></pre></td></tr></table></figure>
+
+<p>这里的列表list1有两项，字符串’联想’和数字1984。</p>
+<p>现在小姐姐都在您的大房子里了，怎么把怹们挨个请出来呢？聪明的您一定想到了，print()呗。好吧，我们print(name)试试，结果是:</p>
+<blockquote>
+<p>[‘石原里美’, ‘新垣结衣’, ‘长泽雅美’]</p>
+</blockquote>
+<p>嗯？ Python很不讲究，直接把列表给打出来了，这相当于小姐姐们扛着别墅就过来了，不行，我想要，不是，这位身体好大哥想要的应该是其中某一位小姐姐，对吧？把这句话翻译成专业点的术语，就是我们要访问列表中的项。</p>
+<p>可以。</p>
+<p>列表通过索引定位列表中的每一项，相当于给每位小姐姐都编了号。当然，按照搞计算机大哥们的习惯，编号从0开始。不知道为什么大哥们这么喜欢0。。。所以，我们可以这么访问小姐姐们:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">name = [<span class="string">&#x27;石原里美&#x27;</span>,<span class="string">&#x27;新垣结衣&#x27;</span>,<span class="string">&#x27;长泽雅美&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(name[<span class="number">0</span>]) <span class="comment">#name[0]表示列表name中的第一项，就是石原里美啦</span></span><br><span class="line"><span class="built_in">print</span>(name[<span class="number">1</span>]) <span class="comment">#name[0]表示列表name中的第二项，就是新垣结衣啦</span></span><br><span class="line"><span class="built_in">print</span>(name[<span class="number">2</span>]) <span class="comment">#name[0]表示列表name中的第三项，就是长泽雅美啦</span></span><br></pre></td></tr></table></figure>
+
+<p>用索引除了访问列表中的项，也可以更新列表中的项，比如:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">name[<span class="number">2</span>] = <span class="string">&#x27;三上悠亚&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>那就是把原来的长泽雅美换成了三上悠亚。</p>
+<p>或者，身体好的大哥说，4位小姐姐老子也能对付，不用替换，直接把三上加进来！</p>
+<p>那就得用到列表自带的append方法了。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">name.append(<span class="string">&#x27;三上悠亚&#x27;</span>) <span class="comment">#列表变量.append(想添加到列表的值)</span></span><br></pre></td></tr></table></figure>
+
+<p>这时，name就变成了</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">name = [<span class="string">&#x27;石原里美&#x27;</span>,<span class="string">&#x27;新垣结衣&#x27;</span>,<span class="string">&#x27;长泽雅美&#x27;</span>,<span class="string">&#x27;三上悠亚&#x27;</span>]</span><br></pre></td></tr></table></figure>
+
+<p>append 方法会直接把项目添加到列表结尾。</p>
+<p>或者这位小哥哥又说了，三上悠亚在我心中地位第一，干什么给她放最后？给我放最前面！</p>
+<p>得嘞这位爷，咱也别费劲了，我告诉您一个办法，您爱放哪儿放哪儿行不？</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">name.insert(<span class="number">0</span>,<span class="string">&#x27;三上悠亚&#x27;</span>) <span class="comment">#insert方法用于把项目插入到列表中，格式就是 列表变量.insert(想插入的索引,想插入的项目)</span></span><br></pre></td></tr></table></figure>
+
+<p>用insert方法，您爱放哪都行，行了吧？</p>
+<p>以上咱们聊的是用索引访问列表中的项。身强力壮小哥哥又说了，用索引一个一个的来不痛快，而且小姐姐太多也记不住索引，能不能一口气把小姐姐全请出来？</p>
+<p>说来简单，直接用循环就行了。话说一般计算机语言中，循环和条件判断都是非常重要和核心的。Python的循环主要是for循环和while循环,其中for循环提供了很好的访问列表的方法，简单粗暴，来咱们走一个:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">girls = [<span class="string">&#x27;石原里美&#x27;</span>,<span class="string">&#x27;新垣结衣&#x27;</span>,<span class="string">&#x27;长泽雅美&#x27;</span>]  <span class="comment"># 定义一个列表存放数据</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> girls: <span class="comment"># 利用循环输出数组中的每一个元素</span></span><br><span class="line">    <span class="built_in">print</span>(i) <span class="comment">#必须必须注意，这行开始有一个tab</span></span><br></pre></td></tr></table></figure>
+
+<p>看见了吧，就是这么简单。这里需要注意的是，i 本身也是一个变量，这个循环里，先定义一个i用于存放列表中元素，然后按照索引顺序遍历列表中的每一项，然后把此项数值赋给i,然后print()把i的内容输出，然后循环访问列表中的下一项，直到遍历完毕。</p>
+<p>另外我们也引出了Python中写代码一个很重要的内容，缩进。和其它语言不同，Python不用{}标识代码块，编写Python代码时，主要的区分代码块的标记就是tab。这里的tab也可以用4个空格代替，但是要一致，不能一会儿tab一会儿四个空格。这个缩进不能省略，上面的例子中如果没有缩进，会直接报错。</p>
+<p>还有一个重要的概念，就是字符串也可以看做列表，具有列表的特点，比如通过索引访问字符串中的元素，这个就请您自己试试。</p>
+<p>好了，到了留作业的时候，请问，以下的代码输出结果是什么？</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">slogan = <span class="string">&#x27;让世界充满爱&#x27;</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> slogan:</span><br><span class="line">    <span class="built_in">print</span>(i)</span><br></pre></td></tr></table></figure>
+
+
+
+<p>今天就到这里，祝您愉快，咱们下篇再见。至于下篇咱们聊什么？让我想想吧，我现在满脑子都是长泽雅美。。。</p>
+</p>
+      <div class="post-button"><a class="btn" href="/%E5%AE%9D%E8%B4%9D%E5%84%BF%EF%BC%8C%E4%B8%80%E8%B5%B7%E5%AD%A6Python%E5%91%80-6-md/" rel="noopener"><i class="fa fa-angle-double-right fa-fw"></i>Read More</a></div>
+    </div>
+  </div>
+  <div class="lx-entry padding">
+    <div>
+      <h2 class="title"><a href="/%E5%AE%9D%E8%B4%9D%E5%84%BF%EF%BC%8C%E4%B8%80%E8%B5%B7%E5%AD%A6Python%E5%91%80-%E7%95%AA%E5%A4%96%E7%AF%87/">宝贝儿，一起学Python呀 - 番外篇</a></h2>
+      <span class="lx-post-detail"><i class="fa fa-calendar-o"></i> 2021-07-02</span>
+      <p><h1 id="宝贝儿，一起学Python呀-番外篇"><a href="#宝贝儿，一起学Python呀-番外篇" class="headerlink" title="宝贝儿，一起学Python呀 - 番外篇"></a>宝贝儿，一起学Python呀 - 番外篇</h1><center>一</center>
+
+<p>话说《宝贝儿，一起学Python呀》第五篇正在激情创作中，嗯，说白了就是没写完，拖延了。。。 但为什么还要突然插一个《番外篇》呢？难道是要恰饭加广告？</p>
+<p>其实我是不反对啦，但这样的美事一时半会儿不会发生。番外篇的由来是这样的，一直以来，我都会把自己的文章放在我的Blog <a href="https://smallfish-bigocean.github.io/">小鱼游大海</a>和微信公众号上，但是这里其实有个问题，因为我使用Markdown写文章，但是微信公众号对于Markdown的支持比较一言难尽，因此我之前都是找转换器进行转换，但是问题依然存在，比如，我特别喜欢的Markdown的代码区块功能，能显示代码行号，代码高亮，显示效果几乎和VS Code写代码完全一致：</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/python/codeblock4.png" alt="codeblock4"></p>
+<center>VS Code中显示的效果</center>
+
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/python/codeblock3.png" alt="codeblock3"></p>
+<center>Markdown中显示的效果</center>
+
+
+
+<p>看起来很舒服，对吧？ 然后转换成HTML发布到Blog上，似乎效果也不错。</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/python/codeblock2.png" alt="codeblock"></p>
+<center>Blog中显示的效果</center>
+
+
+
+<p>结果放到微信公众号里，就变成如此尊容了。。。</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/python/codeblock1.jpg" alt="codeblock1"></p>
+<p>语法高亮没有了，行号没有了，而且直接堆成了一行，手机竖屏下根本就显示不全。。。</p>
+<center>二</center>
+
+<p>我也思考了几个方案，比如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;li&gt;对代码区块进行截图，然后插入图片&lt;/li&gt;</span><br><span class="line">评论:脱了裤子放P</span><br><span class="line">&lt;li&gt;干脆把平台切换到简书或知乎等支持Markdown的平台&lt;/li&gt;</span><br><span class="line">评论:之所以用公众号就是为了利用微信的推广，要是切到其他平台岂不是更麻烦？别看哥们儿公众号关注度只有个位数，万一经过我一番运作就壮大了呢对吧？梦里什么都有！</span><br><span class="line">&lt;li&gt;利用HTML+CSS进行转换处理&lt;/li&gt;</span><br><span class="line">评论:有学习成本，以后再说</span><br></pre></td></tr></table></figure>
+
+<center>三</center>
+
+<p>难道真的没辙了？这时，我想起了一位哲人说过的话:</p>
+<blockquote>
+<p>没有什么是百度解决不了的，如果有，那就换个浏览器再百度一次</p>
+</blockquote>
+<p>那就以”公众号 代码区块”为关键字搜索一番，您猜怎么着？还真有货耶! </p>
+<p><a target="_blank" rel="noopener" href="http://md.aclickall.com/">一位大侠制作的转换工具</a> 貌似能解决这个问题。咱们试试:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">print(&#x27;我是第一行代码&#x27;)</span><br><span class="line">print(&#x27;我是第二行代码&#x27;)</span><br><span class="line">print(&#x27;我是第三行代码&#x27;)</span><br><span class="line">print(&#x27;我是第四行代码&#x27;)</span><br><span class="line">print(&#x27;我是第五行代码&#x27;)</span><br><span class="line">if 3&gt;4 :</span><br><span class="line">	print(&#x27;脑子秀逗了&#x27;)</span><br></pre></td></tr></table></figure>
+
+<p>看起来好像可以呀？ 那就先试试，不行再说。不过最好还是得看看大侠是怎么实现的，万一哪天这个工具关闭了，就不妥了呢。。。</p>
+<center>四</center>
+
+<p>做点自己想做的事情并不容易，但也很有乐趣，从学Markdown，在Gitee部署图床，部署HEXO Blog系统，把HEXO部署到GitHub仓库，把Blog建立到Github… 发现一点问题，就解决一点问题，直到把工作流理顺，还是很有成就感的。有时候我也在想，每天都面对着同样的屏幕，面无表情地拖拽鼠标，就一件显而易见的问题发无数封邮件跟无数人解释。。。挣钱糊口，给别人打工，无所谓乐趣不乐趣，但还是希望自己的人生能多一点色彩，不然，灰头土脸地跟孩子们说这个世界如何如何有趣，你们要勇敢去探索这样的P话，您自己都不信，孩子能信吗？</p>
+<p>目前《宝贝儿，一起学Python呀》第五篇基本有点眉目了，希望这两天就能发布吧，如果大米老人家期末复习顺利的话。</p>
+<p>不对，不是大米老人家，是大米小祖宗。。。</p>
+<p>再见。</p>
+</p>
+      <div class="post-button"><a class="btn" href="/%E5%AE%9D%E8%B4%9D%E5%84%BF%EF%BC%8C%E4%B8%80%E8%B5%B7%E5%AD%A6Python%E5%91%80-%E7%95%AA%E5%A4%96%E7%AF%87/" rel="noopener"><i class="fa fa-angle-double-right fa-fw"></i>Read More</a></div>
+    </div>
+  </div>
+
+
+<div id="pagination">
+  <a class="extend prev" rel="prev" href="/page/3/"></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/5/"></a>
+</div>
+
+<footer>
+  <div>
+  Copyright &copy; 2022.<a href="/">Small fish, big ocean</a><br>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme <a href="https://lx.js.org" target="_blank">Lx</a><br>
+  </div>
+</footer>
+
+  </div>
+</div>
+</div>
+
+<button class="hamburger hamburger--arrow-r" type="button">
+    <div class="hamburger-box">
+      <div class="hamburger-inner"></div>
+    </div>
+</button> 
+<div class="menu visibility">
+  <div class="menu-head">
+    <span class="layer">
+      <div class="col">
+        <div class="row for-pic">
+          <div class="profile-pic">
+            <a href="/"><img src="/images/avatar.jpeg" alt="Houyufeng 侯宇峄1�7"/></a>
+          </div>
+        </div>
+        <div class="row for-name">
+          <p>Houyufeng 侯宇峄1�7</p>
+          <span class="tagline">Hello, World!</span>
+        </div>
+      </div>
+    </span>
+  </div>
+  <nav class="menu-container">
+  <ul class="menu-items">
+    <li><a href="/"><i class="fa fa-home fa-fw"></i>Home</a></li>
+    <li><a href="/archives/"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+    
+    <li class="has-sub"><span class="dropdown-heading">
+      <i class="fa fa-bookmark fa-fw"></i>Pages</span>
+        <ul>
+          <li><a href="/guestbook/">Guestbook</a></li>
+        <li><a href="/about/">About</a></li>
+        </ul>
+    </li>
+    <li class="has-sub"><span class="dropdown-heading">
+      <i class="fa fa-link fa-fw"></i>Friends</span>
+        <ul>
+          </ul>
+    </li>
+  </ul>
+  </nav>
+</div>
+
+<div class="gototop js-top">
+  <a href="#" class="js-gotop"><i class="fa fa-arrow-up"></i></a>
+</div>
+<script src="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/js/jquery.easing.min.js"></script>
+<script>
+(function () {
+	"use strict";
+	var goToTop = function() {
+		$(".js-gotop").on("click", function(event){
+			event.preventDefault();
+			$("html, body").animate({
+				scrollTop: $("html").offset().top
+			}, 500, "easeInOutExpo");
+			return false;
+		});
+		$(window).scroll(function(){
+			var $win = $(window);
+			if ($win.scrollTop() > 200) {
+				$(".js-top").addClass("active");
+			} else {
+				$(".js-top").removeClass("active");
+			}
+		});
+	};
+	$(function(){
+		goToTop();
+	});
+}());
+</script>
+
+
+</body>
+</html>

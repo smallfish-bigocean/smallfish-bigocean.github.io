@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content=#58b77a>
+  <title>Windows 系统封装的一个新办法 | Small fish, big ocean</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Houyufeng 侯宇峄1�7">
+  <meta name="keywords" content="">
+  <meta name="description" content="My blog">
+  <script id="hexo-configurations">
+  var CONFIG = {
+    root: '/',
+    theme: 'hexo-theme-lx-master',
+    version: '0.3.9',
+    localsearch:{
+      "enable": false,
+      "trigger": "auto",
+      "top_n_per_article": 1,
+      "unescape": false,
+      "preload": false
+      },
+    path: 'null'
+  };
+</script>
+
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/css/main.min.css">
+  <style type="text/css">
+    pre,
+    code {
+      font-family: 'Fira Code', monospace;
+    }
+    html {
+      font-family: sans-serif;
+    }
+    body {
+      font-family: sans-serif;
+    }
+    h1, h2, h3, h4, h5, figure {
+      font-family: sans-serif;
+    }
+    .menu-container{
+      font-family: sans-serif;
+    }
+  </style>
+
+  <script src="//cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/js/jquery.jside.menu.js"></script>
+	<script>
+	$(document).ready(function(){
+	$(".menu-container").jSideMenu({
+	    jSidePosition: "position-right",
+	    jSideSticky: true,
+	    jSideSkin: "greenish",
+	     });
+	}); 
+	</script>
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Fira Code:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css">
+<meta name="generator" content="Hexo 6.2.0"></head>
+<body>
+<div class="single">
+
+<div id="page">
+<div id="lx-aside" style="background-image: url(//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/images/post_cover.jpeg)" data-stellar-background-ratio="0.5">
+  <div class="overlay">
+  <div class="page-title">
+    <div class="avatar"><a href="/"><img src="/images/avatar.jpeg"></a></div>
+    <span>2021-12-09</span>
+    <h2>Windows 系统封装...</h2>
+    
+    </div>
+</div>
+</div>
+
+<div id="lx-main-content">
+  <div class="lx-post">
+    <div class="lx-entry padding">
+      <div>
+        <h1 id="Windows-系统封装的一个新办法"><a href="#Windows-系统封装的一个新办法" class="headerlink" title="Windows 系统封装的一个新办法"></a>Windows 系统封装的一个新办法</h1><center>一</center>
+一不注意, Typora官网竟然不能访问了, 本来还说正式版终于出来了, 准备买个授权支持一下.
+![typora](https://gitee.com/houyufengatgitee/img_bed/raw/1fe57f169b0f3bce4a0fc86f175192fab90c53ba/windowsdeploy/typora.png)
+不知道这软件或软件作者干什么了, 也不知道为什么被屏蔽了, 只能希望后续还能放开. 这篇文章只好暂时用Visual Studio Code来写, 又得面对这个傻大黑粗的界面, 而且不是所见即所得,还得开个预览界面...
+![vscode](https://gitee.com/houyufengatgitee/img_bed/raw/master/windowsdeploy/vscode.png)
+不过这里还是安利一下VS Code, 不愧是微软的作品, 功能强大, 插件丰富, 无论是敲敲Python代码还是拿来写文章, 或者作为数据库管理, 都相当好用, 堪称瑞士军刀. 这么棒的好工具还是开源免费, 说真的, 除了Windows, 微软现在做的东西都非常出色...
+<center>二</center>
+说到Windows, 今天开始我想聊聊系统封装和部署的问题. 作为完全没干过一天IT的披着计算机信息行业从业人员外衣的男性文员, 这段时间也有花时间研究一下Windows封装和部署的课题, 所以你们知道为什么Python教程和温格自传翻译都停滞了. 当然了, 这样的停滞可能会继续进行, 因为昨天小齐告诉我一个好消息, 俩米的期末考试安排好像出来了, 这对我这样的居家男性简直就是晴天霹雳, 要知道, 每次给俩米弄作业, 望着俩米看着我的纯净而天真的大眼睛, 我知道, 这道题肯定是不会了, 唉...
+
+<p>跑题了, 说到Windows封装和部署, 我的理解是, 这个工作的核心目的是:</p>
+<blockquote>
+<p>为特定使用场景下的大量电脑设置统一的Windows系统及软件, 最终实现客户开机即用</p>
+</blockquote>
+<p>Windows封装和部署的常用场景, 一般是品牌电脑出厂预装系统. 比如, 您买来一台联想电脑, 进入系统后会发现除了Windows系统本体, 往往会有厂商预制的一些工具类软件和设置. 另一种常见的场景是, 针对专门客户, 往往会根据客户要求对系统进行定制, 例如联想卖给Google 几千台ThinkStation 工作站, 可能会根据Google的要求预装他们想要的软件, 这时就需要对Windows系统进行定制和封装.</p>
+<p>我理解的Windows 系统定制和封装, 大概包括这么几个步骤:</p>
+<ul>
+<li>Windows 系统本身</li>
+<li>运行定制系统的电脑的驱动程序</li>
+<li>Windows 系统的个性化设置 (如客户要求统一的桌面壁纸)</li>
+<li>客户所需的各种软件</li>
+</ul>
+<p>至于一般的封装步骤, 微软给的方案是从这批要部署定制系统的电脑里找出一台, 然后先正常安装系统, 驱动, 软件, 进行个性化设置, 然后用Windows自带的sysprep工具进行封装, 最后用DISM工具抓取系统分区映像, 最后再把抓取到的映像部署到剩下的电脑里.</p>
+<center>三</center>
+如果只是这个思路, 我就不用专门写文章说了. 这里我给出大家一个新思路, 就是不需要实体电脑, 直接利用Windows自带的Hyper-V虚拟机进行系统的封装, 步骤跟利用实体电脑没有大区别, 唯一有差异的, 就是驱动程序安装. 因为Hyper-V模拟的硬件环境肯定和实体电脑不一样, 直接楞装驱动保证会出错, 对不对? 所以我给出的思路是, 直接用DISM, 把驱动直接集成到Windows安装镜像里, 岂不美哉? 一般大的PC生产商都会对商用电脑提供驱动包, 方便驱动的集成, 比如联想商用产品的驱动包可以在这里找到 [联想驱动包部署](https://support.lenovo.com/us/en/solutions/ht074984). 把驱动包下载回来, 在处理Windows安装镜像时, 直接用DISM进行集成即可:
+
+<p><code>dism /image:&lt;Windows 映像所在目录&gt; /add-driver: /driver:&lt;驱动包所在目录&gt; /recurse</code></p>
+<p>这样就会得到一个包含所需驱动程序的Windows镜像, 用这个镜像拿到虚拟机里安装, 就能确保虚拟机里的系统既包含了驱动, 又不会出现报错.</p>
+<p>使用虚拟机代替实体电脑进行系统封装的另一个好处, 则是支持”反悔”和改过. Windows自带的Hyper-V虚拟机集成了强大的检查点功能, 说白了, 您可以在安装和设置Windows系统时随时设置检查点, 一旦出错就可以退回到最近的检查点, 确保封装的顺利进行.<br><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/windowsdeploy/vm.png" alt="Windows封装"><br>比如这里我大概弄了二十多个检查点, 每做一步操作就设置一个, 遇到错误就退回上一个检查点重新进行该操作, 这样得到的系统, 基本不会有任何问题 ,这是在实体电脑上无法实现的功能. 至于如何把系统抓出来? 自然是为这个虚拟机添加第二块虚拟硬盘, 然后用Windows PE启动这个虚拟机, 在Windows PE里直接抓取虚拟系统的系统分区 (这里我严重推荐ffu闪存格式, 据说是当初为Windows Phone系统部署设计的, 用在电脑上好用的一批)<br><code>dism /capture-ffu /capturedrive:\\.\physicaldrive&lt;系统分区所在磁盘的编号&gt; /imagefile:&lt;第二个虚拟硬盘分区&gt;\windows.ffu /name:&lt;随便写点什么&gt;</code><br>这样, 封装好的系统就会以ffu闪存格式存在第二个虚拟硬盘分区里, 直接挂载虚拟硬盘, 把ffu文件拷出来就能用喽.</p>
+<center>四</center>
+这篇文章算不上教程, 仅仅是一个思路的描述, 核心就是用虚拟机代替实体电脑进行系统封装. 后续我计划把一些封装过程中用到的工具和代码放到github上供大家研究和使用, 当然了, 目前看这件事遥遥无期~~~
+
+<p>2021年已经接近尾声了, 我也不由自主开始回味这一年的点点滴滴. 学会了什么, 领悟了什么, 给谁带来了温暖?  还有什么问题没解决, 还有哪些遗憾需要弥补, 我又伤害了谁? … 我恐惧于虚度人生, 我害怕浪费时间, 我不希望做错事情. 希望接下来的时间能提高效率, 再多做些事情, 多学些东西, 多温暖身边的人. 2021, 请等我一下.</p>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="lx-navigation">
+	<div class="lx-cover prev lx-cover-sm" style="background-image: url(//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/images/footer-l.jpeg)">
+		<div class="overlay"></div>
+		<a class="copy" href="/%E4%BA%BA%E7%94%9F%E4%B9%8B%E7%86%B5/">
+			<div class="display-t">
+				<div class="display-tc">
+					<div>
+						<span>Next</span>
+						<h3>人生之熵</h3>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+        <div class="lx-cover next lx-cover-sm" style="background-image: url(//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/images/footer-r.jpeg)">
+		<div class="overlay"></div>
+		<a class="copy" href="/%E9%80%81%E4%BD%A0%E4%B8%80%E9%A1%B6%E5%B8%BD%E5%AD%90-%E7%BB%BF%E8%89%B2%E7%9A%84/">
+			<div class="display-t">
+				<div class="display-tc">
+					<div>
+						<span>Prev</span>
+						<h3>送你一顶帽子,...</h3>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+</div>
+
+</div>
+
+<footer>
+  <div>
+  Copyright &copy; 2022.<a href="/">Small fish, big ocean</a><br>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme <a href="https://lx.js.org" target="_blank">Lx</a><br>
+  </div>
+</footer>
+
+</div>
+
+<button class="hamburger hamburger--arrow-r" type="button">
+    <div class="hamburger-box">
+      <div class="hamburger-inner"></div>
+    </div>
+</button> 
+<div class="menu visibility">
+  <div class="menu-head">
+    <span class="layer">
+      <div class="col">
+        <div class="row for-pic">
+          <div class="profile-pic">
+            <a href="/"><img src="/images/avatar.jpeg" alt="Houyufeng 侯宇峄1�7"/></a>
+          </div>
+        </div>
+        <div class="row for-name">
+          <p>Houyufeng 侯宇峄1�7</p>
+          <span class="tagline">Hello, World!</span>
+        </div>
+      </div>
+    </span>
+  </div>
+  <nav class="menu-container">
+  <ul class="menu-items">
+    <li><a href="/"><i class="fa fa-home fa-fw"></i>Home</a></li>
+    <li><a href="/archives/"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+    
+    <li class="has-sub"><span class="dropdown-heading">
+      <i class="fa fa-bookmark fa-fw"></i>Pages</span>
+        <ul>
+          <li><a href="/guestbook/">Guestbook</a></li>
+        <li><a href="/about/">About</a></li>
+        </ul>
+    </li>
+    <li class="has-sub"><span class="dropdown-heading">
+      <i class="fa fa-link fa-fw"></i>Friends</span>
+        <ul>
+          </ul>
+    </li>
+  </ul>
+  </nav>
+</div>
+
+<div class="gototop js-top">
+  <a href="#" class="js-gotop"><i class="fa fa-arrow-up"></i></a>
+</div>
+<script src="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/js/jquery.easing.min.js"></script>
+<script>
+(function () {
+	"use strict";
+	var goToTop = function() {
+		$(".js-gotop").on("click", function(event){
+			event.preventDefault();
+			$("html, body").animate({
+				scrollTop: $("html").offset().top
+			}, 500, "easeInOutExpo");
+			return false;
+		});
+		$(window).scroll(function(){
+			var $win = $(window);
+			if ($win.scrollTop() > 200) {
+				$(".js-top").addClass("active");
+			} else {
+				$(".js-top").removeClass("active");
+			}
+		});
+	};
+	$(function(){
+		goToTop();
+	});
+}());
+</script>
+
+
+</body>
+</html>

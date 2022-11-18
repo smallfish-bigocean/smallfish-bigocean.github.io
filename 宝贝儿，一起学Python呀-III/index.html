@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content=#58b77a>
+  <title>宝贝儿，一起学Python呀-III | Small fish, big ocean</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Houyufeng 侯宇峄1�7">
+  <meta name="keywords" content="">
+  <meta name="description" content="My blog">
+  <script id="hexo-configurations">
+  var CONFIG = {
+    root: '/',
+    theme: 'hexo-theme-lx-master',
+    version: '0.3.9',
+    localsearch:{
+      "enable": false,
+      "trigger": "auto",
+      "top_n_per_article": 1,
+      "unescape": false,
+      "preload": false
+      },
+    path: 'null'
+  };
+</script>
+
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/css/main.min.css">
+  <style type="text/css">
+    pre,
+    code {
+      font-family: 'Fira Code', monospace;
+    }
+    html {
+      font-family: sans-serif;
+    }
+    body {
+      font-family: sans-serif;
+    }
+    h1, h2, h3, h4, h5, figure {
+      font-family: sans-serif;
+    }
+    .menu-container{
+      font-family: sans-serif;
+    }
+  </style>
+
+  <script src="//cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/js/jquery.jside.menu.js"></script>
+	<script>
+	$(document).ready(function(){
+	$(".menu-container").jSideMenu({
+	    jSidePosition: "position-right",
+	    jSideSticky: true,
+	    jSideSkin: "greenish",
+	     });
+	}); 
+	</script>
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Fira Code:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css">
+<meta name="generator" content="Hexo 6.2.0"></head>
+<body>
+<div class="single">
+
+<div id="page">
+<div id="lx-aside" style="background-image: url(//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/images/post_cover.jpeg)" data-stellar-background-ratio="0.5">
+  <div class="overlay">
+  <div class="page-title">
+    <div class="avatar"><a href="/"><img src="/images/avatar.jpeg"></a></div>
+    <span>2021-06-16</span>
+    <h2>宝贝儿，一起学Pytho...</h2>
+    
+    </div>
+</div>
+</div>
+
+<div id="lx-main-content">
+  <div class="lx-post">
+    <div class="lx-entry padding">
+      <div>
+        <h1 id="宝贝儿，一起学Python呀-III"><a href="#宝贝儿，一起学Python呀-III" class="headerlink" title="宝贝儿，一起学Python呀-III"></a>宝贝儿，一起学Python呀-III</h1><h2 id="第三篇-跟World-Say-Hello前，咱们还得絮叨絮叨"><a href="#第三篇-跟World-Say-Hello前，咱们还得絮叨絮叨" class="headerlink" title="第三篇 跟World Say Hello前，咱们还得絮叨絮叨"></a>第三篇 跟World Say Hello前，咱们还得絮叨絮叨</h2><center>一</center>
+
+<p>不知不觉，Python已经写到了第三篇，好消息是，我的拖延症暂时被控制住了，没太发作。坏消息嘛，到目前为止写了5000多字，连个正经东西还没看到，这真是花钱买本书，您说亏不亏？您觉得没正经东西，那是因为您没听过评书。您要是听过王玥波王老板的评书，好家伙，那垫话用的，好家伙了。要是赶上剧情里有打尖儿的，那今天的书就没别的了，保证就是王老板跟您侃老北京炸酱面的12种做法。。。听怹的书，您得有过日子心。同理可证，听我书，不是，听我给您侃大山，您也得有过日子心不是。</p>
+<p>要说一般的编程教材，一般的结构都是先花一大章节告诉你怎么去安装语言本身和编译环境，然后再推荐您个IDE(集成开发环境)，然后就是如何让屏幕输出”Hello World”。您费了半天劲，就为了打个“你好世界”，怎么看怎么像奥运会又要来了不是。</p>
+<p>所以说，不急，不急。咱不着急跟世界说你好，咱们先聊聊Python是怎么回事。</p>
+<p>Python， 蟒蛇也。(祖国母亲普及义务教育的好处，我脑子里立刻响起“永州之野产异蛇，黑质而白章”，旧社会，老百姓苦啊，还是社会主义好。我就等着接班社会主义事业了。。。) 这大蟒蛇貌似学名叫Python bivittatus。而蟒蛇家族里，其中一种在缅甸生活，因为白化病而呈现黄金色，所以叫黄金蟒。俩米，就是大米小米，这俩位就是黄金蟒的铁粉，每次去任何城市的动物园，都会找爬行动物馆然后找黄金蟒过过瘾，然后跟我探讨家里养一条的可能性。。。</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/python/python.jpg" alt="黄金蟒"></p>
+<p>也许Python软件基金会，也就是Python的维护组织，倾听到了俩米的心声，所以Python的Logo里，就是两只蟒蛇的形象，其中就有黄金蟒。</p>
+<p><img src="https://www.python.org/static/community_logos/python-logo-master-v3-TM.png" alt="Python"></p>
+<p>所以，既然如此有缘分，亲爱的俩米，你们要想办法通过中国电子学会的Python考试认证哟~~~</p>
+<p>又跑题了，又跑题了。当您决定给自己的电脑装个Python，您通过百度到达了<a href="www.python.org">Python的官网</a>, 一看，我的妈呀，怎么那么多版本？ (顺便说一句，您应该关注到了，Python是org域名，就问您NB不NB)</p>
+<p>很多时候，我们都会面对一个问题，就是版本选择。比如一些朋友想买台电脑时，通常都会陷入那么多Windows 10版本，我该装哪个版本的苦恼。哪个版本才是最强大最NB最爽的？(有机会我写个文章聊聊Windows 10 的大家族，跟您聊聊这些版本都是干嘛的，哪个让您用的最爽歪歪，呼呼)</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/python/win10.png" alt="Windows 10 Edition"></p>
+<p>如果说Windows带给您的是选择困难症standard edition, 那Python就是选择困难症 data centre edition啦。看看我们的主要Python版本:</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/python/pythonversion.png" alt="pythonvsersion">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             </p>
+<p>这就完了？ nonono，我专门抓取了Python目前开放下载的版本，是这个样式儿的:<a href="https://smallfish-bigocean.github.io/Python-Release-History/">Python release history</a> 您可以直接点击页面链接下载，当然，我也截图贴上来，您感受一下:</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/python/pyrelease.png" alt="pythonversion"></p>
+<p>从2001年至今，从Python 2.0.1 到 3.9.5，是不是很开心？因为您正在接触的，是一个有着深厚内功，久经历练的非常成熟却又在科学，信息，金融等前沿领域有着广泛应用的超级语言。</p>
+<center>二</center>
+
+<p>那么，您应该选哪个版本？</p>
+<blockquote>
+<p>子曰: 三长一短选最短,三短一长选最长 两长两短就选B,同长同短就选A 长短不一选择D,参差不齐C无敌 以抄为主,以懵为辅 抄辅结合,定能及格。。。</p>
+</blockquote>
+<p>一不留神又说实话了。。。 我们现在都很忙，没必要浪费时间学没用的，不喜欢的。所以这个大招就不上了。我给您换一个。</p>
+<blockquote>
+<p>安装最新版。对于目前而言，就是Python 3.9.5</p>
+</blockquote>
+<p>相信您会有疑问，一个软件，装最新版本这个难道还需要讨论？莫非小侯你想按篇幅收费？</p>
+<blockquote>
+<p>是的，我想</p>
+</blockquote>
+<p>嗯嗯，请忽略我无法抑制的内心独白。其实事情是这样，您在学习和使用Python时，最常使用的方法，肯定是百度。比如，您想研究怎么用Python打开一个Excel文件，您会百度”Python打开excel文件”，然后您会搜索到很多网页，基本内容大同小异，基本就是互相抄的。当然这不是重点，这些代码基本都是对的，您只要拷贝到您的编辑器里，稍微改改，似乎应该就能用了。</p>
+<p>但其实不是这样的。我在学习和使用Python编程时，遇到的最多的问题就是，人家代码我抄的真真儿的，就是哐哐哐报错，什么哎呀你长得不行啦，哎呀你收入不行啦，哎呀你开马自达但我想在宝马里哭啦。。。 这时保证您的内心是崩溃的，是的，这是任何一种编程语言初学者都要面对的问题：</p>
+<blockquote>
+<p>人家运行好好的代码，我原样复制就是报错，就是跑不通，难道就因为我用的电脑不是联想ThinkPad吗？</p>
+</blockquote>
+<p>对此，我想说，</p>
+<blockquote>
+<p>是的呢</p>
+</blockquote>
+<p>哈哈。放轻松大兄弟。这里我就想和您谈到的第一个我经常遇到的Python版本问题：</p>
+<h5 id="您抄的代码运行不了，第一就很可能是Python-版本的不同"><a href="#您抄的代码运行不了，第一就很可能是Python-版本的不同" class="headerlink" title="您抄的代码运行不了，第一就很可能是Python 版本的不同"></a>您抄的代码运行不了，第一就很可能是Python 版本的不同</h5><p>您要知道，您百度出来的信息，指不定是哪年的了。人家用的，说不定是多老的版本，甚至很可能是Python 2.7时代的祖传代码。您拿祖传代码在Python 3.x环境运行，哐哐报错不是很正常吗？</p>
+<p>最简单的，屏幕输出print函数，Python 2时代可以写成这样，就像声明一个变量:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span> <span class="string">&#x27;小侯哥哥，你好好帅呀&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>您这么运行，您的显示器就会输出一句大实话。但是在Python 3时代，这就报错了，因为Python 3 的print只能是函数形式，所以您想夸我，就得写成带括号的带参数的函数形式:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;小侯哥哥，你好好帅呀&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>再比如另外一个常用的input函数，python 2下，input得到的是一个整数，但python 3的input得到的是字符串。所以，如果您不小心拷贝到了祖传代码，不关注这些问题，很可能就会出问题。</p>
+<p>除了Python 2 和 3 之间的巨大差异，另一个我会遇到的Python版本问题是:</p>
+<h5 id="某些Python的第三方库不支持最新的版本"><a href="#某些Python的第三方库不支持最新的版本" class="headerlink" title="某些Python的第三方库不支持最新的版本"></a>某些Python的第三方库不支持最新的版本</h5><p>比如，我之前用过的一个爬虫库，就只能支持到Python 3.7.x版本。您如果运行更新的3.8或3.9，在安装库时就会遇到问题。</p>
+<p>好消息是，这些问题都不会阻碍Python成为您的好帮手。这些问题都能解决，只要您有耐心，愿意多思考，多尝试，这些都不是问题。</p>
+<p>总之一句话，请您安装最新的Python 版本，目前就是<a target="_blank" rel="noopener" href="https://www.python.org/ftp/python/3.9.5/python-3.9.5-amd64.exe">Python 3.9.5</a>.</p>
+<p>您安装的，其实是一个Python的运行环境。Linux和MacOS都内置对Python的支持，Windows只需要单独安装一下就行。另外说一句，很多Python教程都会一步一步截图告诉您应该怎么按下一步。其实没那么复杂，安装默认的来就行，只有一个要注意，就是把”Add Python 3.9 to Path”给勾上，这样您就能在您系统的任何一个文件夹，任何一个位置直接运行您的Python程序了。其他的嘛，看得懂的您就选选，看不懂的就默认，不会有什么问题。</p>
+<center>三</center>
+
+<p>开始使用Python的准备工作很简单，一共就2步: Step 1 安装Python。</p>
+<p>下一篇，我再跟您聊聊用什么软件开发Python程序。但是我还是想说，工具永远是其次，您需要的是，改变自己，改变旧习惯的信念。</p>
+<center>四</center>
+
+<p>以下算是番外篇吧，对我们学习用处不大，但似乎不说又不够专业。</p>
+<h6 id="Python是开源的。"><a href="#Python是开源的。" class="headerlink" title="Python是开源的。"></a>Python是开源的。</h6><p>您认为这对我们不重要，但这其实很重要。</p>
+<p>Python很强大的一点就在于官方和无数爱好者提供了大量的库，利用这些库，我们能很方便简单地写出我们需要的程序 (我会专门谈谈我对库的理解，应该是在下两篇以内)。正是因为开源，我们才能免费而且随意地去使用它们。您甚至可以直接打开这些库文件，学习人家是怎么实现这些功能的。我一直在赞美开源，因为开源让每个人都在无私地贡献自己的才智，平等造福于世界上的每个人。我甚至觉得开源思想的出现让我相信共产主义也许不是幻想。正因为如此，如果不涉及我服务企业的内部信息或者我或者任何其他人的隐私，我写的每篇文章，每段代码都是开源的。</p>
+<h5 id="Python是跨平台的"><a href="#Python是跨平台的" class="headerlink" title="Python是跨平台的"></a>Python是跨平台的</h5><p>对计算机语言而言，跨平台其实已经算是一个基本要求。跨平台，意味着您的代码可以做到“一次编写，到处运行”。但其实，很多时候计算机语言都做不到跨平台，因为我们的代码很难不跟操作系统打交道，比如这样的逻辑:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">加载 操作系统文件管理的方法库</span><br><span class="line">路径 = &quot;E:\学习资料&quot;</span><br><span class="line">列出文件数量(路径)</span><br></pre></td></tr></table></figure>
+
+<p>这里我用了逻辑而不是具体的语言，这里我用的是伪代码让您了解编程语言的工作逻辑，与具体什么语言关系不大。这段逻辑，我想设置了一个路径，引用了操作系统文件管理的方法库里面能列出文件数量的方法，目的是想用这两行代码算算我现在已经收集了多少学习资料，咳咳。</p>
+<p>这样的代码，显然时不能跨平台的，因为不同操作系统管理文件的方式是不一样的。Windows会理解E盘是个什么。但像Linux就会懵B, “学习资料我隐隐能理解大概是干嘛用的，但是这个E盘是个什么玩意？” 要知道，Linux管理硬盘完全不是用CDE这样的分区管理方式，所以这样的代码就不能跨平台。当然，绝大多数情况下，我们都可以通过只修改少量代码就能让代码实现跨平台。</p>
+<center>五</center>
+
+<p>最后，还是想聊聊为什么我想写点东西。周末带孩子上课外班，坐在那里放眼望去，多数的家长还是看手机的多。我一开始也这样。后来想想，看手机最可怕的不是浪费时间，而是手机带给我们的其实都是碎片化信息。各种官媒，自媒体都在用各自的手段释放各种吸引眼球的信息，但仔细想想，说句不客气的，这些信息，垃圾居多。当我们懒得自己去探索，去思考，而是习惯被动接受各种垃圾信息，然后陶醉在“互联网时代获取信息的渠道就是NB”时，其实和以前没有互联网相比，真的有什么本质区别么？ 未必。未必。</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/python/enviroment.jpg" alt="环境"></p>
+<p>所以，我希望能引入学习 - 思考 -总结 - 构建属于自己的知识体系 这样的循环去充实自己。不然，我真的害怕某天自己会习惯，会坦然，那可就真的是躺平了。</p>
+<p>得嘞，今天就写到这里了，下一篇，我跟您聊聊开始动手写第一个代码吧，不然真成废话连载了。</p>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="lx-navigation">
+	<div class="lx-cover prev lx-cover-sm" style="background-image: url(//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/images/footer-l.jpeg)">
+		<div class="overlay"></div>
+		<a class="copy" href="/%E5%AE%9D%E8%B4%9D%E5%84%BF%EF%BC%8C%E4%B8%80%E8%B5%B7%E5%AD%A6Python%E5%91%80-IV-md/">
+			<div class="display-t">
+				<div class="display-tc">
+					<div>
+						<span>Next</span>
+						<h3>宝贝儿，一起学...</h3>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+        <div class="lx-cover next lx-cover-sm" style="background-image: url(//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/images/footer-r.jpeg)">
+		<div class="overlay"></div>
+		<a class="copy" href="/%E5%AE%9D%E8%B4%9D%E5%84%BF%EF%BC%8C%E4%B8%80%E8%B5%B7%E5%AD%A6Python%E5%91%80-II/">
+			<div class="display-t">
+				<div class="display-tc">
+					<div>
+						<span>Prev</span>
+						<h3>宝贝儿，一起学...</h3>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+</div>
+
+</div>
+
+<footer>
+  <div>
+  Copyright &copy; 2022.<a href="/">Small fish, big ocean</a><br>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme <a href="https://lx.js.org" target="_blank">Lx</a><br>
+  </div>
+</footer>
+
+</div>
+
+<button class="hamburger hamburger--arrow-r" type="button">
+    <div class="hamburger-box">
+      <div class="hamburger-inner"></div>
+    </div>
+</button> 
+<div class="menu visibility">
+  <div class="menu-head">
+    <span class="layer">
+      <div class="col">
+        <div class="row for-pic">
+          <div class="profile-pic">
+            <a href="/"><img src="/images/avatar.jpeg" alt="Houyufeng 侯宇峄1�7"/></a>
+          </div>
+        </div>
+        <div class="row for-name">
+          <p>Houyufeng 侯宇峄1�7</p>
+          <span class="tagline">Hello, World!</span>
+        </div>
+      </div>
+    </span>
+  </div>
+  <nav class="menu-container">
+  <ul class="menu-items">
+    <li><a href="/"><i class="fa fa-home fa-fw"></i>Home</a></li>
+    <li><a href="/archives/"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+    
+    <li class="has-sub"><span class="dropdown-heading">
+      <i class="fa fa-bookmark fa-fw"></i>Pages</span>
+        <ul>
+          <li><a href="/guestbook/">Guestbook</a></li>
+        <li><a href="/about/">About</a></li>
+        </ul>
+    </li>
+    <li class="has-sub"><span class="dropdown-heading">
+      <i class="fa fa-link fa-fw"></i>Friends</span>
+        <ul>
+          </ul>
+    </li>
+  </ul>
+  </nav>
+</div>
+
+<div class="gototop js-top">
+  <a href="#" class="js-gotop"><i class="fa fa-arrow-up"></i></a>
+</div>
+<script src="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/js/jquery.easing.min.js"></script>
+<script>
+(function () {
+	"use strict";
+	var goToTop = function() {
+		$(".js-gotop").on("click", function(event){
+			event.preventDefault();
+			$("html, body").animate({
+				scrollTop: $("html").offset().top
+			}, 500, "easeInOutExpo");
+			return false;
+		});
+		$(window).scroll(function(){
+			var $win = $(window);
+			if ($win.scrollTop() > 200) {
+				$(".js-top").addClass("active");
+			} else {
+				$(".js-top").removeClass("active");
+			}
+		});
+	};
+	$(function(){
+		goToTop();
+	});
+}());
+</script>
+
+
+</body>
+</html>

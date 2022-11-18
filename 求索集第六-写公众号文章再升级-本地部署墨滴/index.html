@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content=#58b77a>
+  <title>求索集第六: 写公众号文章再升级 - 本地部署墨滴 | Small fish, big ocean</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Houyufeng 侯宇峄1�7">
+  <meta name="keywords" content="">
+  <meta name="description" content="My blog">
+  <script id="hexo-configurations">
+  var CONFIG = {
+    root: '/',
+    theme: 'hexo-theme-lx-master',
+    version: '0.3.9',
+    localsearch:{
+      "enable": false,
+      "trigger": "auto",
+      "top_n_per_article": 1,
+      "unescape": false,
+      "preload": false
+      },
+    path: 'null'
+  };
+</script>
+
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/css/main.min.css">
+  <style type="text/css">
+    pre,
+    code {
+      font-family: 'Fira Code', monospace;
+    }
+    html {
+      font-family: sans-serif;
+    }
+    body {
+      font-family: sans-serif;
+    }
+    h1, h2, h3, h4, h5, figure {
+      font-family: sans-serif;
+    }
+    .menu-container{
+      font-family: sans-serif;
+    }
+  </style>
+
+  <script src="//cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/js/jquery.jside.menu.js"></script>
+	<script>
+	$(document).ready(function(){
+	$(".menu-container").jSideMenu({
+	    jSidePosition: "position-right",
+	    jSideSticky: true,
+	    jSideSkin: "greenish",
+	     });
+	}); 
+	</script>
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Fira Code:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css">
+<meta name="generator" content="Hexo 6.2.0"></head>
+<body>
+<div class="single">
+
+<div id="page">
+<div id="lx-aside" style="background-image: url(//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/images/post_cover.jpeg)" data-stellar-background-ratio="0.5">
+  <div class="overlay">
+  <div class="page-title">
+    <div class="avatar"><a href="/"><img src="/images/avatar.jpeg"></a></div>
+    <span>2022-05-22</span>
+    <h2>求索集第六: 写公众号文...</h2>
+    
+    </div>
+</div>
+</div>
+
+<div id="lx-main-content">
+  <div class="lx-post">
+    <div class="lx-entry padding">
+      <div>
+        <h1 id="求索集第六-写公众号文章再升级-本地部署墨滴"><a href="#求索集第六-写公众号文章再升级-本地部署墨滴" class="headerlink" title="求索集第六: 写公众号文章再升级 - 本地部署墨滴"></a>求索集第六: 写公众号文章再升级 - 本地部署墨滴</h1><center>一</center>
+
+<p>自从学习了Markdown和hexo, 写Blog就变得更加有趣. 和hexo对Markdown的出色支持不同, 微信公众号有自己的一套格式系统, 对markdown的支持也不是很完美, 因此, 之前把文章导入到公众号的重要步骤就是用墨滴之类的第三方工具把markdown转换成公众号文章, 然后再发表. 概括一下, 整个工作流是:</p>
+<blockquote>
+<p>使用<em><strong>typora</strong></em>编写<em><strong>markdown</strong></em>格式文章 - 在<em><strong>墨滴</strong></em>里对<em><strong>markdown</strong></em>文章进行重新编码和排版 - 发表到微信公众号</p>
+</blockquote>
+<p>这里面存在的一个问题是, 墨滴作为一个出色markdown处理工具, 是基于线上的, 需要连接互联网, 而且数据也是存在墨滴的服务器上. 有时, 出于种种原因, 我们需要数据本地化. 针对本地化需求, 墨滴倒是提供了本地编辑器, 但是只有7天试用时间, 想长期使用就要按年付费. 实际上, 墨滴其实是开源的, 那么, 我们其实就有了自己搞一个本地版本墨滴的可能性.让我们研究一下.</p>
+<center>二</center>
+
+<h3 id="首先-我们先到墨滴的github仓库获取源代码"><a href="#首先-我们先到墨滴的github仓库获取源代码" class="headerlink" title="首先, 我们先到墨滴的github仓库获取源代码:"></a>首先, 我们先到墨滴的github仓库获取源代码:</h3><p><a target="_blank" rel="noopener" href="https://github.com/mdnice/markdown-nice">墨滴 Github仓库</a>, 可以看到, 墨滴使用JS开发的.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Git clone https://github.com/mdnice/markdown-nice.git</span><br></pre></td></tr></table></figure>
+
+<p>这一步相当于把墨滴的最新源代码下载到了本地.</p>
+<h3 id="其次-编译墨滴源代码-生成可以部署的墨滴程序代码"><a href="#其次-编译墨滴源代码-生成可以部署的墨滴程序代码" class="headerlink" title="其次, 编译墨滴源代码, 生成可以部署的墨滴程序代码"></a>其次, 编译墨滴源代码, 生成可以部署的墨滴程序代码</h3><p>进入本地的墨滴源码文件夹, 因为是JS开发的, 百度了一下, 用npm 或 yarn就能对源代码打包:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">H:\learning\markdown-nice&gt;yarn build</span><br></pre></td></tr></table></figure>
+
+<p>打包完毕, 会在墨滴源代码文件夹里看到一个build文件夹, 这里面就是我们要的编译好的程序啦, 进去看看,</p>
+<p>哦哦哦, 原来不是exe程序, 而是网页, 那就更棒了, 因为相对于程序, 网页形式的应用更加方便, 而且有本地网络访问的可能, 换句话说, 局域网里其它的电脑, 手机, 平板也能通过网页浏览器访问墨滴, 那岂不是我那联想平板也能写公众号文章了?</p>
+<p>于是我选择打开index.html, 果然不行, 看来这个编译好的墨滴程序应该是需要网页服务器才能运行了. </p>
+<h3 id="然后-把编译好的墨滴代码部署到本地IIS服务器"><a href="#然后-把编译好的墨滴代码部署到本地IIS服务器" class="headerlink" title="然后, 把编译好的墨滴代码部署到本地IIS服务器"></a>然后, 把编译好的墨滴代码部署到本地IIS服务器</h3><p>于是我开启了Windows Server自带的IIS服务器, 新建一个站点, 站点绑定好本机IP, 然后端口选了个1234 省的和其他应用冲突, 当然防火墙里也需要打开这个端口, 然后把build出来的墨滴代码全部拷贝到站点的文件夹下, 激动的时刻到了,</p>
+<p>浏览器里输入</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://192.168.0.107:1234/</span><br></pre></td></tr></table></figure>
+
+<p>哦也, 墨滴的界面就华丽丽的出现了, 注意, 这可是部署在本地的代码, 就算没有互联网也能运行的哟:)</p>
+<p>然后打开平板, 同样输入本地墨滴的地址, 哦也, 这下平板也能愉快地用markdown写blog和公众号文章了, hoho~~~</p>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="lx-navigation">
+	<div class="lx-cover prev lx-cover-sm" style="background-image: url(//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/images/footer-l.jpeg)">
+		<div class="overlay"></div>
+		<a class="copy" href="/%E6%B1%82%E7%B4%A2%E9%9B%86-%E7%AC%AC%E4%B8%83-%E4%B9%9F%E8%AE%B8%E8%BF%99%E5%B0%B1%E6%98%AF%E5%AE%87%E5%AE%99%E7%9A%84%E7%9C%9F%E7%9B%B8-%E5%88%9D%E8%AF%86%E9%9A%8F%E6%9C%BA%E6%BC%AB%E6%AD%A5%E6%9C%89%E6%84%9F/">
+			<div class="display-t">
+				<div class="display-tc">
+					<div>
+						<span>Next</span>
+						<h3>求索集 第七 ...</h3>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+        <div class="lx-cover next lx-cover-sm" style="background-image: url(//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/images/footer-r.jpeg)">
+		<div class="overlay"></div>
+		<a class="copy" href="/%E6%B1%82%E7%B4%A2%E9%9B%86-%E7%AC%AC%E4%BA%94-%E5%88%B0%E5%BA%95%E6%9C%89%E5%A4%9A%E5%B7%AE-%E6%A0%87%E5%87%86%E5%B7%AE-%E6%96%B9%E5%B7%AE-%E5%8D%8F%E6%96%B9%E5%B7%AE/">
+			<div class="display-t">
+				<div class="display-tc">
+					<div>
+						<span>Prev</span>
+						<h3>求索集-第五-...</h3>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+</div>
+
+</div>
+
+<footer>
+  <div>
+  Copyright &copy; 2022.<a href="/">Small fish, big ocean</a><br>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme <a href="https://lx.js.org" target="_blank">Lx</a><br>
+  </div>
+</footer>
+
+</div>
+
+<button class="hamburger hamburger--arrow-r" type="button">
+    <div class="hamburger-box">
+      <div class="hamburger-inner"></div>
+    </div>
+</button> 
+<div class="menu visibility">
+  <div class="menu-head">
+    <span class="layer">
+      <div class="col">
+        <div class="row for-pic">
+          <div class="profile-pic">
+            <a href="/"><img src="/images/avatar.jpeg" alt="Houyufeng 侯宇峄1�7"/></a>
+          </div>
+        </div>
+        <div class="row for-name">
+          <p>Houyufeng 侯宇峄1�7</p>
+          <span class="tagline">Hello, World!</span>
+        </div>
+      </div>
+    </span>
+  </div>
+  <nav class="menu-container">
+  <ul class="menu-items">
+    <li><a href="/"><i class="fa fa-home fa-fw"></i>Home</a></li>
+    <li><a href="/archives/"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+    
+    <li class="has-sub"><span class="dropdown-heading">
+      <i class="fa fa-bookmark fa-fw"></i>Pages</span>
+        <ul>
+          <li><a href="/guestbook/">Guestbook</a></li>
+        <li><a href="/about/">About</a></li>
+        </ul>
+    </li>
+    <li class="has-sub"><span class="dropdown-heading">
+      <i class="fa fa-link fa-fw"></i>Friends</span>
+        <ul>
+          </ul>
+    </li>
+  </ul>
+  </nav>
+</div>
+
+<div class="gototop js-top">
+  <a href="#" class="js-gotop"><i class="fa fa-arrow-up"></i></a>
+</div>
+<script src="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/js/jquery.easing.min.js"></script>
+<script>
+(function () {
+	"use strict";
+	var goToTop = function() {
+		$(".js-gotop").on("click", function(event){
+			event.preventDefault();
+			$("html, body").animate({
+				scrollTop: $("html").offset().top
+			}, 500, "easeInOutExpo");
+			return false;
+		});
+		$(window).scroll(function(){
+			var $win = $(window);
+			if ($win.scrollTop() > 200) {
+				$(".js-top").addClass("active");
+			} else {
+				$(".js-top").removeClass("active");
+			}
+		});
+	};
+	$(function(){
+		goToTop();
+	});
+}());
+</script>
+
+
+</body>
+</html>

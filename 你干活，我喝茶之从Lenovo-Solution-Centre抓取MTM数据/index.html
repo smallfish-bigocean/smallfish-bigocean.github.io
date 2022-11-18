@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content=#58b77a>
+  <title>你干活，我喝茶之从Lenovo Solution Centre抓取MTM数据 | Small fish, big ocean</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Houyufeng 侯宇峄1�7">
+  <meta name="keywords" content="">
+  <meta name="description" content="My blog">
+  <script id="hexo-configurations">
+  var CONFIG = {
+    root: '/',
+    theme: 'hexo-theme-lx-master',
+    version: '0.3.9',
+    localsearch:{
+      "enable": false,
+      "trigger": "auto",
+      "top_n_per_article": 1,
+      "unescape": false,
+      "preload": false
+      },
+    path: 'null'
+  };
+</script>
+
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/css/main.min.css">
+  <style type="text/css">
+    pre,
+    code {
+      font-family: 'Fira Code', monospace;
+    }
+    html {
+      font-family: sans-serif;
+    }
+    body {
+      font-family: sans-serif;
+    }
+    h1, h2, h3, h4, h5, figure {
+      font-family: sans-serif;
+    }
+    .menu-container{
+      font-family: sans-serif;
+    }
+  </style>
+
+  <script src="//cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/js/jquery.jside.menu.js"></script>
+	<script>
+	$(document).ready(function(){
+	$(".menu-container").jSideMenu({
+	    jSidePosition: "position-right",
+	    jSideSticky: true,
+	    jSideSkin: "greenish",
+	     });
+	}); 
+	</script>
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Fira Code:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css">
+<meta name="generator" content="Hexo 6.2.0"></head>
+<body>
+<div class="single">
+
+<div id="page">
+<div id="lx-aside" style="background-image: url(//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/images/post_cover.jpeg)" data-stellar-background-ratio="0.5">
+  <div class="overlay">
+  <div class="page-title">
+    <div class="avatar"><a href="/"><img src="/images/avatar.jpeg"></a></div>
+    <span>2021-04-02</span>
+    <h2>你干活，我喝茶之从Len...</h2>
+    
+    </div>
+</div>
+</div>
+
+<div id="lx-main-content">
+  <div class="lx-post">
+    <div class="lx-entry padding">
+      <div>
+        <h1 id="你干活，我喝茶之从Lenovo-Solution-Centre抓取MTM数据"><a href="#你干活，我喝茶之从Lenovo-Solution-Centre抓取MTM数据" class="headerlink" title="你干活，我喝茶之从Lenovo Solution Centre抓取MTM数据"></a>你干活，我喝茶之从Lenovo Solution Centre抓取MTM数据</h1><blockquote>
+<p>重复劳动往小了说影响工作效率，往大了说影响生活质量，必须予以重视</p>
+</blockquote>
+<p>话说某天，一个Geo的大哥给我发邮件，说PSREF上列的US MTM和Lenovo Solution Centre上的不一致。那么解决方式很简单，直接把Lenovo Solution Centre的MTM给抓下来，岂不美哉？</p>
+<p>当然了，Lenovo Solution Centre已经提供了这个功能，只需要选择每个产品，然后分别导出数据，然后再切掉除了MTM以外的数据就行了。但是显然，如此明显的重复劳动，效率是极其低下的，试想，如果让程序自己把MTM都抓下来存在Excel文件里，岂不美哉？ 废话不说，开干！目标已经明确，我们就是想要MTM这一列：</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/3I86Sef5lTYM579TPYYcFdEtmmd84iaWsPqFezpId9moEvGQ9AUJeVKa49tLGcFlqREAE6jlzGia6y7DcDZPDZww/640?wx_fmt=png" alt="img"></p>
+<blockquote>
+<p>“今天的目标是进入Lenovo Solution Centre产品配置列表，把MTM列数据通通抓下来，然后存到一个Excel表里”</p>
+</blockquote>
+<p>动手不着急，咱们先分析看看这个任务的流程和逻辑。</p>
+<p>打开<a target="_blank" rel="noopener" href="http://www.lenovosc.com/">www.lenovosc.com</a>, 进入产品页面需要两步:</p>
+<p>先选择产品线:</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/3I86Sef5lTYM579TPYYcFdEtmmd84iaWsUfwJOvYjYKxgibXVhrjOG9Nl5L7um6ic8xzOj2GISJHK4BYiaWICY3YiaA/640?wx_fmt=png" alt="img"></p>
+<p>然后选择产品:</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/3I86Sef5lTYM579TPYYcFdEtmmd84iaWsCbhBRyiaTEj8ToMslB22BcPW69bhM4BLaVicB0Po1xblz5q5gZ7SrXqw/640?wx_fmt=png" alt="img"></p>
+<p>然后GO，就能进入产品MTM列表，剩下的就是抓出MTM那列的数据，然后存到Excel里。所以基本的逻辑就是:</p>
+<blockquote>
+<ol>
+<li>进入产品页面</li>
+<li>抓取MTM列表数据</li>
+<li>存入Excel表格</li>
+</ol>
+</blockquote>
+<p>项目拆分完毕，下面就是确定实现方式。我的知识储备能用得上的就是两位爬虫界的主力，Beautiful Soup和Selenium。考虑到Selenium模拟浏览器的方式太费资源，我的小电脑跑起来总是很吃力，还老收到FBI Warning，我反正是不喜欢Selenium，咱们还是先Beautiful Soup煲汤好了。。。</p>
+<p>一顿如狼似虎的操作，我直接卡在了选择产品那里。不管怎么弄，Beautiful Soup的key.click()就是无法选中产品，刚才还真香的排骨汤，现在彻底凉了，看着表面漂着的猪油，我一阵阵反胃，脑海里仿佛出现特朗普和拜登的嘲笑，星条旗好像慢慢就要盖住五星红旗，眼看就是一场危机。。。</p>
+<p>“起来，不愿做奴隶的人们”。就在我满脑子浆糊想去洗手间坐会儿吸取天地之灵气的时候，脑海里突然浮现出这首雄壮有力的歌曲，顿时虎躯一震，FBI 的Warning信息此刻再也无关紧要，关闭了播放器，我重新打开VS Code，Selenium，真香，刚才我说话都是那个啥，您别往心里去…</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">from selenium import  webdriver </span><br><span class="line">import time</span><br><span class="line">from openpyxl import Workbook</span><br><span class="line">from openpyxl import load_workbook</span><br></pre></td></tr></table></figure>
+
+<p>随着坚定有力的复制粘贴，我决定对Selenium表示深深的歉意。是的，虽然Selenium模拟浏览器的方式效率实在那个啥，但是本着能用就行的不纠结定律，我还是不想为难自己，毕竟那些伟大的程序员脑袋就是纠结秃的，肤发受之父母，虐待自己就是不孝，这是一个合格的社会主义事业接班人不能允许的。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">driver = webdriver.Firefox()</span><br><span class="line">driver.get(&#x27;https://lenovosc.com/usa/portfolio/system/thinkstation&#x27;) </span><br><span class="line">time.sleep(2)</span><br></pre></td></tr></table></figure>
+
+<p>这次我毫不犹豫让Selenium模拟火狐这个狐狸精。为什么不模拟Chrome？因为每次让Selenium模拟Chrome，都给我报点小问题，什么您冲个VIP吧，什么美女荷官在线发牌吧，什么澳门 and 拉斯维加斯吧，都是我这个小花朵一样的的接班人不懂的，所以，咱们就小狐狸算了，有点味道不算什么。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">system_type = driver.find_element_by_id(&#x27;system_type&#x27;) #定位到下拉框</span><br><span class="line">driver.find_element_by_css_selector(&quot;[value=&#x27;1061&#x27;]&quot;).click()</span><br><span class="line">button = driver.find_element_by_class_name(&#x27;btn.btn-lg.btn-info&#x27;)</span><br><span class="line">button.click()</span><br><span class="line">print(&#x27;开始倒计时&#x27;)</span><br><span class="line">time.sleep(10)</span><br></pre></td></tr></table></figure>
+
+<p>以上是进入产品页的代码.</p>
+<p>而且从这个页面的源代码里，我们还能看到以下产品的value值，所以“一次获取全部产品的MTM”其实也就没什么难度了呢，大不了搞个循环就是了呢~~~</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;option value=&quot;1061&quot;&gt;P330&lt;/option&gt;</span><br><span class="line">&lt;option value=&quot;1077&quot;&gt;P330 Tiny&lt;/option&gt;</span><br><span class="line">&lt;option value=&quot;1357&quot;&gt;P340&lt;/option&gt;</span><br><span class="line">&lt;option value=&quot;1370&quot;&gt;P340 Tiny&lt;/option&gt;</span><br><span class="line">&lt;option value=&quot;974&quot;&gt;P520&lt;/option&gt;</span><br><span class="line">&lt;option value=&quot;975&quot;&gt;P520c&lt;/option&gt;</span><br><span class="line">&lt;option value=&quot;1422&quot;&gt;P620&lt;/option&gt;</span><br><span class="line">&lt;option value=&quot;938&quot;&gt;P720&lt;/option&gt;</span><br><span class="line">&lt;option value=&quot;937&quot;&gt;P920&lt;/option&gt;</span><br></pre></td></tr></table></figure>
+
+<p>下面就进入产品页面了，这个页面的表格就是<table></table>，那抓出MTM也就不困难了。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mtm_table = driver.find_element_by_class_name(&#x27;k-selectable&#x27;)</span><br><span class="line">mtm_line = mtm_table.find_elements_by_tag_name(&#x27;tr&#x27;)</span><br><span class="line">ts = driver.find_elements_by_xpath(&#x27;/html/body/div/div[2]/div/div/div/div/div[1]/form/div/div[2]/table/tbody/tr/td[4]&#x27;)</span><br></pre></td></tr></table></figure>
+
+<p>嗯，装B遭雷劈。其实找MTM列这块我头大的厉害，毕竟xpath玩儿起来远比id class难，所以我特地请教了小齐老师，小齐老师是我学习的对象，简称我对象，嗯。</p>
+<p>好了，东西有了，只要用个循环就可以得到MTM，然后建立一个列表存这些MTM</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mtmlist = []</span><br><span class="line">for i in ts:</span><br><span class="line">    mtmlist.append(i.text)</span><br></pre></td></tr></table></figure>
+
+<p>后面就是怎么把存放MTM的列表给存到Excel里了。这里我还费了老鼻子劲。怎么一行存一个MTM呢？搞了半天，openpyxl百度了一个遍，还是没有头绪。后来发现问题在于基础知识不牢固。</p>
+<blockquote>
+<p>这是一个非常需要快速学习能力的时代，而快速学习的关键，是你要知道你需要知道你想干的事情，到底需要具备哪些领域的知识</p>
+</blockquote>
+<p>原来只要用ws.cell(行，列，值)大法就能给单元格赋值，配上循环，逻辑简单，哦耶</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">wb = Workbook()</span><br><span class="line">ws = wb.active</span><br><span class="line">for i in range(len(mtmlist)):</span><br><span class="line">    ws.cell(row=i+1, column=1,value=mtmlist[i])</span><br><span class="line">    i = i+1</span><br><span class="line">wb.save(&#x27;H:\\Temp\\123.xlsx&#x27;)</span><br></pre></td></tr></table></figure>
+
+<p>嗯嗯，123.xlsx，果然是我的风格，我很多文件都是abc-123这样的命名方式，都是跟加勒比海岸呀，什么东京有点热呀，什么一本二本道啊里面的老师学的呢~~~</p>
+<p>写完作业再验证一下，用手动方式下载了MTM列表，一对比，还真是对呢</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/3I86Sef5lTYM579TPYYcFdEtmmd84iaWsod9CUklwpm71zrw6OBLqm5tWxEUm5JaicUo9Rbs4p6N2cd0W4QyUVnQ/640?wx_fmt=png" alt="img"></p>
+<p>后续还有能优化的，比如把所有产品线的MTM都加上，比如把python转成exe然后设置为计划任务，这都是目前我的能力之内能搞定的，下面就是确定好方案稍加完善即可。</p>
+<p>说点题外话，这段时间有功夫就写写Python，其实倒不是想转行干程序员，毕竟我这个岁数和小体格，拿程序员当职业怕是够呛。但是确实我们每天都在面对重复的劳动，面对着效率的低下，面对着日复一日年复一年的埋头干活。我想用一种方式来找到新的思路，能让自己换个角度看待身边的一切，想能有个时间抬起头看看天空。</p>
+<p>我们当然有意愿升职加薪走上人生巅峰，但学习却不能以此为最终目标。目标太短视，一旦无法迅速完成会严重打击自己的学习动力。我们应该为了中华崛起而学习，为实现社会主义现代化而奋斗。。。</p>
+<p>文章最后我就一个小问题，我什么时候能接班…</p>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="lx-navigation">
+	<div class="lx-cover prev lx-cover-sm" style="background-image: url(//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/images/footer-l.jpeg)">
+		<div class="overlay"></div>
+		<a class="copy" href="/%E4%BB%8EPSREF%E7%BD%91%E7%AB%99%E8%8E%B7%E5%8F%96%E4%BA%A7%E5%93%81%E9%85%8D%E7%BD%AE/">
+			<div class="display-t">
+				<div class="display-tc">
+					<div>
+						<span>Next</span>
+						<h3>从PSREF网...</h3>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+        <div class="lx-cover next lx-cover-sm" style="background-image: url(//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/images/footer-r.jpeg)">
+		<div class="overlay"></div>
+		<a class="copy" href="/%E7%94%A8Linux%E6%9D%A5%E5%B7%A5%E4%BD%9C%EF%BC%8C%E4%B8%AD%E8%BF%98%E6%98%AF%E4%B8%8D%E4%B8%AD%E5%92%A7/">
+			<div class="display-t">
+				<div class="display-tc">
+					<div>
+						<span>Prev</span>
+						<h3>用Linux来...</h3>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+</div>
+
+</div>
+
+<footer>
+  <div>
+  Copyright &copy; 2022.<a href="/">Small fish, big ocean</a><br>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme <a href="https://lx.js.org" target="_blank">Lx</a><br>
+  </div>
+</footer>
+
+</div>
+
+<button class="hamburger hamburger--arrow-r" type="button">
+    <div class="hamburger-box">
+      <div class="hamburger-inner"></div>
+    </div>
+</button> 
+<div class="menu visibility">
+  <div class="menu-head">
+    <span class="layer">
+      <div class="col">
+        <div class="row for-pic">
+          <div class="profile-pic">
+            <a href="/"><img src="/images/avatar.jpeg" alt="Houyufeng 侯宇峄1�7"/></a>
+          </div>
+        </div>
+        <div class="row for-name">
+          <p>Houyufeng 侯宇峄1�7</p>
+          <span class="tagline">Hello, World!</span>
+        </div>
+      </div>
+    </span>
+  </div>
+  <nav class="menu-container">
+  <ul class="menu-items">
+    <li><a href="/"><i class="fa fa-home fa-fw"></i>Home</a></li>
+    <li><a href="/archives/"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+    
+    <li class="has-sub"><span class="dropdown-heading">
+      <i class="fa fa-bookmark fa-fw"></i>Pages</span>
+        <ul>
+          <li><a href="/guestbook/">Guestbook</a></li>
+        <li><a href="/about/">About</a></li>
+        </ul>
+    </li>
+    <li class="has-sub"><span class="dropdown-heading">
+      <i class="fa fa-link fa-fw"></i>Friends</span>
+        <ul>
+          </ul>
+    </li>
+  </ul>
+  </nav>
+</div>
+
+<div class="gototop js-top">
+  <a href="#" class="js-gotop"><i class="fa fa-arrow-up"></i></a>
+</div>
+<script src="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/js/jquery.easing.min.js"></script>
+<script>
+(function () {
+	"use strict";
+	var goToTop = function() {
+		$(".js-gotop").on("click", function(event){
+			event.preventDefault();
+			$("html, body").animate({
+				scrollTop: $("html").offset().top
+			}, 500, "easeInOutExpo");
+			return false;
+		});
+		$(window).scroll(function(){
+			var $win = $(window);
+			if ($win.scrollTop() > 200) {
+				$(".js-top").addClass("active");
+			} else {
+				$(".js-top").removeClass("active");
+			}
+		});
+	};
+	$(function(){
+		goToTop();
+	});
+}());
+</script>
+
+
+</body>
+</html>

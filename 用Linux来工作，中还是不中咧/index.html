@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content=#58b77a>
+  <title>用Linux来工作，中还是不中咧 | Small fish, big ocean</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Houyufeng 侯宇峄1�7">
+  <meta name="keywords" content="">
+  <meta name="description" content="My blog">
+  <script id="hexo-configurations">
+  var CONFIG = {
+    root: '/',
+    theme: 'hexo-theme-lx-master',
+    version: '0.3.9',
+    localsearch:{
+      "enable": false,
+      "trigger": "auto",
+      "top_n_per_article": 1,
+      "unescape": false,
+      "preload": false
+      },
+    path: 'null'
+  };
+</script>
+
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/css/main.min.css">
+  <style type="text/css">
+    pre,
+    code {
+      font-family: 'Fira Code', monospace;
+    }
+    html {
+      font-family: sans-serif;
+    }
+    body {
+      font-family: sans-serif;
+    }
+    h1, h2, h3, h4, h5, figure {
+      font-family: sans-serif;
+    }
+    .menu-container{
+      font-family: sans-serif;
+    }
+  </style>
+
+  <script src="//cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/js/jquery.jside.menu.js"></script>
+	<script>
+	$(document).ready(function(){
+	$(".menu-container").jSideMenu({
+	    jSidePosition: "position-right",
+	    jSideSticky: true,
+	    jSideSkin: "greenish",
+	     });
+	}); 
+	</script>
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Fira Code:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css">
+<meta name="generator" content="Hexo 6.2.0"></head>
+<body>
+<div class="single">
+
+<div id="page">
+<div id="lx-aside" style="background-image: url(//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/images/post_cover.jpeg)" data-stellar-background-ratio="0.5">
+  <div class="overlay">
+  <div class="page-title">
+    <div class="avatar"><a href="/"><img src="/images/avatar.jpeg"></a></div>
+    <span>2021-04-02</span>
+    <h2>用Linux来工作，中还...</h2>
+    
+    </div>
+</div>
+</div>
+
+<div id="lx-main-content">
+  <div class="lx-post">
+    <div class="lx-entry padding">
+      <div>
+        <h1 id="用Linux来工作，中还是不中咧"><a href="#用Linux来工作，中还是不中咧" class="headerlink" title="用Linux来工作，中还是不中咧"></a>用Linux来工作，中还是不中咧</h1><blockquote>
+<p>Linux和Windows孰优孰劣的争执似乎由来已久。总有一些人似乎想证明Linux用于工作会同样优秀，那么花一些时间研究研究Linux到底能不能满足我的需要，还是挺有意思的一件事。</p>
+</blockquote>
+<p>毫无疑问，Windows 10在敏捷开发的时代变得无比强大，Windows早已成为无所不在的各式各样的云的入口。无与伦比的性能，浩如烟海的应用库，海纳百川的兼容能力带来的强大生产力已经直接挤兑的苹果在PC领域放弃了Intel平台和微软竞争，转而专修自有芯片在专门领域闷声发大财。</p>
+<p>但Windows无比强大的同时，Linux凭借自由的思想吸引着业内最强悍的大佬们前仆后继，Linux已经不仅仅是一个平台，而是早已演变成一种哲学思想，席卷整个世界，就连微软也成了自由开源世界的重要参与者。至于基于Linux的安卓系统，则已经统治了全球智能手机市场（是的，基于IDC数据，安卓的全球市场占有率已经接近90%）。</p>
+<p>Windows和Linux彼此是如此不同，却又彼此吸引着对方，彼此融合，两种伟大的思想必将碰撞出最华丽的火花，照亮这个世界的每个角落。</p>
+<p>扯远了，在没人给稿费的文章里乱扯显然是不聪明的，回到今天主题，如果把Linux从它最擅长的企业级基础平台应用上请下神坛，转而为小小的我服务，当个桌面系统干活儿，那会怎样呢？</p>
+<p>和上次一样，今天我们依然请出Red Hat Enterprise Linux：</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/workonlinux/lockscreen.jpg" alt="lock">  </p>
+<ul>
+<li>Office</li>
+</ul>
+<p>毫无疑问，Office应用集是每天干活最常用的。邮件，Excel， PPT， Onenote已经成了四大开机必启动应用。Linux下的Office有很多，但相信我，没有一个能像微软的Office一样好用，所以别浪费时间尝试了，微软已经提供了强大的web版Office。</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/workonlinux/office.jpg" alt="office"></p>
+<p>可以看到，web版Office作为Office应用集的入口，已经提供了完整的功能访问入口，甚至比Windows下本地安装的Office更快捷，更强大。</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/workonlinux/excel.jpg" alt="excel"></p>
+<p>随便打开一个Excel，桌面版的功能一个不少，唯一的问题是相应速度还是差了一些，如果仅仅作为excel file viewer是完全没有问题了。</p>
+<p>另外如果在Linux下用Chrome打开Office，还可以用Chrome的功能把Web 版Office直接做成仿本地应用的形式，直接从Linux的启动栏就能直接访问.</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/workonlinux/desktop.jpg" alt="desktop"></p>
+<p>  当然，由于微软并未提供Linux下的Onedrive应用，因此实时同步文件就别想了，除非把文件放在Windows上然后从Linux访问。</p>
+<ul>
+<li>Teams</li>
+</ul>
+<p>Teams作为现在微软在企业大力推广的写作办公系统，虽然理论上是Office应用集的一部分，但还是值得拿出来单说的。Linux下Teams当然可以在前面提到的web Office里找到，但其实如果访问teams.microsoft.com，你会发现微软竟然提供了Linux版本, 最佳Linux和安卓软件开发商非微软莫属…</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/workonlinux/Teams.jpg" alt="teams"></p>
+<ul>
+<li>其它基于浏览器的工作</li>
+</ul>
+<p>Linux自己集成的火狐已经足以完成全部工作，而且由于火狐本来就是我在Windows上的主力浏览器，在Linux上设置好同步，所有数据包括书签，密码，插件百分之百顺利迁移. 安装Chrome后，两个浏览器能够完成所有的工作，唯一的遗憾，最佳Linux软件开发商微软并未推出Linux下的Edge浏览器，不然Chrome在正规方式下不能同步的遗憾就彻底被解决了。</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/workonlinux/firefox.jpg" alt="firefox"></p>
+<p>咦，热搜居然是又要涨养老金，我得赶紧告诉米爷爷米奶奶米姥爷米姥姥这个好消息，我和小齐的养老金没白交，感谢祖国~~~</p>
+<ul>
+<li>vpn</li>
+</ul>
+<p>在办公室以外办公，使用VPN是访问企业内部文件的主要方式。谢谢IT部门的同事，居然提供了VPN的Linux版本，我试了一下，连接速度貌似比Windows下还快了那么一点点。。。</p>
+<ul>
+<li>Typora</li>
+</ul>
+<p>为什么这个小东东要单独拿出来说？ 因为这应该算是Linux给我的一个小惊喜。 是的，顺便我也坦白好了，每次写公众号文章我都是用Typora这个棒棒哒markdown语法编辑器 （以后有机会我会和您聊聊markdown，总之一句话，用了markdown，写作有力气，Word拜拜啦），小而美的杰出代表。就这个东东您猜怎么着，竟然有Linux客户端，还是64位的…</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/workonlinux/typora.jpg" alt="typora"></p>
+<p>请允许我为这个软件的开发者致以深深的敬意，大哥 &#x2F; 大姐，我真服了你了, 真的~~~</p>
+<ul>
+<li>我就要用Windows，你打我呀</li>
+</ul>
+<p>Linux下有支持RDP协议的远程桌面软件，实在有什么必须在Windows上干的活儿，直接远程，速度还是相当可以的。另外如果想完全脱离Windows，还可以在Linux下跑Windows虚拟机，反正强大的联想ThinkStation 桌面工作站和ThinkPad P系移动工作站的强大能力干这点事情纯粹有点性能过剩 ~~~</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/workonlinux/rdpwindows.jpg" alt="remote"></p>
+<ul>
+<li><p>git &#x2F; python &#x2F; vscode</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/workonlinux/git.jpg" alt="git"></p>
+</li>
+</ul>
+<p>git 系统自带，python和VS code需要现装，用起来和Windows下并没有什么不一样。不过之前Windows下写的python代码有的会报错，毕竟猫摇尾巴和狗摇尾巴不是一个意思。</p>
+<p>对了，再次表扬Linux最佳软件开发商检开源社区最佳贡献者微软大神，VS Code完全开源不说，Linux下更新速度和Windows完全一样。我看微软也是深得我党两手都要抓，两手都要硬的精髓，微软，你其实很硬!</p>
+<ul>
+<li>其它常用应用和行业软件</li>
+</ul>
+<p>像QQ，微信，建议使用手机版或者虚拟机&#x2F;远程桌面在Windows下运行算了，别跟自己较劲。</p>
+<p>至于Adobe家族，建议同上。</p>
+<hr>
+<p>用Linux来工作小实验到现在暂时告一段落，基本上可以看到目前我的工作环境，Linux已经基本满足需求，而且这种满足并非是凑合，而是完全符合工作流的要求和规范，这才是这个实验以后Linux最让我满意的一点。</p>
+<p>当然，Linux在易用性上还是得吐槽。比如安装Chrome浏览器，用常规的办法会哐哐哐报告一堆依赖性问题，你得一个一个去把依赖的包装好，过程保证吐血，后来我才发现，得用</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum localinstall &lt;chrome安装包&gt;</span><br></pre></td></tr></table></figure>
+
+<p>这个命令，Linux会自己帮你解决依赖性问题。。。看来Linux确实不是给伸手党设计的，不过一旦接受了这个设定，内心也就不再挣扎。</p>
+<blockquote>
+<p>写到这里，今天的时间也就差不多了。坦白说我开始享受这种感觉，就是业余时间把眼睛从手机上移开，多陪陪大人孩子，趁他们做自己的事情时，也做点自己喜欢的事情，想点事情，写点东西。有时我们也不要那么功利，仿佛做什么都要看利益。多想，多动手，多让自己跳出现在的圈子做点和之前不一样的。时间对每个人都是公平的，只要用心，就会精彩，好玩儿。</p>
+</blockquote>
+<p>哦对了，今天的实验仅仅是一个开始，我并不会把工作环境马上切过来，毕竟还有一些任务，比如CTO数据从系统导出到Excel再导入数据库再按照需求和规则进行处理并导出的工作流我目前完全在微软的Windows平台下的Visual Studio + SQL Server完成，我相信Linux肯定有同样的玩儿法，但怎么玩儿，怕是得花几个周末再研究研究了。。。</p>
+<p>下次见我的朋友，周末愉快 :smile:</p>
+<p>我去，文章结束了我才知道markdown一样支持插入表情，讨厌厌:sob::cry::cold_sweat:</p>
+<p>我又去，发布到公众号表情就全没了。国内互联网环境真的是自成体系啊, 我对天发誓我在写文章的时候表情是有的，讨厌厌一百遍…</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/workonlinux/emoji.jpg" alt="emoji"></p>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="lx-navigation">
+	<div class="lx-cover prev lx-cover-sm" style="background-image: url(//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/images/footer-l.jpeg)">
+		<div class="overlay"></div>
+		<a class="copy" href="/%E4%BD%A0%E5%B9%B2%E6%B4%BB%EF%BC%8C%E6%88%91%E5%96%9D%E8%8C%B6%E4%B9%8B%E4%BB%8ELenovo-Solution-Centre%E6%8A%93%E5%8F%96MTM%E6%95%B0%E6%8D%AE/">
+			<div class="display-t">
+				<div class="display-tc">
+					<div>
+						<span>Next</span>
+						<h3>你干活，我喝茶...</h3>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+        <div class="lx-cover next lx-cover-sm" style="background-image: url(//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/images/footer-r.jpeg)">
+		<div class="overlay"></div>
+		<a class="copy" href="/%E5%9B%A0%E4%B8%BA%E7%AE%80%E5%8D%95%EF%BC%8C%E6%89%80%E4%BB%A5%E5%BC%BA%E5%A4%A7/">
+			<div class="display-t">
+				<div class="display-tc">
+					<div>
+						<span>Prev</span>
+						<h3>因为简单，所以强大</h3>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+</div>
+
+</div>
+
+<footer>
+  <div>
+  Copyright &copy; 2022.<a href="/">Small fish, big ocean</a><br>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme <a href="https://lx.js.org" target="_blank">Lx</a><br>
+  </div>
+</footer>
+
+</div>
+
+<button class="hamburger hamburger--arrow-r" type="button">
+    <div class="hamburger-box">
+      <div class="hamburger-inner"></div>
+    </div>
+</button> 
+<div class="menu visibility">
+  <div class="menu-head">
+    <span class="layer">
+      <div class="col">
+        <div class="row for-pic">
+          <div class="profile-pic">
+            <a href="/"><img src="/images/avatar.jpeg" alt="Houyufeng 侯宇峄1�7"/></a>
+          </div>
+        </div>
+        <div class="row for-name">
+          <p>Houyufeng 侯宇峄1�7</p>
+          <span class="tagline">Hello, World!</span>
+        </div>
+      </div>
+    </span>
+  </div>
+  <nav class="menu-container">
+  <ul class="menu-items">
+    <li><a href="/"><i class="fa fa-home fa-fw"></i>Home</a></li>
+    <li><a href="/archives/"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+    
+    <li class="has-sub"><span class="dropdown-heading">
+      <i class="fa fa-bookmark fa-fw"></i>Pages</span>
+        <ul>
+          <li><a href="/guestbook/">Guestbook</a></li>
+        <li><a href="/about/">About</a></li>
+        </ul>
+    </li>
+    <li class="has-sub"><span class="dropdown-heading">
+      <i class="fa fa-link fa-fw"></i>Friends</span>
+        <ul>
+          </ul>
+    </li>
+  </ul>
+  </nav>
+</div>
+
+<div class="gototop js-top">
+  <a href="#" class="js-gotop"><i class="fa fa-arrow-up"></i></a>
+</div>
+<script src="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/js/jquery.easing.min.js"></script>
+<script>
+(function () {
+	"use strict";
+	var goToTop = function() {
+		$(".js-gotop").on("click", function(event){
+			event.preventDefault();
+			$("html, body").animate({
+				scrollTop: $("html").offset().top
+			}, 500, "easeInOutExpo");
+			return false;
+		});
+		$(window).scroll(function(){
+			var $win = $(window);
+			if ($win.scrollTop() > 200) {
+				$(".js-top").addClass("active");
+			} else {
+				$(".js-top").removeClass("active");
+			}
+		});
+	};
+	$(function(){
+		goToTop();
+	});
+}());
+</script>
+
+
+</body>
+</html>

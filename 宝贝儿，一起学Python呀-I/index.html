@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content=#58b77a>
+  <title>宝贝儿，一起学Python呀 - I | Small fish, big ocean</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Houyufeng 侯宇峄1�7">
+  <meta name="keywords" content="">
+  <meta name="description" content="My blog">
+  <script id="hexo-configurations">
+  var CONFIG = {
+    root: '/',
+    theme: 'hexo-theme-lx-master',
+    version: '0.3.9',
+    localsearch:{
+      "enable": false,
+      "trigger": "auto",
+      "top_n_per_article": 1,
+      "unescape": false,
+      "preload": false
+      },
+    path: 'null'
+  };
+</script>
+
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/css/main.min.css">
+  <style type="text/css">
+    pre,
+    code {
+      font-family: 'Fira Code', monospace;
+    }
+    html {
+      font-family: sans-serif;
+    }
+    body {
+      font-family: sans-serif;
+    }
+    h1, h2, h3, h4, h5, figure {
+      font-family: sans-serif;
+    }
+    .menu-container{
+      font-family: sans-serif;
+    }
+  </style>
+
+  <script src="//cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/js/jquery.jside.menu.js"></script>
+	<script>
+	$(document).ready(function(){
+	$(".menu-container").jSideMenu({
+	    jSidePosition: "position-right",
+	    jSideSticky: true,
+	    jSideSkin: "greenish",
+	     });
+	}); 
+	</script>
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Fira Code:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css">
+<meta name="generator" content="Hexo 6.2.0"></head>
+<body>
+<div class="single">
+
+<div id="page">
+<div id="lx-aside" style="background-image: url(//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/images/post_cover.jpeg)" data-stellar-background-ratio="0.5">
+  <div class="overlay">
+  <div class="page-title">
+    <div class="avatar"><a href="/"><img src="/images/avatar.jpeg"></a></div>
+    <span>2021-06-08</span>
+    <h2>宝贝儿，一起学Pytho...</h2>
+    
+    </div>
+</div>
+</div>
+
+<div id="lx-main-content">
+  <div class="lx-post">
+    <div class="lx-entry padding">
+      <div>
+        <h1 id="宝贝儿，一起学Python呀-I"><a href="#宝贝儿，一起学Python呀-I" class="headerlink" title="宝贝儿，一起学Python呀 - I"></a>宝贝儿，一起学Python呀 - I</h1><p>这是一系列文章的开始。其实我本意是想跟着中国电子学会的青少年软件编程（Python）等级考试大纲，给俩米介绍一下Python的知识，帮着两个小家伙考个证书，万一小齐一高兴给点零花呢。本来想好文风应该是“小宝宝，今天，粑粑要带你走入程序的世界”这样幼稚又2B的风格，结果一动笔就飘了，小可爱风格也回到老爷们儿侃大山风格，而尽量不说少儿不宜内容，已经算是我最后的坚持。。。</p>
+<p>得了，我这高阶拖延症就别说那么多了，咱们聊起来。</p>
+<h2 id="第一篇-又不想当程序员，学编程干嘛？"><a href="#第一篇-又不想当程序员，学编程干嘛？" class="headerlink" title="第一篇 又不想当程序员，学编程干嘛？"></a>第一篇 又不想当程序员，学编程干嘛？</h2><center>算是前言</center>
+
+<p>说实话，就我这水平还好意思写这个其实挺有点厚脸皮的。我从事的工作和编程没有任何关系，也不是程序员，唯一沾边的就是头发似乎也不怎么多。。。 而且我这水平和知识储备其实也不够写东西的，抄袭就算了，不是多高尚，一提起不费脑子就费手的活儿我就头大。</p>
+<p>在这个系列的文章里，我想和你们聊聊我是怎么走进编程的世界，编程是如何帮助我提高工作效率，如何改变我的思考方式，甚至影响到我对这个世界的感受。我相信我的人生正在孕育着一些不一样的种子，我也确信，我有能力让自己变得和以前不一样。所以我必须从一些简单的事情做起，比如，尝试让自己写下这一系列Python文章。</p>
+<p>由于我并不是程序员，也没有任何专业背景，所以我准备以中国电子学会的青少年软件编程（Python）等级考试大纲为主线。不否认，我写这个系列的文章也希望能帮助你们通过这个考试，学习之余还能获得个证书，岂不快哉？</p>
+<p>写这种文章，对我来说最大的挑战是我毕竟不是程序员，我对编程的理解还停留在很浅薄的程度，甚至至今我的代码库里还有程序错误没有解决方案，这也导致我内心其实非常忐忑，一旦写错什么，误导了别人就不好了。 但是我坚信我们不应该因为害怕犯错而什么都不去做，学习本来就离不开犯错。虽然这个世界告诉我们躺平会减少很多烦恼，在郁闷的时候我也想劝自己放弃挣扎算了。但是，还是努努吧，努努就有希望，万一有呢，是吧。</p>
+<p>当然，任何事物都有两个方面。也正因为我不是专业人员，所以我很了解初学者战战兢兢的心情。站在Python这座风景秀丽的大山前，站在这座山前，我们第一个反应应该不是期待山巅的风景，而是扪心自问，我爬的上去吗？ 这是很正常的心态，但是相信我，这个星球上有很多很多人，他们都不是专业人员，也不是程序员，也不是计算机专家，他们只是学生，老师，科研人员，普通上班族，他们都很好的用Python在帮助自己。我们学习踢球，不是为了成为梅西C罗，我们也没必要强迫自己学会连过五人或者倒钩破门。只是为了平时能和朋友踢几脚球，那足球没那么复杂。Python最大的魅力也正在于此，不管使用者的程度如何，它都能帮助你。</p>
+<center>有那么多好用的程序，干嘛还要自己编程？</center>
+
+<p>这应该是一个特别好的问题。以前我遇到问题的时候，总会先“百度”一下有没有软件能解决我的问题。但是很多时候，其实我的问题太“小”了，太细节了。 比如说，你们一定知道PPT这个软件 (准确的说，我们说的应该是微软Office套件中的演示软件Powerpoint，PPT仅仅是这个软件支持的一种文件格式，而且现在这个格式也早就进化成了PPTX。PPT只是一种通俗的说法)。PPT是一个特别棒的软件，功能非常庞大，能做很多事情。但有时候我的需要只是画个流程图，这个流程图只包含文本框，箭头之类的形状。为了这么简单的功能，而下载一个庞大而且不怎么便宜的软件，似乎有点大炮打蚊子的感觉，但我们仅仅只需要一个蚊子拍，而我这个小小的“蚊子拍”，很难让那些专业的软件厂商，或者程序员，来专门耗时间帮我写个小程序来解决问题，这个确实不怎么现实。即使有程序员愿意提供软件定制服务，恐怕价格也不是我能承受的。</p>
+<p>再比如，我举个实际的例子。我平时会定期处理一堆Excel表格，大概20来个吧. 这些表格有相同的结构，也就是说它的列(行话叫字段，不过咱不是专业人士，不在乎)都是一样的。我需要定期从每个表格当中按照一定的格式读取一系列数据，然后把这些数据按照一定的规则处理一下，然后把处理好的数据整合在一起。</p>
+<p><img src="https://gitee.com/houyufengatgitee/img_bed/raw/master/python/excel.png" alt="excel"></p>
+<p>可以想象，如果每次都要用Excel程序来依次打开这些文件，然后靠着我的双眼皮大眼睛去处理数据，然后再一个一个拷贝出来，然后找个地方贴上去。。。 我想这一天我会非常的忙碌。也许看起来这样的员工好像很努力很认真，但是我自己知道，这是在浪费生命。我完全可以让电脑来做这件事情，然后把省下来的时间用来思考更多更有价值的问题，这样说不定我也能让我自己更加有价值呢，是吧。</p>
+<p>这件事情我当然可以找微软，因为其实Excel就提供了强大的VBA程序来做这件事。但VBA有很大的问题，第一，它只能在微软的Excel里运行，不具备通用性。第二，Excel VBA不怎么好学（得，一不小心把实话说出来了）。我之前确实有用Excel VBA来做这件事，但是相信我，仅仅在“自动打开表格并读取数据后，关闭这个表格”这个问题上，就已经让我卡了。天书一样的代码，看着就让人没有生活的情趣，虽然后来依靠一些手段解决了，但总觉得不那么“高级”和“优雅”。</p>
+<p>所以有没有这种可能，就是有一个不怎么难学的编程软件，能提供各种各样的工具，就像乐高里各种各样的现成的积木和连接件一样，让我只要使用这些积木和连接件，就能拼出我想要的小程序小部件，而不是连最基础的积木连接件都得我自己搞，这不是很美好吗？就像这样：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> 引入读写Excel的工具</span><br><span class="line"><span class="number">2.</span> 设置Excel表格的存储位置为E:\学习资料\</span><br><span class="line"><span class="number">3.</span> 使用读写Excel的工具读取存储位置中的所有Excel文件中的第一个文件</span><br><span class="line"><span class="number">4.</span> 读取这个文件中符合以下条件的行</span><br><span class="line">   条件一</span><br><span class="line">   条件二</span><br><span class="line">   条件三</span><br><span class="line"><span class="number">5.</span> 把符合条件的行按以下规则进行处理</span><br><span class="line">   规则一</span><br><span class="line">   规则二</span><br><span class="line">   规则三</span><br><span class="line"><span class="number">6.</span> 把处理好的数据存放到新的位置</span><br><span class="line"><span class="number">7.</span> 打开下一个文件</span><br><span class="line"><span class="number">8.</span> 重复<span class="number">4</span>-<span class="number">6</span></span><br><span class="line"><span class="number">9.</span> 指定文件夹下所有文件都已经处理完毕，程序执行完毕，您可以继续浏览学习资料中的其他文件</span><br></pre></td></tr></table></figure>
+
+<p>我并不需要了解Excel本身的接口啊，API啊，SDK啊（这些都是什么？？？），我只需要把注意力集中优化我自己需要做的事情的逻辑或工作流，然后按照这个编程语言的要求和规则写出来就可以了，这不是挺好吗。</p>
+<center>这么说，Python很勇咯</center>
+
+<p>初学者经常面对的第一个问题，恐怕就是一键三联: “好学吗？””功能强大吗？”“和XXX比如何呢？”</p>
+<p>我想说，如果您的智商和我差不多，那很遗憾，Python不复杂，但也没到一下子就能学会的程度。不然干嘛Python程序员的收入都那么高，要是那么容易就玩儿透了，我不早就人生巅峰了么。 要知道一般应用场景下，Python本身其实没什么太复杂太难理解的东西，但您要了解的远不止程序本身。比如，如果您想用Python抓取某只股票的股价，嗯，这叫爬虫，Python的看家本领，任何一本Python教程都会教我们怎么用Python写爬虫。我也有用Python定期抓取股票价格，然后当价格高于某个点时给我发邮件提示洒家要发财了。不过遗憾的是，这么长时间我就没收到过这样的邮件，走上人生巅峰也依然是遥不可及的梦。经测试，不是程序有问题，而是股票不给力。。。 好了我接着说，如果您想写个抓取股价的程序，那您不能这样:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Python, 爷买了港股00992，给爷查股价，现在马上Now！股价到了<span class="number">15</span>块，给爷发个邮件，主题是“您要当高富帅走上人生巅峰了呢”</span><br></pre></td></tr></table></figure>
+
+<p>虽然Python很NB，但如此简单粗暴，怕也是不行的。您就算对着Siri或者小度或者小爱或者小冰（这都是什么奇怪的东东）这么说，弄不好都不会有什么回应。用Python实现这样的功能，您不会在代码本身遇到太多问题，但是您需要了解一些Python代码以外的知识和问题，比如</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">您了解您想抓取信息的这个网站吗？</span><br><span class="line">请求方式用 Get / POST？是否需要带请求参数? <span class="comment">#现在很多网站都是动态网页，还用了Ajax，所以不带参数毛都找不到。</span></span><br><span class="line">分析HTML代码？ <span class="comment"># Python会帮您抓取解析HTML代码，但您得自己从里面找到股价信息</span></span><br><span class="line">如何处理找到的股价？ 发电子邮件？ <span class="comment"># 那您得会Python涉及电子邮件的包了，而且还得了解SMTP。。。</span></span><br><span class="line">写到文件里？<span class="comment">#操作系统的相关基础知识，相对路径绝对路径什么的您得了解，要是涉及到其它文件格式比如Word文档，那您还得研究研究Python提供的Word处理包的使用了</span></span><br><span class="line">发个短信？<span class="comment">#那您得自己找SMS服务提供商，了解他们提供的API怎么玩儿。。。</span></span><br></pre></td></tr></table></figure>
+
+<p>哈哈，相信看到这里您已经准备打退堂鼓了。但是我是这么想的，像我们这样的普通人，每天早起睁眼就要催孩子起床，送孩子上学，然后在车流滚滚的城市中挤到办公室，然后面无表情地坐在电脑前面点鼠标，大脑甚至连一小时有价值的思考都不用做，难道这就是我们想要的工作，想要的生活？难道我们真的只能用忙碌来安慰自己，用消耗自己生命的代价来告诉公司告诉老板我的价值？我们并不奢求自己能飞多高，也并不想把希望寄托在别人的认可上，但至少，做一些能让自己认可的事情，能让自己平凡的生活不那么平庸，我觉得这还是可以做到的。每天给自己一些时间思考，每天做出一些切实的小小改变，每天引入一些新东西 帮助自己更有效率，这难道不比做个键盘鼠标操作员更能让我们的人生多一些颜色么？这不是鸡汤，这是我们奖励给自己的鸡腿呀！</p>
+<p>Python是很勇，但真正超勇的，正是我们那依然奔腾如少年的内心呐。</p>
+<p>第一篇就写到这儿，下周见。</p>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="lx-navigation">
+	<div class="lx-cover prev lx-cover-sm" style="background-image: url(//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/images/footer-l.jpeg)">
+		<div class="overlay"></div>
+		<a class="copy" href="/%E8%BF%99%E4%B8%AA11%E6%9C%89%E7%82%B9%E7%8C%9B/">
+			<div class="display-t">
+				<div class="display-tc">
+					<div>
+						<span>Next</span>
+						<h3>这个11有点猛</h3>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+        <div class="lx-cover next lx-cover-sm" style="background-image: url(//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/images/footer-r.jpeg)">
+		<div class="overlay"></div>
+		<a class="copy" href="/%E8%8A%B1%E4%B8%AD%E9%86%89%E5%8D%A7%E7%9C%9F%E5%A5%BD%E6%B1%89%EF%BC%8C%E7%95%99%E5%BE%97%E8%8A%B3%E9%A6%99%E6%BB%A1%E4%BA%BA%E9%97%B4/">
+			<div class="display-t">
+				<div class="display-tc">
+					<div>
+						<span>Prev</span>
+						<h3>花中醉卧真好汉...</h3>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+</div>
+
+</div>
+
+<footer>
+  <div>
+  Copyright &copy; 2022.<a href="/">Small fish, big ocean</a><br>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme <a href="https://lx.js.org" target="_blank">Lx</a><br>
+  </div>
+</footer>
+
+</div>
+
+<button class="hamburger hamburger--arrow-r" type="button">
+    <div class="hamburger-box">
+      <div class="hamburger-inner"></div>
+    </div>
+</button> 
+<div class="menu visibility">
+  <div class="menu-head">
+    <span class="layer">
+      <div class="col">
+        <div class="row for-pic">
+          <div class="profile-pic">
+            <a href="/"><img src="/images/avatar.jpeg" alt="Houyufeng 侯宇峄1�7"/></a>
+          </div>
+        </div>
+        <div class="row for-name">
+          <p>Houyufeng 侯宇峄1�7</p>
+          <span class="tagline">Hello, World!</span>
+        </div>
+      </div>
+    </span>
+  </div>
+  <nav class="menu-container">
+  <ul class="menu-items">
+    <li><a href="/"><i class="fa fa-home fa-fw"></i>Home</a></li>
+    <li><a href="/archives/"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+    
+    <li class="has-sub"><span class="dropdown-heading">
+      <i class="fa fa-bookmark fa-fw"></i>Pages</span>
+        <ul>
+          <li><a href="/guestbook/">Guestbook</a></li>
+        <li><a href="/about/">About</a></li>
+        </ul>
+    </li>
+    <li class="has-sub"><span class="dropdown-heading">
+      <i class="fa fa-link fa-fw"></i>Friends</span>
+        <ul>
+          </ul>
+    </li>
+  </ul>
+  </nav>
+</div>
+
+<div class="gototop js-top">
+  <a href="#" class="js-gotop"><i class="fa fa-arrow-up"></i></a>
+</div>
+<script src="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/js/jquery.easing.min.js"></script>
+<script>
+(function () {
+	"use strict";
+	var goToTop = function() {
+		$(".js-gotop").on("click", function(event){
+			event.preventDefault();
+			$("html, body").animate({
+				scrollTop: $("html").offset().top
+			}, 500, "easeInOutExpo");
+			return false;
+		});
+		$(window).scroll(function(){
+			var $win = $(window);
+			if ($win.scrollTop() > 200) {
+				$(".js-top").addClass("active");
+			} else {
+				$(".js-top").removeClass("active");
+			}
+		});
+	};
+	$(function(){
+		goToTop();
+	});
+}());
+</script>
+
+
+</body>
+</html>
